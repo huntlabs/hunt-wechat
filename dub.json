@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"huntlabs"
+	],
+	"copyright": "Copyright © 2019, huntlabs",
+	"description": "wechat sdk",
+	"license": "Apache-2.0",
+	"name": "wechat",
+	"dependencies": {
+        "hunt-http" : "~>0.3.0-rc.2"
+    }
+}
