@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.ModifyDomain;
 
-public class ModifyDomain {
+class ModifyDomain {
 
 	private string action; // add添加, delete删除, set覆盖, get获取。当参数是get时不需要填四个域名字段。
 

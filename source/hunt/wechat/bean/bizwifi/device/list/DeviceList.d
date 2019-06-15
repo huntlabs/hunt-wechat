@@ -8,7 +8,7 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 15:51
  * @Description:
  */
-public class DeviceList : ShopInfo {
+class DeviceList : ShopInfo {
     private Integer pageindex;
     private Integer pagesize;
 

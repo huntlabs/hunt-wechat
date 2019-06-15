@@ -2,7 +2,7 @@ module hunt.wechat.bean.paymch.MchPayApp;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
-public class MchPayApp {
+class MchPayApp {
 
 	private string appid;
 

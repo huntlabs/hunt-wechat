@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.PromotionGoodsDetail;
 
-public class PromotionGoodsDetail {
+class PromotionGoodsDetail {
 
 	private string goods_id;
 	

@@ -1,7 +1,7 @@
 module hunt.wechat.bean.scan.info.BrandInfo;
 
 
-public class BrandInfo {
+class BrandInfo {
     private BaseInfo base_info;
     private DetailInfo detail_info;
     private ActionInfo action_info;

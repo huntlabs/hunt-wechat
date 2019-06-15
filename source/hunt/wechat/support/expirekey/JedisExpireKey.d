@@ -1,19 +1,18 @@
 module hunt.wechat.support.expirekey.JedisExpireKey;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import hunt.wechat.support.ExpireKey;
 
-public class JedisExpireKey : ExpireKey {
+class JedisExpireKey : ExpireKey {
 	
-	private static Logger logger = LoggerFactory.getLogger(JedisExpireKey.class);
 
 	private JedisPool pool;
 
-	private static final string DEFAULT_VALUE = "";
+	private enum string DEFAULT_VALUE = "";
 
 	private string perfix = "WP_ExpireKey_";
 

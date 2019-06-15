@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupDeleteResult : BaseResult {
+class DeviceGroupDeleteResult : BaseResult {
 
 	// private Object data
 }

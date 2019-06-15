@@ -6,7 +6,7 @@ module hunt.wechat.bean.semantic.semproxy.SemproxySearch;
  * @Date: 2018/7/24 18:09
  * @Description:
  */
-public class SemproxySearch {
+class SemproxySearch {
     private string query;
     private string city;
     private string category;

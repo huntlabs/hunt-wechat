@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.article.Details;
 
-public class Details {
+class Details {
 	private string stat_date;
 	private Integer target_user;
 	private Integer int_page_read_user;

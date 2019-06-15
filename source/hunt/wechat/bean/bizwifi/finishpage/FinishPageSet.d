@@ -8,7 +8,7 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 10:55
  * @Description:
  */
-public class FinishPageSet : ShopInfo {
+class FinishPageSet : ShopInfo {
 
     private string finishpage_url;
     private string wxa_user_name;

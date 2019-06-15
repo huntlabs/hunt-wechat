@@ -4,13 +4,13 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-public class MaterialBatchgetResult : BaseResult{
+class MaterialBatchgetResult : BaseResult{
 
 	private string total_count;
 
 	private string item_count;
 
-	private List<MaterialBatchgetResultItem> item;
+	private List!(MaterialBatchgetResultItem) item;
 
 	public string getTotal_count() {
 		return total_count;
@@ -28,11 +28,11 @@ public class MaterialBatchgetResult : BaseResult{
 		this.item_count = item_count;
 	}
 
-	public List<MaterialBatchgetResultItem> getItem() {
+	public List!(MaterialBatchgetResultItem) getItem() {
 		return item;
 	}
 
-	public void setItem(List<MaterialBatchgetResultItem> item) {
+	public void setItem(List!(MaterialBatchgetResultItem) item) {
 		this.item = item;
 	}
 

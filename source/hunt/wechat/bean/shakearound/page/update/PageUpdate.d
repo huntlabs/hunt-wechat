@@ -10,6 +10,6 @@ import hunt.wechat.bean.shakearound.page.PageInfo;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class PageUpdate : PageInfo {
+class PageUpdate : PageInfo {
 
 }

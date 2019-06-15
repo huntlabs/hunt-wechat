@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "item")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CopyrightCheckResultItem {
+class CopyrightCheckResultItem {
 
 	private Integer ArticleIdx;				//群发文章的序号，从1开始
 	private Integer UserDeclareState;		//用户声明文章的状态

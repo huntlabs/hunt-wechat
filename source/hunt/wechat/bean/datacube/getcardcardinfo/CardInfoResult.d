@@ -10,18 +10,18 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class CardInfoResult : BaseResult {
+class CardInfoResult : BaseResult {
 
 	/**
 	 * 数据列表
 	 */
-	List<CardInfoResultInfo> list;
+	List!(CardInfoResultInfo) list;
 
-	public List<CardInfoResultInfo> getList() {
+	public List!(CardInfoResultInfo) getList() {
 		return list;
 	}
 
-	public void setList(List<CardInfoResultInfo> list) {
+	public void setList(List!(CardInfoResultInfo) list) {
 		this.list = list;
 	}
 }

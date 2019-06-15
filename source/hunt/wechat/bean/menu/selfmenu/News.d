@@ -1,6 +1,6 @@
 module hunt.wechat.bean.menu.selfmenu.News;
 
-public class News {
+class News {
 
 	private string title;
 

@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 import hunt.wechat.bean.BaseResult;
 
-public class GetQrcodeResult : BaseResult{
+class GetQrcodeResult : BaseResult{
 
 	private BufferedImage bufferedImage;
 

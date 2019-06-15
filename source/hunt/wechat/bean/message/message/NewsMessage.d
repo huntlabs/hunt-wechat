@@ -4,17 +4,17 @@ import hunt.collection.Collections;
 import hunt.collection.List;
 
 /**
- * 发送图文消息（点击跳转到外链）<br>
+ * 发送图文消息（点击跳转到外链）
  * 图文消息条数限制在1条以内，注意，如果图文数超过1，则将会返回错误码45008。
  *
  * @author LiYi
  */
-public class NewsMessage : Message {
+class NewsMessage : Message {
 
     public NewsMessage() {
     }
 
-    public NewsMessage(string touser, List<Article> articles) {
+    public NewsMessage(string touser, List!(Article) articles) {
         super(touser, "news");
         this.news = new News();
         this.news.setArticles(articles);
@@ -41,20 +41,20 @@ public class NewsMessage : Message {
         this.news = news;
     }
 
-    public static class News {
+    static class News {
 
-        private List<Article> articles;
+        private List!(Article) articles;
 
-        public List<Article> getArticles() {
+        public List!(Article) getArticles() {
             return articles;
         }
 
-        public void setArticles(List<Article> articles) {
+        public void setArticles(List!(Article) articles) {
             this.articles = articles;
         }
     }
 
-    public static class Article {
+    static class Article {
         private string title;
         private string description;
         private string url;

@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.templatemessage.TemplateMessage;
 
 import hunt.collection.LinkedHashMap;
 
-public class TemplateMessage {
+class TemplateMessage {
 
 	private string touser;
 
@@ -15,7 +15,7 @@ public class TemplateMessage {
 
 	private string url;
 
-	private LinkedHashMap<string, TemplateMessageItem> data;
+	private LinkedHashMap!(string, TemplateMessageItem) data;
 
 	public string getTouser() {
 		return touser;
@@ -41,11 +41,11 @@ public class TemplateMessage {
 		this.url = url;
 	}
 
-	public LinkedHashMap<string, TemplateMessageItem> getData() {
+	public LinkedHashMap!(string, TemplateMessageItem) getData() {
 		return data;
 	}
 
-	public void setData(LinkedHashMap<string, TemplateMessageItem> data) {
+	public void setData(LinkedHashMap!(string, TemplateMessageItem) data) {
 		this.data = data;
 	}
 

@@ -1,6 +1,6 @@
 module hunt.wechat.bean.scan.infolist.VerifiedCateList;
 
-public class VerifiedCateList {
+class VerifiedCateList {
     private string verified_cate_id;
     private string verified_cate_name;
 

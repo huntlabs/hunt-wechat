@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxa.GetwxasearchstatusResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class GetwxasearchstatusResult : BaseResult {
+class GetwxasearchstatusResult : BaseResult {
 
 	private Integer status;
 

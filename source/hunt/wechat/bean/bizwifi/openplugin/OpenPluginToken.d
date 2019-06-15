@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.openplugin.OpenPluginToken;
  * @Date: 2018/7/24 10:04
  * @Description:
  */
-public class OpenPluginToken {
+class OpenPluginToken {
     private string callback_url;
 
     public string getCallback_url() {

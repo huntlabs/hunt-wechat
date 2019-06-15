@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public abstract class AbstractStatisticsResultData {
+abstract class AbstractStatisticsResultData {
 
 	/**
 	 * 点击摇周边消息的次数

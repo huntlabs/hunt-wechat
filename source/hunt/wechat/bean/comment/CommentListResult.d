@@ -4,11 +4,11 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-public class CommentListResult : BaseResult {
+class CommentListResult : BaseResult {
 
 	private Long total;
 
-	List<Comment> comment;
+	List!(Comment) comment;
 
 	public Long getTotal() {
 		return total;
@@ -18,11 +18,11 @@ public class CommentListResult : BaseResult {
 		this.total = total;
 	}
 
-	public List<Comment> getComment() {
+	public List!(Comment) getComment() {
 		return comment;
 	}
 
-	public void setComment(List<Comment> comment) {
+	public void setComment(List!(Comment) comment) {
 		this.comment = comment;
 	}
 

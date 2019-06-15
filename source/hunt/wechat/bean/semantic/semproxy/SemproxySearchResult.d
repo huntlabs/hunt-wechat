@@ -9,7 +9,7 @@ import hunt.wechat.bean.semantic.semproxy.inner.Semantic;
  * @Date: 2018/7/24 18:10
  * @Description:
  */
-public class SemproxySearchResult : BaseResult {
+class SemproxySearchResult : BaseResult {
 
     private string query;
     private string type;

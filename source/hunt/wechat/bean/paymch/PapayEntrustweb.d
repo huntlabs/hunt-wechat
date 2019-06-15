@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.PapayEntrustweb;
 
-public class PapayEntrustweb {
+class PapayEntrustweb {
 
 	private string mch_id;
 

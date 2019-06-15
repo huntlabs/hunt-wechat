@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxopen.Wxopen;
 
 import hunt.collection.List;
 
-public class Wxopen {
+class Wxopen {
 
 	private Integer status;
 
@@ -20,7 +20,7 @@ public class Wxopen {
 
 	private string headimg_url;
 
-	private List<FuncInfo> func_infos;
+	private List!(FuncInfo) func_infos;
 
 	private Integer copy_verify_status;
 
@@ -90,11 +90,11 @@ public class Wxopen {
 		this.headimg_url = headimg_url;
 	}
 
-	public List<FuncInfo> getFunc_infos() {
+	public List!(FuncInfo) getFunc_infos() {
 		return func_infos;
 	}
 
-	public void setFunc_infos(List<FuncInfo> func_infos) {
+	public void setFunc_infos(List!(FuncInfo) func_infos) {
 		this.func_infos = func_infos;
 	}
 

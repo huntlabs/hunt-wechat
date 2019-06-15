@@ -2,23 +2,23 @@ module hunt.wechat.bean.scan.crud.WhiteUsers;
 
 import hunt.collection.List;
 
-public class WhiteUsers {
+class WhiteUsers {
     private List <string> openid;
     private List <string> username;
 
-    public List<string> getOpenid() {
+    public List!(string) getOpenid() {
         return openid;
     }
 
-    public void setOpenid(List<string> openid) {
+    public void setOpenid(List!(string) openid) {
         this.openid = openid;
     }
 
-    public List<string> getUsername() {
+    public List!(string) getUsername() {
         return username;
     }
 
-    public void setUsername(List<string> username) {
+    public void setUsername(List!(string) username) {
         this.username = username;
     }
 }

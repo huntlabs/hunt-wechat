@@ -15,7 +15,7 @@ import hunt.wechat.bean.AdaptorCDATA;
  */
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Authcodetoopenid {
+class Authcodetoopenid {
 
 	@XmlElement
 	private string appid;

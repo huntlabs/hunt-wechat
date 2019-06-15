@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.SecapiPayProfitsharingfinishResult;
 
-public class SecapiPayProfitsharingfinishResult : MchBase {
+class SecapiPayProfitsharingfinishResult : MchBase {
 
 	private string transaction_id;
 

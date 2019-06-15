@@ -64,7 +64,7 @@ import hunt.wechat.util.JsonUtil;
  * @author Moyq5
  *
  */
-public class CardAPI : BaseAPI {
+class CardAPI : BaseAPI {
 
 	/**
 	 * 批量查询卡券列表
@@ -151,10 +151,10 @@ public class CardAPI : BaseAPI {
 	}
 
 	/**
-	 * Code解码<br>
-	 * 1.只能解码本公众号卡券获取的加密code。 <br>
-	 * 2.开发者若从url上获取到加密code,请注意先进行urldecode，否则报错。<br>
-	 * 3.encrypt_code是卡券的code码经过加密处理得到的加密code码，与code一一对应。<br>
+	 * Code解码
+	 * 1.只能解码本公众号卡券获取的加密code。 
+	 * 2.开发者若从url上获取到加密code,请注意先进行urldecode，否则报错。
+	 * 3.encrypt_code是卡券的code码经过加密处理得到的加密code码，与code一一对应。
 	 * 4.开发者只能解密本公众号的加密code，否则报错。
 	 * @param accessToken accessToken
 	 * @param codeDecrypt codeDecrypt
@@ -165,10 +165,10 @@ public class CardAPI : BaseAPI {
 	}
 
 	/**
-	 * Code解码<br>
-	 * 1.只能解码本公众号卡券获取的加密code。 <br>
-	 * 2.开发者若从url上获取到加密code,请注意先进行urldecode，否则报错。<br>
-	 * 3.encrypt_code是卡券的code码经过加密处理得到的加密code码，与code一一对应。<br>
+	 * Code解码
+	 * 1.只能解码本公众号卡券获取的加密code。 
+	 * 2.开发者若从url上获取到加密code,请注意先进行urldecode，否则报错。
+	 * 3.encrypt_code是卡券的code码经过加密处理得到的加密code码，与code一一对应。
 	 * 4.开发者只能解密本公众号的加密code，否则报错。
 	 * @param accessToken accessToken
 	 * @param postJson postJson
@@ -355,7 +355,7 @@ public class CardAPI : BaseAPI {
 	 * @return result
 	 */
 	public static CreateResult create(string accessToken, CashCard cashCard) {
-		Create<CashCard> card = new Create<CashCard>();
+		Create!(CashCard) card = new Create!(CashCard)();
 		card.setCard(cashCard);
 		return create(accessToken, card);
 	}
@@ -367,7 +367,7 @@ public class CardAPI : BaseAPI {
 	 * @return result
 	 */
 	public static CreateResult create(string accessToken, DiscountCard discountCard) {
-		Create<DiscountCard> card = new Create<DiscountCard>();
+		Create!(DiscountCard) card = new Create!(DiscountCard)();
 		card.setCard(discountCard);
 		return create(accessToken, card);
 	}
@@ -379,7 +379,7 @@ public class CardAPI : BaseAPI {
 	 * @return result
 	 */
 	public static CreateResult create(string accessToken, GeneralCouponCard generalCouponCard) {
-		Create<GeneralCouponCard> card = new Create<GeneralCouponCard>();
+		Create!(GeneralCouponCard) card = new Create!(GeneralCouponCard)();
 		card.setCard(generalCouponCard);
 		return create(accessToken, card);
 	}
@@ -391,7 +391,7 @@ public class CardAPI : BaseAPI {
 	 * @return result
 	 */
 	public static CreateResult create(string accessToken, GiftCard giftCard) {
-		Create<GiftCard> card = new Create<GiftCard>();
+		Create!(GiftCard) card = new Create!(GiftCard)();
 		card.setCard(giftCard);
 		return create(accessToken, card);
 	}
@@ -403,7 +403,7 @@ public class CardAPI : BaseAPI {
 	 * @return result
 	 */
 	public static CreateResult create(string accessToken, GrouponCard grouponCard) {
-		Create<GrouponCard> card = new Create<GrouponCard>();
+		Create!(GrouponCard) card = new Create!(GrouponCard)();
 		card.setCard(grouponCard);
 		return create(accessToken, card);
 	}

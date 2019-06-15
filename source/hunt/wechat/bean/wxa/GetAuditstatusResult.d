@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxa.GetAuditstatusResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class GetAuditstatusResult : BaseResult {
+class GetAuditstatusResult : BaseResult {
 
 	private Integer status;
 	private string reason; // 当status=1，审核被拒绝时，返回的拒绝原因

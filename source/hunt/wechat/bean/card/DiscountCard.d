@@ -9,7 +9,7 @@ import hunt.wechat.bean.card.Discount;
  * @author Moyq5
  *
  */
-public class DiscountCard : AbstractCard {
+class DiscountCard : AbstractCard {
 
 	private Discount discount;
 

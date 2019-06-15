@@ -20,7 +20,7 @@ import hunt.wechat.bean.DynamicField;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class RefundqueryResult : MchBase : DynamicField{
+class RefundqueryResult : MchBase : DynamicField{
 
 	private string device_info;
 
@@ -41,7 +41,7 @@ public class RefundqueryResult : MchBase : DynamicField{
 	private string refund_account;
 
 	@XmlTransient
-	private List<RefundqueryResultItem> refundqueryResultItems;
+	private List!(RefundqueryResultItem) refundqueryResultItems;
 	
 
 	public string getTransaction_id() {
@@ -116,20 +116,20 @@ public class RefundqueryResult : MchBase : DynamicField{
 		this.refund_account = refund_account;
 	}
 	
-	public void setRefundqueryResultItems(List<RefundqueryResultItem> refundqueryResultItems) {
+	public void setRefundqueryResultItems(List!(RefundqueryResultItem) refundqueryResultItems) {
 		this.refundqueryResultItems = refundqueryResultItems;
 	}
 
-	public List<RefundqueryResultItem> getRefundqueryResultItems() {
+	public List!(RefundqueryResultItem) getRefundqueryResultItems() {
 		return refundqueryResultItems;
 	}
 	
 	override
-	public void buildDynamicField(Map<string, string> dataMap) {
+	public void buildDynamicField(Map!(string, string) dataMap) {
 		if(dataMap != null){
 			string refund_countStr = dataMap.get("refund_count");
 			if(refund_countStr != null){
-				List<RefundqueryResultItem> list = new ArrayList<RefundqueryResultItem>();
+				List!(RefundqueryResultItem) list = new ArrayList!(RefundqueryResultItem)();
 				for (int i = 0; i < Integer.parseInt(refund_countStr); i++) {
 					RefundqueryResultItem item = new RefundqueryResultItem();
 					item.setOut_refund_no(dataMap.get("out_refund_no_"+i));
@@ -145,7 +145,7 @@ public class RefundqueryResult : MchBase : DynamicField{
 					item.setRefund_recv_accout(dataMap.get("refund_recv_accout_"+i));
 					item.setN(i);
 					if(item.getCoupon_refund_count()!= null){
-						List<Coupon> couponList = new ArrayList<Coupon>();
+						List!(Coupon) couponList = new ArrayList!(Coupon)();
 						for(int j=0;j<item.getCoupon_refund_count();j++){
 							Coupon coupon = new Coupon(
 									null,

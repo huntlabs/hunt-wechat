@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ComponentReceiveXML {
+class ComponentReceiveXML {
 
 	@XmlElement(name = "AppId")
 	private string appId;

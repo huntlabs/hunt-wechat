@@ -3,9 +3,8 @@ module hunt.wechat.bean.xmlmessage.XMLImageMessage;
 import hunt.wechat.bean.message.message.ImageMessage;
 import hunt.wechat.bean.message.message.Message;
 
-public class XMLImageMessage : XMLMessage{
+class XMLImageMessage : XMLMessage{
 
-	private static final long serialVersionUID = 5972200803798750987L;
 
 	private string mediaId;
 

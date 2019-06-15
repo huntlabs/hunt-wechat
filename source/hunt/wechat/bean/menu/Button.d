@@ -2,7 +2,7 @@ module hunt.wechat.bean.menu.Button;
 
 import hunt.collection.List;
 
-public class Button {
+class Button {
 
 	private string type; // click|view|scancode_waitmsg|scancode_push|pic_sysphoto|pic_photo_or_album|pic_weixin|location_select|media_id|view_limited|miniprogram
 	private string name;
@@ -12,7 +12,7 @@ public class Button {
 	private string appid; // 小程序的appid
 	private string pagepath;// 小程序的页面路径
 
-	private List<Button> sub_button;
+	private List!(Button) sub_button;
 
 	public Button() {
 	}
@@ -59,11 +59,11 @@ public class Button {
 		this.url = url;
 	}
 
-	public List<Button> getSub_button() {
+	public List!(Button) getSub_button() {
 		return sub_button;
 	}
 
-	public void setSub_button(List<Button> subButton) {
+	public void setSub_button(List!(Button) subButton) {
 		sub_button = subButton;
 	}
 

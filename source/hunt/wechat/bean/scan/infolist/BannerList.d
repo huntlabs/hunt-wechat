@@ -1,6 +1,6 @@
 module hunt.wechat.bean.scan.infolist.BannerList;
 
-public class BannerList {
+class BannerList {
     private string link;
     private string desc;
 

@@ -6,7 +6,7 @@ module hunt.wechat.bean.semantic.semproxy.inner.ContextInfo;
  * @author: 01
  * @create: 2018-08-18 13:33
  **/
-public class ContextInfo {
+class ContextInfo {
     private string isFinished;
     private string null_times;
 

@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 import hunt.wechat.util.JsonUtil;
 
-public class SceneInfo {
+class SceneInfo {
 
 	private H5Info h5_info;
 
@@ -26,7 +26,7 @@ public class SceneInfo {
 		this.store_info = store_info;
 	}
 
-	public static class H5Info {
+	static class H5Info {
 
 		private string type;
 
@@ -79,7 +79,7 @@ public class SceneInfo {
 		}
 	}
 
-	public static class StoreInfo {
+	static class StoreInfo {
 
 		private string id;
 
@@ -123,15 +123,15 @@ public class SceneInfo {
 
 	}
 
-	static class JsonXmlAdapter : XmlAdapter<string, SceneInfo> {
+	static class JsonXmlAdapter : XmlAdapter!(string, SceneInfo) {
 
 		override
-		public string marshal(SceneInfo arg0) throws Exception {
+		public string marshal(SceneInfo arg0){
 			return "<![CDATA[" + JsonUtil.toJSONString(arg0) + "]]>";
 		}
 
 		override
-		public SceneInfo unmarshal(string arg0) throws Exception {
+		public SceneInfo unmarshal(string arg0){
 			return JsonUtil.parseObject(arg0, SceneInfo.class);
 		}
 	}

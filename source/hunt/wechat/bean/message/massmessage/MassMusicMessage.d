@@ -6,22 +6,22 @@ import hunt.collection.Map;
 import hunt.wechat.bean.message.preview.MusicPreview;
 import hunt.wechat.bean.message.preview.Preview;
 
-public class MassMusicMessage : MassMessage{
+class MassMusicMessage : MassMessage{
 
-	private Map<string, string> music;
+	private Map!(string, string) music;
 
 	public MassMusicMessage(string media_id) {
 		super();
-		music = new HashMap<string, string>();
+		music = new HashMap!(string, string)();
 		music.put("media_id",media_id);
 		super.msgtype = "music";
 	}
 
-	public Map<string, string> getMusic() {
+	public Map!(string, string) getMusic() {
 		return music;
 	}
 
-	public void setMusic(Map<string, string> music) {
+	public void setMusic(Map!(string, string) music) {
 		this.music = music;
 	}
 

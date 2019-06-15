@@ -10,7 +10,7 @@ import hunt.wechat.bean.card.Cash;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UpdateCash : AbstractUpdate {
+class UpdateCash : AbstractUpdate {
 	
 	/**
 	 * 代金券

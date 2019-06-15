@@ -2,7 +2,7 @@ module hunt.wechat.bean.open.OpenResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class OpenResult : BaseResult {
+class OpenResult : BaseResult {
 
 	private string open_appid;
 

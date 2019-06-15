@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxopen.WxamplinkgetResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class WxamplinkgetResult : BaseResult {
+class WxamplinkgetResult : BaseResult {
 
 	private Wxopens wxopens;
 

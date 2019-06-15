@@ -8,7 +8,7 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 17:05
  * @Description:
  */
-public class BarSet : ShopInfo {
+class BarSet : ShopInfo {
     private Integer bar_type;
 
     public Integer getBar_type() {

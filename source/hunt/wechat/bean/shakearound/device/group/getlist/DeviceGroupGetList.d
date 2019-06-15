@@ -8,16 +8,16 @@ module hunt.wechat.bean.shakearound.device.group.getlist.DeviceGroupGetList;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupGetList {
+class DeviceGroupGetList {
 
 	/**
-	 * 分组列表的起始索引值<br>
+	 * 分组列表的起始索引值
 	 * 必填
 	 */
 	private Integer begin;
 	
 	/**
-	 * 待查询的分组数量，不能超过1000个<br>
+	 * 待查询的分组数量，不能超过1000个
 	 * 必填
 	 */
 	private Integer count;
@@ -30,7 +30,7 @@ public class DeviceGroupGetList {
 	}
 
 	/**
-	 * 分组列表的起始索引值<br>
+	 * 分组列表的起始索引值
 	 * 必填
 	 * @param begin 分组列表的起始索引值
 	 */
@@ -46,7 +46,7 @@ public class DeviceGroupGetList {
 	}
 
 	/**
-	 * 待查询的分组数量，不能超过1000个<br>
+	 * 待查询的分组数量，不能超过1000个
 	 * 必填
 	 * @param count 待查询的分组数量
 	 */

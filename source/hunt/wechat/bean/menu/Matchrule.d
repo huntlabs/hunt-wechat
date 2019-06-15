@@ -1,6 +1,6 @@
 module hunt.wechat.bean.menu.Matchrule;
 
-public class Matchrule {
+class Matchrule {
 
 	private string tag_id;
 	

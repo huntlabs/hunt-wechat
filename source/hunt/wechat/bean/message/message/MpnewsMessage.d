@@ -7,7 +7,7 @@ module hunt.wechat.bean.message.message.MpnewsMessage;
  * @since 2.8.26
  * @author LiYi
  */
-public class MpnewsMessage : Message {
+class MpnewsMessage : Message {
 
 	public MpnewsMessage() {
     }
@@ -28,7 +28,7 @@ public class MpnewsMessage : Message {
         this.mpnews = mpnews;
     }
 
-    public static class Mpnews {
+    static class Mpnews {
         private string media_id;
 
         public string getMedia_id() {

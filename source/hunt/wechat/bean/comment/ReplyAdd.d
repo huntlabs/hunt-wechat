@@ -1,6 +1,6 @@
 module hunt.wechat.bean.comment.ReplyAdd;
 
-public class ReplyAdd : Params {
+class ReplyAdd : Params {
 
 	private string content;
 

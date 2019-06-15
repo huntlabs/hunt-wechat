@@ -1,6 +1,6 @@
 module hunt.wechat.bean.message.message.MusicMessage;
 
-public class MusicMessage : Message {
+class MusicMessage : Message {
 
     public MusicMessage() {
     }
@@ -21,7 +21,7 @@ public class MusicMessage : Message {
         this.music = music;
     }
 
-    public static class Music {
+    static class Music {
 
         private string title;
         private string description;

@@ -11,7 +11,7 @@ import hunt.wechat.bean.card.Groupon;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UpdateGroupon : AbstractUpdate {
+class UpdateGroupon : AbstractUpdate {
 	
 	/**
 	 * 团购券

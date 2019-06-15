@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceBindPageResult : BaseResult {
+class DeviceBindPageResult : BaseResult {
 
 	// private Object data
 }

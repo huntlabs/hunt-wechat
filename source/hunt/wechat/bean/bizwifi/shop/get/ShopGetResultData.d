@@ -8,11 +8,11 @@ import hunt.collection.List;
  * @Date: 2018/7/24 16:37
  * @Description:
  */
-public class ShopGetResultData {
+class ShopGetResultData {
     private string shop_name;
     private string ssid;
-    private List<string> ssid_list;
-    private List<SsidPassword> ssid_password_list;
+    private List!(string) ssid_list;
+    private List!(SsidPassword) ssid_password_list;
 
     public string getShop_name() {
         return shop_name;
@@ -30,23 +30,23 @@ public class ShopGetResultData {
         this.ssid = ssid;
     }
 
-    public List<string> getSsid_list() {
+    public List!(string) getSsid_list() {
         return ssid_list;
     }
 
-    public void setSsid_list(List<string> ssid_list) {
+    public void setSsid_list(List!(string) ssid_list) {
         this.ssid_list = ssid_list;
     }
 
-    public List<SsidPassword> getSsid_password_list() {
+    public List!(SsidPassword) getSsid_password_list() {
         return ssid_password_list;
     }
 
-    public void setSsid_password_list(List<SsidPassword> ssid_password_list) {
+    public void setSsid_password_list(List!(SsidPassword) ssid_password_list) {
         this.ssid_password_list = ssid_password_list;
     }
 
-    public static class SsidPassword {
+    static class SsidPassword {
         private string ssid;
         private string password;
 

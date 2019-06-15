@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MicropayResult : MchBase{
+class MicropayResult : MchBase{
 
 	private string openid;
 	private string is_subscribe;
@@ -35,7 +35,7 @@ public class MicropayResult : MchBase{
 	 */
 	@XmlElement
 	@XmlJavaTypeAdapter(value = MicropayPromotionDetailXmlAdapter.class)
-	private List<MicropayPromotionDetail> promotion_detail;
+	private List!(MicropayPromotionDetail) promotion_detail;
 
 	public string getOpenid() {
 		return openid;
@@ -133,10 +133,10 @@ public class MicropayResult : MchBase{
 	public void setSettlement_total_fee(Integer settlement_total_fee) {
 		this.settlement_total_fee = settlement_total_fee;
 	}
-	public List<MicropayPromotionDetail> getPromotion_detail() {
+	public List!(MicropayPromotionDetail) getPromotion_detail() {
 		return promotion_detail;
 	}
-	public void setPromotion_detail(List<MicropayPromotionDetail> promotion_detail) {
+	public void setPromotion_detail(List!(MicropayPromotionDetail) promotion_detail) {
 		this.promotion_detail = promotion_detail;
 	}
 

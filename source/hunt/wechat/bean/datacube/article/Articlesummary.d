@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.article.Articlesummary;
 
-public class Articlesummary {
+class Articlesummary {
 
 	private string ref_date;
 

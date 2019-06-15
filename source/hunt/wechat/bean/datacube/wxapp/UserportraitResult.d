@@ -2,7 +2,7 @@ module hunt.wechat.bean.datacube.wxapp.UserportraitResult;
 
 import hunt.collection.List;
 
-public class UserportraitResult {
+class UserportraitResult {
 
 	private string ref_date;
 
@@ -34,70 +34,70 @@ public class UserportraitResult {
 		this.visit_uv = visit_uv;
 	}
 
-	public static class VisitUv {
-		private List<Item> province;
+	static class VisitUv {
+		private List!(Item) province;
 
-		private List<Item> city;
+		private List!(Item) city;
 
-		private List<Item> genders;
+		private List!(Item) genders;
 
-		private List<Item> platforms;
+		private List!(Item) platforms;
 
-		private List<Item> devices;
+		private List!(Item) devices;
 
-		private List<Item> ages;
+		private List!(Item) ages;
 
-		public List<Item> getProvince() {
+		public List!(Item) getProvince() {
 			return province;
 		}
 
-		public void setProvince(List<Item> province) {
+		public void setProvince(List!(Item) province) {
 			this.province = province;
 		}
 
-		public List<Item> getCity() {
+		public List!(Item) getCity() {
 			return city;
 		}
 
-		public void setCity(List<Item> city) {
+		public void setCity(List!(Item) city) {
 			this.city = city;
 		}
 
-		public List<Item> getGenders() {
+		public List!(Item) getGenders() {
 			return genders;
 		}
 
-		public void setGenders(List<Item> genders) {
+		public void setGenders(List!(Item) genders) {
 			this.genders = genders;
 		}
 
-		public List<Item> getPlatforms() {
+		public List!(Item) getPlatforms() {
 			return platforms;
 		}
 
-		public void setPlatforms(List<Item> platforms) {
+		public void setPlatforms(List!(Item) platforms) {
 			this.platforms = platforms;
 		}
 
-		public List<Item> getDevices() {
+		public List!(Item) getDevices() {
 			return devices;
 		}
 
-		public void setDevices(List<Item> devices) {
+		public void setDevices(List!(Item) devices) {
 			this.devices = devices;
 		}
 
-		public List<Item> getAges() {
+		public List!(Item) getAges() {
 			return ages;
 		}
 
-		public void setAges(List<Item> ages) {
+		public void setAges(List!(Item) ages) {
 			this.ages = ages;
 		}
 
 	}
 
-	public static class Item {
+	static class Item {
 		private Integer id;
 
 		private string name;

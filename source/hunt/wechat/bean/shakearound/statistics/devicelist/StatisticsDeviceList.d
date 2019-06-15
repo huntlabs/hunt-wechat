@@ -10,6 +10,6 @@ import hunt.wechat.bean.shakearound.statistics.AbstractStatisticsList;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class StatisticsDeviceList : AbstractStatisticsList {
+class StatisticsDeviceList : AbstractStatisticsList {
 
 }

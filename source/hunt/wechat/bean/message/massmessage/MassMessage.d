@@ -10,13 +10,13 @@ import hunt.wechat.bean.message.preview.Preview;
  * @author LiYi
  *
  */
-public abstract class MassMessage {
+abstract class MassMessage {
 
 	protected string msgtype;
 
 	private Filter filter;// 用于特定组
 
-	private Set<string> touser;// 用于指定用户
+	private Set!(string) touser;// 用于指定用户
 
 	private string clientmsgid; // 开发者侧群发msgid，长度限制64字节，如不填，则后台默认以群发范围和群发内容的摘要值做为clientmsgid
 
@@ -36,11 +36,11 @@ public abstract class MassMessage {
 		this.filter = filter;
 	}
 
-	public Set<string> getTouser() {
+	public Set!(string) getTouser() {
 		return touser;
 	}
 
-	public void setTouser(Set<string> touser) {
+	public void setTouser(Set!(string) touser) {
 		this.touser = touser;
 	}
 

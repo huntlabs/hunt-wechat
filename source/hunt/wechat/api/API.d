@@ -9,9 +9,9 @@ module hunt.wechat.api.API;
  * @author LiYi
  *
  */
-public class API {
+class API {
 
-	private static final string KEY_JOIN = "#";
+	private enum string KEY_JOIN = "#";
 
 	private static APIHandler apiHandler;
 
@@ -104,7 +104,7 @@ public class API {
 		API.apiHandler = apiHandler;
 	}
 
-	public interface APIHandler {
+	interface APIHandler {
 
 		public string accessToken(string component_appid, string authorizer_appid);
 

@@ -7,17 +7,17 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceApplyStatus {
+class DeviceApplyStatus {
 
 	/**
-	 * 批次ID，申请设备ID时所返回的批次ID<br>
+	 * 批次ID，申请设备ID时所返回的批次ID
 	 * 必填
 	 */
 	@JSONField(name = "apply_id")
 	private Integer applyId;
 
 	/**
-	 * 批次ID，申请设备ID时所返回的批次ID<br>
+	 * 批次ID，申请设备ID时所返回的批次ID
 	 * 必填
 	 * @return 批次ID
 	 */
@@ -26,7 +26,7 @@ public class DeviceApplyStatus {
 	}
 
 	/**
-	 * 批次ID，申请设备ID时所返回的批次ID<br>
+	 * 批次ID，申请设备ID时所返回的批次ID
 	 * 必填
 	 * @param applyId 批次ID
 	 */

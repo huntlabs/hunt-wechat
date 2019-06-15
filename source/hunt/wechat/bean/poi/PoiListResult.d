@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class PoiListResult : BaseResult {
+class PoiListResult : BaseResult {
 
 	@JSONField(name = "business_list")
 	private BusinessResult[] businessList;

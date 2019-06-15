@@ -29,9 +29,9 @@ import hunt.wechat.util.XMLConverUtil;
  * @author LiYi
  *
  */
-public class PayMchAPI : BaseAPI{
+class PayMchAPI : BaseAPI{
 	
-	private static ThreadLocal<Boolean> sandboxnew = new ThreadLocal<Boolean>();
+	private static ThreadLocal!(Boolean) sandboxnew = new ThreadLocal!(Boolean)();
 	
 	/**
 	 * 仿真测试 开始
@@ -72,7 +72,7 @@ public class PayMchAPI : BaseAPI{
 		MchBaseResult mchBaseResult = new MchBaseResult();
 		mchBaseResult.setMch_id(mch_id);
 		mchBaseResult.setNonce_str(UUID.randomUUID().toString().replace("-", ""));
-		Map<string,string> map = MapUtil.objectToMap(mchBaseResult);
+		Map!(string,string) map = MapUtil.objectToMap(mchBaseResult);
 		string sign = SignatureUtil.generateSign(map,mchBaseResult.getSign_type(),key);
 		mchBaseResult.setSign(sign);
 		string closeorderXML = XMLConverUtil.convertToXML(mchBaseResult);
@@ -91,7 +91,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return UnifiedorderResult
 	 */
 	public static UnifiedorderResult payUnifiedorder(Unifiedorder unifiedorder,string key){
-		Map<string,string> map = MapUtil.objectToMap(unifiedorder, "detail", "scene_info");
+		Map!(string,string) map = MapUtil.objectToMap(unifiedorder, "detail", "scene_info");
 		//@since 2.8.8 detail 字段签名处理
 		if(unifiedorder.getDetail() != null){
 			map.put("detail",JsonUtil.toJSONString(unifiedorder.getDetail()));
@@ -120,7 +120,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return MicropayResult
 	 */
 	public static MicropayResult payMicropay(Micropay micropay,string key){
-		Map<string,string> map = MapUtil.objectToMap(micropay);
+		Map!(string,string) map = MapUtil.objectToMap(micropay);
 		//@since 2.8.14 detail 字段签名处理
 		if(micropay.getDetail() != null){
 			map.put("detail",JsonUtil.toJSONString(micropay.getDetail()));
@@ -147,7 +147,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return MchOrderInfoResult
 	 */
 	public static MchOrderInfoResult payOrderquery(MchOrderquery mchOrderquery,string key){
-		Map<string,string> map = MapUtil.objectToMap(mchOrderquery);
+		Map!(string,string) map = MapUtil.objectToMap(mchOrderquery);
 		string sign = SignatureUtil.generateSign(map,mchOrderquery.getSign_type(),key);
 		mchOrderquery.setSign(sign);
 		string closeorderXML = XMLConverUtil.convertToXML(mchOrderquery);
@@ -168,7 +168,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return MchBaseResult
 	 */
 	public static MchBaseResult payCloseorder(Closeorder closeorder,string key){
-		Map<string,string> map = MapUtil.objectToMap(closeorder);
+		Map!(string,string) map = MapUtil.objectToMap(closeorder);
 		string sign = SignatureUtil.generateSign(map,closeorder.getSign_type(),key);
 		closeorder.setSign(sign);
 		string closeorderXML = XMLConverUtil.convertToXML(closeorder);
@@ -192,7 +192,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return SecapiPayRefundResult
 	 */
 	public static SecapiPayRefundResult secapiPayRefund(SecapiPayRefund secapiPayRefund,string key){
-		Map<string,string> map = MapUtil.objectToMap( secapiPayRefund);
+		Map!(string,string) map = MapUtil.objectToMap( secapiPayRefund);
 		string sign = SignatureUtil.generateSign(map,secapiPayRefund.getSign_type(),key);
 		secapiPayRefund.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( secapiPayRefund);
@@ -206,14 +206,14 @@ public class PayMchAPI : BaseAPI{
 
 	/**
 	 * 撤销订单
-	 * 7天以内的交易单可调用撤销，其他正常支付的单如需实现相同功能请调用申请退款API。提交支付交易后调用【查询订单API】，没有明确的支付结果再调用【撤销订单API】。<br>
+	 * 7天以内的交易单可调用撤销，其他正常支付的单如需实现相同功能请调用申请退款API。提交支付交易后调用【查询订单API】，没有明确的支付结果再调用【撤销订单API】。
 	 * 调用支付接口后请勿立即调用撤销订单API，建议支付后至少15s后再调用撤销订单接口。
 	 * @param mchReverse mchReverse
 	 * @param key key
 	 * @return MchReverseResult
 	 */
 	public static MchReverseResult secapiPayReverse(MchReverse mchReverse,string key){
-		Map<string,string> map = MapUtil.objectToMap( mchReverse);
+		Map!(string,string) map = MapUtil.objectToMap( mchReverse);
 		string sign = SignatureUtil.generateSign(map,mchReverse.getSign_type(),key);
 		mchReverse.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( mchReverse);
@@ -235,7 +235,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return RefundqueryResult
 	 */
 	public static RefundqueryResult payRefundquery(Refundquery refundquery,string key){
-		Map<string,string> map = MapUtil.objectToMap(refundquery);
+		Map!(string,string) map = MapUtil.objectToMap(refundquery);
 		string sign = SignatureUtil.generateSign(map,refundquery.getSign_type(),key);
 		refundquery.setSign(sign);
 		string refundqueryXML = XMLConverUtil.convertToXML(refundquery);
@@ -254,7 +254,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return DownloadbillResult
 	 */
 	public static DownloadbillResult payDownloadbill(MchDownloadbill downloadbill,string key){
-		Map<string,string> map = MapUtil.objectToMap(downloadbill);
+		Map!(string,string) map = MapUtil.objectToMap(downloadbill);
 		string sign = SignatureUtil.generateSign(map,downloadbill.getSign_type(),key);
 		downloadbill.setSign(sign);
 		string closeorderXML = XMLConverUtil.convertToXML(downloadbill);
@@ -263,7 +263,7 @@ public class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/downloadbill")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.execute(httpUriRequest,new ResponseHandler<DownloadbillResult>() {
+		return LocalHttpClient.execute(httpUriRequest,new ResponseHandler!(DownloadbillResult)() {
 
 			override
 			public DownloadbillResult handleResponse(HttpResponse response)
@@ -302,25 +302,25 @@ public class PayMchAPI : BaseAPI{
 	}
 
 	/**
-	 * 下载资金账单<br>
-	 * 商户可以通过该接口下载自2017年6月1日起 的历史资金流水账单。<br>
-	 * 说明：<br>
-	 * 1、资金账单中的数据反映的是商户微信账户资金变动情况；<br>
-	 * 2、当日账单在次日上午9点开始生成，建议商户在上午10点以后获取；<br>
-	 * 3、资金账单中涉及金额的字段单位为“元”。<br>
+	 * 下载资金账单
+	 * 商户可以通过该接口下载自2017年6月1日起 的历史资金流水账单。
+	 * 说明：
+	 * 1、资金账单中的数据反映的是商户微信账户资金变动情况；
+	 * 2、当日账单在次日上午9点开始生成，建议商户在上午10点以后获取；
+	 * 3、资金账单中涉及金额的字段单位为“元”。
 	 * @since 2.8.18
 	 * @param payDownloadfundflow payDownloadfundflow
 	 * @param key key
-	 * @return PayDownloadfundflowResult 对象，请求成功时包含以下数据：<br>
-	 * data 文本表格数据 <br>
-	 * sign_type 签名类型 <br>
+	 * @return PayDownloadfundflowResult 对象，请求成功时包含以下数据：
+	 * data 文本表格数据 
+	 * sign_type 签名类型 
 	 * sign 签名
 	 */
 	public static PayDownloadfundflowResult payDownloadfundflow(PayDownloadfundflow payDownloadfundflow,string key){
-		Map<string,string> map = MapUtil.objectToMap(payDownloadfundflow);
+		Map!(string,string) map = MapUtil.objectToMap(payDownloadfundflow);
 		string sign_type = map.get("sign_type");
 		//设置默认签名类型HMAC-SHA256
-		if(sign_type == null || "".equals(sign_type)){
+		if(sign_type == null || ""== sign_type){
 			sign_type = "HMAC-SHA256";
 		}
 		string sign = SignatureUtil.generateSign(map,sign_type,key);
@@ -331,7 +331,7 @@ public class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/downloadfundflow")
 				.setEntity(new StringEntity(xmlData,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecute(payDownloadfundflow.getMch_id(),httpUriRequest,new ResponseHandler<PayDownloadfundflowResult>() {
+		return LocalHttpClient.keyStoreExecute(payDownloadfundflow.getMch_id(),httpUriRequest,new ResponseHandler!(PayDownloadfundflowResult)() {
 	
 					override
 					public PayDownloadfundflowResult handleResponse(HttpResponse response)
@@ -376,7 +376,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return MchShorturlResult
 	 */
 	public static MchShorturlResult toolsShorturl(MchShorturl shorturl,string key){
-		Map<string,string> map = MapUtil.objectToMap(shorturl);
+		Map!(string,string) map = MapUtil.objectToMap(shorturl);
 		string sign = SignatureUtil.generateSign(map,shorturl.getSign_type(),key);
 		shorturl.setSign(sign);
 		string shorturlXML = XMLConverUtil.convertToXML(shorturl);
@@ -395,7 +395,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return AuthcodetoopenidResult
 	 */
 	public static AuthcodetoopenidResult toolsAuthcodetoopenid(Authcodetoopenid authcodetoopenid,string key){
-		Map<string,string> map = MapUtil.objectToMap(authcodetoopenid);
+		Map!(string,string) map = MapUtil.objectToMap(authcodetoopenid);
 		string sign = SignatureUtil.generateSign(map,authcodetoopenid.getSign_type(),key);
 		authcodetoopenid.setSign(sign);
 		string shorturlXML = XMLConverUtil.convertToXML(authcodetoopenid);
@@ -408,14 +408,14 @@ public class PayMchAPI : BaseAPI{
 	}
 
 	/**
-	 * 交易保障 <br> 
+	 * 交易保障  
 	 * 测速上报
 	 * @param report report
 	 * @param key key
 	 * @return MchBaseResult
 	 */
 	public static MchBaseResult payitilReport(Report report,string key){
-		Map<string,string> map = MapUtil.objectToMap(report);
+		Map!(string,string) map = MapUtil.objectToMap(report);
 		string sign = SignatureUtil.generateSign(map,report.getSign_type(),key);
 		report.setSign(sign);
 		string shorturlXML = XMLConverUtil.convertToXML(report);
@@ -434,7 +434,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return SendCouponResult
 	 */
 	public static SendCouponResult mmpaymkttransfersSend_coupon(SendCoupon sendCoupon,string key){
-		Map<string,string> map = MapUtil.objectToMap( sendCoupon);
+		Map!(string,string) map = MapUtil.objectToMap( sendCoupon);
 		string sign = SignatureUtil.generateSign(map,sendCoupon.getSign_type(),key);
 		sendCoupon.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( sendCoupon);
@@ -453,7 +453,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return QueryCouponStockResult
 	 */
 	public static QueryCouponStockResult mmpaymkttransfersQuery_coupon_stock(QueryCouponStock queryCouponStock,string key){
-		Map<string,string> map = MapUtil.objectToMap( queryCouponStock);
+		Map!(string,string) map = MapUtil.objectToMap( queryCouponStock);
 		string sign = SignatureUtil.generateSign(map,queryCouponStock.getSign_type(),key);
 		queryCouponStock.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( queryCouponStock);
@@ -472,7 +472,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return QueryCouponResult
 	 */
 	public static QueryCouponResult promotionQuery_coupon(QueryCoupon queryCoupon,string key){
-		Map<string,string> map = MapUtil.objectToMap( queryCoupon);
+		Map!(string,string) map = MapUtil.objectToMap( queryCoupon);
 		string sign = SignatureUtil.generateSign(map,queryCoupon.getSign_type(),key);
 		queryCoupon.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( queryCoupon);
@@ -485,16 +485,16 @@ public class PayMchAPI : BaseAPI{
 	}
 
 	/**
-	 * 现金红包 <br>
+	 * 现金红包 
 	 *
-	 * 1.发送频率限制------默认1800/min <br>
-	 * 2.发送个数上限------按照默认1800/min算<br>
-	 * 3.金额上限------根据传入场景id不同默认上限不同，可以在商户平台产品设置进行设置和申请，最大不大于4999元/个<br>
-	 * 4.其他的“量”上的限制还有哪些？------用户当天的领取上限次数,默认是10<br>
-	 * 5.如果量上满足不了我们的需求，如何提高各个上限？------金额上限和用户当天领取次数上限可以在商户平台进行设置<br>
-	 * 注 <br>
+	 * 1.发送频率限制------默认1800/min 
+	 * 2.发送个数上限------按照默认1800/min算
+	 * 3.金额上限------根据传入场景id不同默认上限不同，可以在商户平台产品设置进行设置和申请，最大不大于4999元/个
+	 * 4.其他的“量”上的限制还有哪些？------用户当天的领取上限次数,默认是10
+	 * 5.如果量上满足不了我们的需求，如何提高各个上限？------金额上限和用户当天领取次数上限可以在商户平台进行设置
+	 * 注 
 	 * 1：如果你是服务商，希望代你的特约商户发红包，你可以申请获得你特约商户的“现金红包产品授权”。操作路径如下：【登录商户平台-产品中心-
-	 * 特约商户授权产品】（即将上线） <br>
+	 * 特约商户授权产品】（即将上线） 
 	 * 2：红包金额大于200时，请求参数scene_id必传
 	 * 
 	 * @param sendredpack
@@ -504,7 +504,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return SendredpackResult
 	 */
 	public static SendredpackResult mmpaymkttransfersSendredpack(Sendredpack sendredpack,string key){
-		Map<string,string> map = MapUtil.objectToMap( sendredpack);
+		Map!(string,string) map = MapUtil.objectToMap( sendredpack);
 		string sign = SignatureUtil.generateSign(map,sendredpack.getSign_type(),key);
 		sendredpack.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( sendredpack);
@@ -517,14 +517,14 @@ public class PayMchAPI : BaseAPI{
 	}
 
 	/**
-	 * 裂变红包 <br>
+	 * 裂变红包 
 	 * 一次可以发放一组红包。首先领取的用户为种子用户，种子用户领取一组红包当中的一个，并可以通过社交分享将剩下的红包给其他用户。裂变红包充分利用了人际传播的优势。
 	 * @param sendgroupredpack sendgroupredpack
 	 * @param key key
 	 * @return SendredpackResult
 	 */
 	public static SendredpackResult mmpaymkttransfersSendgroupredpack(Sendgroupredpack sendgroupredpack,string key){
-		Map<string,string> map = MapUtil.objectToMap( sendgroupredpack);
+		Map!(string,string) map = MapUtil.objectToMap( sendgroupredpack);
 		string sign = SignatureUtil.generateSign(map,sendgroupredpack.getSign_type(),key);
 		sendgroupredpack.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( sendgroupredpack);
@@ -537,7 +537,7 @@ public class PayMchAPI : BaseAPI{
 	}
 	
 	/**
-	 * 查询红包记录 <br>
+	 * 查询红包记录 
 	 * 用于商户对已发放的红包进行查询红包的具体信息，可支持普通红包和裂变包。
 	 * @since 2.8.5
 	 * @param gethbinfo gethbinfo
@@ -545,7 +545,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return GethbinfoResult
 	 */
 	public static GethbinfoResult mmpaymkttransfersGethbinfo(Gethbinfo gethbinfo,string key){
-		Map<string,string> map = MapUtil.objectToMap( gethbinfo);
+		Map!(string,string) map = MapUtil.objectToMap( gethbinfo);
 		string sign = SignatureUtil.generateSign(map,gethbinfo.getSign_type(),key);
 		gethbinfo.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( gethbinfo);
@@ -559,14 +559,14 @@ public class PayMchAPI : BaseAPI{
 
 
 	/**
-	 * 企业付款 <br>
-	 * 接口调用规则：<br>
-	 * 给同一个实名用户付款，单笔单日限额2W/2W<br>
-	 * 给同一个非实名用户付款，单笔单日限额2000/2000<br>
-	 * 一个商户同一日付款总额限额100W<br>
-	 * 单笔最小金额默认为1元<br>
-	 * 每个用户每天最多可付款10次，可以在商户平台--API安全进行设置<br>
-	 * 给同一个用户付款时间间隔不得低于15秒<br>
+	 * 企业付款 
+	 * 接口调用规则：
+	 * 给同一个实名用户付款，单笔单日限额2W/2W
+	 * 给同一个非实名用户付款，单笔单日限额2000/2000
+	 * 一个商户同一日付款总额限额100W
+	 * 单笔最小金额默认为1元
+	 * 每个用户每天最多可付款10次，可以在商户平台--API安全进行设置
+	 * 给同一个用户付款时间间隔不得低于15秒
 	 * 
 	 * @param transfers
 	 *            transfers
@@ -575,7 +575,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return TransfersResult
 	 */
 	public static TransfersResult mmpaymkttransfersPromotionTransfers(Transfers transfers,string key){
-		Map<string,string> map = MapUtil.objectToMap( transfers);
+		Map!(string,string) map = MapUtil.objectToMap( transfers);
 		string sign = SignatureUtil.generateSign(map,transfers.getSign_type(),key);
 		transfers.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( transfers);
@@ -595,7 +595,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return GettransferinfoResult
 	 */
 	public static GettransferinfoResult mmpaymkttransfersGettransferinfo(Gettransferinfo gettransferinfo,string key){
-		Map<string,string> map = MapUtil.objectToMap( gettransferinfo);
+		Map!(string,string) map = MapUtil.objectToMap( gettransferinfo);
 		string sign = SignatureUtil.generateSign(map,gettransferinfo.getSign_type(),key);
 		gettransferinfo.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( gettransferinfo);
@@ -614,7 +614,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return PayContractorderResult
 	 */
 	public static PayContractorderResult payContractorder(PayContractorder payContractorder,string key){
-		Map<string,string> map = MapUtil.objectToMap(payContractorder);
+		Map!(string,string) map = MapUtil.objectToMap(payContractorder);
 		string sign = SignatureUtil.generateSign(map,payContractorder.getSign_type(),key);
 		payContractorder.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( payContractorder);
@@ -633,7 +633,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return PappayapplyResult
 	 */
 	public static PappayapplyResult payPappayapply(Pappayapply pappayapply,string key){
-		Map<string,string> map = MapUtil.objectToMap( pappayapply);
+		Map!(string,string) map = MapUtil.objectToMap( pappayapply);
 		string sign = SignatureUtil.generateSign(map,pappayapply.getSign_type(),key);
 		pappayapply.setSign(sign);
 		string secapiPayRefundXML = XMLConverUtil.convertToXML( pappayapply);
@@ -652,7 +652,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return MchOrderInfoResult
 	 */
 	public static MchOrderInfoResult payPaporderquery(MchOrderquery mchOrderquery,string key){
-		Map<string,string> map = MapUtil.objectToMap(mchOrderquery);
+		Map!(string,string) map = MapUtil.objectToMap(mchOrderquery);
 		string sign = SignatureUtil.generateSign(map,mchOrderquery.getSign_type(),key);
 		mchOrderquery.setSign(sign);
 		string closeorderXML = XMLConverUtil.convertToXML(mchOrderquery);
@@ -671,7 +671,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return PapayQuerycontractResult
 	 */
 	public static PapayQuerycontractResult papayQuerycontract(PapayQuerycontract papayQuerycontract,string key){
-		Map<string,string> map = MapUtil.objectToMap(papayQuerycontract);
+		Map!(string,string) map = MapUtil.objectToMap(papayQuerycontract);
 		string sign = SignatureUtil.generateSign(map,papayQuerycontract.getSign_type(),key);
 		papayQuerycontract.setSign(sign);
 		string closeorderXML = XMLConverUtil.convertToXML(papayQuerycontract);
@@ -690,7 +690,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return PapayDeletecontractResult
 	 */
 	public static PapayDeletecontractResult papayDeletecontract(PapayDeletecontract papayDeletecontract,string key){
-		Map<string,string> map = MapUtil.objectToMap(papayDeletecontract);
+		Map!(string,string) map = MapUtil.objectToMap(papayDeletecontract);
 		string sign = SignatureUtil.generateSign(map,papayDeletecontract.getSign_type(),key);
 		papayDeletecontract.setSign(sign);
 		string closeorderXML = XMLConverUtil.convertToXML(papayDeletecontract);
@@ -712,14 +712,14 @@ public class PayMchAPI : BaseAPI{
 	 * @return PapayH5entrustwebResult
 	 */
 	public static PapayH5entrustwebResult papayH5entrustweb(PapayEntrustweb papayEntrustweb, string key) {
-		Map<string, string> map = MapUtil.objectToMap(papayEntrustweb);
+		Map!(string, string) map = MapUtil.objectToMap(papayEntrustweb);
 		string sign = SignatureUtil.generateSign(map, "HMAC-SHA256", key);
 		map.put("sign", sign);
 		RequestBuilder requestBuilder = RequestBuilder
 				.get()
 				.setUri(baseURI() + "/papay/h5entrustweb");
-		for (Map.Entry<string, string> entry : map.entrySet()) {
-			if (entry.getValue() != null && !"".equals(entry.getValue())) {
+		for (Map.Entry!(string, string) entry : map.entrySet()) {
+			if (entry.getValue() != null && !""== entry.getValue()) {
 				requestBuilder.addParameter(entry.getKey(), entry.getValue());
 			}
 		}
@@ -735,7 +735,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return SecapiPayProfitsharingResult
 	 */
 	public static SecapiPayProfitsharingResult secapiPayProfitsharing(SecapiPayProfitsharing secapiPayProfitsharing,string key){
-		Map<string,string> map = MapUtil.objectToMap(secapiPayProfitsharing, "receivers");
+		Map!(string,string) map = MapUtil.objectToMap(secapiPayProfitsharing, "receivers");
 		if(secapiPayProfitsharing.getReceivers() != null){
 			map.put("receivers", JsonUtil.toJSONString(secapiPayProfitsharing.getReceivers()));
 		}
@@ -758,7 +758,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return SecapiPayProfitsharingResult
 	 */
 	public static SecapiPayProfitsharingResult secapiPayMultiprofitsharing(SecapiPayProfitsharing secapiPayProfitsharing,string key){
-		Map<string,string> map = MapUtil.objectToMap(secapiPayProfitsharing, "receivers");
+		Map!(string,string) map = MapUtil.objectToMap(secapiPayProfitsharing, "receivers");
 		if(secapiPayProfitsharing.getReceivers() != null){
 			map.put("receivers", JsonUtil.toJSONString(secapiPayProfitsharing.getReceivers()));
 		}
@@ -781,7 +781,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return SecapiPayProfitsharingfinishResult
 	 */
 	public static SecapiPayProfitsharingfinishResult secapiPayProfitsharingfinish(SecapiPayProfitsharingfinish profitsharingfinish,string key){
-		Map<string,string> map = MapUtil.objectToMap(profitsharingfinish);
+		Map!(string,string) map = MapUtil.objectToMap(profitsharingfinish);
 		string sign = SignatureUtil.generateSign(map,profitsharingfinish.getSign_type() == null? "HMAC-SHA256": profitsharingfinish.getSign_type(),key);
 		profitsharingfinish.setSign(sign);
 		string xml = XMLConverUtil.convertToXML(profitsharingfinish);
@@ -801,7 +801,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return PayProfitsharingqueryResult
 	 */
 	public static PayProfitsharingqueryResult payProfitsharingquery(PayProfitsharingquery payProfitsharingquery,string key){
-		Map<string,string> map = MapUtil.objectToMap(payProfitsharingquery);
+		Map!(string,string) map = MapUtil.objectToMap(payProfitsharingquery);
 		string sign = SignatureUtil.generateSign(map,payProfitsharingquery.getSign_type() == null? "HMAC-SHA256": payProfitsharingquery.getSign_type(),key);
 		payProfitsharingquery.setSign(sign);
 		string xml = XMLConverUtil.convertToXML(payProfitsharingquery);
@@ -821,7 +821,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return MchBaseResult
 	 */
 	public static MchBaseResult payProfitsharingaddreceiver(PayProfitsharingOperation payProfitsharingOperation,string key){
-		Map<string,string> map = MapUtil.objectToMap(payProfitsharingOperation, "receiver");
+		Map!(string,string) map = MapUtil.objectToMap(payProfitsharingOperation, "receiver");
 		if(payProfitsharingOperation.getReceiver() != null){
 			map.put("receiver", JsonUtil.toJSONString(payProfitsharingOperation.getReceiver()));
 		}
@@ -844,7 +844,7 @@ public class PayMchAPI : BaseAPI{
 	 * @return MchBaseResult
 	 */
 	public static MchBaseResult payProfitsharingremovereceiver(PayProfitsharingOperation payProfitsharingOperation,string key){
-		Map<string,string> map = MapUtil.objectToMap(payProfitsharingOperation, "receiver");
+		Map!(string,string) map = MapUtil.objectToMap(payProfitsharingOperation, "receiver");
 		if(payProfitsharingOperation.getReceiver() != null){
 			map.put("receiver", JsonUtil.toJSONString(payProfitsharingOperation.getReceiver()));
 		}

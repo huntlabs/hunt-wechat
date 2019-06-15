@@ -9,8 +9,8 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import com.qq.weixin.mp.aes.PKCS7Encoder;
 
@@ -22,9 +22,8 @@ import hunt.wechat.bean.wxa.WxaUserInfo;
  * @author liyi
  * @since 2.8.18
  */
-public abstract class WxaUtil {
+abstract class WxaUtil {
 
-	private static Logger logger = LoggerFactory.getLogger(WxaUtil.class);
 	
 	/**
 	 * 解密用户数据
@@ -62,7 +61,7 @@ public abstract class WxaUtil {
 	 */
 	public static WxaUserInfo validateUserInfo(string session_key, string rawData, string signature) {
 		try {
-			if (DigestUtils.shaHex(rawData + session_key).equals(signature)) {
+			if (DigestUtils.shaHex(rawData + session_key)== signature) {
 				return JsonUtil.parseObject(rawData, WxaUserInfo.class);
 			}
 		} catch (Exception e) {

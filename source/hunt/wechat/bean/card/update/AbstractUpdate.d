@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public abstract class AbstractUpdate {
+abstract class AbstractUpdate {
 
 	/**
 	 * 卡券ID，必填

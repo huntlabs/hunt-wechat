@@ -20,7 +20,7 @@ import hunt.wechat.util.JsonUtil;
  * @author Moyq5
  *
  */
-public class PoiAPI : BaseAPI {
+class PoiAPI : BaseAPI {
 
 	/**
 	 * 创建门店

@@ -6,10 +6,10 @@ module hunt.wechat.bean.card.BaseInfoSku;
  * @author Moyq5
  *
  */
-public class BaseInfoSku {
+class BaseInfoSku {
 
 	/**
-	 * 卡券库存的数量，上限为100000000。<br>
+	 * 卡券库存的数量，上限为100000000。
 	 * 添加必填
 	 */
 	private Integer quantity;
@@ -22,7 +22,7 @@ public class BaseInfoSku {
 	}
 
 	/**
-	 * 卡券库存的数量，上限为100000000。<br>
+	 * 卡券库存的数量，上限为100000000。
 	 * 添加必填
 	 */
 	public void setQuantity(Integer quantity) {

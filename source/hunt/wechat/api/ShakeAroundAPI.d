@@ -14,8 +14,8 @@ import hunt.text.Charset;
 //import org.apache.http.entity.mime.MultipartEntityBuilder;
 //import org.apache.http.entity.mime.content.FileBody;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.shakearound.account.auditstatus.AccountAuditStatusResult;
 import hunt.wechat.bean.shakearound.account.register.AccountRegister;
@@ -82,9 +82,8 @@ import hunt.wechat.util.StreamUtils;
  *
  * @author Moyq5
  */
-public class ShakeAroundAPI : BaseAPI {
+class ShakeAroundAPI : BaseAPI {
 
-    private static Logger logger = LoggerFactory.getLogger(ShakeAroundAPI.class);
 
     /**
      * 申请开通功能－查询审核状态

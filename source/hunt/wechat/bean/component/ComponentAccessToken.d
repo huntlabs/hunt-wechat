@@ -2,7 +2,7 @@ module hunt.wechat.bean.component.ComponentAccessToken;
 
 import hunt.wechat.bean.BaseResult;
 
-public class ComponentAccessToken : BaseResult{
+class ComponentAccessToken : BaseResult{
 
 	private string component_access_token;
 

@@ -1,6 +1,6 @@
 module hunt.wechat.bean.scan.infolist.DetailList;
 
-public class DetailList {
+class DetailList {
     private string  title;
     private string  desc;
 

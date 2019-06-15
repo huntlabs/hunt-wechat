@@ -6,22 +6,22 @@ import hunt.collection.Map;
 import hunt.wechat.bean.message.preview.Preview;
 import hunt.wechat.bean.message.preview.TextPreview;
 
-public class MassTextMessage : MassMessage{
+class MassTextMessage : MassMessage{
 
-	private Map<string, string> text;
+	private Map!(string, string) text;
 
 	public MassTextMessage(string content) {
 		super();
-		text = new HashMap<string, string>();
+		text = new HashMap!(string, string)();
 		text.put("content",content);
 		super.msgtype = "text";
 	}
 
-	public Map<string, string> getText() {
+	public Map!(string, string) getText() {
 		return text;
 	}
 
-	public void setText(Map<string, string> text) {
+	public void setText(Map!(string, string) text) {
 		this.text = text;
 	}
 

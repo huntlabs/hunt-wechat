@@ -2,7 +2,7 @@ module hunt.wechat.bean.sns.SnsToken;
 
 import hunt.wechat.bean.BaseResult;
 
-public class SnsToken : BaseResult{
+class SnsToken : BaseResult{
 
 	private string access_token;
 

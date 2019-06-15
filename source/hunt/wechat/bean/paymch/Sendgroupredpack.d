@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Sendgroupredpack {
+class Sendgroupredpack {
 
     private string nonce_str;
 

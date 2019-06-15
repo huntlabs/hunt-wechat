@@ -8,7 +8,7 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 15:41
  * @Description:
  */
-public class ApportalRegister : ShopInfo {
+class ApportalRegister : ShopInfo {
     private Boolean reset;
 
     public Boolean getReset() {

@@ -12,10 +12,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class RelationSearch {
+class RelationSearch {
 
 	/**
-	 * 查询方式。1： 查询设备的关联关系；2：查询页面的关联关系<br>
+	 * 查询方式。1： 查询设备的关联关系；2：查询页面的关联关系
 	 * 必填
 	 */
 	private Integer type;
@@ -43,7 +43,7 @@ public class RelationSearch {
 	private Integer count;
 
 	/**
-	 * 查询方式。1： 查询设备的关联关系；2：查询页面的关联关系<br>
+	 * 查询方式。1： 查询设备的关联关系；2：查询页面的关联关系
 	 * 必填
 	 * @return 查询方式
 	 */
@@ -52,7 +52,7 @@ public class RelationSearch {
 	}
 
 	/**
-	 * 查询方式。1： 查询设备的关联关系；2：查询页面的关联关系<br>
+	 * 查询方式。1： 查询设备的关联关系；2：查询页面的关联关系
 	 * 必填
 	 * @param type 查询方式
 	 */

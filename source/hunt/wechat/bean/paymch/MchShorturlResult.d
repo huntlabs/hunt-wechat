@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MchShorturlResult : MchBase{
+class MchShorturlResult : MchBase{
 
 	@XmlElement
 	private string short_url;

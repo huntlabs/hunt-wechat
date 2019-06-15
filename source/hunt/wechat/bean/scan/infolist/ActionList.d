@@ -1,6 +1,6 @@
 module hunt.wechat.bean.scan.infolist.ActionList;
 
-public class ActionList {
+class ActionList {
     private string  type;
     private string  retail_price;
     private string  name;

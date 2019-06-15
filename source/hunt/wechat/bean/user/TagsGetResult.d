@@ -10,15 +10,15 @@ import hunt.wechat.bean.BaseResult;
  * @author LiYi
  * 
  */
-public class TagsGetResult : BaseResult {
+class TagsGetResult : BaseResult {
 
-	private List<Tag> tags;
+	private List!(Tag) tags;
 
-	public List<Tag> getTags() {
+	public List!(Tag) getTags() {
 		return tags;
 	}
 
-	public void setTags(List<Tag> tags) {
+	public void setTags(List!(Tag) tags) {
 		this.tags = tags;
 	}
 	

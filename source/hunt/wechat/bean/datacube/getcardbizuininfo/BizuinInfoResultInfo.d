@@ -7,7 +7,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class BizuinInfoResultInfo {
+class BizuinInfoResultInfo {
 
 	/**
 	 * 日期信息

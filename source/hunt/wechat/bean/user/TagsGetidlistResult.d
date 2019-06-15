@@ -2,7 +2,7 @@ module hunt.wechat.bean.user.TagsGetidlistResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class TagsGetidlistResult : BaseResult{
+class TagsGetidlistResult : BaseResult{
 
 	private Integer[] tagid_list;
 

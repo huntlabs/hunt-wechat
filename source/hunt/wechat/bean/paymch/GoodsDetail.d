@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.GoodsDetail;
 
-public class GoodsDetail {
+class GoodsDetail {
 
 	private string goods_id; // 必填 32 商品的编号
 

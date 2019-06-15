@@ -6,19 +6,17 @@ import hunt.util.Serialize;
 import java.io.UnsupportedEncodingException;
 import java.util.UUID;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import com.qq.weixin.mp.aes.AesException;
 import com.qq.weixin.mp.aes.WXBizMsgCrypt;
 
 import hunt.wechat.bean.message.message.Message;
 
-public abstract class XMLMessage : Serializable{
+abstract class XMLMessage : Serializable{
 	
-	private static Logger logger = LoggerFactory.getLogger(XMLMessage.class);
 
-	private static final long serialVersionUID = 8901661274548077509L;
 
 	protected string toUserName;
 	protected string fromUserName;
@@ -48,7 +46,7 @@ public abstract class XMLMessage : Serializable{
 		sb.append("<xml>");
 		sb.append("<ToUserName><![CDATA["+toUserName+"]]></ToUserName>");
 		sb.append("<FromUserName><![CDATA["+fromUserName+"]]></FromUserName>");
-		sb.append("<CreateTime>"+System.currentTimeMillis()/1000+"</CreateTime>");
+		sb.append("<CreateTime>"+DateTimeHelper.currentTimeMillis()/1000+"</CreateTime>");
 		sb.append("<MsgType><![CDATA["+msgType+"]]></MsgType>");
 		sb.append(subXML());
 		sb.append("</xml>");
@@ -72,7 +70,7 @@ public abstract class XMLMessage : Serializable{
 	public bool outputStreamWrite(OutputStream outputStream,WXBizMsgCrypt bizMsgCrypt){
 		if(bizMsgCrypt != null){
 			try {
-				string outputStr = bizMsgCrypt.encryptMsg(toXML(), System.currentTimeMillis()+"",UUID.randomUUID().toString());
+				string outputStr = bizMsgCrypt.encryptMsg(toXML(), DateTimeHelper.currentTimeMillis()+"",UUID.randomUUID().toString());
 				outputStream.write(outputStr.getBytes("utf-8"));
 				outputStream.flush();
 			} catch (UnsupportedEncodingException e) {

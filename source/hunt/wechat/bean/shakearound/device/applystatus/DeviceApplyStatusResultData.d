@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceApplyStatusResultData {
+class DeviceApplyStatusResultData {
 
 	/**
 	 * 提交申请的时间戳
@@ -25,9 +25,9 @@ public class DeviceApplyStatusResultData {
 	private string auditComment;
 	
 	/**
-	 * 审核状态。0：审核未通过、1：审核中、2：审核已通过；<br>
-	 * 若单次申请的设备ID数量小于等于500个，系统会进行快速审核；<br>
-	 * 若单次申请的设备ID数量大于500个，会在三个工作日内完成审核；<br>
+	 * 审核状态。0：审核未通过、1：审核中、2：审核已通过；
+	 * 若单次申请的设备ID数量小于等于500个，系统会进行快速审核；
+	 * 若单次申请的设备ID数量大于500个，会在三个工作日内完成审核；
 	 */
 	@JSONField(name = "audit_status")
 	private Integer auditStatus;
@@ -69,9 +69,9 @@ public class DeviceApplyStatusResultData {
 	}
 
 	/**
-	 * 审核状态。0：审核未通过、1：审核中、2：审核已通过；<br>
-	 * 若单次申请的设备ID数量小于等于500个，系统会进行快速审核；<br>
-	 * 若单次申请的设备ID数量大于500个，会在三个工作日内完成审核；<br>
+	 * 审核状态。0：审核未通过、1：审核中、2：审核已通过；
+	 * 若单次申请的设备ID数量小于等于500个，系统会进行快速审核；
+	 * 若单次申请的设备ID数量大于500个，会在三个工作日内完成审核；
 	 * @return 审核状态
 	 */
 	public Integer getAuditStatus() {
@@ -79,9 +79,9 @@ public class DeviceApplyStatusResultData {
 	}
 
 	/**
-	 * 审核状态。0：审核未通过、1：审核中、2：审核已通过；<br>
-	 * 若单次申请的设备ID数量小于等于500个，系统会进行快速审核；<br>
-	 * 若单次申请的设备ID数量大于500个，会在三个工作日内完成审核；<br>
+	 * 审核状态。0：审核未通过、1：审核中、2：审核已通过；
+	 * 若单次申请的设备ID数量小于等于500个，系统会进行快速审核；
+	 * 若单次申请的设备ID数量大于500个，会在三个工作日内完成审核；
 	 * @param auditStatus 审核状态
 	 */
 	public void setAuditStatus(Integer auditStatus) {

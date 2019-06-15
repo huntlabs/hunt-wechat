@@ -22,8 +22,8 @@ import java.util.UUID;
 //import org.apache.http.impl.client.CloseableHttpClient;
 //import org.apache.http.impl.client.HttpClients;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.media.Media;
 import hunt.wechat.bean.media.MediaGetResult;
@@ -41,9 +41,8 @@ import hunt.wechat.util.StreamUtils;
  * @author LiYi
  *
  */
-public class MediaAPI : BaseAPI{
+class MediaAPI : BaseAPI{
 	
-	private static Logger logger = LoggerFactory.getLogger(MediaAPI.class);
 
 	/**
 	 * 新增临时素材
@@ -171,14 +170,14 @@ public class MediaAPI : BaseAPI{
 	}
 	
 	/**
-	 * 高清语音素材获取接口 <br>
-	 * 公众号可以使用本接口获取从JSSDK的uploadVoice接口上传的临时语音素材，格式为speex，16K采样率。<br>
+	 * 高清语音素材获取接口 
+	 * 公众号可以使用本接口获取从JSSDK的uploadVoice接口上传的临时语音素材，格式为speex，16K采样率。
 	 * 该音频比上文的临时素材获取接口（格式为amr，8K采样率）更加清晰，适合用作语音识别等对音质要求较高的业务。
 	 * @since 2.8.6
 	 * @param access_token access_token
 	 * @param media_id media_id
-	 * @return MediaGetResult <br>
-	 * 如果speex音频格式不符合业务需求，开发者可在获取后，再自行于本地对该语音素材进行转码。<br>
+	 * @return MediaGetResult 
+	 * 如果speex音频格式不符合业务需求，开发者可在获取后，再自行于本地对该语音素材进行转码。
      * 转码请使用speex的官方解码库 http://speex.org/downloads/ ，并结合微信的解码库（含示例代码：<a href="http://wximg.gtimg.com/shake_tv/mpwiki/declib.zip">下载地址</a>）。
 	 */
 	public static MediaGetResult mediaGetJssdk(string access_token,string media_id){
@@ -269,7 +268,7 @@ public class MediaAPI : BaseAPI{
 	 * @param articles 图文信息 1-10 个
 	 * @return Media
 	 */
-	public static Media mediaUploadnews(string access_token,List<Article> articles){
+	public static Media mediaUploadnews(string access_token,List!(Article) articles){
 		string str = JsonUtil.toJSONString(articles);
 		string messageJson = "{\"articles\":"+str+"}";
 		return mediaUploadnews(access_token, messageJson);

@@ -2,7 +2,7 @@ module hunt.wechat.bean.token.Token;
 
 import hunt.wechat.bean.BaseResult;
 
-public class Token : BaseResult {
+class Token : BaseResult {
 
 	private string access_token;
 	private int expires_in;

@@ -4,7 +4,7 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-public class ApiGetAuthorizerInfoResult : BaseResult {
+class ApiGetAuthorizerInfoResult : BaseResult {
 
 	private Authorizer_info authorizer_info;
 
@@ -26,7 +26,7 @@ public class ApiGetAuthorizerInfoResult : BaseResult {
 		this.authorization_info = authorization_info;
 	}
 
-	public static class Authorizer_info {
+	static class Authorizer_info {
 
 		private string nick_name;
 
@@ -118,7 +118,7 @@ public class ApiGetAuthorizerInfoResult : BaseResult {
 			this.qrcode_url = qrcode_url;
 		}
 
-		public static class Service_type_info {
+		static class Service_type_info {
 
 			private Integer id;
 
@@ -131,7 +131,7 @@ public class ApiGetAuthorizerInfoResult : BaseResult {
 			}
 		}
 
-		public static class Verify_type_info {
+		static class Verify_type_info {
 
 			private Integer id;
 
@@ -144,7 +144,7 @@ public class ApiGetAuthorizerInfoResult : BaseResult {
 			}
 		}
 
-		public static class Business_info {
+		static class Business_info {
 
 			private Integer open_store; // 是否开通微信门店功能
 
@@ -200,11 +200,11 @@ public class ApiGetAuthorizerInfoResult : BaseResult {
 
 	}
 
-	public static class Authorization_info {
+	static class Authorization_info {
 
 		private string authorizer_appid;
 
-		private List<FuncInfo> func_info;
+		private List!(FuncInfo) func_info;
 
 		public string getAuthorizer_appid() {
 			return authorizer_appid;
@@ -214,11 +214,11 @@ public class ApiGetAuthorizerInfoResult : BaseResult {
 			this.authorizer_appid = authorizer_appid;
 		}
 
-		public List<FuncInfo> getFunc_info() {
+		public List!(FuncInfo) getFunc_info() {
 			return func_info;
 		}
 
-		public void setFunc_info(List<FuncInfo> func_info) {
+		public void setFunc_info(List!(FuncInfo) func_info) {
 			this.func_info = func_info;
 		}
 	}

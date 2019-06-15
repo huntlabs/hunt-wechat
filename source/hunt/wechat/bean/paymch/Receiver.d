@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 
-public class Receiver {
+class Receiver {
 
 	private string type;
 
@@ -49,16 +49,16 @@ public class Receiver {
 		this.description = description;
 	}
 
-	static class JsonXmlAdapter : XmlAdapter<string, List<Receiver>> {
+	static class JsonXmlAdapter : XmlAdapter<string, List!(Receiver)> {
 
 		override
-		public string marshal(List<Receiver> v) throws Exception {
+		public string marshal(List!(Receiver) v){
 			return "<![CDATA[" + JSON.toJSONString(v) + "]]>";
 		}
 
 		override
-		public List<Receiver> unmarshal(string v) throws Exception {
-			return JSON.parseObject(v, new TypeReference<List<Receiver>>() {
+		public List!(Receiver) unmarshal(string v){
+			return JSON.parseObject(v, new TypeReference<List!(Receiver)>() {
 			});
 		}
 

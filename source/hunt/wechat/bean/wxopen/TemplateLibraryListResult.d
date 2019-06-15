@@ -4,11 +4,11 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-public class TemplateLibraryListResult : BaseResult {
+class TemplateLibraryListResult : BaseResult {
 
 	private Integer total_count;
 
-	private List<TemplateLibraryListItem> list;
+	private List!(TemplateLibraryListItem) list;
 
 	public Integer getTotal_count() {
 		return total_count;
@@ -18,11 +18,11 @@ public class TemplateLibraryListResult : BaseResult {
 		this.total_count = total_count;
 	}
 
-	public List<TemplateLibraryListItem> getList() {
+	public List!(TemplateLibraryListItem) getList() {
 		return list;
 	}
 
-	public void setList(List<TemplateLibraryListItem> list) {
+	public void setList(List!(TemplateLibraryListItem) list) {
 		this.list = list;
 	}
 

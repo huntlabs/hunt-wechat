@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class LandingPageCreateResult : BaseResult {
+class LandingPageCreateResult : BaseResult {
 
 	/**
 	 * 货架链接。

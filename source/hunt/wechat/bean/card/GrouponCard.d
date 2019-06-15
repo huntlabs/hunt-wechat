@@ -9,7 +9,7 @@ import hunt.wechat.bean.card.Groupon;
  * @author Moyq5
  *
  */
-public class GrouponCard : AbstractCard {
+class GrouponCard : AbstractCard {
 
 	private Groupon groupon;
 

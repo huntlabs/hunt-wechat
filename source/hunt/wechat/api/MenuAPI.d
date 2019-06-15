@@ -20,7 +20,7 @@ import hunt.wechat.util.JsonUtil;
  * @author LiYi
  *
  */
-public class MenuAPI : BaseAPI{
+class MenuAPI : BaseAPI{
 
 	/**
 	 * 创建菜单

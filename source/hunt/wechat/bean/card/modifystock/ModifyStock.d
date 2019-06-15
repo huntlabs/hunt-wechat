@@ -8,10 +8,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class ModifyStock {
+class ModifyStock {
 
 	/**
-	 * 卡券ID。<br>
+	 * 卡券ID。
 	 * 必填：是
 	 */
 	@JSONField(name = "card_id")
@@ -37,7 +37,7 @@ public class ModifyStock {
 	}
 	
 	/**
-	 * 卡券ID。<br>
+	 * 卡券ID。
 	 * 必填：是
 	 * @param cardId 卡券ID
 	 */

@@ -6,22 +6,22 @@ import hunt.collection.Map;
 import hunt.wechat.bean.message.preview.Preview;
 import hunt.wechat.bean.message.preview.WxcardPreview;
 
-public class MassWxcardMessage : MassMessage{
+class MassWxcardMessage : MassMessage{
 
-	private Map<string, string> wxcard;
+	private Map!(string, string) wxcard;
 
 	public MassWxcardMessage(string card_id) {
 		super();
-		wxcard = new HashMap<string, string>();
+		wxcard = new HashMap!(string, string)();
 		wxcard.put("card_id",card_id);
 		super.msgtype = "wxcard";
 	}
 
-	public Map<string, string> getWxcard() {
+	public Map!(string, string) getWxcard() {
 		return wxcard;
 	}
 
-	public void setWxcard(Map<string, string> wxcard) {
+	public void setWxcard(Map!(string, string) wxcard) {
 		this.wxcard = wxcard;
 	}
 

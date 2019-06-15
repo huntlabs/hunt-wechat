@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.qrcode.QrcodeGetResultData;
  * @Date: 2018/7/24 16:46
  * @Description:
  */
-public class QrcodeGetResultData {
+class QrcodeGetResultData {
     private string qrcode_url;
 
     public string getQrcode_url() {

@@ -14,7 +14,7 @@ import hunt.wechat.client.LocalHttpClient;
  * @author LiYi
  *
  */
-public class ShorturlAPI : BaseAPI{
+class ShorturlAPI : BaseAPI{
 
 	/**
 	 * 将一条长链接转成短链接

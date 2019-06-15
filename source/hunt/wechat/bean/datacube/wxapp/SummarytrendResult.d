@@ -2,19 +2,19 @@ module hunt.wechat.bean.datacube.wxapp.SummarytrendResult;
 
 import hunt.collection.List;
 
-public class SummarytrendResult {
+class SummarytrendResult {
 
-	private List<Item> list;
+	private List!(Item) list;
 
-	public List<Item> getList() {
+	public List!(Item) getList() {
 		return list;
 	}
 
-	public void setList(List<Item> list) {
+	public void setList(List!(Item) list) {
 		this.list = list;
 	}
 
-	public static class Item {
+	static class Item {
 		private string ref_date;
 
 		private Integer visit_total;

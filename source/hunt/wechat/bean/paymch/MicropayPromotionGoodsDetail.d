@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.MicropayPromotionGoodsDetail;
 
-public class MicropayPromotionGoodsDetail {
+class MicropayPromotionGoodsDetail {
 
 	private string goods_id;
 

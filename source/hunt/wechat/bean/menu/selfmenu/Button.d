@@ -3,7 +3,7 @@ module hunt.wechat.bean.menu.selfmenu.Button;
 import hunt.collection.List;
 
 
-public class Button {
+class Button {
 
 	private string name;
 
@@ -15,7 +15,7 @@ public class Button {
 	private string appid; // 小程序的appid
 	private string pagepath;// 小程序的页面路径
 
-	private List<Button> list;
+	private List!(Button) list;
 
 
 	private Button sub_button;
@@ -61,12 +61,12 @@ public class Button {
 	}
 
 
-	public List<Button> getList() {
+	public List!(Button) getList() {
 		return list;
 	}
 
 
-	public void setList(List<Button> list) {
+	public void setList(List!(Button) list) {
 		this.list = list;
 	}
 

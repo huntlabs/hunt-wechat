@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeUnavailable {
+class CodeUnavailable {
 
 	/**
 	 * 卡券ID。自定义Code码卡券为必填。
@@ -17,7 +17,7 @@ public class CodeUnavailable {
 	private string cardId;
 	
 	/**
-	 * 设置失效的Code码。<br>
+	 * 设置失效的Code码。
 	 * 必填：是
 	 */
 	private string code;
@@ -45,7 +45,7 @@ public class CodeUnavailable {
 	}
 
 	/**
-	 * 设置失效的Code码。<br>
+	 * 设置失效的Code码。
 	 * 必填：是
 	 * @param code 设置失效的Code码
 	 */

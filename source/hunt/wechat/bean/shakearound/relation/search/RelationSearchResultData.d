@@ -13,12 +13,12 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class RelationSearchResultData {
+class RelationSearchResultData {
 
 	/**
 	 * 关联关系列表
 	 */
-	private List<RelationSearchResultDataRelation> relations;
+	private List!(RelationSearchResultDataRelation) relations;
 	
 	/**
 	 * 设备或页面的关联关系总数
@@ -29,14 +29,14 @@ public class RelationSearchResultData {
 	/**
 	 * @return 关联关系列表
 	 */
-	public List<RelationSearchResultDataRelation> getRelations() {
+	public List!(RelationSearchResultDataRelation) getRelations() {
 		return relations;
 	}
 
 	/**
 	 * @param relations 关联关系列表
 	 */
-	public void setRelations(List<RelationSearchResultDataRelation> relations) {
+	public void setRelations(List!(RelationSearchResultDataRelation) relations) {
 		this.relations = relations;
 	}
 

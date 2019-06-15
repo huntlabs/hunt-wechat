@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.couponput.get.CouponputGetResultData;
  * @Date: 2018/7/24 17:16
  * @Description:
  */
-public class CouponputGetResultData {
+class CouponputGetResultData {
     private Integer shop_id;
     private Integer card_status;
     private string card_id;

@@ -9,19 +9,19 @@ import hunt.wechat.bean.BaseResult;
  * 
  * @author Menng
  */
-public class KFAccount : BaseResult {
+class KFAccount : BaseResult {
 
-	private List<KF_List> kf_list;
+	private List!(KF_List) kf_list;
 
-	public List<KF_List> getKf_list() {
+	public List!(KF_List) getKf_list() {
 		return kf_list;
 	}
 
-	public void setKf_list(List<KF_List> kf_list) {
+	public void setKf_list(List!(KF_List) kf_list) {
 		this.kf_list = kf_list;
 	}
 
-	public static class KF_List {
+	static class KF_List {
 		private string kf_account; // 完整客服账号，格式为：账号前缀@公众号微信号
 		private string kf_headimgurl; // 客服头像
 		private string kf_id; // 客服工号

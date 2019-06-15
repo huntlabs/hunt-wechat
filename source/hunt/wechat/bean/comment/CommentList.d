@@ -1,6 +1,6 @@
 module hunt.wechat.bean.comment.CommentList;
 
-public class CommentList {
+class CommentList {
 
 	private Long msg_data_id; // 群发返回的msg_data_id
 

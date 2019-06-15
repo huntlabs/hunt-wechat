@@ -2,7 +2,7 @@ module hunt.wechat.bean.menu.MenuAddconditionalResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class MenuAddconditionalResult : BaseResult {
+class MenuAddconditionalResult : BaseResult {
 	
 	private string menuid;
 

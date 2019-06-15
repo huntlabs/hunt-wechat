@@ -3,9 +3,8 @@ module hunt.wechat.bean.xmlmessage.XMLTextMessage;
 import hunt.wechat.bean.message.message.Message;
 import hunt.wechat.bean.message.message.TextMessage;
 
-public class XMLTextMessage : XMLMessage {
+class XMLTextMessage : XMLMessage {
 
-	private static final long serialVersionUID = 2457998440521370652L;
 
 	private string content;
 

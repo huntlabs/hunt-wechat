@@ -1,6 +1,6 @@
 module hunt.wechat.bean.message.Uploadvideo;
 
-public class Uploadvideo {
+class Uploadvideo {
 
 	private string media_id;	//此处media_id需通过基础支持中的上传下载多媒体文件来得到
 

@@ -6,7 +6,7 @@ module hunt.wechat.bean.semantic.semproxy.inner.Details;
  * @author: 01
  * @create: 2018-08-18 13:32
  **/
-public class Details {
+class Details {
     private string airline;
     private string hit_str;
     private string answer;

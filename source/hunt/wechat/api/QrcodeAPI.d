@@ -12,8 +12,8 @@ import javax.imageio.ImageIO;
 //import org.apache.http.client.methods.RequestBuilder;
 //import org.apache.http.entity.StringEntity;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.qrcode.QrcodeTicket;
 import hunt.wechat.bean.qrcode.Wxaqrcode;
@@ -25,9 +25,8 @@ import hunt.wechat.util.JsonUtil;
  * @author LiYi
  *
  */
-public class QrcodeAPI : BaseAPI{
+class QrcodeAPI : BaseAPI{
 
-	private static Logger logger = LoggerFactory.getLogger(QrcodeAPI.class);
 
 	/**
 	 * 创建二维码
@@ -107,7 +106,7 @@ public class QrcodeAPI : BaseAPI{
 	}
 
 	/**
-	 * 获取小程序页面二维码 <br>
+	 * 获取小程序页面二维码 
 	 * 小程序码使用 使用 WxaAPI.getwxacode　或　WxaAPI.getwxacodeunlimit
 	 * @since 2.8.8
 	 * @param access_token access_token

@@ -5,7 +5,7 @@ module hunt.wechat.bean.message.message.VoiceMessage;
  *
  * @author LiYi
  */
-public class VoiceMessage : Message {
+class VoiceMessage : Message {
 
     public VoiceMessage() {
     }
@@ -26,7 +26,7 @@ public class VoiceMessage : Message {
         this.voice = voice;
     }
 
-    public static class Voice {
+    static class Voice {
         private string media_id;
 
         public string getMedia_id() {

@@ -1,7 +1,7 @@
 module hunt.wechat.bean.scan.base.ProductGet;
 
 
-public class ProductGet {
+class ProductGet {
     private string keystandard;
     private string keystr;
 

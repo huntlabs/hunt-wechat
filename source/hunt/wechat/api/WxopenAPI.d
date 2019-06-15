@@ -22,7 +22,7 @@ import hunt.wechat.util.JsonUtil;
  * @author LiYi
  * @since 2.8.18
  */
-public class WxopenAPI : BaseAPI {
+class WxopenAPI : BaseAPI {
 	
 	/**
 	 * 获取公众号关联的小程序
@@ -120,7 +120,7 @@ public class WxopenAPI : BaseAPI {
 	 * @param keyword_id_list 开发者自行组合好的模板关键词列表，关键词顺序可以自由搭配（例如[3,5,4]或[4,5,3]），最多支持10个关键词组合
 	 * @return result
 	 */
-	public static TemplateAddResult templateAdd(string access_token,string id,List<Integer> keyword_id_list){
+	public static TemplateAddResult templateAdd(string access_token,string id,List!(Integer) keyword_id_list){
 		string json = string.format("{\"id\":\"%s\",\"keyword_id_list\":%s}", id,JsonUtil.toJSONString(keyword_id_list));
 		HttpUriRequest httpUriRequest = RequestBuilder.post()
 				.setHeader(jsonHeader)

@@ -7,11 +7,10 @@ import hunt.collection.List;
 import hunt.wechat.bean.message.message.Message;
 import hunt.wechat.bean.message.message.NewsMessage;
 
-public class XMLNewsMessage : XMLMessage {
+class XMLNewsMessage : XMLMessage {
 
-	private static final long serialVersionUID = -3297287142409782906L;
 
-	private List<Article> articles;
+	private List!(Article) articles;
 
 	/**
 	 * @param toUserName
@@ -21,7 +20,7 @@ public class XMLNewsMessage : XMLMessage {
 	 * @param articles
 	 *            articles
 	 */
-	public XMLNewsMessage(string toUserName, string fromUserName, List<Article> articles) {
+	public XMLNewsMessage(string toUserName, string fromUserName, List!(Article) articles) {
 		super(toUserName, fromUserName, "news");
 		this.articles = articles;
 	}
@@ -45,7 +44,7 @@ public class XMLNewsMessage : XMLMessage {
 		StringBuilder sb = new StringBuilder();
 		sb.append("<ArticleCount>" + articles.size() + "</ArticleCount>");
 		sb.append("<Articles>");
-		for (Article a : articles) {
+		foreach(Article a ; articles) {
 			sb.append("<item>");
 			sb.append("<Title><![CDATA[" + (a.title == null ? "" : a.title) + "]]></Title>");
 			sb.append("<Description><![CDATA[" + (a.description == null ? "" : a.description) + "]]></Description>");
@@ -61,7 +60,7 @@ public class XMLNewsMessage : XMLMessage {
 	public Message convert() {
 		List<NewsMessage.Article> list = new ArrayList<>();
 		if (articles != null) {
-			for (Article a : articles) {
+			foreach(Article a ; articles) {
 				NewsMessage.Article item = new NewsMessage.Article(a.getTitle(), a.getDescription(), a.getUrl(),
 						a.getPicurl());
 				list.add(item);
@@ -70,7 +69,7 @@ public class XMLNewsMessage : XMLMessage {
 		return new NewsMessage(toUserName, list);
 	}
 
-	public static class Article {
+	static class Article {
 		private string title;
 		private string description;
 		private string url;

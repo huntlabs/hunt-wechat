@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class EventMessage {
+class EventMessage {
 
 	//base
 	@XmlElement(name="ToUserName")
@@ -189,7 +189,7 @@ public class EventMessage {
 	private ChosenBeacon chosenBeacon;   //审核结果，成功succ 或失败fail
 	
 	@XmlElement(name="AroundBeacons")
-	private List<AroundBeacon> aroundBeacons;   //审核结果，成功succ 或失败fail
+	private List!(AroundBeacon) aroundBeacons;   //审核结果，成功succ 或失败fail
 	
 	//摇一摇 周边事件通知-------------------------------- END
 	
@@ -277,10 +277,10 @@ public class EventMessage {
 	 * @since 2.8.13
 	 * @return MAP
 	 */
-	public Map<string, string> otherElementsToMap() {
-		Map<string, string> map = new LinkedHashMap<string, string>();
+	public Map!(string, string) otherElementsToMap() {
+		Map!(string, string) map = new LinkedHashMap!(string, string)();
 		if (otherElements != null) {
-			for (org.w3c.dom.Element e : otherElements) {
+			foreach(org.w3c.dom.Element e ; otherElements) {
 				if (e.hasChildNodes()) {
 					if (e.getChildNodes().getLength() == 1
 							&& e.getChildNodes().item(0).getNodeType() == Node.TEXT_NODE) {
@@ -588,11 +588,11 @@ public class EventMessage {
 		this.chosenBeacon = chosenBeacon;
 	}
 
-	public List<AroundBeacon> getAroundBeacons() {
+	public List!(AroundBeacon) getAroundBeacons() {
 		return aroundBeacons;
 	}
 
-	public void setAroundBeacons(List<AroundBeacon> aroundBeacons) {
+	public void setAroundBeacons(List!(AroundBeacon) aroundBeacons) {
 		this.aroundBeacons = aroundBeacons;
 	}
 

@@ -8,10 +8,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeGetDepositCount {
+class CodeGetDepositCount {
 	
 	/**
-	 * 进行导入code的卡券ID。<br>
+	 * 进行导入code的卡券ID。
 	 * 必填：是
 	 */
 	@JSONField(name = "card_id")
@@ -27,7 +27,7 @@ public class CodeGetDepositCount {
 
 	
 	/**
-	 * 进行导入code的卡券ID。<br>
+	 * 进行导入code的卡券ID。
 	 * 必填：是
 	 * @param cardId 卡券ID
 	 */

@@ -5,7 +5,7 @@ module hunt.wechat.bean.message.message.VideoMessage;
  *
  * @author LiYi
  */
-public class VideoMessage : Message {
+class VideoMessage : Message {
 
     public VideoMessage() {
     }
@@ -28,7 +28,7 @@ public class VideoMessage : Message {
     }
 
 
-    public static class Video {
+    static class Video {
         private string media_id;
         private string title;
         private string description;

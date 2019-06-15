@@ -3,9 +3,9 @@ module hunt.wechat.bean.message.preview.VoicePreview;
 import hunt.collection.HashMap;
 import hunt.collection.Map;
 
-public class VoicePreview : Preview{
+class VoicePreview : Preview{
 
-	private Map<string,string> voice = new HashMap<string,string>();
+	private Map!(string,string) voice = new HashMap!(string,string)();
 
 	public VoicePreview(){
 
@@ -16,11 +16,11 @@ public class VoicePreview : Preview{
 		voice.put("media_id", media_id);
 	}
 
-	public Map<string, string> getVoice() {
+	public Map!(string, string) getVoice() {
 		return voice;
 	}
 
-	public void setVoice(Map<string, string> voice) {
+	public void setVoice(Map!(string, string) voice) {
 		this.voice = voice;
 	}
 

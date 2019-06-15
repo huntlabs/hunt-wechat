@@ -7,10 +7,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class ActionInfoMultipleCardItem {
+class ActionInfoMultipleCardItem {
 
 	/**
-	 * 卡券ID。<br>
+	 * 卡券ID。
 	 * 必填：否
 	 */
 	@JSONField(name = "card_id")
@@ -29,7 +29,7 @@ public class ActionInfoMultipleCardItem {
 	}
 
 	/**
-	 * 卡券ID。<br>
+	 * 卡券ID。
 	 * 必填：否
 	 * @param cardId 卡券ID
 	 */

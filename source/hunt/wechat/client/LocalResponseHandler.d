@@ -1,10 +1,10 @@
 module hunt.wechat.client.LocalResponseHandler;
 
-public abstract class LocalResponseHandler{
+abstract class LocalResponseHandler{
 	
 	protected string uriId;
 	
-	protected long startTime = System.currentTimeMillis();
+	protected long startTime = DateTimeHelper.currentTimeMillis();
 
 	public string getUriId() {
 		return uriId;

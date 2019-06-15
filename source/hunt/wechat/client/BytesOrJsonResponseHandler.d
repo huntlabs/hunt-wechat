@@ -9,8 +9,8 @@ import hunt.Exceptions;
 //import org.apache.http.client.ResponseHandler;
 //import org.apache.http.entity.ContentType;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.media.MediaGetResult;
 import hunt.wechat.util.JsonUtil;
@@ -21,19 +21,18 @@ import hunt.wechat.util.JsonUtil;
  * @author LiYi
  *
  */
-public class BytesOrJsonResponseHandler{
+class BytesOrJsonResponseHandler{
 
-	private static Logger logger = LoggerFactory.getLogger(BytesOrJsonResponseHandler.class);
 
-	public static <T : MediaGetResult> ResponseHandler<T> createResponseHandler(final Class<T> clazz){
-		return new BytesOrJsonResponseHandlerImpl<T>(null,clazz);
+	public static <T : MediaGetResult> ResponseHandler!(T) createResponseHandler(final Class!(T) clazz){
+		return new BytesOrJsonResponseHandlerImpl!(T)(null,clazz);
 	}
 
-	public static class BytesOrJsonResponseHandlerImpl<T : MediaGetResult> : LocalResponseHandler : ResponseHandler<T> {
+	static class BytesOrJsonResponseHandlerImpl<T : MediaGetResult> : LocalResponseHandler : ResponseHandler!(T) {
 		
-		private Class<T> clazz;
+		private Class!(T) clazz;
 		
-		public BytesOrJsonResponseHandlerImpl(string uriId, Class<T> clazz) {
+		public BytesOrJsonResponseHandlerImpl(string uriId, Class!(T) clazz) {
 			this.uriId = uriId;
 			this.clazz = clazz;
 		}
@@ -51,7 +50,7 @@ public class BytesOrJsonResponseHandler{
     				||ContentType.APPLICATION_JSON.getMimeType().equalsIgnoreCase(contentTypeStr))){
     				 HttpEntity entity = response.getEntity();
 	                 string str = EntityUtils.toString(entity,"utf-8");
-	                 logger.info("URI[{}] elapsed time:{} ms RESPONSE DATA:{}",super.uriId,System.currentTimeMillis()-super.startTime,str);
+	                 logger.info("URI[{}] elapsed time:{} ms RESPONSE DATA:{}",super.uriId,DateTimeHelper.currentTimeMillis()-super.startTime,str);
 	                 return JsonUtil.parseObject(str, clazz);
     			}else{
     				//bytes data
@@ -65,7 +64,7 @@ public class BytesOrJsonResponseHandler{
 						}
 						mediaGetResult.setContentType(contentTypeStr);
 						mediaGetResult.setBytes(EntityUtils.toByteArray(response.getEntity()));
-						logger.info("URI[{}]ContentType:{} elapsed time:{} ms RESPONSE DATA:{}",super.uriId,contentTypeStr,System.currentTimeMillis()-super.startTime,"");
+						logger.info("URI[{}]ContentType:{} elapsed time:{} ms RESPONSE DATA:{}",super.uriId,contentTypeStr,DateTimeHelper.currentTimeMillis()-super.startTime,"");
 						return t;
 					} catch (InstantiationException e) {
 						// TODO Auto-generated catch block

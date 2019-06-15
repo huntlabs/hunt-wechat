@@ -5,7 +5,7 @@ module hunt.wechat.bean.material.Description;
  * @author LiYi
  *
  */
-public class Description {
+class Description {
 
 	private string title;
 

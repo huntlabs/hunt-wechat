@@ -2,7 +2,7 @@ module hunt.wechat.bean.scan.result.ProductGetqrcodeResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class ProductGetqrcodeResult : BaseResult {
+class ProductGetqrcodeResult : BaseResult {
     private string pic_url;
     private string qrcode_url;
 

@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxopen.TemplateListItem;
 
-public class TemplateListItem {
+class TemplateListItem {
 
 	private string template_id;
 

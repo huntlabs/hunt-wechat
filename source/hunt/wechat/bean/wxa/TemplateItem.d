@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.TemplateItem;
 
-public class TemplateItem {
+class TemplateItem {
 
 	private string create_time;
 

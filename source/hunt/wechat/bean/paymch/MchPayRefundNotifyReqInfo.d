@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MchPayRefundNotifyReqInfo {
+class MchPayRefundNotifyReqInfo {
 
 	private string transaction_id;
 

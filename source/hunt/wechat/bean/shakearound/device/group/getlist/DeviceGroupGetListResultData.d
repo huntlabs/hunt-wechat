@@ -14,12 +14,12 @@ import hunt.wechat.bean.shakearound.device.group.GroupInfo;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupGetListResultData {
+class DeviceGroupGetListResultData {
 
 	/**
 	 * 分组列表
 	 */
-	private List<GroupInfo> groups;
+	private List!(GroupInfo) groups;
 	
 	/**
 	 * 此账号下现有的总分组数
@@ -30,14 +30,14 @@ public class DeviceGroupGetListResultData {
 	/**
 	 * @return 分组列表
 	 */
-	public List<GroupInfo> getGroups() {
+	public List!(GroupInfo) getGroups() {
 		return groups;
 	}
 
 	/**
 	 * @param groups 分组列表
 	 */
-	public void setGroups(List<GroupInfo> groups) {
+	public void setGroups(List!(GroupInfo) groups) {
 		this.groups = groups;
 	}
 

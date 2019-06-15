@@ -2,7 +2,7 @@ module hunt.wechat.bean.media.MediaGetResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class MediaGetResult : BaseResult{
+class MediaGetResult : BaseResult{
 
 	private string filename;
 	

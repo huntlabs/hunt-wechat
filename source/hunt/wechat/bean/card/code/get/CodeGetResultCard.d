@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeGetResultCard {
+class CodeGetResultCard {
 
 	/**
 	 * 卡券ID

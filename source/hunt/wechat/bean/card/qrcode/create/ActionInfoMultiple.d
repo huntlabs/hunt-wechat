@@ -7,7 +7,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class ActionInfoMultiple {
+class ActionInfoMultiple {
 
 	@JSONField(name = "multiple_card")
 	private ActionInfoMultipleCard multipleCard;

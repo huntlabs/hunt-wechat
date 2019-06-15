@@ -10,23 +10,23 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public abstract class AbstractStatisticsList {
+abstract class AbstractStatisticsList {
 
 	/**
-	 * 指定查询日期时间戳，单位为秒<br>
+	 * 指定查询日期时间戳，单位为秒
 	 * 必填
 	 */
 	private Long date;
 	
 	/**
-	 * 指定查询的结果页序号；返回结果按摇周边人数降序排序，每50条记录为一页 <br>
+	 * 指定查询的结果页序号；返回结果按摇周边人数降序排序，每50条记录为一页 
 	 * 必填
 	 */
 	@JSONField(name = "page_index")
 	private Integer pageIndex;
 
 	/**
-	 * 查询日期时间戳，单位为秒<br>
+	 * 查询日期时间戳，单位为秒
 	 * @return 查询日期时间戳
 	 */
 	public Long getDate() {
@@ -34,7 +34,7 @@ public abstract class AbstractStatisticsList {
 	}
 
 	/**
-	 * 指定查询日期时间戳，单位为秒<br>
+	 * 指定查询日期时间戳，单位为秒
 	 * 必填
 	 * @param date 查询日期时间戳
 	 */
@@ -43,7 +43,7 @@ public abstract class AbstractStatisticsList {
 	}
 
 	/**
-	 * 查询的结果页序号；返回结果按摇周边人数降序排序，每50条记录为一页 <br>
+	 * 查询的结果页序号；返回结果按摇周边人数降序排序，每50条记录为一页 
 	 * @return 查询的结果页序号
 	 */
 	public Integer getPageIndex() {
@@ -51,7 +51,7 @@ public abstract class AbstractStatisticsList {
 	}
 
 	/**
-	 * 指定查询的结果页序号；返回结果按摇周边人数降序排序，每50条记录为一页 <br>
+	 * 指定查询的结果页序号；返回结果按摇周边人数降序排序，每50条记录为一页 
 	 * 必填
 	 * @param pageIndex 查询的结果页序号
 	 */

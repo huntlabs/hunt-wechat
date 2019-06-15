@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.GetnearbypoilistPoi;
 
-public class GetnearbypoilistPoi {
+class GetnearbypoilistPoi {
 
 	private string poi_id;
 

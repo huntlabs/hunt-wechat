@@ -7,7 +7,7 @@ module hunt.wechat.bean.message.message.MiniprogrampageMessage;
  * @author LiYi
  *
  */
-public class MiniprogrampageMessage : Message {
+class MiniprogrampageMessage : Message {
 
 	public MiniprogrampageMessage() {
 	}
@@ -31,7 +31,7 @@ public class MiniprogrampageMessage : Message {
 		this.miniprogrampage = miniprogrampage;
 	}
 
-	public static class Miniprogrampage {
+	static class Miniprogrampage {
 
 		private string title;
 		private string pagepath;

@@ -1,6 +1,6 @@
 /**
  * 卡券类－获取卡券详情
- * 各类卡券响应对象：GetResult 、GetCashResult 、GetDiscountResult 、GetGeneralCouponResult、GetGiftResult 、GetGrouponResult ；<br>
+ * 各类卡券响应对象：GetResult 、GetCashResult 、GetDiscountResult 、GetGeneralCouponResult、GetGiftResult 、GetGrouponResult ；
  * @author Moyq5
  *
  */

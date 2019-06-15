@@ -1,6 +1,6 @@
 module hunt.wechat.bean.message.preview.Preview;
 
-public abstract class Preview {
+abstract class Preview {
 	
 	private string touser;
 	

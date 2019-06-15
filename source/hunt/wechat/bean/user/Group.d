@@ -5,11 +5,11 @@ import hunt.collection.List;
 import hunt.wechat.bean.BaseResult;
 
 
-public class Group : BaseResult{
+class Group : BaseResult{
 	
 	private GroupData group;
 	
-	private List<GroupData> groups;
+	private List!(GroupData) groups;
 	
 	private Integer groupid;
 	
@@ -21,11 +21,11 @@ public class Group : BaseResult{
 		this.group = group;
 	}
 
-	public List<GroupData> getGroups() {
+	public List!(GroupData) getGroups() {
 		return groups;
 	}
 
-	public void setGroups(List<GroupData> groups) {
+	public void setGroups(List!(GroupData) groups) {
 		this.groups = groups;
 	}
 
@@ -39,7 +39,7 @@ public class Group : BaseResult{
 
 
 
-	public static class GroupData{
+	static class GroupData{
 		private string id;
 		
 		private string name;

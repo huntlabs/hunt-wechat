@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.WxaUserInfo;
 
-public class WxaUserInfo {
+class WxaUserInfo {
 
 	private string nickName;
 

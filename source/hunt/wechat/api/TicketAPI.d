@@ -11,7 +11,7 @@ import hunt.wechat.client.LocalHttpClient;
  * @author LiYi
  *
  */
-public class TicketAPI : BaseAPI{
+class TicketAPI : BaseAPI{
 	
 	/**
 	 * 获取 jsapi_ticket

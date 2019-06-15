@@ -1,6 +1,6 @@
 module hunt.wechat.util.StringUtils;
 
-public abstract class StringUtils {
+abstract class StringUtils {
 	
 	public static string arrayToDelimitedString(Object[] arr, string delim) {
 		if (arr == null || arr.length == 0) {

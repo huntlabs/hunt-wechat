@@ -5,7 +5,7 @@ module hunt.wechat.bean.paymch.MchVersion;
  * @author LiYi
  *
  */
-public class MchVersion {
+class MchVersion {
 
 	private string version;
 

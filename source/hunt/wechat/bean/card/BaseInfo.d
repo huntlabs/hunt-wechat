@@ -8,17 +8,17 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class BaseInfo {
+class BaseInfo {
 
 	/**
-	 * 卡券的商户logo，建议像素为300*300。<br>
+	 * 卡券的商户logo，建议像素为300*300。
 	 * 添加必填
 	 */
 	@JSONField(name = "logo_url")
 	private string logoUrl;
 
 	/**
-	 * 商户名字,字数上限为12个汉字。<br>
+	 * 商户名字,字数上限为12个汉字。
 	 * 添加必填，不支持修改
 	 */
 	@JSONField(name = "brand_name")
@@ -26,19 +26,19 @@ public class BaseInfo {
 
 	/**
 	 * 
-	 * "CODE_TYPE_TEXT"，文本；<br>
-	 * "CODE_TYPE_BARCODE"，一维码； <br>
-	 * "CODE_TYPE_QRCODE"，二维码；<br>
-	 * "CODE_TYPE_ONLY_QRCODE"，二维码无code显示；<br>
-	 * "CODE_TYPE_ONLY_BARCODE"，一维码无code显示；<br>
-	 * "CODE_TYPE_NONE"，不显示code和条形码类型<br>
+	 * "CODE_TYPE_TEXT"，文本；
+	 * "CODE_TYPE_BARCODE"，一维码； 
+	 * "CODE_TYPE_QRCODE"，二维码；
+	 * "CODE_TYPE_ONLY_QRCODE"，二维码无code显示；
+	 * "CODE_TYPE_ONLY_BARCODE"，一维码无code显示；
+	 * "CODE_TYPE_NONE"，不显示code和条形码类型
 	 * 添加必填
 	 */
 	@JSONField(name = "code_type")
 	private string codeType;
 
 	/**
-	 * 卡券名，字数上限为9个汉字。(建议涵盖卡券属性、服务及金额)。<br>
+	 * 卡券名，字数上限为9个汉字。(建议涵盖卡券属性、服务及金额)。
 	 * 添加必填
 	 */
 	private string title;
@@ -50,13 +50,13 @@ public class BaseInfo {
 	private string subTitle;
 
 	/**
-	 * 券颜色。按色彩规范标注填写Color010-Color100<br>
+	 * 券颜色。按色彩规范标注填写Color010-Color100
 	 * 添加必填
 	 */
 	private string color;
 
 	/**
-	 * 卡券使用提醒，字数上限为16个汉字。<br>
+	 * 卡券使用提醒，字数上限为16个汉字。
 	 * 添加必填
 	 */
 	private string notice;
@@ -68,20 +68,20 @@ public class BaseInfo {
 	private string servicePhone;
 
 	/**
-	 * 卡券使用说明，字数上限为1024个汉字。<br>
+	 * 卡券使用说明，字数上限为1024个汉字。
 	 * 添加必填
 	 */
 	private string description;
 
 	/**
-	 * 使用日期，有效期的信息。<br>
+	 * 使用日期，有效期的信息。
 	 * 添加必填
 	 */
 	@JSONField(name = "date_info")
 	private BaseInfoDateInfo dateInfo;
 
 	/**
-	 * 商品信息。<br>
+	 * 商品信息。
 	 * 添加必填，不支持修改
 	 */
 	private BaseInfoSku sku;
@@ -99,8 +99,8 @@ public class BaseInfo {
 	private Integer useLimit;
 
 	/**
-	 * 是否自定义Code码。 填写true或false，默认为false。 <br>
-	 * 通常自有优惠码系统的开发者选择自定义Code码，并在卡券投放时带入 <br>
+	 * 是否自定义Code码。 填写true或false，默认为false。 
+	 * 通常自有优惠码系统的开发者选择自定义Code码，并在卡券投放时带入 
 	 * 不支持修改
 	 */
 	@JSONField(name = "use_custom_code")
@@ -113,8 +113,8 @@ public class BaseInfo {
 	private string getCustomCodeMode;
 
 	/**
-	 * 是否指定用户领取，填写true或false。默认为false。 <br>
-	 * 通常指定特殊用户群体投放卡券或防止刷券时选择指定用户领取。<br>
+	 * 是否指定用户领取，填写true或false。默认为false。 
+	 * 通常指定特殊用户群体投放卡券或防止刷券时选择指定用户领取。
 	 * 不支持修改
 	 */
 	@JSONField(name = "bind_openid")
@@ -133,9 +133,9 @@ public class BaseInfo {
 	private Boolean canGiveFriend;
 
 	/**
-	 * 门店位置poiid。<br>
-	 * 调用POI门店管理接口获取门店位置poiid。<br>
-	 * 具备线下门店的商户为必填。<br>
+	 * 门店位置poiid。
+	 * 调用POI门店管理接口获取门店位置poiid。
+	 * 具备线下门店的商户为必填。
 	 */
 	@JSONField(name = "location_id_list")
 	private Integer[] locationIdList;
@@ -195,7 +195,7 @@ public class BaseInfo {
 	private string promotionUrlSubTitle;
 
 	/**
-	 * 第三方来源名，例如同程旅游、大众点评。<br>
+	 * 第三方来源名，例如同程旅游、大众点评。
 	 * 不支持修改
 	 */
 	private string source;
@@ -214,7 +214,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 卡券的商户logo，建议像素为300*300。<br>
+	 * 卡券的商户logo，建议像素为300*300。
 	 * 添加必填
 	 */
 	public void setLogoUrl(string logoUrl) {
@@ -229,7 +229,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 商户名字,字数上限为12个汉字。<br>
+	 * 商户名字,字数上限为12个汉字。
 	 * 添加必填，不支持修改
 	 */
 	public void setBrandName(string brandName) {
@@ -237,11 +237,11 @@ public class BaseInfo {
 	}
 
 	/**
-	 * "CODE_TYPE_TEXT"，文本；<br>
-	 * "CODE_TYPE_BARCODE"，一维码； <br>
-	 * "CODE_TYPE_QRCODE"，二维码；<br>
-	 * "CODE_TYPE_ONLY_QRCODE"，二维码无code显示；<br>
-	 * "CODE_TYPE_ONLY_BARCODE"，一维码无code显示；<br>
+	 * "CODE_TYPE_TEXT"，文本；
+	 * "CODE_TYPE_BARCODE"，一维码； 
+	 * "CODE_TYPE_QRCODE"，二维码；
+	 * "CODE_TYPE_ONLY_QRCODE"，二维码无code显示；
+	 * "CODE_TYPE_ONLY_BARCODE"，一维码无code显示；
 	 * "CODE_TYPE_NONE"，不显示code和条形码类型
 	 */
 	public string getCodeType() {
@@ -249,12 +249,12 @@ public class BaseInfo {
 	}
 
 	/**
-	 * "CODE_TYPE_TEXT"，文本；<br>
-	 * "CODE_TYPE_BARCODE"，一维码； <br>
-	 * "CODE_TYPE_QRCODE"，二维码；<br>
-	 * "CODE_TYPE_ONLY_QRCODE"，二维码无code显示；<br>
-	 * "CODE_TYPE_ONLY_BARCODE"，一维码无code显示；<br>
-	 * "CODE_TYPE_NONE"，不显示code和条形码类型<br>
+	 * "CODE_TYPE_TEXT"，文本；
+	 * "CODE_TYPE_BARCODE"，一维码； 
+	 * "CODE_TYPE_QRCODE"，二维码；
+	 * "CODE_TYPE_ONLY_QRCODE"，二维码无code显示；
+	 * "CODE_TYPE_ONLY_BARCODE"，一维码无code显示；
+	 * "CODE_TYPE_NONE"，不显示code和条形码类型
 	 * 添加必填
 	 */
 	public void setCodeType(string codeType) {
@@ -269,7 +269,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 卡券名，字数上限为9个汉字。(建议涵盖卡券属性、服务及金额)。<br>
+	 * 卡券名，字数上限为9个汉字。(建议涵盖卡券属性、服务及金额)。
 	 * 添加必填
 	 */
 	public void setTitle(string title) {
@@ -298,7 +298,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 券颜色。按色彩规范标注填写Color010-Color100<br>
+	 * 券颜色。按色彩规范标注填写Color010-Color100
 	 * 添加必填
 	 */
 	public void setColor(string color) {
@@ -313,7 +313,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 卡券使用提醒，字数上限为16个汉字。<br>
+	 * 卡券使用提醒，字数上限为16个汉字。
 	 * 添加必填
 	 */
 	public void setNotice(string notice) {
@@ -342,7 +342,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 卡券使用说明，字数上限为1024个汉字。<br>
+	 * 卡券使用说明，字数上限为1024个汉字。
 	 * 添加必填
 	 */
 	public void setDescription(string description) {
@@ -357,7 +357,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 使用日期，有效期的信息。<br>
+	 * 使用日期，有效期的信息。
 	 * 添加必填
 	 */
 	public void setDateInfo(BaseInfoDateInfo dateInfo) {
@@ -372,7 +372,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 商品信息。<br>
+	 * 商品信息。
 	 * 添加必填，不支持修改
 	 */
 	public void setSku(BaseInfoSku sku) {
@@ -401,8 +401,8 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 是否自定义Code码。 填写true或false，默认为false。 <br>
-	 * 通常自有优惠码系统的开发者选择自定义Code码，并在卡券投放时带入<br>
+	 * 是否自定义Code码。 填写true或false，默认为false。 
+	 * 通常自有优惠码系统的开发者选择自定义Code码，并在卡券投放时带入
 	 * 不支持修改
 	 */
 	public void setUseCustomCode(Boolean useCustomCode) {
@@ -417,8 +417,8 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 是否指定用户领取，填写true或false。默认为false。 <br>
-	 * 通常指定特殊用户群体投放卡券或防止刷券时选择指定用户领取。<br>
+	 * 是否指定用户领取，填写true或false。默认为false。 
+	 * 通常指定特殊用户群体投放卡券或防止刷券时选择指定用户领取。
 	 * 不支持修改
 	 */
 	public void setBindOpenid(Boolean bindOpenid) {
@@ -461,9 +461,9 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 门店位置poiid。<br>
-	 * 调用POI门店管理接口获取门店位置poiid。<br>
-	 * 具备线下门店的商户为必填。<br>
+	 * 门店位置poiid。
+	 * 调用POI门店管理接口获取门店位置poiid。
+	 * 具备线下门店的商户为必填。
 	 */
 	public void setLocationIdList(Integer[] locationIdList) {
 		this.locationIdList = locationIdList;
@@ -603,7 +603,7 @@ public class BaseInfo {
 	}
 
 	/**
-	 * 第三方来源名，例如同程旅游、大众点评。<br>
+	 * 第三方来源名，例如同程旅游、大众点评。
 	 * 不支持修改
 	 */
 	public void setSource(string source) {

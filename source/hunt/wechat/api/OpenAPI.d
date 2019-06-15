@@ -11,12 +11,11 @@ import hunt.wechat.bean.open.OpenResult;
 import hunt.wechat.client.LocalHttpClient;
 
 /**
- * 微信开放平台帐号管理<br>
+ * 微信开放平台帐号管理
  * 第三方平台在获得此权限后，可以代替已授权的公众号/小程序创建开放平台帐号或进行绑定/解绑操作。
  * @author LiYi
- * @since 2.8.12
  */
-public class OpenAPI : BaseAPI {
+class OpenAPI : BaseAPI {
 
 	/**
 	 * 创建开放平台帐号并绑定公众号/小程序

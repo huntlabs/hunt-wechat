@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.GetnearbypoilistData;
 
-public class GetnearbypoilistData{
+class GetnearbypoilistData{
 
 	private Integer left_apply_num;
 

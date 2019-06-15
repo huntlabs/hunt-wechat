@@ -4,7 +4,7 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-public class ApiQueryAuthResult : BaseResult {
+class ApiQueryAuthResult : BaseResult {
 
 	private Authorization_info authorization_info;
 
@@ -16,7 +16,7 @@ public class ApiQueryAuthResult : BaseResult {
 		this.authorization_info = authorization_info;
 	}
 
-	public static class Authorization_info {
+	static class Authorization_info {
 
 		private string authorizer_appid;
 
@@ -26,7 +26,7 @@ public class ApiQueryAuthResult : BaseResult {
 
 		private string authorizer_refresh_token;
 
-		private List<FuncInfo> func_info;
+		private List!(FuncInfo) func_info;
 
 		public string getAuthorizer_appid() {
 			return authorizer_appid;
@@ -61,11 +61,11 @@ public class ApiQueryAuthResult : BaseResult {
 			this.authorizer_refresh_token = authorizer_refresh_token;
 		}
 
-		public List<FuncInfo> getFunc_info() {
+		public List!(FuncInfo) getFunc_info() {
 			return func_info;
 		}
 
-		public void setFunc_info(List<FuncInfo> func_info) {
+		public void setFunc_info(List!(FuncInfo) func_info) {
 			this.func_info = func_info;
 		}
 	}

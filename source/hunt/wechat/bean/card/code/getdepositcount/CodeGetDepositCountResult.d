@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class CodeGetDepositCountResult : BaseResult {
+class CodeGetDepositCountResult : BaseResult {
 
 	/**
 	 * 已经成功存入的code数目。

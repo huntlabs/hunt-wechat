@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class AbstractCard {
+class AbstractCard {
 	
 	/**
 	 * 卡券类型

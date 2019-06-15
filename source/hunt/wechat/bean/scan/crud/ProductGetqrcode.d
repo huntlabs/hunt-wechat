@@ -4,7 +4,7 @@ module hunt.wechat.bean.scan.crud.ProductGetqrcode;
 import hunt.wechat.bean.scan.base.ProductGet;
 
 
-public class ProductGetqrcode : ProductGet {
+class ProductGetqrcode : ProductGet {
     private string extinfo;
     private string qrcode_size;
 

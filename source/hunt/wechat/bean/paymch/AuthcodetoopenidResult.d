@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class AuthcodetoopenidResult : MchBase{
+class AuthcodetoopenidResult : MchBase{
 
 	@XmlElement
 	private string openid;

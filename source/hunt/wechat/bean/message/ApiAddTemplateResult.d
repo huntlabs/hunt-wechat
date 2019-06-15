@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.ApiAddTemplateResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class ApiAddTemplateResult : BaseResult{
+class ApiAddTemplateResult : BaseResult{
 
 	private string template_id;
 

@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Unifiedorder : MchVersion{
+class Unifiedorder : MchVersion{
 
 	private string appid;
 
@@ -230,11 +230,11 @@ public class Unifiedorder : MchVersion{
 	 * 支付类型
 	 * 
 	 * @param trade_type
-	 *            <br>
+	 *            
 	 * 
-	 *            JSAPI--公众号支付<br>
-	 *            NATIVE--原生扫码支付 <br>
-	 *            APP--APP支付 <br>
+	 *            JSAPI--公众号支付
+	 *            NATIVE--原生扫码支付 
+	 *            APP--APP支付 
 	 *            MWEB--H5
 	 */
 	public void setTrade_type(string trade_type) {

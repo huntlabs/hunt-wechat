@@ -10,6 +10,6 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupGetListResult : AbstractResult<DeviceGroupGetListResultData> {
+class DeviceGroupGetListResult : AbstractResult!(DeviceGroupGetListResultData) {
 
 }

@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @author LiYi
  * 
  */
-public class TagsCreatResult : BaseResult {
+class TagsCreatResult : BaseResult {
 
 	private Tag tag;
 

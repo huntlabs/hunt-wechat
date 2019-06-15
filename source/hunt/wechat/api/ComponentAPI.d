@@ -7,8 +7,8 @@ import hunt.text.Charset;
 //import org.apache.http.client.methods.HttpUriRequest;
 //import org.apache.http.client.methods.RequestBuilder;
 //import org.apache.http.entity.StringEntity;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.component.*;
@@ -19,9 +19,8 @@ import hunt.wechat.client.LocalHttpClient;
  *
  * @author LiYi
  */
-public class ComponentAPI : BaseAPI {
+class ComponentAPI : BaseAPI {
 
-    private static Logger logger = LoggerFactory.getLogger(CommentAPI.class);
 
     /**
      * 生成授权页 URL
@@ -41,10 +40,10 @@ public class ComponentAPI : BaseAPI {
      * @param component_appid 第三方平台ID
      * @param pre_auth_code   预授权码
      * @param redirect_uri    重定向URI
-     * @param auth_type       要授权的帐号类型 <br>
-     *                        1 则商户扫码后，手机端仅展示公众号 <br>
-     *                        2 表示仅展示小程序 <br>
-     *                        3 表示公众号和小程序都展示。<br>
+     * @param auth_type       要授权的帐号类型 
+     *                        1 则商户扫码后，手机端仅展示公众号 
+     *                        2 表示仅展示小程序 
+     *                        3 表示公众号和小程序都展示。
      *                        如果为未制定，则默认小程序和公众号都展示。第三方平台开发者可以使用本字段来控制授权的帐号类型。
      * @return URL
      * @since 2.8.20
@@ -72,10 +71,10 @@ public class ComponentAPI : BaseAPI {
      * @param component_appid 第三方平台ID
      * @param pre_auth_code   预授权码
      * @param redirect_uri    重定向URI
-     * @param auth_type       要授权的帐号类型 <br>
-     *                        1 则商户扫码后，手机端仅展示公众号 <br>
-     *                        2 表示仅展示小程序 <br>
-     *                        3 表示公众号和小程序都展示。<br>
+     * @param auth_type       要授权的帐号类型 
+     *                        1 则商户扫码后，手机端仅展示公众号 
+     *                        2 表示仅展示小程序 
+     *                        3 表示公众号和小程序都展示。
      *                        如果为未制定，则默认小程序和公众号都展示。第三方平台开发者可以使用本字段来控制授权的帐号类型。
      * @return URL
      */
@@ -212,10 +211,10 @@ public class ComponentAPI : BaseAPI {
      * @param component_access_token component_access_token
      * @param component_appid        公众号第三方平台appid
      * @param authorizer_appid       授权公众号appid
-     * @param option_name            选项名称<br>
-     *                               location_report (地理位置上报选项) 	0	无上报  			1	进入会话时上报  2	每5s上报<br>
-     *                               voice_recognize（语音识别开关选项）	0	关闭语音识别		1	开启语音识别<br>
-     *                               customer_service（多客服开关选项）	0	关闭多客服		1	开启多客服<br>
+     * @param option_name            选项名称
+     *                               location_report (地理位置上报选项) 	0	无上报  			1	进入会话时上报  2	每5s上报
+     *                               voice_recognize（语音识别开关选项）	0	关闭语音识别		1	开启语音识别
+     *                               customer_service（多客服开关选项）	0	关闭多客服		1	开启多客服
      * @return AuthorizerOption
      */
     public static AuthorizerOption api_get_authorizer_option(string component_access_token,
@@ -239,10 +238,10 @@ public class ComponentAPI : BaseAPI {
      * @param component_access_token component_access_token
      * @param component_appid        公众号第三方平台appid
      * @param authorizer_appid       授权公众号appid
-     * @param option_name            选项名称<br>
-     *                               location_report (地理位置上报选项) 	0	无上报  			1	进入会话时上报  2	每5s上报<br>
-     *                               voice_recognize（语音识别开关选项）	0	关闭语音识别		1	开启语音识别<br>
-     *                               customer_service（多客服开关选项）	0	关闭多客服		1	开启多客服<br>
+     * @param option_name            选项名称
+     *                               location_report (地理位置上报选项) 	0	无上报  			1	进入会话时上报  2	每5s上报
+     *                               voice_recognize（语音识别开关选项）	0	关闭语音识别		1	开启语音识别
+     *                               customer_service（多客服开关选项）	0	关闭多客服		1	开启多客服
      * @param option_value           设置的选项值
      * @return BaseResult
      */

@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SecapiPayRefundNotify : MchBase{
+class SecapiPayRefundNotify : MchBase{
 
 	private string req_info;
 

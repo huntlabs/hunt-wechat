@@ -1,6 +1,6 @@
 module hunt.wechat.bean.message.templatemessage.TemplateMessageItem;
 
-public class TemplateMessageItem{
+class TemplateMessageItem{
 	private string value;
 
 	private string color;

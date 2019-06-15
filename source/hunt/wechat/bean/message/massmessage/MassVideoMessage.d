@@ -9,7 +9,7 @@ import hunt.wechat.bean.message.preview.VideoPreview;
  *
  * @author LiYi
  */
-public class MassVideoMessage : MassMessage {
+class MassVideoMessage : MassMessage {
 
     private Uploadvideo mpvideo;
 

@@ -9,7 +9,7 @@ import hunt.wechat.bean.AdaptorCDATA;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PapayQuerycontractResult : MchBase{
+class PapayQuerycontractResult : MchBase{
 
 	private Integer contract_id;
 

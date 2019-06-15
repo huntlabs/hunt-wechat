@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PapayQuerycontract {
+class PapayQuerycontract {
 
 	private string mch_id;
 

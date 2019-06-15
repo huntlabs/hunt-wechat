@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @Date: 2018/7/25 10:11
  * @Description:
  */
-public class TranslatecontentResult : BaseResult {
+class TranslatecontentResult : BaseResult {
     private string from_content;
     private string to_content;
 

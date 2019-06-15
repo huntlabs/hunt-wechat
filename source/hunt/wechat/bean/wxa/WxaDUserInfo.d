@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.WxaDUserInfo;
 
-public class WxaDUserInfo : WxaUserInfo{
+class WxaDUserInfo : WxaUserInfo{
 
 	private string openId;
 

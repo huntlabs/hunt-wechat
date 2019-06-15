@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxa.SubmitAuditResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class SubmitAuditResult : BaseResult {
+class SubmitAuditResult : BaseResult {
 
 	private string auditid;
 

@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SendredpackResult : MchBase{
+class SendredpackResult : MchBase{
 
 	private string mch_billno;
 

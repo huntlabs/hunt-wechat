@@ -9,7 +9,7 @@ import hunt.wechat.bean.card.Gift;
  * @author Moyq5
  *
  */
-public class GiftCard : AbstractCard {
+class GiftCard : AbstractCard {
 
 	private Gift gift;
 

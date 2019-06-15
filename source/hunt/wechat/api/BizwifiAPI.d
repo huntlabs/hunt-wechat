@@ -37,7 +37,7 @@ import hunt.wechat.util.JsonUtil;
  *
  * @author zeroJun
  */
-public class BizwifiAPI : BaseAPI {
+class BizwifiAPI : BaseAPI {
 
 
     /**

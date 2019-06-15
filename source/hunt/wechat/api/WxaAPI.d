@@ -20,8 +20,8 @@ import javax.imageio.ImageIO;
 //import org.apache.http.entity.mime.MultipartEntityBuilder;
 //import org.apache.http.entity.mime.content.FileBody;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.wxa.Addnearbypoi;
@@ -50,9 +50,8 @@ import hunt.wechat.util.StreamUtils;
  * @author LiYi
  * @since 2.8.9
  */
-public class WxaAPI : BaseAPI {
+class WxaAPI : BaseAPI {
 	
-	private static Logger logger = LoggerFactory.getLogger(WxaAPI.class);
 
 	/**
 	 * 修改服务器地址
@@ -73,7 +72,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 成员管理 <br>
+	 * 成员管理 
 	 * 绑定微信用户为小程序体验者
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -92,7 +91,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 成员管理 <br>
+	 * 成员管理 
 	 * 解除绑定小程序的体验者
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -111,7 +110,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 为授权的小程序帐号上传小程序代码
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -131,7 +130,7 @@ public class WxaAPI : BaseAPI {
 	
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 获取体验小程序的体验二维码
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -170,7 +169,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 获取授权小程序帐号的可选类目
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -185,7 +184,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 获取小程序的第三方提交代码的页面配置（仅供第三方开发者代小程序调用）
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -200,7 +199,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 将第三方提交的代码包提交审核（仅供第三方开发者代小程序调用）
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -219,7 +218,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 获取第三方提交的审核版本的审核状态（仅供第三方代小程序调用）
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -238,7 +237,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 发布已通过审核的小程序（仅供第三方代小程序调用）
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -255,7 +254,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 代码管理<br>
+	 * 代码管理
 	 * 修改小程序线上代码的可见状态（仅供第三方代小程序调用）
 	 * @since 2.8.9
 	 * @param access_token access_token
@@ -274,8 +273,8 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 获取小程序码 A<br>
-	 * 适用于需要的码数量较少的业务场景 <br>
+	 * 获取小程序码 A
+	 * 适用于需要的码数量较少的业务场景 
 	 * 注意：通过该接口生成的小程序码，永久有效，数量限制见文末说明，请谨慎使用。用户扫描该码进入小程序后，将直接进入 path 对应的页面。
 	 * @since 2.8.10
 	 * @param access_token access_token
@@ -310,8 +309,8 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * 获取小程序码 B<br>
-	 * 适用于需要的码数量极多，或仅临时使用的业务场景<br>
+	 * 获取小程序码 B
+	 * 适用于需要的码数量极多，或仅临时使用的业务场景
 	 * 注意：通过该接口生成的小程序码，永久有效，数量暂无限制。用户扫描该码进入小程序后，将统一打开首页，开发者需在首页根据获取的码中 scene 字段的值，再做处理逻辑。
 	 * @since 2.8.10
 	 * @param access_token access_token
@@ -420,7 +419,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>小程序代码模版库管理</strong><br>
+	 * <strong>小程序代码模版库管理</strong>
 	 * 获取草稿箱内的所有临时代码草稿
 	 * @since 2.8.18
 	 * @param access_token access_token
@@ -436,7 +435,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>小程序代码模版库管理</strong><br>
+	 * <strong>小程序代码模版库管理</strong>
 	 * 获取代码模版库中的所有小程序代码模版
 	 * @since 2.8.18
 	 * @param access_token access_token
@@ -452,7 +451,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>小程序代码模版库管理</strong><br>
+	 * <strong>小程序代码模版库管理</strong>
 	 * 将草稿箱的草稿选为小程序代码模版
 	 * @since 2.8.18
 	 * @param access_token access_token
@@ -471,7 +470,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>小程序代码模版库管理</strong><br>
+	 * <strong>小程序代码模版库管理</strong>
 	 * 删除指定小程序代码模版
 	 * @since 2.8.18
 	 * @param access_token access_token
@@ -490,7 +489,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>基础信息设置</strong><br>
+	 * <strong>基础信息设置</strong>
 	 * 设置小程序隐私设置（是否可被搜索）
 	 * @since 2.8.18
 	 * @param access_token access_token
@@ -509,7 +508,7 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>基础信息设置</strong><br>
+	 * <strong>基础信息设置</strong>
 	 * 查询小程序当前隐私设置（是否可被搜索）
 	 * @since 2.8.18
 	 * @param access_token access_token
@@ -525,13 +524,13 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>文本检查</strong><br>
-	 * 检查一段文本是否含有违法违规内容。 <br>
-	 * 应用场景举例：<br>
-	 * 用户个人资料违规文字检测；<br>
-	 * 媒体新闻类用户发表文章，评论内容检测；<br>
-	 * 游戏类用户编辑上传的素材(如答题类小游戏用户上传的问题及答案)检测等。<br>
-	 * <br>
+	 * <strong>文本检查</strong>
+	 * 检查一段文本是否含有违法违规内容。 
+	 * 应用场景举例：
+	 * 用户个人资料违规文字检测；
+	 * 媒体新闻类用户发表文章，评论内容检测；
+	 * 游戏类用户编辑上传的素材(如答题类小游戏用户上传的问题及答案)检测等。
+	 * 
 	 * 频率限制：单个 appId 调用上限为 2000 次/分钟，1,000,000 次/天
 	 * @since 2.8.20
 	 * @param access_token access_token
@@ -550,12 +549,12 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>图片检查</strong><br>
-	 * 校验一张图片是否含有违法违规内容。<br>
-	 * 应用场景举例：<br>
-	 * 1）图片智能鉴黄：涉及拍照的工具类应用(如美拍，识图类应用)用户拍照上传检测；电商类商品上架图片检测；媒体类用户文章里的图片检测等；<br>
-	 * 2）敏感人脸识别：用户头像；媒体类用户文章里的图片检测；社交类用户上传的图片检测等<br>
-	 * <br>
+	 * <strong>图片检查</strong>
+	 * 校验一张图片是否含有违法违规内容。
+	 * 应用场景举例：
+	 * 1）图片智能鉴黄：涉及拍照的工具类应用(如美拍，识图类应用)用户拍照上传检测；电商类商品上架图片检测；媒体类用户文章里的图片检测等；
+	 * 2）敏感人脸识别：用户头像；媒体类用户文章里的图片检测；社交类用户上传的图片检测等
+	 * 
 	 * 频率限制：单个 appId 调用上限为 1000 次/分钟，100,000 次/天
 	 * @since 2.8.20
 	 * @param access_token access_token
@@ -579,12 +578,12 @@ public class WxaAPI : BaseAPI {
 	}
 	
 	/**
-	 * <strong>图片检查</strong><br>
-	 * 校验一张图片是否含有违法违规内容。<br>
-	 * 应用场景举例：<br>
-	 * 1）图片智能鉴黄：涉及拍照的工具类应用(如美拍，识图类应用)用户拍照上传检测；电商类商品上架图片检测；媒体类用户文章里的图片检测等；<br>
-	 * 2）敏感人脸识别：用户头像；媒体类用户文章里的图片检测；社交类用户上传的图片检测等<br>
-	 * <br>
+	 * <strong>图片检查</strong>
+	 * 校验一张图片是否含有违法违规内容。
+	 * 应用场景举例：
+	 * 1）图片智能鉴黄：涉及拍照的工具类应用(如美拍，识图类应用)用户拍照上传检测；电商类商品上架图片检测；媒体类用户文章里的图片检测等；
+	 * 2）敏感人脸识别：用户头像；媒体类用户文章里的图片检测；社交类用户上传的图片检测等
+	 * 
 	 * 频率限制：单个 appId 调用上限为 1000 次/分钟，100,000 次/天
 	 * @since 2.8.20
 	 * @param access_token access_token

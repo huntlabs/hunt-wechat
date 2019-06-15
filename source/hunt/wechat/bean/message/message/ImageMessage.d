@@ -1,6 +1,6 @@
 module hunt.wechat.bean.message.message.ImageMessage;
 
-public class ImageMessage : Message {
+class ImageMessage : Message {
 
     public ImageMessage() {
     }
@@ -21,7 +21,7 @@ public class ImageMessage : Message {
         this.image = image;
     }
 
-    public static class Image {
+    static class Image {
         private string media_id;
 
         public string getMedia_id() {

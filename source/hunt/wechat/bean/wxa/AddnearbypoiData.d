@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.AddnearbypoiData;
 
-public class AddnearbypoiData {
+class AddnearbypoiData {
 
 	private string audit_id;
 

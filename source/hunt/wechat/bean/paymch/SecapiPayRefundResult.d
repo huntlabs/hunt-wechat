@@ -10,17 +10,16 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.DynamicField;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-@SuppressWarnings("unused")
-public class SecapiPayRefundResult : MchBase : DynamicField{
 
-	private static Logger logger = LoggerFactory.getLogger(SecapiPayRefundResult.class);
+class SecapiPayRefundResult : MchBase : DynamicField{
+
 
 	private string device_info;
 
@@ -57,7 +56,7 @@ public class SecapiPayRefundResult : MchBase : DynamicField{
 	// 使用 getCoupons() 获取 List.
 	// List.size() = coupon_count
 	@XmlTransient
-	private List<Coupon> coupons;
+	private List!(Coupon) coupons;
 
 	public string getDevice_info() {
 		return device_info;
@@ -179,20 +178,20 @@ public class SecapiPayRefundResult : MchBase : DynamicField{
 		this.settlement_total_fee = settlement_total_fee;
 	}
 
-	public List<Coupon> getCoupons() {
+	public List!(Coupon) getCoupons() {
 		return coupons;
 	}
 
-	public void setCoupons(List<Coupon> coupons) {
+	public void setCoupons(List!(Coupon) coupons) {
 		this.coupons = coupons;
 	}
 
 	override
-	public void buildDynamicField(Map<string, string> dataMap) {
+	public void buildDynamicField(Map!(string, string) dataMap) {
 		if(dataMap != null){
 			string coupon_countStr = dataMap.get("coupon_refund_count");
 			if(coupon_countStr != null){
-				List<Coupon> list = new ArrayList<Coupon>();
+				List!(Coupon) list = new ArrayList!(Coupon)();
 				for (int i = 0; i < Integer.parseInt(coupon_countStr); i++) {
 					Coupon coupon = new Coupon(
 							dataMap.get("coupon_type_"+i),

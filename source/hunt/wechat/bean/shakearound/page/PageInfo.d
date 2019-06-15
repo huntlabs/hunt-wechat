@@ -10,29 +10,29 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class PageInfo {
+class PageInfo {
 	
 	/**
-	 * 页面的id<br>
+	 * 页面的id
 	 * 修改必填
 	 */
 	@JSONField(name = "page_id")
 	private Integer pageId;
 	
 	/**
-	 * 在摇一摇页面展示的主标题，不超过6个汉字或12个英文字母<br>
+	 * 在摇一摇页面展示的主标题，不超过6个汉字或12个英文字母
 	 * 添加、修改必填
 	 */
 	private string title;
 	
 	/**
-	 * 在摇一摇页面展示的副标题，不超过7个汉字或14个英文字母<br>
+	 * 在摇一摇页面展示的副标题，不超过7个汉字或14个英文字母
 	 * 添加、修改必填
 	 */
 	private string description;
 	
 	/**
-	 * 跳转链接<br>
+	 * 跳转链接
 	 * 添加、修改必填
 	 */
 	@JSONField(name = "page_url")
@@ -44,14 +44,14 @@ public class PageInfo {
 	private string comment;
 	
 	/**
-	 * 在摇一摇页面展示的图片。<br>
-	 * 添加、修改必填，图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处<br>
+	 * 在摇一摇页面展示的图片。
+	 * 添加、修改必填，图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处
 	 */
 	@JSONField(name = "icon_url")
 	private string iconUrl;
 
 	/**
-	 * 在摇一摇页面展示的主标题，不超过6个汉字或12个英文字母<br>
+	 * 在摇一摇页面展示的主标题，不超过6个汉字或12个英文字母
 	 * @return 在摇一摇页面展示的主标题
 	 */
 	public string getTitle() {
@@ -59,7 +59,7 @@ public class PageInfo {
 	}
 
 	/**
-	 * 在摇一摇页面展示的主标题，不超过6个汉字或12个英文字母<br>
+	 * 在摇一摇页面展示的主标题，不超过6个汉字或12个英文字母
 	 * 添加、修改必填
 	 * @param title 在摇一摇页面展示的主标题
 	 */
@@ -68,7 +68,7 @@ public class PageInfo {
 	}
 
 	/**
-	 * 在摇一摇页面展示的副标题，不超过7个汉字或14个英文字母<br>
+	 * 在摇一摇页面展示的副标题，不超过7个汉字或14个英文字母
 	 * @return 在摇一摇页面展示的副标题
 	 */
 	public string getDescription() {
@@ -76,7 +76,7 @@ public class PageInfo {
 	}
 
 	/**
-	 * 在摇一摇页面展示的副标题，不超过7个汉字或14个英文字母<br>
+	 * 在摇一摇页面展示的副标题，不超过7个汉字或14个英文字母
 	 * 添加、修改必填
 	 * @param description 在摇一摇页面展示的副标题
 	 */
@@ -92,7 +92,7 @@ public class PageInfo {
 	}
 
 	/**
-	 * 跳转链接<br>
+	 * 跳转链接
 	 * 添加、修改必填
 	 * @param pageUrl 跳转链接
 	 */
@@ -124,8 +124,8 @@ public class PageInfo {
 	}
 
 	/**
-	 * 在摇一摇页面展示的图片。<br>
-	 * 添加、修改必填，图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处<br>
+	 * 在摇一摇页面展示的图片。
+	 * 添加、修改必填，图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处
 	 * @param iconUrl 在摇一摇页面展示的图片
 	 */
 	public void setIconUrl(string iconUrl) {
@@ -140,7 +140,7 @@ public class PageInfo {
 	}
 
 	/**
-	 * 页面的id<br>
+	 * 页面的id
 	 * 修改必填
 	 * @param pageId 页面的id
 	 */

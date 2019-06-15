@@ -4,7 +4,7 @@ import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.scan.info.ActionInfo;
 
 
-public class BrandInfoUpdate : BaseResult {
+class BrandInfoUpdate : BaseResult {
     private ActionInfo action_info;
 
     public ActionInfo getAction_info() {

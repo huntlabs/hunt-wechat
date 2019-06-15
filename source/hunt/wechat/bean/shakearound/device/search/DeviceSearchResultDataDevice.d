@@ -12,7 +12,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceSearchResultDataDevice : DeviceIdentifier {
+class DeviceSearchResultDataDevice : DeviceIdentifier {
 
 	/**
 	 * 设备的备注信息
@@ -31,14 +31,14 @@ public class DeviceSearchResultDataDevice : DeviceIdentifier {
 	private Long lastActiveTime;
 	
 	/**
-	 * 若配置了设备与其他公众账号门店关联关系，则返回配置门店归属的公众账号appid。<br>
+	 * 若配置了设备与其他公众账号门店关联关系，则返回配置门店归属的公众账号appid。
 	 * 查看配置设备与其他公众账号门店关联关系接口
 	 */
 	@JSONField(name = "poi_appid")
 	private string poiAppId;
 	
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
 	 * 门店相关信息具体可查看门店相关的接口文档
 	 */
 	@JSONField(name = "poi_id")
@@ -91,7 +91,7 @@ public class DeviceSearchResultDataDevice : DeviceIdentifier {
 	}
 
 	/**
-	 * 若配置了设备与其他公众账号门店关联关系，则返回配置门店归属的公众账号appid。<br>
+	 * 若配置了设备与其他公众账号门店关联关系，则返回配置门店归属的公众账号appid。
 	 * 查看配置设备与其他公众账号门店关联关系接口
 	 * @return 公众账号appid
 	 */
@@ -100,7 +100,7 @@ public class DeviceSearchResultDataDevice : DeviceIdentifier {
 	}
 	
 	/**
-	 * 若配置了设备与其他公众账号门店关联关系，则返回配置门店归属的公众账号appid。<br>
+	 * 若配置了设备与其他公众账号门店关联关系，则返回配置门店归属的公众账号appid。
 	 * 查看配置设备与其他公众账号门店关联关系接口
 	 * @param poiAppId 公众账号appid
 	 */
@@ -109,7 +109,7 @@ public class DeviceSearchResultDataDevice : DeviceIdentifier {
 	}
 
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
 	 * 门店相关信息具体可查看门店相关的接口文档
 	 * @return 设备关联的门店ID
 	 */
@@ -118,7 +118,7 @@ public class DeviceSearchResultDataDevice : DeviceIdentifier {
 	}
 
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
 	 * 门店相关信息具体可查看门店相关的接口文档
 	 * @param poiId 设备关联的门店ID
 	 */

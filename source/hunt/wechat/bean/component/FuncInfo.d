@@ -1,6 +1,6 @@
 module hunt.wechat.bean.component.FuncInfo;
 
-public class FuncInfo {
+class FuncInfo {
 
 	private  FuncscopeCategory funcscope_category;
 
@@ -18,7 +18,7 @@ public class FuncInfo {
 
 
 
-	public static class FuncscopeCategory{
+	static class FuncscopeCategory{
 		private Integer id;
 
 		public Integer getId() {

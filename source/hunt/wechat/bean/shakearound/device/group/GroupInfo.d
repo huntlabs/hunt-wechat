@@ -10,17 +10,17 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class GroupInfo {
+class GroupInfo {
 
 	/**
-	 * 分组唯一标识，全局唯一<br>
+	 * 分组唯一标识，全局唯一
 	 * 修改必填
 	 */
 	@JSONField(name = "group_id")
 	private Integer groupId;
 	
 	/**
-	 * 分组名<br>
+	 * 分组名
 	 * 修改必填
 	 */
 	@JSONField(name = "group_name")
@@ -35,7 +35,7 @@ public class GroupInfo {
 	}
 
 	/**
-	 * 分组唯一标识，全局唯一<br>
+	 * 分组唯一标识，全局唯一
 	 * 修改必填
 	 * @param groupId 分组唯一标识
 	 */
@@ -51,7 +51,7 @@ public class GroupInfo {
 	}
 
 	/**
-	 * 分组名<br>
+	 * 分组名
 	 * 修改必填
 	 * @param groupName 分组名
 	 */

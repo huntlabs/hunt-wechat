@@ -8,7 +8,7 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo.QrcodeGet;
  * @Date: 2018/7/24 16:07
  * @Description:
  */
-public class QrcodeGet : ShopInfo {
+class QrcodeGet : ShopInfo {
     private Integer img_id;
 
     public Integer getImg_id() {

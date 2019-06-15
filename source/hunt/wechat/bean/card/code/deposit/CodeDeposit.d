@@ -8,17 +8,17 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeDeposit {
+class CodeDeposit {
 
 	/**
-	 * 需要进行导入code的卡券ID。<br>
+	 * 需要进行导入code的卡券ID。
 	 * 必填：是
 	 */
 	@JSONField(name = "card_id")
 	private string cardId;
 	
 	/**
-	 * 需导入微信卡券后台的自定义code，上限为100个。<br>
+	 * 需导入微信卡券后台的自定义code，上限为100个。
 	 * 必填：是
 	 */
 	private string[] code;
@@ -32,7 +32,7 @@ public class CodeDeposit {
 	}
 	
 	/**
-	 * 需要进行导入code的卡券ID。<br>
+	 * 需要进行导入code的卡券ID。
 	 * 必填：是
 	 * @param cardId 卡券ID
 	 */
@@ -49,7 +49,7 @@ public class CodeDeposit {
 	}
 	
 	/**
-	 * 需导入微信卡券后台的自定义code，上限为100个。<br>
+	 * 需导入微信卡券后台的自定义code，上限为100个。
 	 * 必填：是
 	 * @param code 自定义code
 	 */

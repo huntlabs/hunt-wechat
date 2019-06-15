@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SendCouponResult : MchBase{
+class SendCouponResult : MchBase{
 
 	private string sub_mch_id;
 

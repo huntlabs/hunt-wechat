@@ -4,7 +4,7 @@ import hunt.wechat.bean.BaseResult;
 
 
 
-public class UploadimgResult : BaseResult{
+class UploadimgResult : BaseResult{
 
 	private string url;
 

@@ -8,7 +8,7 @@ import hunt.wechat.bean.component.ApiQueryAuthResult;
  * @author LiYi
  * @since 2.8.20
  */
-public interface ComponentTokenManager {
+interface ComponentTokenManager {
 
 	/**
 	 * 获取 component_access_token
@@ -19,7 +19,7 @@ public interface ComponentTokenManager {
 	string getComponentAccessToken(string component_appid);
 
 	/**
-	 * 获取 component_access_token <br>
+	 * 获取 component_access_token 
 	 * 适用于单一第三方平台环境
 	 * 
 	 * @return componentAccessToken
@@ -36,7 +36,7 @@ public interface ComponentTokenManager {
 	string getAuthorizerAccessToken(string component_appid, string authorizer_appid);
 
 	/**
-	 * 获取 authorizer_access_token<br>
+	 * 获取 authorizer_access_token
 	 * 适用于单一第三方平台环境
 	 * 
 	 * @param authorizer_appid authorizer_appid

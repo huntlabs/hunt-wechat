@@ -1,6 +1,6 @@
 module hunt.wechat.bean.comment.Params;
 
-public class Params {
+class Params {
 
 	private Long msg_data_id;
 

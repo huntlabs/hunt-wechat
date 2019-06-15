@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.device.delete.DeviceDelete;
  * @Date: 2018/7/24 16:02
  * @Description:
  */
-public class DeviceDelete {
+class DeviceDelete {
     private string bssid;
 
     public string getBssid() {

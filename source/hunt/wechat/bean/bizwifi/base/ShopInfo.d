@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 11:44
  * @Description:
  */
-public class ShopInfo {
+class ShopInfo {
     private Integer shop_id;
     private string ssid;
     private string password;

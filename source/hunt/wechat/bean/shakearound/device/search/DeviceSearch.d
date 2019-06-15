@@ -14,13 +14,13 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceSearch {
+class DeviceSearch {
 
 	/**
-	 * 查询类型。<br>
-	 * 1：查询设备id列表中的设备；<br>
-	 * 2：分页查询所有设备信息；<br>
-	 * 3：分页查询某次申请的所有设备信息<br>
+	 * 查询类型。
+	 * 1：查询设备id列表中的设备；
+	 * 2：分页查询所有设备信息；
+	 * 3：分页查询某次申请的所有设备信息
 	 * 必填
 	 */
 	private Integer type;
@@ -29,7 +29,7 @@ public class DeviceSearch {
 	 * 指定的设备 ； 当type为1时，此项为必填
 	 */
 	@JSONField(name = "device_identifiers")
-	private List<DeviceIdentifier> deviceIdentifiers;
+	private List!(DeviceIdentifier) deviceIdentifiers;
 	
 	/**
 	 * 批次ID，申请设备ID时所返回的批次ID；当type为3时，此项为必填
@@ -49,10 +49,10 @@ public class DeviceSearch {
 	private Integer count;
 
 	/**
-	 * 查询类型。<br>
-	 * 1：查询设备id列表中的设备；<br>
-	 * 2：分页查询所有设备信息；<br>
-	 * 3：分页查询某次申请的所有设备信息<br>
+	 * 查询类型。
+	 * 1：查询设备id列表中的设备；
+	 * 2：分页查询所有设备信息；
+	 * 3：分页查询某次申请的所有设备信息
 	 * 必填
 	 * @return 查询类型
 	 */
@@ -61,10 +61,10 @@ public class DeviceSearch {
 	}
 
 	/**
-	 * 查询类型。<br>
-	 * 1：查询设备id列表中的设备；<br>
-	 * 2：分页查询所有设备信息；<br>
-	 * 3：分页查询某次申请的所有设备信息<br>
+	 * 查询类型。
+	 * 1：查询设备id列表中的设备；
+	 * 2：分页查询所有设备信息；
+	 * 3：分页查询某次申请的所有设备信息
 	 * 必填
 	 * @param type 查询类型
 	 */
@@ -76,7 +76,7 @@ public class DeviceSearch {
 	 * 指定的设备 ； 当type为1时，此项为必填
 	 * @return 指定的设备
 	 */
-	public List<DeviceIdentifier> getDeviceIdentifiers() {
+	public List!(DeviceIdentifier) getDeviceIdentifiers() {
 		return deviceIdentifiers;
 	}
 
@@ -84,7 +84,7 @@ public class DeviceSearch {
 	 * 指定的设备 ； 当type为1时，此项为必填
 	 * @param deviceIdentifiers 指定的设备
 	 */
-	public void setDeviceIdentifiers(List<DeviceIdentifier> deviceIdentifiers) {
+	public void setDeviceIdentifiers(List!(DeviceIdentifier) deviceIdentifiers) {
 		this.deviceIdentifiers = deviceIdentifiers;
 	}
 

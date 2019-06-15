@@ -1,6 +1,6 @@
 module hunt.wechat.bean.message.PrivateTemplate;
 
-public class PrivateTemplate {
+class PrivateTemplate {
 
 	private string template_id;
 	

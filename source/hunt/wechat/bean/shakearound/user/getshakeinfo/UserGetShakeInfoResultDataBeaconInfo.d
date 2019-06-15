@@ -8,7 +8,7 @@ module hunt.wechat.bean.shakearound.user.getshakeinfo.UserGetShakeInfoResultData
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UserGetShakeInfoResultDataBeaconInfo {
+class UserGetShakeInfoResultDataBeaconInfo {
 
 	/**
 	 * Beacon信号与手机的距离，单位为米

@@ -10,9 +10,9 @@ import hunt.collection.List;
  * @Date: 2018/7/3 10:48
  * @Description:
  */
-public class ApiGetAuthorizerListResult : BaseResult {
+class ApiGetAuthorizerListResult : BaseResult {
     private Integer total_count;
-    private List<AuthInfo> list;
+    private List!(AuthInfo) list;
 
     public Integer getTotal_count() {
         return total_count;
@@ -22,15 +22,15 @@ public class ApiGetAuthorizerListResult : BaseResult {
         this.total_count = total_count;
     }
 
-    public List<AuthInfo> getList() {
+    public List!(AuthInfo) getList() {
         return list;
     }
 
-    public void setList(List<AuthInfo> list) {
+    public void setList(List!(AuthInfo) list) {
         this.list = list;
     }
 
-    public static class AuthInfo {
+    static class AuthInfo {
         private string authorizer_appid;
         private string refresh_token;
         private string auth_time;

@@ -11,7 +11,7 @@ import hunt.wechat.bean.card.Gift;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UpdateGift : AbstractUpdate {
+class UpdateGift : AbstractUpdate {
 	
 	/**
 	 * 兑换券

@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class BusinessResult {
+class BusinessResult {
 
 	@JSONField(name = "base_info")
 	private BaseInfoResult baseInfo;

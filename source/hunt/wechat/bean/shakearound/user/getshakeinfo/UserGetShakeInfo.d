@@ -10,16 +10,16 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UserGetShakeInfo {
+class UserGetShakeInfo {
 
 	/**
-	 * 摇周边业务的ticket，可在摇到的URL中得到，ticket生效时间为30分钟，每一次摇都会重新生成新的ticket<br>
+	 * 摇周边业务的ticket，可在摇到的URL中得到，ticket生效时间为30分钟，每一次摇都会重新生成新的ticket
 	 * 必填
 	 */
 	private string ticket;
 	
 	/**
-	 * 是否需要返回门店poi_id，传1则返回，否则不返回；<br>
+	 * 是否需要返回门店poi_id，传1则返回，否则不返回；
 	 * 门店相关信息具体可查看<a href="https://mp.weixin.qq.com/zh_CN/htmledition/comm_htmledition/res/store_manage/store_manage_file.zip">门店相关的接口文档</a>
 	 */
 	@JSONField(name = "need_poi")
@@ -41,7 +41,7 @@ public class UserGetShakeInfo {
 	}
 
 	/**
-	 * 摇周边业务的ticket，可在摇到的URL中得到，ticket生效时间为30分钟，每一次摇都会重新生成新的ticket<br>
+	 * 摇周边业务的ticket，可在摇到的URL中得到，ticket生效时间为30分钟，每一次摇都会重新生成新的ticket
 	 * 必填
 	 * @param ticket 摇周边业务的ticket
 	 */
@@ -57,7 +57,7 @@ public class UserGetShakeInfo {
 	}
 
 	/**
-	 * 是否需要返回门店poi_id，传1则返回，否则不返回；<br>
+	 * 是否需要返回门店poi_id，传1则返回，否则不返回；
 	 * 门店相关信息具体可查看<a href="https://mp.weixin.qq.com/zh_CN/htmledition/comm_htmledition/res/store_manage/store_manage_file.zip">门店相关的接口文档</a>
 	 * @param needPoi 是否需要返回门店poi_id
 	 */

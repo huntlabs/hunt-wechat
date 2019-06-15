@@ -8,16 +8,16 @@ module hunt.wechat.bean.shakearound.lottery.TicketInfo;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class TicketInfo {
+class TicketInfo {
 
 	/**
-	 * 预下单时返回的红包ticket，<br>
+	 * 预下单时返回的红包ticket，
 	 * 添加时：单个活动红包ticket数量上限为100000个，可添加多次。
 	 */
 	private string ticket;
 
 	/**
-	 * 预下单时返回的红包ticket，<br>
+	 * 预下单时返回的红包ticket，
 	 * 添加时：单个活动红包ticket数量上限为100000个，可添加多次。
 	 * @return 预下单时返回的红包ticket
 	 */
@@ -26,7 +26,7 @@ public class TicketInfo {
 	}
 
 	/**
-	 * 预下单时返回的红包ticket，<br>
+	 * 预下单时返回的红包ticket，
 	 * 添加时：单个活动红包ticket数量上限为100000个，可添加多次。
 	 * @param ticket 预下单时返回的红包ticket
 	 */

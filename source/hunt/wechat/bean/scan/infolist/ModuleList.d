@@ -1,6 +1,6 @@
 module hunt.wechat.bean.scan.infolist.ModuleList;
 
-public class ModuleList {
+class ModuleList {
     private string type;
     private string native_show;
     private string anti_fake_url;

@@ -14,7 +14,7 @@ import hunt.wechat.bean.shakearound.device.group.GroupInfo;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupGetDetailResultData : GroupInfo {
+class DeviceGroupGetDetailResultData : GroupInfo {
 
 	/**
 	 * 此分组现有的总设备数
@@ -25,7 +25,7 @@ public class DeviceGroupGetDetailResultData : GroupInfo {
 	/**
 	 * 分组下的设备列表
 	 */
-	private List<DeviceGroupGetDetailResultDataDevice> devices;
+	private List!(DeviceGroupGetDetailResultDataDevice) devices;
 
 	/**
 	 * @return 此分组现有的总设备数
@@ -44,14 +44,14 @@ public class DeviceGroupGetDetailResultData : GroupInfo {
 	/**
 	 * @return 分组下的设备列表
 	 */
-	public List<DeviceGroupGetDetailResultDataDevice> getDevices() {
+	public List!(DeviceGroupGetDetailResultDataDevice) getDevices() {
 		return devices;
 	}
 
 	/**
 	 * @param devices 分组下的设备列表
 	 */
-	public void setDevices(List<DeviceGroupGetDetailResultDataDevice> devices) {
+	public void setDevices(List!(DeviceGroupGetDetailResultDataDevice) devices) {
 		this.devices = devices;
 	}
 

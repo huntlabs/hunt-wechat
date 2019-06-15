@@ -7,30 +7,30 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceIdentifier {
+class DeviceIdentifier {
 
 	/**
-	 * 设备编号，<br>
-	 * 添加或修改时，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先<br>
+	 * 设备编号，
+	 * 添加或修改时，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先
 	 * 必填
 	 */
 	@JSONField(name = "device_id")
 	private Integer deviceId;
 	
 	/**
-	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。<br>
+	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。
 	 * 必填
 	 */
 	private string uuid;
 	
 	/**
-	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。<br>
+	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。
 	 * 必填
 	 */
 	private Integer major;
 	
 	/**
-	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。<br>
+	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。
 	 * 必填
 	 */
 	private Integer minor;
@@ -43,8 +43,8 @@ public class DeviceIdentifier {
 	}
 
 	/**
-	 * 设备编号，<br>
-	 * 添加或修改时，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先<br>
+	 * 设备编号，
+	 * 添加或修改时，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先
 	 * 必填
 	 * @param deviceId 设备编号
 	 */
@@ -60,7 +60,7 @@ public class DeviceIdentifier {
 	}
 
 	/**
-	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。<br>
+	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。
 	 * 必填
 	 * @param uuid UUID
 	 */
@@ -76,7 +76,7 @@ public class DeviceIdentifier {
 	}
 
 	/**
-	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。<br>
+	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。
 	 * 必填
 	 * @param major major
 	 */
@@ -92,7 +92,7 @@ public class DeviceIdentifier {
 	}
 
 	/**
-	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。<br>
+	 * 添加或修改时，UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。
 	 * 必填
 	 * @param minor minor
 	 */

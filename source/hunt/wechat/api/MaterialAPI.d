@@ -21,8 +21,8 @@ import hunt.collection.List;
 //import org.apache.http.impl.client.CloseableHttpClient;
 //import org.apache.http.impl.client.HttpClients;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.material.Description;
@@ -42,9 +42,8 @@ import hunt.wechat.util.StreamUtils;
  * @author LiYi
  *
  */
-public class MaterialAPI : BaseAPI{
+class MaterialAPI : BaseAPI{
 	
-	private static Logger logger = LoggerFactory.getLogger(MaterialAPI.class);
 
 	/**
 	 * 新增永久图文素材
@@ -52,7 +51,7 @@ public class MaterialAPI : BaseAPI{
 	 * @param articles articles
 	 * @return Media
 	 */
-	public static Media add_news(string access_token,List<Article> articles){
+	public static Media add_news(string access_token,List!(Article) articles){
 		string str = JsonUtil.toJSONString(articles);
 		string messageJson = "{\"articles\":"+str+"}";
 		HttpUriRequest httpUriRequest = RequestBuilder.post()
@@ -211,7 +210,7 @@ public class MaterialAPI : BaseAPI{
 	 * @param articles articles
 	 * @return BaseResult
 	 */
-	public static BaseResult update_news(string access_token,string media_id,int index,List<Article> articles){
+	public static BaseResult update_news(string access_token,string media_id,int index,List!(Article) articles){
 		return update_news(access_token, media_id, index, JsonUtil.toJSONString(articles));
 	}
 	

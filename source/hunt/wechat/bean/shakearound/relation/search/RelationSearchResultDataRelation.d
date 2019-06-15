@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class RelationSearchResultDataRelation {
+class RelationSearchResultDataRelation {
 
 	/**
 	 * 设备编号

@@ -8,9 +8,9 @@ import hunt.wechat.bean.BaseResult;
  * 未接入会话
  * @author Menng
  */
-public class KFWaitcase : BaseResult {
+class KFWaitcase : BaseResult {
 	private int count; // 未接入会话数量
-	private List<WaitcaseList> waitcaselist; // 未接入会话列表，最多返回100条数据
+	private List!(WaitcaseList) waitcaselist; // 未接入会话列表，最多返回100条数据
 
 	public int getCount() {
 		return count;
@@ -20,15 +20,15 @@ public class KFWaitcase : BaseResult {
 		this.count = count;
 	}
 
-	public List<WaitcaseList> getWaitcaselist() {
+	public List!(WaitcaseList) getWaitcaselist() {
 		return waitcaselist;
 	}
 
-	public void setWaitcaselist(List<WaitcaseList> waitcaselist) {
+	public void setWaitcaselist(List!(WaitcaseList) waitcaselist) {
 		this.waitcaselist = waitcaselist;
 	}
 
-	public static class WaitcaseList {
+	static class WaitcaseList {
 		private Integer createtime; // 用户来访时间，UNIX时间戳
 		private string kf_account; // 指定接待的客服，为空表示未指定客服
 		private string openid; // 客户openid

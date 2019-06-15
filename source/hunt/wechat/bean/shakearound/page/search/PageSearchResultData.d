@@ -14,12 +14,12 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class PageSearchResultData {
+class PageSearchResultData {
 
 	/**
 	 * 页面列表
 	 */
-	private List<PageInfo> pages;
+	private List!(PageInfo) pages;
 	
 	/**
 	 * 商户名下的页面总数
@@ -30,14 +30,14 @@ public class PageSearchResultData {
 	/**
 	 * @return 页面列表
 	 */
-	public List<PageInfo> getPages() {
+	public List!(PageInfo) getPages() {
 		return pages;
 	}
 
 	/**
 	 * @param pages 页面列表
 	 */
-	public void setPages(List<PageInfo> pages) {
+	public void setPages(List!(PageInfo) pages) {
 		this.pages = pages;
 	}
 

@@ -2,7 +2,7 @@ module hunt.wechat.bean.shorturl.Shorturl;
 
 import hunt.wechat.bean.BaseResult;
 
-public class Shorturl : BaseResult{
+class Shorturl : BaseResult{
 
 	private string short_url;
 

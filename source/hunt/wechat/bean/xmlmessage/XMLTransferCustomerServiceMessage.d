@@ -9,9 +9,8 @@ import hunt.wechat.bean.message.message.Message;
  * @author LiYi
  *
  */
-public class XMLTransferCustomerServiceMessage : XMLMessage {
+class XMLTransferCustomerServiceMessage : XMLMessage {
 
-	private static final long serialVersionUID = -4192054456072285008L;
 
 	private string kfAccount;
 

@@ -8,7 +8,7 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 17:13
  * @Description:
  */
-public class CouponputSet : ShopInfo {
+class CouponputSet : ShopInfo {
     private string card_id;
     private string card_describe;
     private string start_time;

@@ -12,24 +12,24 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceBindPage {
+class DeviceBindPage {
 
 	/**
-	 * 指定页面的设备ID<br>
+	 * 指定页面的设备ID
 	 * 必填
 	 */
 	@JSONField(name = "device_identifier")
 	private DeviceIdentifier deviceIdentifier;
 	
 	/**
-	 * 待关联的页面列表<br>
+	 * 待关联的页面列表
 	 * 必填
 	 */
 	@JSONField(name = "page_ids")
 	private Integer[] pageIds;
 
 	/**
-	 * 指定页面的设备ID<br>
+	 * 指定页面的设备ID
 	 * 必填
 	 * @return 指定页面的设备ID
 	 */
@@ -38,7 +38,7 @@ public class DeviceBindPage {
 	}
 
 	/**
-	 * 指定页面的设备ID<br>
+	 * 指定页面的设备ID
 	 * 必填
 	 * @param deviceIdentifier 指定页面的设备ID
 	 */
@@ -47,7 +47,7 @@ public class DeviceBindPage {
 	}
 
 	/**
-	 * 待关联的页面列表<br>
+	 * 待关联的页面列表
 	 * 必填
 	 * @return 待关联的页面列表
 	 */
@@ -56,7 +56,7 @@ public class DeviceBindPage {
 	}
 
 	/**
-	 * 待关联的页面列表<br>
+	 * 待关联的页面列表
 	 * 必填
 	 * @param pageIds 待关联的页面列表
 	 */

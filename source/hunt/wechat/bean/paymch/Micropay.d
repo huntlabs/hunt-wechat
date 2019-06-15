@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Micropay : MchVersion {
+class Micropay : MchVersion {
 
 	private string appid;
 	private string mch_id;

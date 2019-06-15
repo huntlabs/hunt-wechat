@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class AdvancedInfoUseCondition {
+class AdvancedInfoUseCondition {
 
 	/**
 	 * 指定可用的商品类目，仅用于代金券类型，填入后将在券面拼写适用于xxx
@@ -29,14 +29,14 @@ public class AdvancedInfoUseCondition {
 	private Integer leastCost;
 
 	/**
-	 * 购买xx可用类型门槛，仅用于兑换，填入后自动拼写购买xxx可用。<br>
+	 * 购买xx可用类型门槛，仅用于兑换，填入后自动拼写购买xxx可用。
 	 * 长度：512
 	 */
 	@JSONField(name = "object_use_for")
 	private string objectUseFor;
 
 	/**
-	 * 不可以与其他类型共享门槛，填写false时系统将在使用须知里拼写“不可与其他优惠共享”，<br>
+	 * 不可以与其他类型共享门槛，填写false时系统将在使用须知里拼写“不可与其他优惠共享”，
 	 * 填写true时系统将在使用须知里拼写“可与其他优惠共享”，默认为true
 	 */
 	@JSONField(name = "can_use_with_other_discount")
@@ -85,7 +85,7 @@ public class AdvancedInfoUseCondition {
 	}
 
 	/**
-	 * 购买xx可用类型门槛，仅用于兑换，填入后自动拼写购买xxx可用。<br>
+	 * 购买xx可用类型门槛，仅用于兑换，填入后自动拼写购买xxx可用。
 	 * 长度：512
 	 */
 	public string getObjectUseFor() {
@@ -93,7 +93,7 @@ public class AdvancedInfoUseCondition {
 	}
 
 	/**
-	 * 购买xx可用类型门槛，仅用于兑换，填入后自动拼写购买xxx可用。<br>
+	 * 购买xx可用类型门槛，仅用于兑换，填入后自动拼写购买xxx可用。
 	 * 长度：512
 	 */
 	public void setObjectUseFor(string objectUseFor) {
@@ -101,7 +101,7 @@ public class AdvancedInfoUseCondition {
 	}
 
 	/**
-	 * 不可以与其他类型共享门槛，填写false时系统将在使用须知里拼写“不可与其他优惠共享”，<br>
+	 * 不可以与其他类型共享门槛，填写false时系统将在使用须知里拼写“不可与其他优惠共享”，
 	 * 填写true时系统将在使用须知里拼写“可与其他优惠共享”，默认为true
 	 */
 	public Boolean getCanUseWithOtherDiscount() {
@@ -109,7 +109,7 @@ public class AdvancedInfoUseCondition {
 	}
 
 	/**
-	 * 不可以与其他类型共享门槛，填写false时系统将在使用须知里拼写“不可与其他优惠共享”，<br>
+	 * 不可以与其他类型共享门槛，填写false时系统将在使用须知里拼写“不可与其他优惠共享”，
 	 * 填写true时系统将在使用须知里拼写“可与其他优惠共享”，默认为true
 	 */
 	public void setCanUseWithOtherDiscount(Boolean canUseWithOtherDiscount) {

@@ -38,7 +38,7 @@ import hunt.wechat.util.JsonUtil;
  *
  * @author LiYi
  */
-public class MessageAPI : BaseAPI {
+class MessageAPI : BaseAPI {
 
 
     /**
@@ -72,11 +72,10 @@ public class MessageAPI : BaseAPI {
     
     /**
      * 客服输入状态
-     * @since 2.8.26
      * @param access_token access_token
      * @param touser touser
-     * @param command <br>
-     *  "Typing"：对用户下发“正在输入"状态  <br>
+     * @param command 
+     *  "Typing"：对用户下发“正在输入"状态  
      *  "CancelTyping"：取消对用户的”正在输入"状态
      * @return BaseResult
      */
@@ -98,7 +97,7 @@ public class MessageAPI : BaseAPI {
      * @param articles     图文信息 1-10 个
      * @return Media
      */
-    public static Media mediaUploadnews(string access_token, List<Article> articles) {
+    public static Media mediaUploadnews(string access_token, List!(Article) articles) {
         return MediaAPI.mediaUploadnews(access_token, articles);
     }
 
@@ -185,11 +184,11 @@ public class MessageAPI : BaseAPI {
 
 
     /**
-     * 高级群发接口	删除群发 <br>
-     * 1、只有已经发送成功的消息才能删除<br>
-     * 2、删除消息是将消息的图文详情页失效，已经收到的用户，还是能在其本地看到消息卡片。<br>
-     * 3、删除群发消息只能删除图文消息和视频消息，其他类型的消息一经发送，无法删除。<br>
-     * 4、如果多次群发发送的是一个图文消息，那么删除其中一次群发，就会删除掉这个图文消息也，导致所有群发都失效<br>
+     * 高级群发接口	删除群发 
+     * 1、只有已经发送成功的消息才能删除
+     * 2、删除消息是将消息的图文详情页失效，已经收到的用户，还是能在其本地看到消息卡片。
+     * 3、删除群发消息只能删除图文消息和视频消息，其他类型的消息一经发送，无法删除。
+     * 4、如果多次群发发送的是一个图文消息，那么删除其中一次群发，就会删除掉这个图文消息也，导致所有群发都失效
      *
      * @param access_token access_token
      * @param msg_id       msg_id
@@ -200,17 +199,16 @@ public class MessageAPI : BaseAPI {
     }
 
     /**
-     * 高级群发接口	删除群发 <br>
-     * 1、只有已经发送成功的消息才能删除<br>
-     * 2、删除消息是将消息的图文详情页失效，已经收到的用户，还是能在其本地看到消息卡片。<br>
-     * 3、删除群发消息只能删除图文消息和视频消息，其他类型的消息一经发送，无法删除。<br>
-     * 4、如果多次群发发送的是一个图文消息，那么删除其中一次群发，就会删除掉这个图文消息也，导致所有群发都失效<br>
+     * 高级群发接口	删除群发 
+     * 1、只有已经发送成功的消息才能删除
+     * 2、删除消息是将消息的图文详情页失效，已经收到的用户，还是能在其本地看到消息卡片。
+     * 3、删除群发消息只能删除图文消息和视频消息，其他类型的消息一经发送，无法删除。
+     * 4、如果多次群发发送的是一个图文消息，那么删除其中一次群发，就会删除掉这个图文消息也，导致所有群发都失效
      *
      * @param access_token access_token
      * @param msg_id       msg_id
      * @param article_idx  要删除的文章在图文消息中的位置，第一篇编号为1，该字段不填或填0会删除全部文章
      * @return BaseResult
-     * @since 2.8.10
      */
     public static BaseResult messageMassDelete(string access_token, string msg_id, Integer article_idx) {
         string messageJson = string.format("{\"msg_id\":\"%s\",\"article_idx\":%d}", msg_id, article_idx);
@@ -229,7 +227,6 @@ public class MessageAPI : BaseAPI {
      * @param access_token access_token
      * @param preview      preview
      * @return MessageSendResult
-     * @since 2.6.3
      */
     public static MessageSendResult messageMassPreview(string access_token, Preview preview) {
         string previewJson = JsonUtil.toJSONString(preview);
@@ -248,7 +245,6 @@ public class MessageAPI : BaseAPI {
      * @param access_token access_token
      * @param msg_id       msg_id
      * @return MessageSendResult
-     * @since 2.6.3
      */
     public static MessageSendResult messageMassGet(string access_token, string msg_id) {
         string messageJson = string.format("{\"msg_id\":\"%s\"}", msg_id);
@@ -288,7 +284,6 @@ public class MessageAPI : BaseAPI {
      * @param access_token    access_token
      * @param templateMessage templateMessage
      * @return result
-     * @since 2.8.3
      */
     public static BaseResult messageWxopenTemplateSend(string access_token, WxopenTemplateMessage templateMessage) {
         string messageJson = JsonUtil.toJSONString(templateMessage);
@@ -305,55 +300,54 @@ public class MessageAPI : BaseAPI {
      * 模板消息 设置所属行业
      *
      * @param access_token access_token
-     * @param industrys    行业值，暂设置个数限制为2个。<br>
+     * @param industrys    行业值，暂设置个数限制为2个。
      *                     <p>
-     *                     主行业	副行业	代码	   <br>
-     *                     IT科技	互联网/电子商务	1 <br>
-     *                     IT科技	IT软件与服务	2 <br>
-     *                     IT科技	IT硬件与设备	3 <br>
-     *                     IT科技	电子技术	4 <br>
-     *                     IT科技	通信与运营商	5 <br>
-     *                     IT科技	网络游戏	6 <br>
-     *                     金融业	银行	7 <br>
-     *                     金融业	基金|理财|信托	8 <br>
-     *                     金融业	保险	9 <br>
-     *                     餐饮	餐饮	10 <br>
-     *                     酒店旅游	酒店	11 <br>
-     *                     酒店旅游	旅游	12 <br>
-     *                     运输与仓储	快递	13 <br>
-     *                     运输与仓储	物流	14 <br>
-     *                     运输与仓储	仓储	15 <br>
-     *                     教育	培训	16 <br>
-     *                     教育	院校	17 <br>
-     *                     政府与公共事业	学术科研	18 <br>
-     *                     政府与公共事业	交警	19 <br>
-     *                     政府与公共事业	博物馆	20 <br>
-     *                     政府与公共事业	公共事业|非盈利机构	21 <br>
-     *                     医药护理	医药医疗	22 <br>
-     *                     医药护理	护理美容	23 <br>
-     *                     医药护理	保健与卫生	24 <br>
-     *                     交通工具	汽车相关	25 <br>
-     *                     交通工具	摩托车相关	26 <br>
-     *                     交通工具	火车相关	27 <br>
-     *                     交通工具	飞机相关	28 <br>
-     *                     房地产	建筑	29 <br>
-     *                     房地产	物业	30 <br>
-     *                     消费品	消费品	31 <br>
-     *                     商业服务	法律	32 <br>
-     *                     商业服务	会展	33 <br>
-     *                     商业服务	中介服务	34 <br>
-     *                     商业服务	认证	35 <br>
-     *                     商业服务	审计	36 <br>
-     *                     文体娱乐	传媒	37 <br>
-     *                     文体娱乐	体育	38 <br>
-     *                     文体娱乐	娱乐休闲	39 <br>
-     *                     印刷	印刷	40 <br>
-     *                     其它	其它	41 <br>
+     *                     主行业	副行业	代码	   
+     *                     IT科技	互联网/电子商务	1 
+     *                     IT科技	IT软件与服务	2 
+     *                     IT科技	IT硬件与设备	3 
+     *                     IT科技	电子技术	4 
+     *                     IT科技	通信与运营商	5 
+     *                     IT科技	网络游戏	6 
+     *                     金融业	银行	7 
+     *                     金融业	基金|理财|信托	8 
+     *                     金融业	保险	9 
+     *                     餐饮	餐饮	10 
+     *                     酒店旅游	酒店	11 
+     *                     酒店旅游	旅游	12 
+     *                     运输与仓储	快递	13 
+     *                     运输与仓储	物流	14 
+     *                     运输与仓储	仓储	15 
+     *                     教育	培训	16 
+     *                     教育	院校	17 
+     *                     政府与公共事业	学术科研	18 
+     *                     政府与公共事业	交警	19 
+     *                     政府与公共事业	博物馆	20 
+     *                     政府与公共事业	公共事业|非盈利机构	21 
+     *                     医药护理	医药医疗	22 
+     *                     医药护理	护理美容	23 
+     *                     医药护理	保健与卫生	24 
+     *                     交通工具	汽车相关	25 
+     *                     交通工具	摩托车相关	26 
+     *                     交通工具	火车相关	27 
+     *                     交通工具	飞机相关	28 
+     *                     房地产	建筑	29 
+     *                     房地产	物业	30 
+     *                     消费品	消费品	31 
+     *                     商业服务	法律	32 
+     *                     商业服务	会展	33 
+     *                     商业服务	中介服务	34 
+     *                     商业服务	认证	35 
+     *                     商业服务	审计	36 
+     *                     文体娱乐	传媒	37 
+     *                     文体娱乐	体育	38 
+     *                     文体娱乐	娱乐休闲	39 
+     *                     印刷	印刷	40 
+     *                     其它	其它	41 
      * @return BaseResult
-     * @since 2.6.1
      */
     public static BaseResult templateApi_set_industry(string access_token, string... industrys) {
-        Map<string, string> map = new LinkedHashMap<string, string>();
+        Map!(string, string) map = new LinkedHashMap!(string, string)();
         for (int i = 1; i <= industrys.length; i++) {
             map.put("industry_id" + i, industrys[i - 1]);
         }
@@ -372,7 +366,6 @@ public class MessageAPI : BaseAPI {
      *
      * @param access_token access_token
      * @return GetIndustryResult
-     * @since 2.6.1
      */
     public static GetIndustryResult templateGet_industry(string access_token) {
         HttpUriRequest httpUriRequest = RequestBuilder.post()
@@ -388,7 +381,6 @@ public class MessageAPI : BaseAPI {
      * @param access_token      access_token
      * @param template_id_short template_id_short
      * @return ApiAddTemplateResult
-     * @since 2.6.1
      */
     public static ApiAddTemplateResult templateApi_add_template(string access_token, string template_id_short) {
         string json = string.format("{\"template_id_short\":\"%s\"}", template_id_short);
@@ -406,7 +398,6 @@ public class MessageAPI : BaseAPI {
      *
      * @param access_token access_token
      * @return GetAllPrivateTemplateResult
-     * @since 2.6.1
      */
     public static GetAllPrivateTemplateResult templateGet_all_private_template(string access_token) {
         HttpUriRequest httpUriRequest = RequestBuilder.post()
@@ -422,7 +413,6 @@ public class MessageAPI : BaseAPI {
      * @param access_token access_token
      * @param template_id  template_id
      * @return BaseResult
-     * @since 2.6.1
      */
     public static BaseResult templateDel_private_template(string access_token, string template_id) {
         string json = string.format("{\"template_id\":\"%s\"}", template_id);
@@ -440,7 +430,6 @@ public class MessageAPI : BaseAPI {
      *
      * @param access_token access_token
      * @return CurrentAutoreplyInfo
-     * @since 2.6.3
      */
     public static CurrentAutoreplyInfo get_current_autoreply_info(string access_token) {
         HttpUriRequest httpUriRequest = RequestBuilder.post()

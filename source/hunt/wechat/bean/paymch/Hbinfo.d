@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.Hbinfo;
 
-public class Hbinfo {
+class Hbinfo {
 
 	private string openid;
 

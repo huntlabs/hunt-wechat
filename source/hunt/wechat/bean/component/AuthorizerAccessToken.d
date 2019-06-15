@@ -2,7 +2,7 @@ module hunt.wechat.bean.component.AuthorizerAccessToken;
 
 import hunt.wechat.bean.BaseResult;
 
-public class AuthorizerAccessToken : BaseResult {
+class AuthorizerAccessToken : BaseResult {
 
 	private string authorizer_access_token;
 

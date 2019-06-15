@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxopen.FuncInfo;
 
-public class FuncInfo {
+class FuncInfo {
 
 	private Integer status;
 

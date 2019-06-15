@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class CreateResult : BaseResult {
+class CreateResult : BaseResult {
 
 	/**
 	 * 卡券ID

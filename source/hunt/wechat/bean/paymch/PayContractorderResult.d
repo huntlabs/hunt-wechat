@@ -9,7 +9,7 @@ import hunt.wechat.bean.AdaptorCDATA;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PayContractorderResult : MchBase{
+class PayContractorderResult : MchBase{
 
 	private string contract_result_code;
 	

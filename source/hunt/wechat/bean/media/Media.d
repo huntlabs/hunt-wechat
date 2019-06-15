@@ -2,7 +2,7 @@ module hunt.wechat.bean.media.Media;
 
 import hunt.wechat.bean.BaseResult;
 
-public class Media : BaseResult{
+class Media : BaseResult{
 
 	private string type;
 	

@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.user.Usercumulate;
 
-public class Usercumulate {
+class Usercumulate {
 
 	private string ref_date;
 

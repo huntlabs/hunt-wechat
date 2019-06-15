@@ -2,7 +2,7 @@ module hunt.wechat.bean.user.GetblacklistResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class GetblacklistResult : BaseResult {
+class GetblacklistResult : BaseResult {
 
 	private Integer total;
 
@@ -44,7 +44,7 @@ public class GetblacklistResult : BaseResult {
 		this.data = data;
 	}
 
-	public static class Data {
+	static class Data {
 
 		private string[] openid;
 

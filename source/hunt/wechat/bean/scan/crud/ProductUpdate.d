@@ -3,7 +3,7 @@ module hunt.wechat.bean.scan.crud.ProductUpdate;
 
 import hunt.wechat.bean.scan.base.ProductGet;
 
-public class ProductUpdate : ProductGet {
+class ProductUpdate : ProductGet {
     private BrandInfoUpdate brand_info;
 
     public BrandInfoUpdate getBrand_info() {

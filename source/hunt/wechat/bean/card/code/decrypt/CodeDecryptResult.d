@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class CodeDecryptResult : BaseResult {
+class CodeDecryptResult : BaseResult {
 
 	/**
 	 * 解密后获取的真实Code码

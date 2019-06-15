@@ -7,7 +7,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月25日
  */
-public class AccountAuditStatusResultData {
+class AccountAuditStatusResultData {
 
 	/**
 	 * 提交申请的时间戳

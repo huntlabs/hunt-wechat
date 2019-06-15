@@ -24,7 +24,7 @@ import hunt.wechat.client.LocalHttpClient;
  * 多客服功能
  * @author Menng
  */
-public class CustomserviceAPI : BaseAPI {
+class CustomserviceAPI : BaseAPI {
 
 	/**
 	 * 获取客服基本信息

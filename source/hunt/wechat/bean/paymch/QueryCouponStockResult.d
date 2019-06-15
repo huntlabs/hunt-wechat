@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class QueryCouponStockResult : MchBase{
+class QueryCouponStockResult : MchBase{
 
 	private string sub_mch_id;
 

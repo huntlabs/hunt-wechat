@@ -7,24 +7,23 @@ import hunt.Exceptions;
 //import org.apache.http.client.ClientProtocolException;
 //import org.apache.http.client.ResponseHandler;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.util.JsonUtil;
 
-public class JsonResponseHandler{
+class JsonResponseHandler{
 
-	private static Logger logger = LoggerFactory.getLogger(JsonResponseHandler.class);
 
-	public static <T> ResponseHandler<T> createResponseHandler(final Class<T> clazz){
-		return new JsonResponseHandlerImpl<T>(null,clazz);
+	public static <T> ResponseHandler!(T) createResponseHandler(final Class!(T) clazz){
+		return new JsonResponseHandlerImpl!(T)(null,clazz);
 	}
 
-	public static class JsonResponseHandlerImpl<T> : LocalResponseHandler : ResponseHandler<T> {
+	static class JsonResponseHandlerImpl!(T) : LocalResponseHandler : ResponseHandler!(T) {
 		
-		private Class<T> clazz;
+		private Class!(T) clazz;
 		
-		public JsonResponseHandlerImpl(string uriId, Class<T> clazz) {
+		public JsonResponseHandlerImpl(string uriId, Class!(T) clazz) {
 			this.uriId = uriId;
 			this.clazz = clazz;
 		}
@@ -36,7 +35,7 @@ public class JsonResponseHandler{
             if (status >= 200 && status < 300) {
                 HttpEntity entity = response.getEntity();
                 string str = EntityUtils.toString(entity,"utf-8");
-                logger.info("URI[{}] elapsed time:{} ms RESPONSE DATA:{}",super.uriId,System.currentTimeMillis()-super.startTime,str);
+                logger.info("URI[{}] elapsed time:{} ms RESPONSE DATA:{}",super.uriId,DateTimeHelper.currentTimeMillis()-super.startTime,str);
                 return JsonUtil.parseObject(str, clazz);
             } else {
                 throw new ClientProtocolException("Unexpected response status: " + status);

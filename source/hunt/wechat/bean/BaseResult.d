@@ -6,9 +6,9 @@ module hunt.wechat.bean.BaseResult;
  *
  * @author LiYi
  */
-public class BaseResult {
+class BaseResult {
 
-  private static final string SUCCESS_CODE = "0";
+  private enum string SUCCESS_CODE = "0";
 
   private string errcode;
   private string errmsg;
@@ -38,7 +38,7 @@ public class BaseResult {
   }
 
   public bool isSuccess() {
-    return errcode == null || errcode.isEmpty() || errcode.equals(SUCCESS_CODE);
+    return errcode == null || errcode.isEmpty() || errcode== SUCCESS_CODE;
   }
 
 }

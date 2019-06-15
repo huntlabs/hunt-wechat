@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PayProfitsharingOperation : MchBase {
+class PayProfitsharingOperation : MchBase {
 
 	@XmlJavaTypeAdapter(value = ReceiverOperation.JsonXmlAdapter.class)
 	private ReceiverOperation receiver;

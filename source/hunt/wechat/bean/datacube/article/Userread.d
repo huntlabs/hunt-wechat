@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.article.Userread;
 
-public class Userread {
+class Userread {
 
 	private string ref_date;
 

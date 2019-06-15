@@ -10,10 +10,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class PageSearch {
+class PageSearch {
 
 	/**
-	 * 查询类型。1： 查询页面id列表中的页面信息；2：分页查询所有页面信息<br>
+	 * 查询类型。1： 查询页面id列表中的页面信息；2：分页查询所有页面信息
 	 * 必填
 	 */
 	private Integer type;
@@ -35,7 +35,7 @@ public class PageSearch {
 	private Integer count;
 
 	/**
-	 * 查询类型。1： 查询页面id列表中的页面信息；2：分页查询所有页面信息<br>
+	 * 查询类型。1： 查询页面id列表中的页面信息；2：分页查询所有页面信息
 	 * 必填
 	 * @return 查询类型
 	 */
@@ -44,7 +44,7 @@ public class PageSearch {
 	}
 
 	/**
-	 * 查询类型。1： 查询页面id列表中的页面信息；2：分页查询所有页面信息<br>
+	 * 查询类型。1： 查询页面id列表中的页面信息；2：分页查询所有页面信息
 	 * 必填
 	 * @param type 查询类型
 	 */

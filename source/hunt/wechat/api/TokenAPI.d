@@ -11,7 +11,7 @@ import hunt.wechat.client.LocalHttpClient;
  * @author LiYi
  *
  */
-public class TokenAPI : BaseAPI{
+class TokenAPI : BaseAPI{
 
 	/**
 	 * 获取access_token

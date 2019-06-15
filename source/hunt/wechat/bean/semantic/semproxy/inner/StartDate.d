@@ -6,7 +6,7 @@ module hunt.wechat.bean.semantic.semproxy.inner.StartDate;
  * @author: 01
  * @create: 2018-08-18 13:34
  **/
-public class StartDate {
+class StartDate {
     private string type;
     private string date;
     private string date_ori;

@@ -8,12 +8,11 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
 
-public abstract class SignatureUtil {
 
-	private static Logger logger = LoggerFactory.getLogger(SignatureUtil.class);
+abstract class SignatureUtil {
+
 	
 	/**
 	 * 生成sign HMAC-SHA256 或 MD5 签名
@@ -21,7 +20,7 @@ public abstract class SignatureUtil {
 	 * @param paternerKey paternerKey
 	 * @return sign
 	 */
-	public static string generateSign(Map<string, string> map,string paternerKey){
+	public static string generateSign(Map!(string, string) map,string paternerKey){
 		return generateSign(map, null, paternerKey);
 	}
 	
@@ -32,8 +31,8 @@ public abstract class SignatureUtil {
 	 * @param paternerKey paternerKey
 	 * @return sign
 	 */
-	public static string generateSign(Map<string, string> map,string sign_type,string paternerKey){
-		Map<string, string> tmap = MapUtil.order(map);
+	public static string generateSign(Map!(string, string) map,string sign_type,string paternerKey){
+		Map!(string, string) tmap = MapUtil.order(map);
 		if(tmap.containsKey("sign")){
 			tmap.remove("sign");
 		}
@@ -76,7 +75,7 @@ public abstract class SignatureUtil {
 	 * @param key mch key
 	 * @return bool
 	 */
-	public static bool validateSign(Map<string,string> map,string key){
+	public static bool validateSign(Map!(string,string) map,string key){
 		return validateSign(map, null, key);
 	}
 	
@@ -88,7 +87,7 @@ public abstract class SignatureUtil {
 	 * @param key mch key
 	 * @return bool
 	 */
-	public static bool validateSign(Map<string,string> map,string sign_type,string key){
+	public static bool validateSign(Map!(string,string) map,string sign_type,string key){
 		if(map.get("sign") == null){
 			return false;
 		}

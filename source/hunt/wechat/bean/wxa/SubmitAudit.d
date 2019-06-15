@@ -3,23 +3,23 @@ module hunt.wechat.bean.wxa.SubmitAudit;
 import hunt.collection.ArrayList;
 import hunt.collection.List;
 
-public class SubmitAudit {
+class SubmitAudit {
 
-	private List<Item> item_list;
+	private List!(Item) item_list;
 
-	public List<Item> getItem_list() {
+	public List!(Item) getItem_list() {
 		return item_list;
 	}
 
-	public void setItem_list(List<Item> item_list) {
+	public void setItem_list(List!(Item) item_list) {
 		this.item_list = item_list;
 	}
 
 	public SubmitAudit() {
-		item_list = new ArrayList<Item>();
+		item_list = new ArrayList!(Item)();
 	}
 
-	public SubmitAudit(List<Item> item_list) {
+	public SubmitAudit(List!(Item) item_list) {
 		this.item_list = item_list;
 	}
 	public void addItem(string address,string tag,string first_class,string second_class,string title){
@@ -32,7 +32,7 @@ public class SubmitAudit {
 	public void removeItem(int index){
 		item_list.remove(index);
 	}
-	public static class Item {
+	static class Item {
 
 		private string address;
 		private string tag;
@@ -67,19 +67,19 @@ public class SubmitAudit {
 			this.tag = tag;
 		}
 
-		public string getFirst_class() {
+		string getFirst_class() {
 			return first_class;
 		}
 
-		public void setFirst_class(string first_class) {
+		void setFirst_class(string first_class) {
 			this.first_class = first_class;
 		}
 
-		public string getSecond_class() {
+		string getSecond_class() {
 			return second_class;
 		}
 
-		public void setSecond_class(string second_class) {
+		void setSecond_class(string second_class) {
 			this.second_class = second_class;
 		}
 

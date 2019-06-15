@@ -13,12 +13,12 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceSearchResultData {
+class DeviceSearchResultData {
 
 	/**
 	 * 设备列表
 	 */
-	private List<DeviceSearchResultDataDevice> devices;
+	private List!(DeviceSearchResultDataDevice) devices;
 	
 	/**
 	 * 商户名下的设备总量
@@ -29,14 +29,14 @@ public class DeviceSearchResultData {
 	/**
 	 * @return 设备列表
 	 */
-	public List<DeviceSearchResultDataDevice> getDevices() {
+	public List!(DeviceSearchResultDataDevice) getDevices() {
 		return devices;
 	}
 
 	/**
 	 * @param devices 设备列表
 	 */
-	public void setDevices(List<DeviceSearchResultDataDevice> devices) {
+	public void setDevices(List!(DeviceSearchResultDataDevice) devices) {
 		this.devices = devices;
 	}
 

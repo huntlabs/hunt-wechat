@@ -10,42 +10,42 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月25日
  */
-public class AccountRegister {
+class AccountRegister {
 
     /**
-     * 联系人姓名，不超过20汉字或40个英文字母<br>
+     * 联系人姓名，不超过20汉字或40个英文字母
      * 必填
      */
     private string name;
 
     /**
-     * 联系人电话<br>
+     * 联系人电话
      * 必填
      */
     @JSONField(name = "phone_number")
     private string phoneNumber;
 
     /**
-     * 联系人邮箱<br>
+     * 联系人邮箱
      * 必填
      */
     private string email;
 
     /**
-     * 平台定义的行业代号，具体请查看链接<a href="http://3gimg.qq.com/shake_nearby/Qualificationdocuments.html">行业代号</a><br>
+     * 平台定义的行业代号，具体请查看链接<a href="http://3gimg.qq.com/shake_nearby/Qualificationdocuments.html">行业代号</a>
      * 必填
      */
     @JSONField(name = "industry_id")
     private string industryId;
 
     /**
-     * 相关资质文件的图片url，<br>
-     * 图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处；<br>
-     * 当不需要资质文件时，数组内可以不填写url<br>
+     * 相关资质文件的图片url，
+     * 图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处；
+     * 当不需要资质文件时，数组内可以不填写url
      * 必填
      */
     @JSONField(name = "qualification_cert_urls")
-    private List<string> qualificationCertUrls;
+    private List!(string) qualificationCertUrls;
 
     /**
      * 申请理由，不超过250汉字或500个英文字母
@@ -54,7 +54,7 @@ public class AccountRegister {
     private string applyReason;
 
     /**
-     * 联系人姓名，不超过20汉字或40个英文字母<br>
+     * 联系人姓名，不超过20汉字或40个英文字母
      * 必填
      *
      * @return 联系人姓名
@@ -64,7 +64,7 @@ public class AccountRegister {
     }
 
     /**
-     * 联系人姓名，不超过20汉字或40个英文字母<br>
+     * 联系人姓名，不超过20汉字或40个英文字母
      * 必填
      *
      * @param name 联系人姓名
@@ -74,7 +74,7 @@ public class AccountRegister {
     }
 
     /**
-     * 联系人电话<br>
+     * 联系人电话
      * 必填
      *
      * @return 联系人电话
@@ -84,7 +84,7 @@ public class AccountRegister {
     }
 
     /**
-     * 联系人电话<br>
+     * 联系人电话
      * 必填
      *
      * @param phoneNumber 联系人电话
@@ -94,7 +94,7 @@ public class AccountRegister {
     }
 
     /**
-     * 联系人邮箱<br>
+     * 联系人邮箱
      * 必填
      *
      * @return 联系人邮箱
@@ -104,7 +104,7 @@ public class AccountRegister {
     }
 
     /**
-     * 联系人邮箱<br>
+     * 联系人邮箱
      * 必填
      *
      * @param email 联系人邮箱
@@ -114,7 +114,7 @@ public class AccountRegister {
     }
 
     /**
-     * 平台定义的行业代号，具体请查看链接<a href="http://3gimg.qq.com/shake_nearby/Qualificationdocuments.html">行业代号</a><br>
+     * 平台定义的行业代号，具体请查看链接<a href="http://3gimg.qq.com/shake_nearby/Qualificationdocuments.html">行业代号</a>
      * 必填
      *
      * @return 平台定义的行业代号
@@ -124,7 +124,7 @@ public class AccountRegister {
     }
 
     /**
-     * 平台定义的行业代号，具体请查看链接<a href="http://3gimg.qq.com/shake_nearby/Qualificationdocuments.html">行业代号</a><br>
+     * 平台定义的行业代号，具体请查看链接<a href="http://3gimg.qq.com/shake_nearby/Qualificationdocuments.html">行业代号</a>
      * 必填
      *
      * @param industryId 平台定义的行业代号
@@ -134,26 +134,26 @@ public class AccountRegister {
     }
 
     /**
-     * 相关资质文件的图片url，<br>
-     * 图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处；<br>
-     * 当不需要资质文件时，数组内可以不填写url<br>
+     * 相关资质文件的图片url，
+     * 图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处；
+     * 当不需要资质文件时，数组内可以不填写url
      * 必填
      *
      * @return 相关资质文件的图片url
      */
-    public List<string> getQualificationCertUrls() {
+    public List!(string) getQualificationCertUrls() {
         return qualificationCertUrls;
     }
 
     /**
-     * 相关资质文件的图片url，<br>
-     * 图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处；<br>
-     * 当不需要资质文件时，数组内可以不填写url<br>
+     * 相关资质文件的图片url，
+     * 图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处；
+     * 当不需要资质文件时，数组内可以不填写url
      * 必填
      *
      * @param qualificationCertUrls 相关资质文件的图片url
      */
-    public void setQualificationCertUrls(List<string> qualificationCertUrls) {
+    public void setQualificationCertUrls(List!(string) qualificationCertUrls) {
         this.qualificationCertUrls = qualificationCertUrls;
     }
 

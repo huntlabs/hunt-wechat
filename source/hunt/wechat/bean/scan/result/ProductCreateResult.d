@@ -2,7 +2,7 @@ module hunt.wechat.bean.scan.result.ProductCreateResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class ProductCreateResult : BaseResult {
+class ProductCreateResult : BaseResult {
     private Integer pid;
 
     public ProductCreateResult(Integer pid) {

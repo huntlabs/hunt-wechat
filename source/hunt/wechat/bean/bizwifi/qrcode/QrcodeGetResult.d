@@ -8,5 +8,5 @@ import hunt.wechat.bean.shakearound.AbstractResult.QrcodeGetResult;
  * @Date: 2018/7/24 16:46
  * @Description:
  */
-public class QrcodeGetResult : AbstractResult<QrcodeGetResultData> {
+class QrcodeGetResult : AbstractResult!(QrcodeGetResultData) {
 }

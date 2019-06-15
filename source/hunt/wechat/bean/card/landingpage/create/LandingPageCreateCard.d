@@ -8,17 +8,17 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class LandingPageCreateCard {
+class LandingPageCreateCard {
 
 	/**
-	 * 所要在页面投放的card_id<br>
+	 * 所要在页面投放的card_id
 	 * 必填：是
 	 */
 	@JSONField(name = "card_id")
 	private string cardId;
 	
 	/**
-	 * 缩略图url<br>
+	 * 缩略图url
 	 * 必填：是
 	 */
 	@JSONField(name = "thumb_url")
@@ -34,7 +34,7 @@ public class LandingPageCreateCard {
 	}
 
 	/**
-	 * 所要在页面投放的card_id<br>
+	 * 所要在页面投放的card_id
 	 * 必填：是
 	 * 
 	 * @param cardId 投放的card_id
@@ -51,7 +51,7 @@ public class LandingPageCreateCard {
 	}
 	
 	/**
-	 * 缩略图url<br>
+	 * 缩略图url
 	 * 必填：是
 	 * @param thumbUrl 缩略图url
 	 */

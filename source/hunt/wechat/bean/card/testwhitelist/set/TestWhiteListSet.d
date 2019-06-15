@@ -6,7 +6,7 @@ module hunt.wechat.bean.card.testwhitelist.set.TestWhiteListSet;
  * @author Moyq5
  *
  */
-public class TestWhiteListSet {
+class TestWhiteListSet {
 
 	/**
 	 * 测试的openid列表
@@ -26,7 +26,7 @@ public class TestWhiteListSet {
 	}
 
 	/**
-	 * 测试的openid列表<br>
+	 * 测试的openid列表
 	 * 必填：否
 	 * @param openid 测试的openid列表
 	 */
@@ -42,7 +42,7 @@ public class TestWhiteListSet {
 	}
 
 	/**
-	 * 测试的微信号列表<br>
+	 * 测试的微信号列表
 	 * 必填：否
 	 * @param username 测试的微信号列表
 	 */

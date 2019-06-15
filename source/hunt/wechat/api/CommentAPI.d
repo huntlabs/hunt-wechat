@@ -16,10 +16,9 @@ import hunt.wechat.util.JsonUtil;
 
 /**
  * 图文消息留言管理接口
- * @since 2.8.10
  * @author LiYi
  */
-public class CommentAPI : BaseAPI{
+class CommentAPI : BaseAPI{
 
 
 	/**

@@ -2,7 +2,7 @@ module hunt.wechat.bean.menu.TrymatchResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class TrymatchResult : BaseResult{
+class TrymatchResult : BaseResult{
 
 	private Button[] button;
 

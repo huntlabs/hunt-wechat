@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeConsume {
+class CodeConsume {
 	
 	/**
 	 * 卡券ID。创建卡券时use_custom_code填写true时必填。非自定义Code不必填写。
@@ -17,7 +17,7 @@ public class CodeConsume {
 	private string cardId;
 	
 	/**
-	 * 需核销的Code码。<br>
+	 * 需核销的Code码。
 	 * 必填：是
 	 */
 	private string code;
@@ -46,7 +46,7 @@ public class CodeConsume {
 	}
 
 	/**
-	 * 需核销的Code码。<br>
+	 * 需核销的Code码。
 	 * 必填：是
 	 * @param code 需核销的Code码
 	 */

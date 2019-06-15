@@ -6,9 +6,9 @@ import hunt.collection.Map;
 import hunt.wechat.bean.message.preview.MpvideoPreview;
 import hunt.wechat.bean.message.preview.Preview;
 
-public class MassMPvideoMessage : MassMessage{
+class MassMPvideoMessage : MassMessage{
 
-	private Map<string, string> mpvideo;
+	private Map!(string, string) mpvideo;
 
 	/**
 	 *
@@ -16,16 +16,16 @@ public class MassMPvideoMessage : MassMessage{
 	 */
 	public MassMPvideoMessage(string media_id) {
 		super();
-		mpvideo = new HashMap<string, string>();
+		mpvideo = new HashMap!(string, string)();
 		mpvideo.put("media_id",media_id);
 		super.msgtype = "mpvideo";
 	}
 
-	public Map<string, string> getMpvideo() {
+	public Map!(string, string) getMpvideo() {
 		return mpvideo;
 	}
 
-	public void setMpvideo(Map<string, string> mpvideo) {
+	public void setMpvideo(Map!(string, string) mpvideo) {
 		this.mpvideo = mpvideo;
 	}
 

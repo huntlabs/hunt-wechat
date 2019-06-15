@@ -3,7 +3,7 @@ module hunt.wechat.bean.scan.result.TicketCheckResult;
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.scan.base.ProductGet;
 
-public class TicketCheckResult : BaseResult {
+class TicketCheckResult : BaseResult {
     private ProductGet productGet;
     private string openid;
     private string scene;

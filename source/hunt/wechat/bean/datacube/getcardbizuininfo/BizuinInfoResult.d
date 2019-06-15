@@ -10,18 +10,18 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class BizuinInfoResult : BaseResult {
+class BizuinInfoResult : BaseResult {
 
 	/**
 	 * 记录列表
 	 */
-	List<BizuinInfoResultInfo> list;
+	List!(BizuinInfoResultInfo) list;
 
-	public List<BizuinInfoResultInfo> getList() {
+	public List!(BizuinInfoResultInfo) getList() {
 		return list;
 	}
 
-	public void setList(List<BizuinInfoResultInfo> list) {
+	public void setList(List!(BizuinInfoResultInfo) list) {
 		this.list = list;
 	}
 }

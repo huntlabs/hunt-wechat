@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PapayDeletecontractResult : MchBase {
+class PapayDeletecontractResult : MchBase {
 
 	private Integer contract_id;
 

@@ -6,7 +6,7 @@ module hunt.wechat.bean.message.templatemessage.TemplateMessageMiniProgram;
  * @author dave.wu
  * @version 2018/1/9
  */
-public class TemplateMessageMiniProgram {
+class TemplateMessageMiniProgram {
     private string appid;
 
     private string pagepath;

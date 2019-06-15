@@ -12,8 +12,8 @@ import java.io.Writer;
 import hunt.text.Charset;
 
 
-public abstract class StreamUtils {
-	public static final int BUFFER_SIZE = 4096;
+abstract class StreamUtils {
+	public enum int BUFFER_SIZE = 4096;
 
 	/**
 	 * Copy the contents of the given InputStream into a new byte array.
@@ -22,7 +22,7 @@ public abstract class StreamUtils {
 	 * @return the new byte array that has been copied to
 	 * @throws IOException in case of I/O errors
 	 */
-	public static byte[] copyToByteArray(InputStream in) throws IOException {
+	public static byte[] copyToByteArray(InputStream in){
 		ByteArrayOutputStream out = new ByteArrayOutputStream(BUFFER_SIZE);
 		copy(in, out);
 		return out.toByteArray();
@@ -36,7 +36,7 @@ public abstract class StreamUtils {
 	 * @return the string that has been copied to
 	 * @throws IOException in case of I/O errors
 	 */
-	public static string copyToString(InputStream in, Charset charset) throws IOException {
+	public static string copyToString(InputStream in, Charset charset){
 		StringBuilder out = new StringBuilder();
 		InputStreamReader reader = new InputStreamReader(in, charset);
 		char[] buffer = new char[BUFFER_SIZE];
@@ -54,7 +54,7 @@ public abstract class StreamUtils {
 	 * @param out the OutputStream to copy to
 	 * @throws IOException in case of I/O errors
 	 */
-	public static void copy(byte[] in, OutputStream out) throws IOException {
+	public static void copy(byte[] in, OutputStream out){
 		out.write(in);
 	}
 
@@ -66,7 +66,7 @@ public abstract class StreamUtils {
 	 * @param out the OutputStream to copy to
 	 * @throws IOException in case of I/O errors
 	 */
-	public static void copy(string in, Charset charset, OutputStream out) throws IOException {
+	public static void copy(string in, Charset charset, OutputStream out){
 		Writer writer = new OutputStreamWriter(out, charset);
 		writer.write(in);
 		writer.flush();
@@ -80,7 +80,7 @@ public abstract class StreamUtils {
 	 * @return the number of bytes copied
 	 * @throws IOException in case of I/O errors
 	 */
-	public static int copy(InputStream in, OutputStream out) throws IOException {
+	public static int copy(InputStream in, OutputStream out){
 		int byteCount = 0;
 		byte[] buffer = new byte[BUFFER_SIZE];
 		int bytesRead = -1;
@@ -120,7 +120,7 @@ public abstract class StreamUtils {
 		}
 
 		override
-		public void close() throws IOException {
+		public void close(){
 		}
 	}
 
@@ -132,13 +132,13 @@ public abstract class StreamUtils {
 		}
 
 		override
-		public void write(byte[] b, int off, int let) throws IOException {
+		public void write(byte[] b, int off, int let){
 			// It is critical that we override this method for performance
 			out.write(b, off, let);
 		}
 
 		override
-		public void close() throws IOException {
+		public void close(){
 		}
 	}
 }

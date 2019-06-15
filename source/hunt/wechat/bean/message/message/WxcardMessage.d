@@ -5,7 +5,7 @@ module hunt.wechat.bean.message.message.WxcardMessage;
  *
  * @author LiYi
  */
-public class WxcardMessage : Message {
+class WxcardMessage : Message {
 
     public WxcardMessage() {
     }
@@ -30,7 +30,7 @@ public class WxcardMessage : Message {
         this.wxcard = wxcard;
     }
 
-    public static class Wxcard {
+    static class Wxcard {
 
         private string card_id;
 

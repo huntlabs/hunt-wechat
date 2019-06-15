@@ -8,6 +8,6 @@ import hunt.wechat.bean.card.code.deposit.CodeDeposit;
  * @author Moyq5
  *
  */
-public class CodeCheckCode : CodeDeposit {
+class CodeCheckCode : CodeDeposit {
 
 }

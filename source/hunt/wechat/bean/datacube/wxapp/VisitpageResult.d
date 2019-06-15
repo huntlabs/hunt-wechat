@@ -2,11 +2,11 @@ module hunt.wechat.bean.datacube.wxapp.VisitpageResult;
 
 import hunt.collection.List;
 
-public class VisitpageResult {
+class VisitpageResult {
 
 	private string ref_date;
 
-	private List<Item> list;
+	private List!(Item) list;
 
 	public string getRef_date() {
 		return ref_date;
@@ -16,15 +16,15 @@ public class VisitpageResult {
 		this.ref_date = ref_date;
 	}
 
-	public List<Item> getList() {
+	public List!(Item) getList() {
 		return list;
 	}
 
-	public void setList(List<Item> list) {
+	public void setList(List!(Item) list) {
 		this.list = list;
 	}
 
-	public static class Item {
+	static class Item {
 		private string page_path;
 
 		private Integer page_visit_pv;

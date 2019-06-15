@@ -8,10 +8,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class Groupon : AbstractInfo {
+class Groupon : AbstractInfo {
 
 	/**
-	 * 团购详情<br>
+	 * 团购详情
 	 * 添加必填，不支持修改 
 	 */
 	@JSONField(name = "deal_detail")
@@ -25,7 +25,7 @@ public class Groupon : AbstractInfo {
 	}
 
 	/**
-	 * 团购详情<br>
+	 * 团购详情
 	 * 添加必填，不支持修改 
 	 */
 	public void setDealDetail(string dealDetail) {

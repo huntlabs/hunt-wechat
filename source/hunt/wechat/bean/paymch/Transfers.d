@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Transfers {
+class Transfers {
 
     private string mch_appid;
 

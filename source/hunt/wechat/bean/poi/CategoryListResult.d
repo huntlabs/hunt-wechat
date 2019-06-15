@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CategoryListResult {
+class CategoryListResult {
 	@JSONField(name = "category_list")
 	private string[] categoryList;
 

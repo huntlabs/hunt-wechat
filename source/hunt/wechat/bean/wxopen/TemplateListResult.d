@@ -4,15 +4,15 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-public class TemplateListResult : BaseResult {
+class TemplateListResult : BaseResult {
 
-	private List<TemplateListItem> list;
+	private List!(TemplateListItem) list;
 
-	public List<TemplateListItem> getList() {
+	public List!(TemplateListItem) getList() {
 		return list;
 	}
 
-	public void setList(List<TemplateListItem> list) {
+	public void setList(List!(TemplateListItem) list) {
 		this.list = list;
 	}
 

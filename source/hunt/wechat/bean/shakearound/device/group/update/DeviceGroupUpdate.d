@@ -10,6 +10,6 @@ import hunt.wechat.bean.shakearound.device.group.GroupInfo;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupUpdate : GroupInfo {
+class DeviceGroupUpdate : GroupInfo {
 
 }

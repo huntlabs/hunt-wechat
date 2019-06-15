@@ -10,7 +10,7 @@ import hunt.wechat.bean.shakearound.statistics.AbstractStatisticsResultData;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class StatisticsDeviceResultData : AbstractStatisticsResultData {
+class StatisticsDeviceResultData : AbstractStatisticsResultData {
 
 	/**
 	 * 当天0点对应的时间戳

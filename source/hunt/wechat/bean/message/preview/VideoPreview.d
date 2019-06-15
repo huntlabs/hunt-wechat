@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.preview.VideoPreview;
 
 import hunt.wechat.bean.message.Uploadvideo;
 
-public class VideoPreview : Preview {
+class VideoPreview : Preview {
 
 	private Uploadvideo video;
 

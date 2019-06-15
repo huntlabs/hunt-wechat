@@ -10,23 +10,23 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupGetDetail {
+class DeviceGroupGetDetail {
 
 	/**
-	 * 分组唯一标识，全局唯一<br>
+	 * 分组唯一标识，全局唯一
 	 * 必填
 	 */
 	@JSONField(name = "group_id")
 	private Integer groupId;
 	
 	/**
-	 * 分组里设备的起始索引值<br>
+	 * 分组里设备的起始索引值
 	 * 必填
 	 */
 	private Integer begin;
 	
 	/**
-	 * 待查询的分组里设备的数量，不能超过1000个<br>
+	 * 待查询的分组里设备的数量，不能超过1000个
 	 * 必填
 	 */
 	private Integer count;
@@ -39,7 +39,7 @@ public class DeviceGroupGetDetail {
 	}
 
 	/**
-	 * 分组唯一标识，全局唯一<br>
+	 * 分组唯一标识，全局唯一
 	 * 必填
 	 * @param groupId 分组唯一标识
 	 */
@@ -55,7 +55,7 @@ public class DeviceGroupGetDetail {
 	}
 
 	/**
-	 * 分组里设备的起始索引值<br>
+	 * 分组里设备的起始索引值
 	 * 必填
 	 * @param begin 分组里设备的起始索引值
 	 */
@@ -71,7 +71,7 @@ public class DeviceGroupGetDetail {
 	}
 
 	/**
-	 * 待查询的分组里设备的数量，不能超过1000个<br>
+	 * 待查询的分组里设备的数量，不能超过1000个
 	 * 必填
 	 * @param count 待查询的分组里设备的数量
 	 */

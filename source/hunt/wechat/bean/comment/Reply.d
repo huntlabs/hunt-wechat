@@ -6,7 +6,7 @@ module hunt.wechat.bean.comment.Reply;
  * @author LiYi
  *
  */
-public class Reply {
+class Reply {
 
 	private string content;
 

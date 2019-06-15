@@ -9,7 +9,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月27日
  */
-public class CodeDepositResult : BaseResult {
+class CodeDepositResult : BaseResult {
 
 	/**
 	 * 成功个数

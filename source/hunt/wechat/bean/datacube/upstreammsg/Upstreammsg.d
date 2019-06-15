@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.upstreammsg.Upstreammsg;
 
-public class Upstreammsg {
+class Upstreammsg {
 
 	private string ref_date;
 

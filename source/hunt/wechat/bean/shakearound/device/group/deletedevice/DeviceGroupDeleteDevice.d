@@ -10,6 +10,6 @@ import hunt.wechat.bean.shakearound.device.group.adddevice.DeviceGroupAddDevice;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class DeviceGroupDeleteDevice : DeviceGroupAddDevice {
+class DeviceGroupDeleteDevice : DeviceGroupAddDevice {
 
 }

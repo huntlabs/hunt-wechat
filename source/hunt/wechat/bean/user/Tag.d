@@ -1,6 +1,6 @@
 module hunt.wechat.bean.user.Tag;
 
-public class Tag {
+class Tag {
 
 	private Integer id;
 	

@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UserGetShakeInfoResultData {
+class UserGetShakeInfoResultData {
 
 	/**
 	 * 摇周边页面唯一ID

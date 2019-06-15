@@ -2,7 +2,7 @@ module hunt.wechat.bean.material.MaterialcountResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class MaterialcountResult : BaseResult{
+class MaterialcountResult : BaseResult{
 
 	private Integer voice_count;
 

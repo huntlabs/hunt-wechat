@@ -10,5 +10,5 @@ import hunt.collection.List;
  * @Date: 2018/7/24 17:29
  * @Description:
  */
-public class StatisticsListResult : AbstractResult<List<StatisticsListResultData>> {
+class StatisticsListResult : AbstractResult<List!(StatisticsListResultData)> {
 }

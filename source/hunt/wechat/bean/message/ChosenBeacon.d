@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlElement;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ChosenBeacon {
+class ChosenBeacon {
 	
 	@XmlElement(name="Uuid")
 	private string uuid;

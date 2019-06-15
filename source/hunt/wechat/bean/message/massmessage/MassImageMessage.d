@@ -6,22 +6,22 @@ import hunt.collection.Map;
 import hunt.wechat.bean.message.preview.ImagePreview;
 import hunt.wechat.bean.message.preview.Preview;
 
-public class MassImageMessage : MassMessage{
+class MassImageMessage : MassMessage{
 
-	private Map<string, string> image;
+	private Map!(string, string) image;
 
 	public MassImageMessage(string media_id) {
 		super();
-		image = new HashMap<string, string>();
+		image = new HashMap!(string, string)();
 		image.put("media_id",media_id);
 		super.msgtype = "image";
 	}
 
-	public Map<string, string> getImage() {
+	public Map!(string, string) getImage() {
 		return image;
 	}
 
-	public void setImage(Map<string, string> image) {
+	public void setImage(Map!(string, string) image) {
 		this.image = image;
 	}
 

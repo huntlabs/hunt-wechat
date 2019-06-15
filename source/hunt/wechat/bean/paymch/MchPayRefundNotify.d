@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MchPayRefundNotify {
+class MchPayRefundNotify {
 
 	private string return_code;
 	

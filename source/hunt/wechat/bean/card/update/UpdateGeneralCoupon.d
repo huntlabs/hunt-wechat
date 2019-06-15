@@ -13,7 +13,7 @@ import hunt.wechat.bean.card.GeneralCoupon;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UpdateGeneralCoupon : AbstractUpdate {
+class UpdateGeneralCoupon : AbstractUpdate {
 	
 	/**
 	 * 优惠券

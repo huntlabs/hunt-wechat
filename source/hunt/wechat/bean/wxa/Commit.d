@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.Commit;
 
-public class Commit {
+class Commit {
 
 	private string template_id;
 	private string ext_json;

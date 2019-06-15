@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class PoiResult : BaseResult {
+class PoiResult : BaseResult {
 
 	private BusinessResult business;
 

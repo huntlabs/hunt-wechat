@@ -12,7 +12,7 @@ import hunt.wechat.bean.shakearound.statistics.AbstractStatisticsResultData;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class StatisticsDeviceListResultDataDevice : AbstractStatisticsResultData {
+class StatisticsDeviceListResultDataDevice : AbstractStatisticsResultData {
 
 	/**
 	 * 设备编号

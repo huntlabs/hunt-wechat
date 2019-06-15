@@ -2,7 +2,7 @@ module hunt.wechat.bean.component.AuthorizerOption;
 
 import hunt.wechat.bean.BaseResult;
 
-public class AuthorizerOption : BaseResult {
+class AuthorizerOption : BaseResult {
 
 	private string authorizer_appid;
 

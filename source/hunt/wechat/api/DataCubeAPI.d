@@ -33,13 +33,13 @@ import hunt.wechat.util.JsonUtil;
  * 数据统计
  * @author Moyq5
  */
-public class DataCubeAPI : BaseAPI {
+class DataCubeAPI : BaseAPI {
 
 	/**
-	 * 拉取卡券概况数据<br>
-	 * 1. 查询时间区间需&lt;=62天，否则报错;  <br>
-	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；<br>
-	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。<br>
+	 * 拉取卡券概况数据
+	 * 1. 查询时间区间需&lt;=62天，否则报错;  
+	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；
+	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。
 	 * @param access_token access_token
 	 * @param bizuinCube bizuinCube
 	 * @return result
@@ -49,10 +49,10 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 拉取卡券概况数据<br>
-	 * 1. 查询时间区间需&lt;=62天，否则报错；<br>
-	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；<br>
-	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。<br>
+	 * 拉取卡券概况数据
+	 * 1. 查询时间区间需&lt;=62天，否则报错；
+	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；
+	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。
 	 * @param access_token access_token
 	 * @param requestJson post完整的json
 	 * @return result
@@ -68,11 +68,11 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 获取免费券数据<br>
-	 * 1. 该接口目前仅支持拉取免费券（优惠券、团购券、折扣券、礼品券）的卡券相关数据，暂不支持特殊票券（电影票、会议门票、景区门票、飞机票）数据。<br>
-	 * 2. 查询时间区间需&lt;=62天，否则报错；<br>
-	 * 3. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；<br>
-	 * 4. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。<br>
+	 * 获取免费券数据
+	 * 1. 该接口目前仅支持拉取免费券（优惠券、团购券、折扣券、礼品券）的卡券相关数据，暂不支持特殊票券（电影票、会议门票、景区门票、飞机票）数据。
+	 * 2. 查询时间区间需&lt;=62天，否则报错；
+	 * 3. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；
+	 * 4. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。
 	 * @param access_token access_token
 	 * @param freeCardCube freeCardCube
 	 * @return result
@@ -82,11 +82,11 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 获取免费券数据<br>
-	 * 1. 该接口目前仅支持拉取免费券（优惠券、团购券、折扣券、礼品券）的卡券相关数据，暂不支持特殊票券（电影票、会议门票、景区门票、飞机票）数据。<br>
-	 * 2. 查询时间区间需&lt;=62天，否则报错；<br>
-	 * 3. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；<br>
-	 * 4. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。<br>
+	 * 获取免费券数据
+	 * 1. 该接口目前仅支持拉取免费券（优惠券、团购券、折扣券、礼品券）的卡券相关数据，暂不支持特殊票券（电影票、会议门票、景区门票、飞机票）数据。
+	 * 2. 查询时间区间需&lt;=62天，否则报错；
+	 * 3. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；
+	 * 4. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。
 	 * @param access_token access_token
 	 * @param requestJson post完整的json
 	 * @return result
@@ -103,10 +103,10 @@ public class DataCubeAPI : BaseAPI {
 	
 	
 	/**
-	 * 拉取会员卡数据<br>
-	 * 1. 查询时间区间需&lt;=62天，否则报错；<br>
-	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；<br>
-	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。<br>
+	 * 拉取会员卡数据
+	 * 1. 查询时间区间需&lt;=62天，否则报错；
+	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；
+	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。
 	 * @param access_token access_token
 	 * @param memberCardCube memberCardCube
 	 * @return result
@@ -116,10 +116,10 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 拉取会员卡数据<br>
-	 * 1. 查询时间区间需&lt;=62天，否则报错；<br>
-	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；<br>
-	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。<br>
+	 * 拉取会员卡数据
+	 * 1. 查询时间区间需&lt;=62天，否则报错；
+	 * 2. 传入时间格式需严格参照示例填写如”2015-06-15”，否则报错；
+	 * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。
 	 * @param access_token access_token
 	 * @param requestJson post完整的json
 	 * @return result
@@ -436,7 +436,7 @@ public class DataCubeAPI : BaseAPI {
 	 * @return result
 	 * @since 2.8.6
 	 */
-	public static InterfacesummaryResult getinterfacesummary(string access_token, string begin_date,string end_date) {
+	static InterfacesummaryResult getinterfacesummary(string access_token, string begin_date,string end_date) {
 		string requestJson = string.format("{\"begin_date\":\"%s\",\"end_date\":\"%s\"}", begin_date,end_date);
 		HttpUriRequest httpUriRequest = RequestBuilder.post()
 				.setHeader(jsonHeader)
@@ -455,7 +455,7 @@ public class DataCubeAPI : BaseAPI {
 	 * @return result
 	 * @since 2.8.6
 	 */
-	public static InterfacesummaryResult getinterfacesummaryhour(string access_token, string begin_date,string end_date) {
+	static InterfacesummaryResult getinterfacesummaryhour(string access_token, string begin_date,string end_date) {
 		string requestJson = string.format("{\"begin_date\":\"%s\",\"end_date\":\"%s\"}", begin_date,end_date);
 		HttpUriRequest httpUriRequest = RequestBuilder.post()
 				.setHeader(jsonHeader)
@@ -488,7 +488,7 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 访问趋势 (小程序)<br>
+	 * 访问趋势 (小程序)
 	 * 日趋势
 	 * @param access_token access_token
 	 * @param begin_date begin_date
@@ -508,7 +508,7 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 访问趋势 (小程序)<br>
+	 * 访问趋势 (小程序)
 	 * 周趋势
 	 * @param access_token access_token
 	 * @param begin_date begin_date
@@ -528,7 +528,7 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 访问趋势 (小程序)<br>
+	 * 访问趋势 (小程序)
 	 * 月趋势
 	 * @param access_token access_token
 	 * @param begin_date begin_date
@@ -548,7 +548,7 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 访问分布 (小程序)<br>
+	 * 访问分布 (小程序)
 	 * @param access_token access_token
 	 * @param begin_date begin_date
 	 * @param end_date end_date
@@ -567,7 +567,7 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 访问留存 (小程序)<br>
+	 * 访问留存 (小程序)
 	 * 日留存
 	 * @param access_token access_token
 	 * @param begin_date begin_date
@@ -587,7 +587,7 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 访问留存 (小程序)<br>
+	 * 访问留存 (小程序)
 	 * 周留存
 	 * @param access_token access_token
 	 * @param begin_date begin_date
@@ -607,7 +607,7 @@ public class DataCubeAPI : BaseAPI {
 	}
 	
 	/**
-	 * 访问留存 (小程序)<br>
+	 * 访问留存 (小程序)
 	 * 月留存
 	 * @param access_token access_token
 	 * @param begin_date begin_date

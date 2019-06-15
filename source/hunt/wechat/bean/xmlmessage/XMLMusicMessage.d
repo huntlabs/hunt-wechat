@@ -4,9 +4,8 @@ import hunt.wechat.bean.message.message.Message;
 import hunt.wechat.bean.message.message.MusicMessage;
 import hunt.wechat.bean.message.message.MusicMessage.Music;
 
-public class XMLMusicMessage : XMLMessage {
+class XMLMusicMessage : XMLMessage {
 
-	private static final long serialVersionUID = 4423743864197488630L;
 
 	private string title;
 

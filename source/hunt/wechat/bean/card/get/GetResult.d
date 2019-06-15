@@ -9,7 +9,7 @@ import hunt.wechat.bean.card.AbstractCard;
  *
  * @param <T>可以是CreateCash、CreateDiscount、CreateGeneralCoupon、CreateGift、CreateGroupon
  */
-public class GetResult<T : AbstractCard> : BaseResult {
+class GetResult<T : AbstractCard> : BaseResult {
 
 	private T card;
 

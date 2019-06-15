@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxa.AddnearbypoiResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class AddnearbypoiResult : BaseResult {
+class AddnearbypoiResult : BaseResult {
 
 	private AddnearbypoiData data;
 

@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 import com.alibaba.fastjson.JSON;
 
-public class ReceiverOperation {
+class ReceiverOperation {
 
 	private string type;
 
@@ -36,15 +36,15 @@ public class ReceiverOperation {
 		this.name = name;
 	}
 
-	static class JsonXmlAdapter : XmlAdapter<string, ReceiverOperation> {
+	static class JsonXmlAdapter : XmlAdapter!(string, ReceiverOperation) {
 
 		override
-		public string marshal(ReceiverOperation v) throws Exception {
+		public string marshal(ReceiverOperation v){
 			return "<![CDATA[" + JSON.toJSONString(v) + "]]>";
 		}
 
 		override
-		public ReceiverOperation unmarshal(string v) throws Exception {
+		public ReceiverOperation unmarshal(string v){
 			return JSON.parseObject(v, ReceiverOperation.class);
 		}
 

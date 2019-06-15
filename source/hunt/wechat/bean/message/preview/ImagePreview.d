@@ -3,9 +3,9 @@ module hunt.wechat.bean.message.preview.ImagePreview;
 import hunt.collection.HashMap;
 import hunt.collection.Map;
 
-public class ImagePreview : Preview{
+class ImagePreview : Preview{
 
-	private Map<string,string> image = new HashMap<string,string>();
+	private Map!(string,string) image = new HashMap!(string,string)();
 
 	public ImagePreview(){
 
@@ -16,11 +16,11 @@ public class ImagePreview : Preview{
 		image.put("media_id", media_id);
 	}
 
-	public Map<string, string> getImage() {
+	public Map!(string, string) getImage() {
 		return image;
 	}
 
-	public void setImage(Map<string, string> image) {
+	public void setImage(Map!(string, string) image) {
 		this.image = image;
 	}
 

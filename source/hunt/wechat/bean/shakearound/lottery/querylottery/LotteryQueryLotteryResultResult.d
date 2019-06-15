@@ -6,15 +6,15 @@ module hunt.wechat.bean.shakearound.lottery.querylottery.LotteryQueryLotteryResu
 import com.alibaba.fastjson.annotation.JSONField;
 
 /**
- * 微信摇一摇周边－摇一摇红包－红包查询接口－响应参数－红包信息<br>
- * 注意：调用SetPrizeBucket录入红包次数超过3000次的，或红包总数超过1万个的活动，<br>
- * 目前暂不支持expired_prizes, drawed_prizes, available_prizes, expired_value, <br>
- * drawed_value, available_value这6个字段的查询。<br>
+ * 微信摇一摇周边－摇一摇红包－红包查询接口－响应参数－红包信息
+ * 注意：调用SetPrizeBucket录入红包次数超过3000次的，或红包总数超过1万个的活动，
+ * 目前暂不支持expired_prizes, drawed_prizes, available_prizes, expired_value, 
+ * drawed_value, available_value这6个字段的查询。
  * 需要查询时，可以通过邮箱zhoubian@tencent.com联系我们，也可加入开发者QQ交流群390582489。
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class LotteryQueryLotteryResultResult {
+class LotteryQueryLotteryResultResult {
 
 	/**
 	 * 抽奖活动名称（选择使用模板时，也作为摇一摇消息主标题），最长6个汉字，12个英文字母。

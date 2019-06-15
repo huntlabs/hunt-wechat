@@ -12,30 +12,29 @@ import hunt.collection.LinkedHashMap;
 import hunt.collection.List;
 import hunt.collection.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
 
-public abstract class MapUtil {
+
+abstract class MapUtil {
 	
-	private static Logger logger = LoggerFactory.getLogger(MapUtil.class);
 
 	/**
 	 * Map key 排序
 	 * @param map map
 	 * @return map
 	 */
-	public static Map<string,string> order(Map<string, string> map){
-		HashMap<string, string> tempMap = new LinkedHashMap<string, string>();
-		List<Map.Entry<string, string>> infoIds = new ArrayList<Map.Entry<string, string>>(	map.entrySet());
+	public static Map!(string,string) order(Map!(string, string) map){
+		HashMap!(string, string) tempMap = new LinkedHashMap!(string, string)();
+		List<Map.Entry!(string, string)> infoIds = new ArrayList<Map.Entry!(string, string)>(	map.entrySet());
 
-		Collections.sort(infoIds, new Comparator<Map.Entry<string, string>>() {
-			public int compare(Map.Entry<string, string> o1,Map.Entry<string, string> o2) {
+		Collections.sort(infoIds, new Comparator<Map.Entry!(string, string)>() {
+			public int compare(Map.Entry!(string, string) o1,Map.Entry!(string, string) o2) {
 				return (o1.getKey()).toString().compareTo(o2.getKey());
 			}
 		});
 
 		for (int i = 0; i < infoIds.size(); i++) {
-			Map.Entry<string, string> item = infoIds.get(i);
+			Map.Entry!(string, string) item = infoIds.get(i);
 			tempMap.put(item.getKey(), item.getValue());
 		}
 		return tempMap;
@@ -48,16 +47,16 @@ public abstract class MapUtil {
 	 * @param ignore ignore
 	 * @return map
 	 */
-	public static Map<string,string> objectToMap(Object object,string... ignore){
-		Map<string,string> tempMap = new LinkedHashMap<string, string>();
-		for(Field f : getAllFields(object.getClass())){
+	public static Map!(string,string) objectToMap(Object object,string... ignore){
+		Map!(string,string) tempMap = new LinkedHashMap!(string, string)();
+		foreach(Field f ; getAllFields(object.getClass())){
 			if(!f.isAccessible()){
 				f.setAccessible(true);
 			}
 			bool ig = false;
 			if(ignore!=null&&ignore.length>0){
-				for(string i : ignore){
-					if(i.equals(f.getName())){
+				foreach(string i ; ignore){
+					if(i== f.getName()){
 						ig = true;
 						break;
 					}
@@ -87,10 +86,10 @@ public abstract class MapUtil {
 	 * @param valueUrlencode valueUrlencode
 	 * @return string
 	 */
-	public static string mapJoin(Map<string, string> map,bool keyLower,bool valueUrlencode){
+	public static string mapJoin(Map!(string, string) map,bool keyLower,bool valueUrlencode){
 		StringBuilder stringBuilder = new StringBuilder();
 		for(string key :map.keySet()){
-			if(map.get(key)!=null&&!"".equals(map.get(key))){
+			if(map.get(key)!=null&&!""== map.get(key)){
 				try {
 					string temp = (key.endsWith("_")&&key.length()>1)?key.substring(0,key.length()-1):key;
 					stringBuilder.append(keyLower?temp.toLowerCase():temp)
@@ -113,10 +112,10 @@ public abstract class MapUtil {
 	 * @param clazz clazz
 	 * @return list
 	 */
-	private static List<Field> getAllFields(Class<?> clazz){
-		if(!clazz.equals(Object.class)){
-			List<Field> fields = new ArrayList<Field>(Arrays.asList(clazz.getDeclaredFields()));
-			List<Field> fields2 = getAllFields(clazz.getSuperclass());
+	private static List!(Field) getAllFields(Class<?> clazz){
+		if(!clazz== Object.class){
+			List!(Field) fields = new ArrayList!(Field)(Arrays.asList(clazz.getDeclaredFields()));
+			List!(Field) fields2 = getAllFields(clazz.getSuperclass());
 			if(fields2!=null){
 				fields.addAll(fields2);
 			}

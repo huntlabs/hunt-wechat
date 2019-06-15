@@ -14,7 +14,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class LotterySetPrizeBucket {
+class LotterySetPrizeBucket {
 
 	/**
 	 * 红包抽奖id，来自addlotteryinfo返回的lottery_id
@@ -35,11 +35,11 @@ public class LotterySetPrizeBucket {
 	private string sponsorAppId;
 	
 	/**
-	 * 红包ticket列表，如果红包数较多，可以一次传入多个红包，批量调用该接口设置红包信息。<br>
+	 * 红包ticket列表，如果红包数较多，可以一次传入多个红包，批量调用该接口设置红包信息。
 	 * 每次请求传入的红包个数上限为100
 	 */
 	@JSONField(name = "prize_info_list")
-	private List<TicketInfo> prizeInfoList;
+	private List!(TicketInfo) prizeInfoList;
 
 	/**
 	 * 红包抽奖id，来自addlotteryinfo返回的lottery_id
@@ -90,20 +90,20 @@ public class LotterySetPrizeBucket {
 	}
 
 	/**
-	 * 红包ticket列表，如果红包数较多，可以一次传入多个红包，批量调用该接口设置红包信息。<br>
+	 * 红包ticket列表，如果红包数较多，可以一次传入多个红包，批量调用该接口设置红包信息。
 	 * 每次请求传入的红包个数上限为100
 	 * @return 红包ticket列表
 	 */
-	public List<TicketInfo> getPrizeInfoList() {
+	public List!(TicketInfo) getPrizeInfoList() {
 		return prizeInfoList;
 	}
 
 	/**
-	 * 红包ticket列表，如果红包数较多，可以一次传入多个红包，批量调用该接口设置红包信息。<br>
+	 * 红包ticket列表，如果红包数较多，可以一次传入多个红包，批量调用该接口设置红包信息。
 	 * 每次请求传入的红包个数上限为100
 	 * @param prizeInfoList 红包ticket列表
 	 */
-	public void setPrizeInfoList(List<TicketInfo> prizeInfoList) {
+	public void setPrizeInfoList(List!(TicketInfo) prizeInfoList) {
 		this.prizeInfoList = prizeInfoList;
 	}
 }

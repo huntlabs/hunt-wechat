@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SecapiPayRefund {
+class SecapiPayRefund {
 
 	private string appid;
 	

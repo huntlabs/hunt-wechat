@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PayProfitsharingqueryResult : MchBase {
+class PayProfitsharingqueryResult : MchBase {
 
 	private string transaction_id;
 
@@ -22,7 +22,7 @@ public class PayProfitsharingqueryResult : MchBase {
 	private string close_reason;
 
 	@XmlJavaTypeAdapter(value = ReceiverQuery.JsonXmlAdapter.class)
-	private List<ReceiverQuery> receivers;
+	private List!(ReceiverQuery) receivers;
 
 	public string getTransaction_id() {
 		return transaction_id;
@@ -64,11 +64,11 @@ public class PayProfitsharingqueryResult : MchBase {
 		this.close_reason = close_reason;
 	}
 
-	public List<ReceiverQuery> getReceivers() {
+	public List!(ReceiverQuery) getReceivers() {
 		return receivers;
 	}
 
-	public void setReceivers(List<ReceiverQuery> receivers) {
+	public void setReceivers(List!(ReceiverQuery) receivers) {
 		this.receivers = receivers;
 	}
 

@@ -2,12 +2,12 @@ module hunt.wechat.util.EmojiUtil;
 
 import com.vdurmont.emoji.EmojiParser;
 
-public abstract class EmojiUtil {
+abstract class EmojiUtil {
 	
 	/**
-	 * 转换emoji <br>
+	 * 转换emoji 
 	 * Example: <code>🍀</code> 将转变为
-     * <code>&amp;#x1f340;</code><br>
+     * <code>&amp;#x1f340;</code>
 	 * @param emoji_str emoji_str
 	 * @return emoji_result
 	 */
@@ -16,9 +16,9 @@ public abstract class EmojiUtil {
 	}
 	
 	/**
-	 * 转换emoji <br>
+	 * 转换emoji 
 	 * Example: <code>🍀</code> 将转变为
-     * &lt;span class='emoji emoji1f340'&gt;&lt;/span&gt;<br>
+     * &lt;span class='emoji emoji1f340'&gt;&lt;/span&gt;
 	 * @param emoji_str emoji_str
 	 * @return emoji_result
 	 */
@@ -31,9 +31,9 @@ public abstract class EmojiUtil {
 	}
 	
 	/**
-	 * 转换emoji <br>
+	 * 转换emoji 
 	 * Example: <code>🍀</code> 将转变为
-     * :four_leaf_clover:<br>
+     * :four_leaf_clover:
 	 * @param emoji_str emoji_str
 	 * @return emoji_result
 	 */

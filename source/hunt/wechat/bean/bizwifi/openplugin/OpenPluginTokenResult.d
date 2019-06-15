@@ -8,6 +8,6 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @Date: 2018/7/24 10:06
  * @Description:
  */
-public class OpenPluginTokenResult : AbstractResult<OpenPluginTokenResultData> {
+class OpenPluginTokenResult : AbstractResult!(OpenPluginTokenResultData) {
 
 }

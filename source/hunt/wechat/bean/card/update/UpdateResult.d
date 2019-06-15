@@ -12,7 +12,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UpdateResult : BaseResult {
+class UpdateResult : BaseResult {
 
 	/**
 	 * 是否提交审核，false为修改后不会重新提审，true为修改字段后重新提审，该卡券的状态变为审核中。

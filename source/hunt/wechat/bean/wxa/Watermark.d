@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.Watermark;
 
-public class Watermark {
+class Watermark {
 
 	private string appid;
 

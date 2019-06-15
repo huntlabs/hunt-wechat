@@ -2,7 +2,7 @@ module hunt.wechat.bean.sns.Jscode2sessionResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class Jscode2sessionResult : BaseResult {
+class Jscode2sessionResult : BaseResult {
 
 	private string openid;
 

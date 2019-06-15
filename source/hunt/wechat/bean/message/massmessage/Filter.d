@@ -1,7 +1,7 @@
 module hunt.wechat.bean.message.massmessage.Filter;
 
 
-public class Filter {
+class Filter {
 
 	private bool is_to_all;
 

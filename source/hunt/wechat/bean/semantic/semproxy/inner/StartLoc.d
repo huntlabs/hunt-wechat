@@ -6,7 +6,7 @@ module hunt.wechat.bean.semantic.semproxy.inner.StartLoc;
  * @author: 01
  * @create: 2018-08-18 13:33
  **/
-public class StartLoc {
+class StartLoc {
     private string type;
     private string city;
     private string city_simple;

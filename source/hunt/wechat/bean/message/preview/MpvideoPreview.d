@@ -3,9 +3,9 @@ module hunt.wechat.bean.message.preview.MpvideoPreview;
 import hunt.collection.HashMap;
 import hunt.collection.Map;
 
-public class MpvideoPreview : Preview{
+class MpvideoPreview : Preview{
 
-	private Map<string,string> mpvideo = new HashMap<string,string>();
+	private Map!(string,string) mpvideo = new HashMap!(string,string)();
 
 	public MpvideoPreview(){
 
@@ -16,11 +16,11 @@ public class MpvideoPreview : Preview{
 		mpvideo.put("media_id", media_id);
 	}
 
-	public Map<string, string> getMpvideo() {
+	public Map!(string, string) getMpvideo() {
 		return mpvideo;
 	}
 
-	public void setMpvideo(Map<string, string> mpvideo) {
+	public void setMpvideo(Map!(string, string) mpvideo) {
 		this.mpvideo = mpvideo;
 	}
 

@@ -8,6 +8,6 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @Date: 2018/7/24 15:52
  * @Description:
  */
-public class DeviceListResult : AbstractResult<DeviceListResultData> {
+class DeviceListResult : AbstractResult!(DeviceListResultData) {
 
 }

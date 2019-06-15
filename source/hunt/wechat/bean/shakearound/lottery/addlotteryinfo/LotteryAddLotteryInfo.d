@@ -7,7 +7,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class LotteryAddLotteryInfo {
+class LotteryAddLotteryInfo {
 
 	/**
 	 * 抽奖活动名称（选择使用模板时，也作为摇一摇消息主标题），最长6个汉字，12个英文字母。

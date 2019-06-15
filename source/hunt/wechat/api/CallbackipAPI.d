@@ -11,7 +11,7 @@ import hunt.wechat.client.LocalHttpClient;
  * @author LiYi
  *
  */
-public class CallbackipAPI : BaseAPI{
+class CallbackipAPI : BaseAPI{
 
 	/**
 	 * 获取微信服务器IP地址

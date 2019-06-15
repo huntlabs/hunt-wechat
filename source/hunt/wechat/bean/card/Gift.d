@@ -6,10 +6,10 @@ module hunt.wechat.bean.card.Gift;
  * @author Moyq5
  *
  */
-public class Gift : AbstractInfo {
+class Gift : AbstractInfo {
 
 	/**
-	 * 填写兑换内容的名称。<br>
+	 * 填写兑换内容的名称。
 	 * 添加必填，不支持修改 
 	 */
 	private string gift;
@@ -22,7 +22,7 @@ public class Gift : AbstractInfo {
 	}
 
 	/**
-	 * 填写兑换内容的名称。<br>
+	 * 填写兑换内容的名称。
 	 * 添加必填，不支持修改 
 	 */
 	public void setGift(string gift) {

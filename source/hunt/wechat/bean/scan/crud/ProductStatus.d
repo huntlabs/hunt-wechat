@@ -4,7 +4,7 @@ module hunt.wechat.bean.scan.crud.ProductStatus;
 import hunt.wechat.bean.scan.base.ProductGet;
 
 
-public class ProductStatus : ProductGet {
+class ProductStatus : ProductGet {
 
     private string status;
 

@@ -7,6 +7,6 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @author Moyq5
  * @date 2016年7月25日
  */
-public class DeviceApplyIdResult : AbstractResult<DeviceApplyIdResultData> {
+class DeviceApplyIdResult : AbstractResult!(DeviceApplyIdResultData) {
 
 }

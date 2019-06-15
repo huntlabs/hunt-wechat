@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxopen.TemplateAddResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class TemplateAddResult : BaseResult {
+class TemplateAddResult : BaseResult {
 
 	private string template_id;
 

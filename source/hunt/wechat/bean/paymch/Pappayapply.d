@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  */
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Pappayapply {
+class Pappayapply {
 
     private string appid;
 

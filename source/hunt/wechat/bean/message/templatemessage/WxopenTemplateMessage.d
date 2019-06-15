@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.templatemessage.WxopenTemplateMessage;
 
 import hunt.collection.LinkedHashMap;
 
-public class WxopenTemplateMessage {
+class WxopenTemplateMessage {
 
 	private string touser;
 
@@ -14,7 +14,7 @@ public class WxopenTemplateMessage {
 
 	private string emphasis_keyword;
 
-	private LinkedHashMap<string, TemplateMessageItem> data;
+	private LinkedHashMap!(string, TemplateMessageItem) data;
 
 	public string getTouser() {
 		return touser;
@@ -56,11 +56,11 @@ public class WxopenTemplateMessage {
 		this.emphasis_keyword = emphasis_keyword;
 	}
 
-	public LinkedHashMap<string, TemplateMessageItem> getData() {
+	public LinkedHashMap!(string, TemplateMessageItem) getData() {
 		return data;
 	}
 
-	public void setData(LinkedHashMap<string, TemplateMessageItem> data) {
+	public void setData(LinkedHashMap!(string, TemplateMessageItem) data) {
 		this.data = data;
 	}
 

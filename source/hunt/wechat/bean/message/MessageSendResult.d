@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.MessageSendResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class MessageSendResult : BaseResult{
+class MessageSendResult : BaseResult{
 
 	private string type;
 

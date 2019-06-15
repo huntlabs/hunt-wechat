@@ -5,7 +5,7 @@ module hunt.wechat.bean.card.qrcode.create.ActionInfo;
  * @author Moyq5
  *
  */
-public class ActionInfo {
+class ActionInfo {
 	
 	private ActionInfoCard card;
 

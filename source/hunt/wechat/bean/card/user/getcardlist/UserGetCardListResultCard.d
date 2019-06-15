@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class UserGetCardListResultCard {
+class UserGetCardListResultCard {
 
 	@JSONField(name = "card_id")
 	private string cardId;

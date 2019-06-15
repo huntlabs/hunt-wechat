@@ -5,7 +5,7 @@ module hunt.wechat.support.ExpireKey;
  * @author LiYi
  *
  */
-public interface ExpireKey {
+interface ExpireKey {
 
 	//12 s
 	public static final Integer DEFAULT_EXPIRE = 12;

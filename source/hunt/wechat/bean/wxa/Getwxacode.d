@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.Getwxacode;
 
-public class Getwxacode {
+class Getwxacode {
 
 	private string path;
 	

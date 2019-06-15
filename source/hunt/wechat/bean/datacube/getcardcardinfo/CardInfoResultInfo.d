@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CardInfoResultInfo : BizuinInfoResultInfo {
+class CardInfoResultInfo : BizuinInfoResultInfo {
 
 	/**
 	 * 卡券ID
@@ -19,7 +19,7 @@ public class CardInfoResultInfo : BizuinInfoResultInfo {
 	private string cardId;
 	
 	/**
-	 * cardtype:0：折扣券，1：代金券，2：礼品券，3：优惠券，4：团购券<br>
+	 * cardtype:0：折扣券，1：代金券，2：礼品券，3：优惠券，4：团购券
 	 * （暂不支持拉取特殊票券类型数据，电影票、飞机票、会议门票、景区门票）
 	 */
 	@JSONField(name = "card_type")
@@ -40,7 +40,7 @@ public class CardInfoResultInfo : BizuinInfoResultInfo {
 	}
 	
 	/**
-	 * cardtype:0：折扣券，1：代金券，2：礼品券，3：优惠券，4：团购券<br>
+	 * cardtype:0：折扣券，1：代金券，2：礼品券，3：优惠券，4：团购券
 	 * （暂不支持拉取特殊票券类型数据，电影票、飞机票、会议门票、景区门票）
 	 * @return 卡券类型
 	 */
@@ -49,7 +49,7 @@ public class CardInfoResultInfo : BizuinInfoResultInfo {
 	}
 	
 	/**
-	 * cardtype:0：折扣券，1：代金券，2：礼品券，3：优惠券，4：团购券<br>
+	 * cardtype:0：折扣券，1：代金券，2：礼品券，3：优惠券，4：团购券
 	 * （暂不支持拉取特殊票券类型数据，电影票、飞机票、会议门票、景区门票）
 	 * @param cardType 卡券类型
 	 */

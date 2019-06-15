@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.shop.list.ShopList;
  * @Date: 2018/7/24 11:31
  * @Description:
  */
-public class ShopList {
+class ShopList {
     private Integer pageindex;
     private Integer pagesize;
 

@@ -7,11 +7,11 @@ import hunt.collection.Map;
  * @author LiYi
  * @since 2.8.5
  */
-public interface DynamicField {
+interface DynamicField {
 
 	/**
 	 * 生成动态属性
 	 * @param dataMap xml 转换后的map数据
 	 */
-	void buildDynamicField(Map<string,string> dataMap);
+	void buildDynamicField(Map!(string,string) dataMap);
 }

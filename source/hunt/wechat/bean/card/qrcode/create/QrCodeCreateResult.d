@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class QrCodeCreateResult : BaseResult {
+class QrCodeCreateResult : BaseResult {
 
 	/**
 	 * 获取的二维码ticket，凭借此ticket调用通过ticket换取二维码接口可以在有效时间内换取二维码。

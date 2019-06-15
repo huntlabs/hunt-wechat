@@ -3,9 +3,9 @@ module hunt.wechat.bean.message.preview.MusicPreview;
 import hunt.collection.HashMap;
 import hunt.collection.Map;
 
-public class MusicPreview : Preview {
+class MusicPreview : Preview {
 
-	private Map<string, string> music = new HashMap<string, string>();
+	private Map!(string, string) music = new HashMap!(string, string)();
 
 	public MusicPreview(){
 
@@ -17,11 +17,11 @@ public class MusicPreview : Preview {
 		music.put("media_id", media_id);
 	}
 
-	public Map<string, string> getMusic() {
+	public Map!(string, string) getMusic() {
 		return music;
 	}
 
-	public void setMusic(Map<string, string> music) {
+	public void setMusic(Map!(string, string) music) {
 		this.music = music;
 	}
 

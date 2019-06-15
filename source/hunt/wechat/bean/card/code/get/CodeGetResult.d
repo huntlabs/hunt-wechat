@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class CodeGetResult : BaseResult {
+class CodeGetResult : BaseResult {
 
 	/**
 	 * 卡券信息
@@ -29,14 +29,14 @@ public class CodeGetResult : BaseResult {
 	private Boolean canConsume;
 	
 	/**
-	 * 当前code对应卡券的状态: <br>
-	 * NORMAL 正常 <br>
-	 * CONSUMED 已核销 <br>
-	 * EXPIRE 已过期 <br>
-	 * GIFTING 转赠中<br>
-	 * GIFT_TIMEOUT 转赠超时<br>
-	 * DELETE 已删除<br>
-	 * UNAVAILABLE 已失效 <br>
+	 * 当前code对应卡券的状态: 
+	 * NORMAL 正常 
+	 * CONSUMED 已核销 
+	 * EXPIRE 已过期 
+	 * GIFTING 转赠中
+	 * GIFT_TIMEOUT 转赠超时
+	 * DELETE 已删除
+	 * UNAVAILABLE 已失效 
 	 * code未被添加或被转赠领取的情况则统一报错：invalid serial code
 	 */
 	@JSONField(name = "user_card_status")
@@ -87,14 +87,14 @@ public class CodeGetResult : BaseResult {
 	}
 
 	/**
-	 * 当前code对应卡券的状态: <br>
-	 * NORMAL 正常 <br>
-	 * CONSUMED 已核销 <br>
-	 * EXPIRE 已过期 <br>
-	 * GIFTING 转赠中<br>
-	 * GIFT_TIMEOUT 转赠超时<br>
-	 * DELETE 已删除<br>
-	 * UNAVAILABLE 已失效 <br>
+	 * 当前code对应卡券的状态: 
+	 * NORMAL 正常 
+	 * CONSUMED 已核销 
+	 * EXPIRE 已过期 
+	 * GIFTING 转赠中
+	 * GIFT_TIMEOUT 转赠超时
+	 * DELETE 已删除
+	 * UNAVAILABLE 已失效 
 	 * code未被添加或被转赠领取的情况则统一报错：invalid serial code
 	 * @return 卡券的状态
 	 */
@@ -103,14 +103,14 @@ public class CodeGetResult : BaseResult {
 	}
 
 	/**
-	 * 当前code对应卡券的状态: <br>
-	 * NORMAL 正常 <br>
-	 * CONSUMED 已核销 <br>
-	 * EXPIRE 已过期 <br>
-	 * GIFTING 转赠中<br>
-	 * GIFT_TIMEOUT 转赠超时<br>
-	 * DELETE 已删除<br>
-	 * UNAVAILABLE 已失效 <br>
+	 * 当前code对应卡券的状态: 
+	 * NORMAL 正常 
+	 * CONSUMED 已核销 
+	 * EXPIRE 已过期 
+	 * GIFTING 转赠中
+	 * GIFT_TIMEOUT 转赠超时
+	 * DELETE 已删除
+	 * UNAVAILABLE 已失效 
 	 * code未被添加或被转赠领取的情况则统一报错：invalid serial code
 	 * @param userCardStatus 卡券的状态
 	 */

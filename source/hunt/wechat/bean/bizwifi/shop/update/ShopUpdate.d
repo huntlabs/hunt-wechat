@@ -8,7 +8,7 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 12:04
  * @Description:
  */
-public class ShopUpdate : ShopInfo {
+class ShopUpdate : ShopInfo {
     private string old_ssid;
 
     public string getOld_ssid() {

@@ -7,6 +7,6 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class UserGetShakeInfoResult : AbstractResult<UserGetShakeInfoResultData> {
+class UserGetShakeInfoResult : AbstractResult!(UserGetShakeInfoResultData) {
 
 }

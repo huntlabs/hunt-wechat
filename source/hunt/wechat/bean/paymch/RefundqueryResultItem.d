@@ -2,7 +2,7 @@ module hunt.wechat.bean.paymch.RefundqueryResultItem;
 
 import hunt.collection.List;
 
-public class RefundqueryResultItem {
+class RefundqueryResultItem {
 
 	private string out_refund_no;
 	private string refund_id;
@@ -20,7 +20,7 @@ public class RefundqueryResultItem {
 
 	private Integer n;
 
-	private List<Coupon> coupons;
+	private List!(Coupon) coupons;
 
 	public string getOut_refund_no() {
 		return out_refund_no;
@@ -118,11 +118,11 @@ public class RefundqueryResultItem {
 		this.n = n;
 	}
 
-	public List<Coupon> getCoupons() {
+	public List!(Coupon) getCoupons() {
 		return coupons;
 	}
 
-	public void setCoupons(List<Coupon> coupons) {
+	public void setCoupons(List!(Coupon) coupons) {
 		this.coupons = coupons;
 	}
 

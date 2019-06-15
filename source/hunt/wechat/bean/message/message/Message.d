@@ -1,6 +1,6 @@
 module hunt.wechat.bean.message.message.Message;
 
-public abstract class Message {
+abstract class Message {
 	
 	public Message() {
 		super();
@@ -43,7 +43,7 @@ public abstract class Message {
 		this.customservice = customservice;
 	}
 
-	public static class Customservice{
+	static class Customservice{
 		
 		private string kf_account;
 	

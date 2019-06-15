@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class LotteryQueryLotteryResult : BaseResult {
+class LotteryQueryLotteryResult : BaseResult {
 
 	/**
 	 * 红包信息

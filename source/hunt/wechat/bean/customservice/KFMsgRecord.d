@@ -8,9 +8,9 @@ import hunt.wechat.bean.BaseResult;
  * 客服聊天记录
  * @author Menng
  */
-public class KFMsgRecord : BaseResult {
+class KFMsgRecord : BaseResult {
 	private string retcode;
-	private List<RecordList> recordlist;
+	private List!(RecordList) recordlist;
 
 	public string getRetcode() {
 		return retcode;
@@ -20,15 +20,15 @@ public class KFMsgRecord : BaseResult {
 		this.retcode = retcode;
 	}
 
-	public List<RecordList> getRecordlist() {
+	public List!(RecordList) getRecordlist() {
 		return recordlist;
 	}
 
-	public void setRecordlist(List<RecordList> recordlist) {
+	public void setRecordlist(List!(RecordList) recordlist) {
 		this.recordlist = recordlist;
 	}
 
-	public static class RecordList {
+	static class RecordList {
 		private string openid; // 用户的openid
 		private string opercode; // 操作ID（会话状态）
 		private string text; // 聊天记录

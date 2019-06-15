@@ -15,7 +15,7 @@ import hunt.wechat.bean.AdaptorCDATA;
  */
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PayContractorder {
+class PayContractorder {
 
 	private string appid;
 	private string mch_id;

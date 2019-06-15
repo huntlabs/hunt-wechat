@@ -1,6 +1,6 @@
 module hunt.wechat.bean.qrcode.Wxaqrcode;
 
-public class Wxaqrcode {
+class Wxaqrcode {
 
 	private string path;
 

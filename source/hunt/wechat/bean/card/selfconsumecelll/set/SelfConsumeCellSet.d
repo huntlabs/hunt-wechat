@@ -8,7 +8,7 @@ import hunt.wechat.bean.card.paycell.set.PaySellSet;
  * @author Moyq5
  *
  */
-public class SelfConsumeCellSet : PaySellSet {
+class SelfConsumeCellSet : PaySellSet {
 
 	override
 	public string getCardId() {

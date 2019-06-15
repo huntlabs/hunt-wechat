@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="AroundBeacon")
-public class AroundBeacon {
+class AroundBeacon {
 	
 	@XmlElement(name="Uuid")
 	private string uuid;

@@ -12,8 +12,8 @@ module hunt.wechat.api.SemanticAPI;
 //import org.apache.http.impl.client.CloseableHttpClient;
 //import org.apache.http.impl.client.HttpClients;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.media.MediaType;
 import hunt.wechat.bean.semantic.queryrecoresultfortext.QueryrecoresultfortextResult;
@@ -35,9 +35,8 @@ import java.nio.charset.UnsupportedCharsetException;
  * @author zeroJun
  * @since 2.8.22
  */
-public class SemanticAPI : BaseAPI {
+class SemanticAPI : BaseAPI {
 
-    private static Logger logger = LoggerFactory.getLogger(SemanticAPI.class);
 
     /**
      * 语义理解

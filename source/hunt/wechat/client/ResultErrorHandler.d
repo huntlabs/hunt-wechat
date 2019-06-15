@@ -5,8 +5,8 @@ module hunt.wechat.client.ResultErrorHandler;
 //import org.apache.http.client.methods.HttpUriRequest;
 //import org.apache.http.entity.ContentType;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.paymch.MchBase;
@@ -19,9 +19,8 @@ import hunt.wechat.util.JsonUtil;
  * @author SHYL
  *
  */
-public abstract class ResultErrorHandler {
+abstract class ResultErrorHandler {
 	
-	private static Logger logger = LoggerFactory.getLogger(ResultErrorHandler.class);
 
 	/**
 	 * 数据错误检查

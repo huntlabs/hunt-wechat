@@ -1,6 +1,6 @@
 module hunt.wechat.bean.material.MaterialBatchgetResultItem;
 
-public class MaterialBatchgetResultItem {
+class MaterialBatchgetResultItem {
 
 	private string media_id;
 

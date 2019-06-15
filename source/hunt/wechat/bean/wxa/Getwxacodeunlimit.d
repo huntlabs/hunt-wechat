@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.Getwxacodeunlimit;
 
-public class Getwxacodeunlimit {
+class Getwxacodeunlimit {
 
 	private string scene;
 	

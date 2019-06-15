@@ -10,7 +10,7 @@ import hunt.wechat.bean.AdaptorCDATA;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MchShorturl {
+class MchShorturl {
 
 	@XmlElement
 	private string appid;

@@ -2,7 +2,7 @@ module hunt.wechat.bean.wxa.ModifyDomainResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class ModifyDomainResult : BaseResult{
+class ModifyDomainResult : BaseResult{
 
 	//以下字段仅在get时返回
 	private string[] requestdomain; // request合法域名

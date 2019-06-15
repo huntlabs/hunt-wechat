@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeUpdate {
+class CodeUpdate {
 
 	/**
 	 * 卡券ID。自定义Code码卡券为必填。
@@ -17,13 +17,13 @@ public class CodeUpdate {
 	private string cardId;
 	
 	/**
-	 * 需变更的Code码。<br>
+	 * 需变更的Code码。
 	 * 必填：是
 	 */
 	private string code;
 	
 	/**
-	 * 变更后的有效Code码。<br>
+	 * 变更后的有效Code码。
 	 * 必填：是，长度：64
 	 */
 	@JSONField(name = "new_code")
@@ -53,7 +53,7 @@ public class CodeUpdate {
 	}
 
 	/**
-	 * 需变更的Code码。<br>
+	 * 需变更的Code码。
 	 * 必填：是
 	 * @param code 需变更的Code码
 	 */
@@ -69,7 +69,7 @@ public class CodeUpdate {
 	}
 
 	/**
-	 * 变更后的有效Code码。<br>
+	 * 变更后的有效Code码。
 	 * 必填：是，长度：64
 	 * @param newCode 变更后的有效Code码
 	 */

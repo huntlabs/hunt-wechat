@@ -1,7 +1,7 @@
 module hunt.wechat.bean.scan.crud.ProductGetlist;
 
 
-public class ProductGetlist {
+class ProductGetlist {
     private string offset;
     private string limit;
     private string status;

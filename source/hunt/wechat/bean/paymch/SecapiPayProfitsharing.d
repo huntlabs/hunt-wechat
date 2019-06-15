@@ -9,14 +9,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SecapiPayProfitsharing : MchBase {
+class SecapiPayProfitsharing : MchBase {
 
 	private string transaction_id;
 
 	private string out_order_no;
 
 	@XmlJavaTypeAdapter(value = Receiver.JsonXmlAdapter.class)
-	private List<Receiver> receivers;
+	private List!(Receiver) receivers;
 
 	public string getTransaction_id() {
 		return transaction_id;
@@ -34,11 +34,11 @@ public class SecapiPayProfitsharing : MchBase {
 		this.out_order_no = out_order_no;
 	}
 
-	public List<Receiver> getReceivers() {
+	public List!(Receiver) getReceivers() {
 		return receivers;
 	}
 
-	public void setReceivers(List<Receiver> receivers) {
+	public void setReceivers(List!(Receiver) receivers) {
 		this.receivers = receivers;
 	}
 

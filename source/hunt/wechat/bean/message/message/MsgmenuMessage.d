@@ -5,10 +5,9 @@ import hunt.collection.List;
 /**
  * 菜单消息
  * 
- * @since 2.8.26
  * @author LiYi
  */
-public class MsgmenuMessage : Message {
+class MsgmenuMessage : Message {
 
 	public MsgmenuMessage() {
 	}
@@ -28,13 +27,13 @@ public class MsgmenuMessage : Message {
 		this.msgmenu = msgmenu;
 	}
 
-	public static class Msgmenu {
+	static class Msgmenu {
 
 		private string head_content;
 
 		private string tail_content;
 
-		private List<MenuOption> list;
+		private List!(MenuOption) list;
 
 		public string getHead_content() {
 			return head_content;
@@ -52,17 +51,17 @@ public class MsgmenuMessage : Message {
 			this.tail_content = tail_content;
 		}
 
-		public List<MenuOption> getList() {
+		public List!(MenuOption) getList() {
 			return list;
 		}
 
-		public void setList(List<MenuOption> list) {
+		public void setList(List!(MenuOption) list) {
 			this.list = list;
 		}
 
 	}
 
-	public static class MenuOption {
+	static class MenuOption {
 		private string id;
 		private string content;
 

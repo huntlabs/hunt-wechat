@@ -2,15 +2,15 @@ module hunt.wechat.bean.menu.selfmenu.SelfmenuInfo;
 
 import hunt.collection.List;
 
-public class SelfmenuInfo {
+class SelfmenuInfo {
 
-	private List<Button> button;
+	private List!(Button) button;
 
-	public List<Button> getButton() {
+	public List!(Button) getButton() {
 		return button;
 	}
 
-	public void setButton(List<Button> button) {
+	public void setButton(List!(Button) button) {
 		this.button = button;
 	}
 

@@ -8,8 +8,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.api.TicketAPI;
 import hunt.wechat.bean.ticket.Ticket;
@@ -19,13 +19,12 @@ import hunt.wechat.bean.ticket.Ticket;
  * @author LiYi
  *
  */
-public class TicketManager {
+class TicketManager {
 	
-	private static final Logger logger = LoggerFactory.getLogger(TicketManager.class);
 
 	private static ScheduledExecutorService scheduledExecutorService;
 
-	private static Map<string,string> ticketMap = new ConcurrentHashMap<string,string>();
+	private static Map!(string,string) ticketMap = new ConcurrentHashMap!(string,string)();
 
 	private static Map<string,ScheduledFuture<?>> futureMap = new ConcurrentHashMap<string, ScheduledFuture<?>>();
 
@@ -35,7 +34,7 @@ public class TicketManager {
 	
 	private static string firestAppid;
 	
-	private static final string KEY_JOIN = "__";
+	private enum string KEY_JOIN = "__";
 	
 	/**
 	 * 初始化 scheduledExecutorService
@@ -71,7 +70,7 @@ public class TicketManager {
 	}
 	
 	/**
-	 * 初始化ticket(jsapi) 刷新，每119分钟刷新一次。<br>
+	 * 初始化ticket(jsapi) 刷新，每119分钟刷新一次。
 	 * 依赖TokenManager
 	 * @param appid appid
 	 */
@@ -80,7 +79,7 @@ public class TicketManager {
 	}
 	
 	/**
-	 * 初始化ticket 刷新，每119分钟刷新一次。<br>
+	 * 初始化ticket 刷新，每119分钟刷新一次。
 	 * 依赖TokenManager
 	 * @since 2.8.2 
 	 * @param appid appid
@@ -115,7 +114,7 @@ public class TicketManager {
 		if(firestAppid == null){
 			firestAppid = appid;
 		}
-		for(final string type : types){
+		foreach(final string type ; types){
 			final string key = appid + KEY_JOIN + type;
 			if(scheduledExecutorService == null){
 				initScheduledExecutorService();
@@ -171,7 +170,7 @@ public class TicketManager {
 	 * @param types ticket 类型  [jsapi,wx_card]
 	 */
 	public static void destroyed(string appid,string... types){
-		for(string type : types){
+		foreach(string type ; types){
 			string key = appid + KEY_JOIN + type;
 			if(futureMap.containsKey(key)){
 				futureMap.get(key).cancel(true);

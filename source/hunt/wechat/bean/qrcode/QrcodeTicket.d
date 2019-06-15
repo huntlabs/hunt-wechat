@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
  * @author LiYi
  *
  */
-public class QrcodeTicket : BaseResult{
+class QrcodeTicket : BaseResult{
 
 	private string ticket;
 

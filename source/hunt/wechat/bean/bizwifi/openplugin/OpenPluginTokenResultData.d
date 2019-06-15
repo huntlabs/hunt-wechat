@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.openplugin.OpenPluginTokenResultData;
  * @Date: 2018/7/24 16:36
  * @Description:
  */
-public class OpenPluginTokenResultData {
+class OpenPluginTokenResultData {
     private Boolean is_open;
     private string wifi_token;
 

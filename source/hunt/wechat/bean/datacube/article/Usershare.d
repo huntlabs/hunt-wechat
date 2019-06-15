@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.article.Usershare;
 
-public class Usershare {
+class Usershare {
 
 	private string ref_date;
 

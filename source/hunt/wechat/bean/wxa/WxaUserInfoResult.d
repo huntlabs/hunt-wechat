@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.WxaUserInfoResult;
 
-public class WxaUserInfoResult {
+class WxaUserInfoResult {
 
 	private WxaUserInfo userInfo;
 

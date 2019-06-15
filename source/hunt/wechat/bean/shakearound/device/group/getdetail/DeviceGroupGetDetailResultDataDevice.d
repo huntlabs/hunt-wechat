@@ -12,7 +12,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupGetDetailResultDataDevice : DeviceIdentifier {
+class DeviceGroupGetDetailResultDataDevice : DeviceIdentifier {
 
 	/**
 	 * 设备的备注信息
@@ -20,7 +20,7 @@ public class DeviceGroupGetDetailResultDataDevice : DeviceIdentifier {
 	private string comment;
 	
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
 	 * 门店相关信息具体可查看门店相关的接口文档 
 	 */
 	@JSONField(name = "poi_id")

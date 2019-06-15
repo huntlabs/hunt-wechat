@@ -11,10 +11,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class PageDelete {
+class PageDelete {
 
 	/**
-	 * 指定页面的id<br>
+	 * 指定页面的id
 	 * 必填
 	 */
 	@JSONField(name = "page_id")
@@ -28,7 +28,7 @@ public class PageDelete {
 	}
 
 	/**
-	 * 指定页面的id<br>
+	 * 指定页面的id
 	 * 必填
 	 * @param pageId 页面的id
 	 */

@@ -8,11 +8,11 @@ import hunt.collection.List;
  * @Date: 2018/7/24 16:38
  * @Description:
  */
-public class ShopListResultData {
+class ShopListResultData {
     private Integer totalcount;
     private Integer pageindex;
     private Integer pagecount;
-    private List<Records> records;
+    private List!(Records) records;
 
     public Integer getTotalcount() {
         return totalcount;
@@ -38,19 +38,19 @@ public class ShopListResultData {
         this.pagecount = pagecount;
     }
 
-    public List<Records> getRecords() {
+    public List!(Records) getRecords() {
         return records;
     }
 
-    public void setRecords(List<Records> records) {
+    public void setRecords(List!(Records) records) {
         this.records = records;
     }
 
-    public static class Records {
+    static class Records {
         private Integer shop_id;
         private string shop_name;
         private string ssid;
-        private List<string> ssid_list;
+        private List!(string) ssid_list;
         private Integer protocol_type;
         private string sid;
         private string poi_id;
@@ -79,11 +79,11 @@ public class ShopListResultData {
             this.ssid = ssid;
         }
 
-        public List<string> getSsid_list() {
+        public List!(string) getSsid_list() {
             return ssid_list;
         }
 
-        public void setSsid_list(List<string> ssid_list) {
+        public void setSsid_list(List!(string) ssid_list) {
             this.ssid_list = ssid_list;
         }
 

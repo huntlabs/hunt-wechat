@@ -22,8 +22,8 @@ import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.Source;
 import javax.xml.transform.sax.SAXSource;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -38,9 +38,8 @@ import com.sun.xml.bind.marshaller.CharacterEscapeHandler;
  * @author LiYi
  *
  */
-public abstract class XMLConverUtil {
+abstract class XMLConverUtil {
 
-	private static Logger logger = LoggerFactory.getLogger(XMLConverUtil.class);
 
 	private static Map<Class<?>, JAXBContext> JAXB_CONTEXT_MAP;
 
@@ -59,7 +58,7 @@ public abstract class XMLConverUtil {
 	 *            xml
 	 * @return T
 	 */
-	public static <T> T convertToObject(Class<T> clazz, string xml) {
+	public static <T> T convertToObject(Class!(T) clazz, string xml) {
 		return convertToObject(clazz, new StringReader(xml));
 	}
 
@@ -74,7 +73,7 @@ public abstract class XMLConverUtil {
 	 *            inputStream
 	 * @return T
 	 */
-	public static <T> T convertToObject(Class<T> clazz, InputStream inputStream) {
+	public static <T> T convertToObject(Class!(T) clazz, InputStream inputStream) {
 		return convertToObject(clazz, new InputStreamReader(inputStream));
 	}
 
@@ -91,7 +90,7 @@ public abstract class XMLConverUtil {
 	 *            charset
 	 * @return T
 	 */
-	public static <T> T convertToObject(Class<T> clazz, InputStream inputStream, Charset charset) {
+	public static <T> T convertToObject(Class!(T) clazz, InputStream inputStream, Charset charset) {
 		return convertToObject(clazz, new InputStreamReader(inputStream, charset));
 	}
 
@@ -106,8 +105,8 @@ public abstract class XMLConverUtil {
 	 *            reader
 	 * @return T
 	 */
-	@SuppressWarnings("unchecked")
-	public static <T> T convertToObject(Class<T> clazz, Reader reader) {
+	
+	public static <T> T convertToObject(Class!(T) clazz, Reader reader) {
 		try {
 			/**
 			 * XXE 漏洞
@@ -146,8 +145,8 @@ public abstract class XMLConverUtil {
 			Marshaller marshaller = JAXB_CONTEXT_MAP.get(object.getClass()).createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			// 设置CDATA输出字符
-			marshaller.setProperty(CharacterEscapeHandler.class.getName(), new CharacterEscapeHandler() {
-				public void escape(char[] ac, int i, int j, bool flag, Writer writer) throws IOException {
+			marshaller.setProperty(typeid(CharacterEscapeHandler).name, new CharacterEscapeHandler() {
+				public void escape(char[] ac, int i, int j, bool flag, Writer writer){
 					writer.write(ac, i, j);
 				}
 			});
@@ -167,8 +166,8 @@ public abstract class XMLConverUtil {
 	 *            xml
 	 * @return map
 	 */
-	public static Map<string, string> convertToMap(string xml) {
-		Map<string, string> map = new LinkedHashMap<string, string>();
+	public static Map!(string, string) convertToMap(string xml) {
+		Map!(string, string) map = new LinkedHashMap!(string, string)();
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 

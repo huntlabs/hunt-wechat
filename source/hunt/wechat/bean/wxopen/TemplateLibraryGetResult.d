@@ -4,13 +4,13 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-public class TemplateLibraryGetResult : BaseResult {
+class TemplateLibraryGetResult : BaseResult {
 
 	private string id;
 
 	private string title;
 
-	private List<TemplateLibraryGetItem> keyword_list;
+	private List!(TemplateLibraryGetItem) keyword_list;
 
 	public string getId() {
 		return id;
@@ -28,11 +28,11 @@ public class TemplateLibraryGetResult : BaseResult {
 		this.title = title;
 	}
 
-	public List<TemplateLibraryGetItem> getKeyword_list() {
+	public List!(TemplateLibraryGetItem) getKeyword_list() {
 		return keyword_list;
 	}
 
-	public void setKeyword_list(List<TemplateLibraryGetItem> keyword_list) {
+	public void setKeyword_list(List!(TemplateLibraryGetItem) keyword_list) {
 		this.keyword_list = keyword_list;
 	}
 

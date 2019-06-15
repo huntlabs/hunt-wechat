@@ -2,7 +2,7 @@ module hunt.wechat.bean.datacube.article.Articletotal;
 
 import hunt.collection.List;
 
-public class Articletotal {
+class Articletotal {
 
 	private string ref_date;
 
@@ -10,7 +10,7 @@ public class Articletotal {
 
 	private string title;
 
-	private List<Details> details;
+	private List!(Details) details;
 
 	public string getRef_date() {
 		return ref_date;
@@ -36,11 +36,11 @@ public class Articletotal {
 		this.title = title;
 	}
 
-	public List<Details> getDetails() {
+	public List!(Details) getDetails() {
 		return details;
 	}
 
-	public void setDetails(List<Details> details) {
+	public void setDetails(List!(Details) details) {
 		this.details = details;
 	}
 

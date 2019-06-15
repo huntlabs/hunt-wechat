@@ -8,8 +8,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.api.TokenAPI;
 import hunt.wechat.bean.token.Token;
@@ -19,13 +19,12 @@ import hunt.wechat.bean.token.Token;
  * @author LiYi
  *
  */
-public class TokenManager{
+class TokenManager{
 
-	private static final Logger logger = LoggerFactory.getLogger(TokenManager.class);
 	
 	private static ScheduledExecutorService scheduledExecutorService;
 
-	private static Map<string,string> tokenMap = new ConcurrentHashMap<string,string>();
+	private static Map!(string,string) tokenMap = new ConcurrentHashMap!(string,string)();
 
 	private static Map<string,ScheduledFuture<?>> futureMap = new ConcurrentHashMap<string, ScheduledFuture<?>>();
 

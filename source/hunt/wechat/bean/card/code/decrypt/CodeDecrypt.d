@@ -8,10 +8,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeDecrypt {
+class CodeDecrypt {
 	
 	/**
-	 * 经过加密的Code码。<br>
+	 * 经过加密的Code码。
 	 * 必填：是
 	 */
 	@JSONField(name = "encrypt_code")
@@ -25,7 +25,7 @@ public class CodeDecrypt {
 	}
 
 	/**
-	 * 经过加密的Code码。<br>
+	 * 经过加密的Code码。
 	 * 必填：是
 	 * @param encryptCode 经过加密的Code码
 	 */

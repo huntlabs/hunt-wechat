@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxopen.TemplateLibraryGetItem;
 
-public class TemplateLibraryGetItem {
+class TemplateLibraryGetItem {
 
 	private Integer keyword_id;
 

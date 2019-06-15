@@ -8,17 +8,17 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class UserGetCardList {
+class UserGetCardList {
 
 	/**
-	 * 卡券ID。不填写时默认查询当前appid下的卡券。<br>
+	 * 卡券ID。不填写时默认查询当前appid下的卡券。
 	 * 必填：否
 	 */
 	@JSONField(name = "card_id")
 	private string cardId;
 	
 	/**
-	 * 需要查询的用户openid<br>
+	 * 需要查询的用户openid
 	 * 必填：是
 	 */
 	private string openid;
@@ -32,7 +32,7 @@ public class UserGetCardList {
 	}
 
 	/**
-	 * 卡券ID。不填写时默认查询当前appid下的卡券。<br>
+	 * 卡券ID。不填写时默认查询当前appid下的卡券。
 	 * 必填：否
 	 * @param cardId 卡券ID
 	 */
@@ -48,7 +48,7 @@ public class UserGetCardList {
 	}
 
 	/**
-	 * 需要查询的用户openid<br>
+	 * 需要查询的用户openid
 	 * 必填：是
 	 * @param openid 需要查询的用户openid
 	 */

@@ -8,6 +8,6 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @Date: 2018/7/24 11:35
  * @Description:
  */
-public class ShopListResult : AbstractResult<ShopListResultData> {
+class ShopListResult : AbstractResult!(ShopListResultData) {
 
 }

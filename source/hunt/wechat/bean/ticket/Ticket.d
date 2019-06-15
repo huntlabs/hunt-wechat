@@ -2,7 +2,7 @@ module hunt.wechat.bean.ticket.Ticket;
 
 import hunt.wechat.bean.BaseResult;
 
-public class Ticket : BaseResult{
+class Ticket : BaseResult{
 
 	private string ticket;
 

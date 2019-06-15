@@ -8,5 +8,5 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @Date: 2018/7/24 17:16
  * @Description:
  */
-public class CouponputGetResult : AbstractResult<CouponputGetResultData> {
+class CouponputGetResult : AbstractResult!(CouponputGetResultData) {
 }

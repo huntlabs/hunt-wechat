@@ -2,7 +2,7 @@ module hunt.wechat.bean.user.UserTagGetResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class UserTagGetResult : BaseResult {
+class UserTagGetResult : BaseResult {
 
 	private Integer count;
 
@@ -34,7 +34,7 @@ public class UserTagGetResult : BaseResult {
 		this.next_openid = next_openid;
 	}
 
-	public static class Data {
+	static class Data {
 
 		private string[] openid;
 

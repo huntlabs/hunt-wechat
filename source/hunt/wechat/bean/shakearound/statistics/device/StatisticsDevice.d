@@ -13,10 +13,10 @@ import hunt.wechat.bean.shakearound.statistics.AbstractStatistics;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class StatisticsDevice : AbstractStatistics {
+class StatisticsDevice : AbstractStatistics {
 
 	/**
-	 * 指定页面的设备ID<br>
+	 * 指定页面的设备ID
 	 * 必填
 	 */
 	@JSONField(name = "device_identifier")
@@ -30,7 +30,7 @@ public class StatisticsDevice : AbstractStatistics {
 	}
 
 	/**
-	 * 指定页面的设备ID<br>
+	 * 指定页面的设备ID
 	 * 必填
 	 * @param deviceIdentifier 页面的设备ID
 	 */

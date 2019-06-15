@@ -1,7 +1,7 @@
 module hunt.wechat.bean.message.message.TextMessage;
 
 
-public class TextMessage : Message {
+class TextMessage : Message {
 
     public TextMessage() {
     }
@@ -26,7 +26,7 @@ public class TextMessage : Message {
         this.text = text;
     }
 
-    public static class Text {
+    static class Text {
 
         private string content;
 

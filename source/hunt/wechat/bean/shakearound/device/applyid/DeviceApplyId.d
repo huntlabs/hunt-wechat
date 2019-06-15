@@ -8,16 +8,16 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月25日
  */
-public class DeviceApplyId {
+class DeviceApplyId {
 
 	/**
-	 * 申请的设备ID的数量，单次新增设备超过500个，需走人工审核流程<br>
+	 * 申请的设备ID的数量，单次新增设备超过500个，需走人工审核流程
 	 * 必填
 	 */
 	private Integer quantity;
 	
 	/**
-	 * 申请理由，不超过100个汉字或200个英文字母<br>
+	 * 申请理由，不超过100个汉字或200个英文字母
 	 * 必填
 	 */
 	@JSONField(name = "apply_reason")
@@ -29,7 +29,7 @@ public class DeviceApplyId {
 	private string comment;
 	
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
 	 * 门店相关信息具体可查看门店相关的接口文档
 	 */
 	@JSONField(name = "poi_id")
@@ -43,7 +43,7 @@ public class DeviceApplyId {
 	}
 
 	/**
-	 * 申请的设备ID的数量，单次新增设备超过500个，需走人工审核流程<br>
+	 * 申请的设备ID的数量，单次新增设备超过500个，需走人工审核流程
 	 * 必填
 	 * @param quantity 申请的设备ID的数量
 	 */
@@ -60,7 +60,7 @@ public class DeviceApplyId {
 	}
 
 	/**
-	 * 申请理由，不超过100个汉字或200个英文字母<br>
+	 * 申请理由，不超过100个汉字或200个英文字母
 	 * 必填
 	 * @param applyReason 申请理由
 	 */
@@ -85,7 +85,7 @@ public class DeviceApplyId {
 	}
 
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
 	 * 门店相关信息具体可查看门店相关的接口文档
 	 * @return 设备关联的门店ID
 	 */
@@ -94,7 +94,7 @@ public class DeviceApplyId {
 	}
 
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
 	 * 门店相关信息具体可查看门店相关的接口文档
 	 * @param poiId 设备关联的门店ID
 	 */

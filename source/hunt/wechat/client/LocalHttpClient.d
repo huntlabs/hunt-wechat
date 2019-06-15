@@ -22,14 +22,13 @@ import java.util.concurrent.ConcurrentHashMap;
 //import org.apache.http.impl.client.CloseableHttpClient;
 //import org.apache.http.message.BasicHeader;
 //import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.Version;
 
-public class LocalHttpClient {
+class LocalHttpClient {
 	
-	private static final Logger logger = LoggerFactory.getLogger(LocalHttpClient.class);
 	
 	private static int timeout = 8000;
 	
@@ -37,7 +36,7 @@ public class LocalHttpClient {
 
 	protected static CloseableHttpClient httpClient = HttpClientFactory.createHttpClient(100,10,timeout,retryExecutionCount);
 
-	private static Map<string,CloseableHttpClient> httpClient_mchKeyStore = new ConcurrentHashMap<string, CloseableHttpClient>();
+	private static Map!(string,CloseableHttpClient) httpClient_mchKeyStore = new ConcurrentHashMap!(string, CloseableHttpClient)();
 	
 	private static ResultErrorHandler resultErrorHandler;
 	
@@ -124,7 +123,7 @@ public class LocalHttpClient {
 		return null;
 	}
 
-	public static <T> T execute(HttpUriRequest request,ResponseHandler<T> responseHandler){
+	public static <T> T execute(HttpUriRequest request,ResponseHandler!(T) responseHandler){
 		string uriId = loggerRequest(request);
 		userAgent(request);
 		if(responseHandler instanceof LocalResponseHandler){
@@ -152,7 +151,7 @@ public class LocalHttpClient {
 	 * @param <T> T
 	 * @return result
 	 */
-	public static <T> T executeJsonResult(HttpUriRequest request,Class<T> clazz){
+	public static <T> T executeJsonResult(HttpUriRequest request,Class!(T) clazz){
 		return execute(request,JsonResponseHandler.createResponseHandler(clazz));
 	}
 
@@ -163,7 +162,7 @@ public class LocalHttpClient {
 	 * @param <T> T
 	 * @return result
 	 */
-	public static <T> T executeXmlResult(HttpUriRequest request,Class<T> clazz){
+	public static <T> T executeXmlResult(HttpUriRequest request,Class!(T) clazz){
 		return execute(request,XmlResponseHandler.createResponseHandler(clazz));
 	}
 	
@@ -177,7 +176,7 @@ public class LocalHttpClient {
 	 * @return result
 	 * @since 2.8.5
 	 */
-	public static <T> T executeXmlResult(HttpUriRequest request,Class<T> clazz,string sign_type,string key){
+	public static <T> T executeXmlResult(HttpUriRequest request,Class!(T) clazz,string sign_type,string key){
 		return execute(request,XmlResponseHandler.createResponseHandler(clazz,sign_type,key));
 	}
 
@@ -189,7 +188,7 @@ public class LocalHttpClient {
 	 * @param <T> T
 	 * @return result
 	 */
-	public static <T> T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class<T> clazz){
+	public static <T> T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class!(T) clazz){
 		return keyStoreExecuteXmlResult(mch_id, request, clazz, null,null);
 	}
 	
@@ -204,11 +203,11 @@ public class LocalHttpClient {
 	 * @since 2.8.5
 	 * @return result
 	 */
-	public static <T> T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class<T> clazz,string sign_type,string key){
+	public static <T> T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class!(T) clazz,string sign_type,string key){
 		return keyStoreExecute(mch_id, request, XmlResponseHandler.createResponseHandler(clazz, sign_type, key));
 	}
 	
-	public static <T> T keyStoreExecute(string mch_id,HttpUriRequest request,ResponseHandler<T> responseHandler){
+	public static <T> T keyStoreExecute(string mch_id,HttpUriRequest request,ResponseHandler!(T) responseHandler){
 		string uriId = loggerRequest(request);
 		userAgent(request);
 		if(responseHandler instanceof LocalResponseHandler){

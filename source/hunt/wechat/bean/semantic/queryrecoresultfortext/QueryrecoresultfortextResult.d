@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @Date: 2018/7/25 10:11
  * @Description:
  */
-public class QueryrecoresultfortextResult : BaseResult {
+class QueryrecoresultfortextResult : BaseResult {
     private string result;
 
     public string getResult() {

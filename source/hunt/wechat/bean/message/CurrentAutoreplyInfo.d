@@ -5,23 +5,23 @@ import hunt.collection.Map;
 
 import hunt.wechat.bean.BaseResult;
 
-public class CurrentAutoreplyInfo : BaseResult{
+class CurrentAutoreplyInfo : BaseResult{
 
 	private Integer is_add_friend_reply_open;
 	
 	private Integer is_autoreply_open;
 	
-	private Map<string,string> add_friend_autoreply_info;
+	private Map!(string,string) add_friend_autoreply_info;
 	
-	private Map<string,string> message_default_autoreply_info;
+	private Map!(string,string) message_default_autoreply_info;
 	
 	private Keyword_autoreply_info keyword_autoreply_info;
 	
-	public static class Keyword_autoreply_info{
+	static class Keyword_autoreply_info{
 		
-		private List<Keyword_reply> list;
+		private List!(Keyword_reply) list;
 		
-		public static class Keyword_reply{
+		static class Keyword_reply{
 			
 			private string rule_name;
 			
@@ -29,11 +29,11 @@ public class CurrentAutoreplyInfo : BaseResult{
 			
 			private string reply_mode;
 			
-			private List<Keyword_list_info> keyword_list_info;
+			private List!(Keyword_list_info) keyword_list_info;
 			
-			private List<Reply_list_info> reply_list_info;
+			private List!(Reply_list_info) reply_list_info;
 			
-			public static class Keyword_list_info{
+			static class Keyword_list_info{
 				
 				private string type;
 				
@@ -67,17 +67,17 @@ public class CurrentAutoreplyInfo : BaseResult{
 				
 			}
 			
-			public static class Reply_list_info{
+			static class Reply_list_info{
 				private string type;
 				
 				private string content;
 				
 				private News_info_list news_info;
 				
-				public static class News_info_list{
-					private List<News_info> list;
+				static class News_info_list{
+					private List!(News_info) list;
 					
-					public static class News_info{
+					static class News_info{
 						
 						private string title;
 						
@@ -151,11 +151,11 @@ public class CurrentAutoreplyInfo : BaseResult{
 						
 					}
 
-					public List<News_info> getList() {
+					public List!(News_info) getList() {
 						return list;
 					}
 
-					public void setList(List<News_info> list) {
+					public void setList(List!(News_info) list) {
 						this.list = list;
 					}
 					
@@ -213,30 +213,30 @@ public class CurrentAutoreplyInfo : BaseResult{
 				this.reply_mode = reply_mode;
 			}
 
-			public List<Keyword_list_info> getKeyword_list_info() {
+			public List!(Keyword_list_info) getKeyword_list_info() {
 				return keyword_list_info;
 			}
 
-			public void setKeyword_list_info(List<Keyword_list_info> keyword_list_info) {
+			public void setKeyword_list_info(List!(Keyword_list_info) keyword_list_info) {
 				this.keyword_list_info = keyword_list_info;
 			}
 
-			public List<Reply_list_info> getReply_list_info() {
+			public List!(Reply_list_info) getReply_list_info() {
 				return reply_list_info;
 			}
 
-			public void setReply_list_info(List<Reply_list_info> reply_list_info) {
+			public void setReply_list_info(List!(Reply_list_info) reply_list_info) {
 				this.reply_list_info = reply_list_info;
 			}
 			
 			
 		}
 
-		public List<Keyword_reply> getList() {
+		public List!(Keyword_reply) getList() {
 			return list;
 		}
 
-		public void setList(List<Keyword_reply> list) {
+		public void setList(List!(Keyword_reply) list) {
 			this.list = list;
 		}
 		
@@ -258,21 +258,21 @@ public class CurrentAutoreplyInfo : BaseResult{
 		this.is_autoreply_open = is_autoreply_open;
 	}
 
-	public Map<string, string> getAdd_friend_autoreply_info() {
+	public Map!(string, string) getAdd_friend_autoreply_info() {
 		return add_friend_autoreply_info;
 	}
 
 	public void setAdd_friend_autoreply_info(
-			Map<string, string> add_friend_autoreply_info) {
+			Map!(string, string) add_friend_autoreply_info) {
 		this.add_friend_autoreply_info = add_friend_autoreply_info;
 	}
 
-	public Map<string, string> getMessage_default_autoreply_info() {
+	public Map!(string, string) getMessage_default_autoreply_info() {
 		return message_default_autoreply_info;
 	}
 
 	public void setMessage_default_autoreply_info(
-			Map<string, string> message_default_autoreply_info) {
+			Map!(string, string) message_default_autoreply_info) {
 		this.message_default_autoreply_info = message_default_autoreply_info;
 	}
 

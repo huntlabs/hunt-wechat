@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class TransfersResult : MchBase{
+class TransfersResult : MchBase{
 
 	private string partner_trade_no;
 

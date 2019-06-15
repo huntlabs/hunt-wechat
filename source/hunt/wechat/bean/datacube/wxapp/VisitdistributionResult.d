@@ -2,11 +2,11 @@ module hunt.wechat.bean.datacube.wxapp.VisitdistributionResult;
 
 import hunt.collection.List;
 
-public class VisitdistributionResult {
+class VisitdistributionResult {
 
 	private string ref_date;
 
-	private List<Item> list;
+	private List!(Item) list;
 
 	public string getRef_date() {
 		return ref_date;
@@ -16,19 +16,19 @@ public class VisitdistributionResult {
 		this.ref_date = ref_date;
 	}
 
-	public List<Item> getList() {
+	public List!(Item) getList() {
 		return list;
 	}
 
-	public void setList(List<Item> list) {
+	public void setList(List!(Item) list) {
 		this.list = list;
 	}
 
-	public static class Item {
+	static class Item {
 
 		private string index;
 
-		private List<Item_list> item_list;
+		private List!(Item_list) item_list;
 
 		public string getIndex() {
 			return index;
@@ -38,17 +38,17 @@ public class VisitdistributionResult {
 			this.index = index;
 		}
 
-		public List<Item_list> getItem_list() {
+		public List!(Item_list) getItem_list() {
 			return item_list;
 		}
 
-		public void setItem_list(List<Item_list> item_list) {
+		public void setItem_list(List!(Item_list) item_list) {
 			this.item_list = item_list;
 		}
 
 	}
 
-	public static class Item_list {
+	static class Item_list {
 		private Integer key;
 
 		private Integer value;

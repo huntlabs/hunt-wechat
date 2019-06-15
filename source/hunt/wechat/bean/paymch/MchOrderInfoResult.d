@@ -15,7 +15,7 @@ import hunt.wechat.bean.DynamicField;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MchOrderInfoResult : MchBase : DynamicField{
+class MchOrderInfoResult : MchBase : DynamicField{
 
 	private string trade_state;
 
@@ -64,7 +64,7 @@ public class MchOrderInfoResult : MchBase : DynamicField{
 	 * List.size() = coupon_count
 	 */
 	@XmlTransient
-	private List<Coupon> coupons;
+	private List!(Coupon) coupons;
 
 	/**
 	 * 单品优惠 ,请求参数 version=1.0
@@ -72,7 +72,7 @@ public class MchOrderInfoResult : MchBase : DynamicField{
 	 */
 	@XmlElement
 	@XmlJavaTypeAdapter(value = PromotionDetailXmlAdapter.class)
-	private List<PromotionDetail> promotion_detail;
+	private List!(PromotionDetail) promotion_detail;
 	
 	/**
 	 * 委托代扣协议id
@@ -240,19 +240,19 @@ public class MchOrderInfoResult : MchBase : DynamicField{
 		this.settlement_total_fee = settlement_total_fee;
 	}
 
-	public List<Coupon> getCoupons() {
+	public List!(Coupon) getCoupons() {
 		return coupons;
 	}
 
-	public void setCoupons(List<Coupon> coupons) {
+	public void setCoupons(List!(Coupon) coupons) {
 		this.coupons = coupons;
 	}
 
-	public List<PromotionDetail> getPromotion_detail() {
+	public List!(PromotionDetail) getPromotion_detail() {
 		return promotion_detail;
 	}
 
-	public void setPromotion_detail(List<PromotionDetail> promotion_detail) {
+	public void setPromotion_detail(List!(PromotionDetail) promotion_detail) {
 		this.promotion_detail = promotion_detail;
 	}
 	
@@ -265,11 +265,11 @@ public class MchOrderInfoResult : MchBase : DynamicField{
 	}
 
 	override
-	public void buildDynamicField(Map<string, string> dataMap) {
+	public void buildDynamicField(Map!(string, string) dataMap) {
 		if(dataMap != null){
 			string coupon_countStr = dataMap.get("coupon_count");
 			if(coupon_countStr != null){
-				List<Coupon> list = new ArrayList<Coupon>();
+				List!(Coupon) list = new ArrayList!(Coupon)();
 				for (int i = 0; i < Integer.parseInt(coupon_countStr); i++) {
 					Coupon coupon = new Coupon(
 							dataMap.get("coupon_type_"+i),

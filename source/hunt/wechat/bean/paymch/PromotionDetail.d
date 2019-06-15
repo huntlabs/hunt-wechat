@@ -2,7 +2,7 @@ module hunt.wechat.bean.paymch.PromotionDetail;
 
 import hunt.collection.List;
 
-public class PromotionDetail {
+class PromotionDetail {
 
 	private string promotion_id;
 
@@ -22,7 +22,7 @@ public class PromotionDetail {
 
 	private string other_contribute;
 
-	private List<PromotionGoodsDetail> goods_detail;
+	private List!(PromotionGoodsDetail) goods_detail;
 
 	public string getPromotion_id() {
 		return promotion_id;
@@ -96,11 +96,11 @@ public class PromotionDetail {
 		this.other_contribute = other_contribute;
 	}
 
-	public List<PromotionGoodsDetail> getGoods_detail() {
+	public List!(PromotionGoodsDetail) getGoods_detail() {
 		return goods_detail;
 	}
 
-	public void setGoods_detail(List<PromotionGoodsDetail> goods_detail) {
+	public void setGoods_detail(List!(PromotionGoodsDetail) goods_detail) {
 		this.goods_detail = goods_detail;
 	}
 

@@ -2,7 +2,7 @@ module hunt.wechat.bean.component.PreAuthCode;
 
 import hunt.wechat.bean.BaseResult;
 
-public class PreAuthCode : BaseResult{
+class PreAuthCode : BaseResult{
 
 	private string pre_auth_code;
 

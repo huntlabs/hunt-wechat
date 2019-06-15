@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.Addnearbypoi;
 
-public class Addnearbypoi {
+class Addnearbypoi {
 
 	private string related_name;
 

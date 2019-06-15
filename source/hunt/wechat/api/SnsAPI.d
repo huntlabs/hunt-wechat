@@ -5,8 +5,8 @@ import java.net.URLEncoder;
 
 //import org.apache.http.client.methods.HttpUriRequest;
 //import org.apache.http.client.methods.RequestBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.sns.Jscode2sessionResult;
@@ -20,9 +20,8 @@ import hunt.wechat.util.EmojiUtil;
  * @author LiYi
  *
  */
-public class SnsAPI : BaseAPI{
+class SnsAPI : BaseAPI{
 
-	private static Logger logger = LoggerFactory.getLogger(SnsAPI.class);
 	
 	/**
 	 * 通过code换取网页授权access_token
@@ -123,13 +122,13 @@ public class SnsAPI : BaseAPI{
 	 * @param access_token access_token
 	 * @param openid openid
 	 * @param lang 国家地区语言版本，zh_CN 简体，zh_TW 繁体，en 英语
-	 * @param emoji 表情解析方式<br>
-	 * 0 		  不设置 <br>
-	 * 1 HtmlHex 格式<br>
-	 * 2 HtmlTag 格式<br>
-	 * 3 Alias  格式<br>
-	 * 4 HtmlDec 格式<br>
-	 * 5 PureText 纯文本<br>
+	 * @param emoji 表情解析方式
+	 * 0 		  不设置 
+	 * 1 HtmlHex 格式
+	 * 2 HtmlTag 格式
+	 * 3 Alias  格式
+	 * 4 HtmlDec 格式
+	 * 5 PureText 纯文本
 	 * @return User
 	 */
 	public static User userinfo(string access_token,string openid,string lang,int emoji){

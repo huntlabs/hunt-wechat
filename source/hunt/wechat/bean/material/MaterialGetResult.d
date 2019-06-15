@@ -5,7 +5,7 @@ import hunt.collection.List;
 import hunt.wechat.bean.media.MediaGetResult;
 import hunt.wechat.bean.message.Article;
 
-public class MaterialGetResult : MediaGetResult {
+class MaterialGetResult : MediaGetResult {
 
 	private string title; // 如果返回的是视频消息素材
 
@@ -13,7 +13,7 @@ public class MaterialGetResult : MediaGetResult {
 
 	private string down_url; // 如果返回的是视频消息素材
 
-	private List<Article> news_item; // 图文素材返回
+	private List!(Article) news_item; // 图文素材返回
 
 	public string getTitle() {
 		return title;
@@ -39,11 +39,11 @@ public class MaterialGetResult : MediaGetResult {
 		this.down_url = down_url;
 	}
 
-	public List<Article> getNews_item() {
+	public List!(Article) getNews_item() {
 		return news_item;
 	}
 
-	public void setNews_item(List<Article> news_item) {
+	public void setNews_item(List!(Article) news_item) {
 		this.news_item = news_item;
 	}
 

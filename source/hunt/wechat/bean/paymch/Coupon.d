@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.Coupon;
 
-public class Coupon {
+class Coupon {
 
 	private string type; // CASH--充值代金券 NO_CASH---非充值代金券
 

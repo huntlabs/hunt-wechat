@@ -26,20 +26,20 @@ import hunt.wechat.util.JsonUtil;
  * @author LiYi
  *
  */
-public class UserAPI : BaseAPI{
+class UserAPI : BaseAPI{
 
 	/**
 	 * 获取用户基本信息
 	 * @since 2.7.1
 	 * @param access_token access_token
 	 * @param openid openid
-	 * @param emoji 表情解析方式<br>
-	 * 0 		  不设置 <br>
-	 * 1 HtmlHex 格式<br>
-	 * 2 HtmlTag 格式<br>
-	 * 3 Alias  格式<br>
-	 * 4 HtmlDec 格式<br>
-	 * 5 PureText 纯文本<br>
+	 * @param emoji 表情解析方式
+	 * 0 		  不设置 
+	 * 1 HtmlHex 格式
+	 * 2 HtmlTag 格式
+	 * 3 Alias  格式
+	 * 4 HtmlDec 格式
+	 * 5 PureText 纯文本
 	 * @return User
 	 */
 	public static User userInfo(string access_token,string openid,int emoji){
@@ -87,16 +87,16 @@ public class UserAPI : BaseAPI{
 	 * @param access_token access_token
 	 * @param lang	zh-CN
 	 * @param openids 最多支持一次拉取100条
-	 * @param emoji 表情解析方式<br>
-	 * 0 		  不设置 <br>
-	 * 1 HtmlHex 格式<br>
-	 * 2 HtmlTag 格式<br>
-	 * 3 Alias  格式<br>
-	 * 4 HtmlDec 格式<br>
-	 * 5 PureText 纯文本<br>
+	 * @param emoji 表情解析方式
+	 * 0 		  不设置 
+	 * 1 HtmlHex 格式
+	 * 2 HtmlTag 格式
+	 * 3 Alias  格式
+	 * 4 HtmlDec 格式
+	 * 5 PureText 纯文本
 	 * @return UserInfoList
 	 */
-	public static UserInfoList userInfoBatchget(string access_token,string lang,List<string> openids,int emoji){
+	public static UserInfoList userInfoBatchget(string access_token,string lang,List!(string) openids,int emoji){
 		StringBuilder sb = new StringBuilder();
 		sb.append("{\"user_list\": [");
 		for(int i = 0;i < openids.size();i++){
@@ -114,7 +114,7 @@ public class UserAPI : BaseAPI{
 				.build();
 		UserInfoList userInfoList = LocalHttpClient.executeJsonResult(httpUriRequest,UserInfoList.class);
 		if(emoji != 0 && userInfoList != null && userInfoList.getUser_info_list() != null){
-			for(User user : userInfoList.getUser_info_list()){
+			foreach(User user ; userInfoList.getUser_info_list()){
 				if(user.getNickname() != null){
 					user.setNickname_emoji(EmojiUtil.parse(user.getNickname(), emoji));
 				}
@@ -130,7 +130,7 @@ public class UserAPI : BaseAPI{
 	 * @param openids 最多支持一次拉取100条
 	 * @return UserInfoList
 	 */
-	public static UserInfoList userInfoBatchget(string access_token,string lang,List<string> openids){
+	public static UserInfoList userInfoBatchget(string access_token,string lang,List!(string) openids){
 		return userInfoBatchget(access_token, lang, openids,0);
 	}
 
@@ -243,7 +243,7 @@ public class UserAPI : BaseAPI{
 	 * @param to_groupid to_groupid
 	 * @return BaseResult
 	 */
-	public static BaseResult groupsMembersBatchUpdate(string access_token,List<string> openid_list,string to_groupid){
+	public static BaseResult groupsMembersBatchUpdate(string access_token,List!(string) openid_list,string to_groupid){
 		string openidListStr = JsonUtil.toJSONString(openid_list);
 		string groupJson = "{\"openid_list\":"+openidListStr+",\"to_groupid\":"+to_groupid+"}";
 		HttpUriRequest httpUriRequest = RequestBuilder.post()
@@ -273,7 +273,7 @@ public class UserAPI : BaseAPI{
 	}
 
 	/**
-	 * 标签管理 创建标签<br>
+	 * 标签管理 创建标签
 	 * 一个公众号，最多可以创建100个标签。
 	 * @since 2.8.1
 	 * @param access_token access_token
@@ -325,8 +325,8 @@ public class UserAPI : BaseAPI{
 	}
 	
 	/**
-	 * 标签管理 删除标签<br>
-	 * 请注意，当某个标签下的粉丝超过10w时，后台不可直接删除标签。<br>
+	 * 标签管理 删除标签
+	 * 请注意，当某个标签下的粉丝超过10w时，后台不可直接删除标签。
 	 * 此时，开发者可以对该标签下的openid列表，先进行取消标签的操作，直到粉丝数不超过10w后，才可直接删除该标签。
 	 * @since 2.8.1
 	 * @param access_token access_token
@@ -364,7 +364,7 @@ public class UserAPI : BaseAPI{
 	}
 	
 	/**
-	 * 用户管理 批量为用户打标签<br>
+	 * 用户管理 批量为用户打标签
 	 * 标签功能目前支持公众号为用户打上最多20个标签。
 	 * @since 2.8.1
 	 * @param access_token access_token
@@ -421,7 +421,7 @@ public class UserAPI : BaseAPI{
 	}
 	
 	/**
-	 * 黑名单管理	获取公众号的黑名单列表<br>
+	 * 黑名单管理	获取公众号的黑名单列表
 	 * 该接口每次调用最多可拉取 10000 个OpenID，当列表数较多时，可以通过多次拉取的方式来满足需求。
 	 * @since 2.8.1
 	 * @param access_token	access_token

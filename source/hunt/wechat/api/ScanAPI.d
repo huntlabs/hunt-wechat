@@ -18,7 +18,7 @@ import hunt.text.Charset;
  * @author swang
  * @since 2.8.22
  */
-public class ScanAPI : BaseAPI {
+class ScanAPI : BaseAPI {
 
     /**
      * 获取商户信息

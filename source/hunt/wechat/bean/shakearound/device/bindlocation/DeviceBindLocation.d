@@ -12,40 +12,40 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月26日
  */
-public class DeviceBindLocation {
+class DeviceBindLocation {
 
 	/**
-	 * 指定的设备ID<br>
+	 * 指定的设备ID
 	 * 必填
 	 */
 	@JSONField(name = "device_identifier")
 	private DeviceIdentifier deviceIdentifier;
 	
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
-	 * 当值为0时，将清除设备已关联的门店ID。<br>
-	 * 门店相关信息具体可查看门店相关的接口文档<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
+	 * 当值为0时，将清除设备已关联的门店ID。
+	 * 门店相关信息具体可查看门店相关的接口文档
 	 * 必填
 	 */
 	@JSONField(name = "poi_id")
 	private Integer poiId;
 	
 	/**
-	 * 为1时，关联的门店和设备归属于同一公众账号；<br>
-	 * 为2时，关联的门店为其他公众账号的门店<br>
+	 * 为1时，关联的门店和设备归属于同一公众账号；
+	 * 为2时，关联的门店为其他公众账号的门店
 	 * 不填默认为1
 	 */
 	private Integer type;
 	
 	/**
-	 * 关联门店所归属的公众账号的APPID<br>
+	 * 关联门店所归属的公众账号的APPID
 	 * 当Type为2时，必填
 	 */
 	@JSONField(name = "poi_appid")
 	private string poiAppid;
 
 	/**
-	 * 指定的设备ID<br>
+	 * 指定的设备ID
 	 * 必填
 	 * @return 指定的设备ID
 	 */
@@ -54,7 +54,7 @@ public class DeviceBindLocation {
 	}
 
 	/**
-	 * 指定的设备ID<br>
+	 * 指定的设备ID
 	 * 必填
 	 * @param deviceIdentifier 指定的设备ID
 	 */
@@ -63,9 +63,9 @@ public class DeviceBindLocation {
 	}
 
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
-	 * 当值为0时，将清除设备已关联的门店ID。<br>
-	 * 门店相关信息具体可查看门店相关的接口文档<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
+	 * 当值为0时，将清除设备已关联的门店ID。
+	 * 门店相关信息具体可查看门店相关的接口文档
 	 * 必填
 	 * @return 设备关联的门店ID
 	 */
@@ -74,9 +74,9 @@ public class DeviceBindLocation {
 	}
 
 	/**
-	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。<br>
-	 * 当值为0时，将清除设备已关联的门店ID。<br>
-	 * 门店相关信息具体可查看门店相关的接口文档<br>
+	 * 设备关联的门店ID，关联门店后，在门店1KM的范围内有优先摇出信息的机会。
+	 * 当值为0时，将清除设备已关联的门店ID。
+	 * 门店相关信息具体可查看门店相关的接口文档
 	 * 必填
 	 * @param poiId 设备关联的门店ID
 	 */
@@ -85,8 +85,8 @@ public class DeviceBindLocation {
 	}
 
 	/**
-	 * 为1时，关联的门店和设备归属于同一公众账号；<br>
-	 * 为2时，关联的门店为其他公众账号的门店<br>
+	 * 为1时，关联的门店和设备归属于同一公众账号；
+	 * 为2时，关联的门店为其他公众账号的门店
 	 * 不填默认为1
 	 * @return 门店与公众号关系类型
 	 */
@@ -95,8 +95,8 @@ public class DeviceBindLocation {
 	}
 
 	/**
-	 * 为1时，关联的门店和设备归属于同一公众账号；<br>
-	 * 为2时，关联的门店为其他公众账号的门店<br>
+	 * 为1时，关联的门店和设备归属于同一公众账号；
+	 * 为2时，关联的门店为其他公众账号的门店
 	 * 不填默认为1
 	 * @param type 门店与公众号关系类型
 	 */
@@ -105,7 +105,7 @@ public class DeviceBindLocation {
 	}
 
 	/**
-	 * 关联门店所归属的公众账号的APPID<br>
+	 * 关联门店所归属的公众账号的APPID
 	 * 当Type为2时，必填
 	 * @return 关联门店所归属的公众账号的APPID
 	 */
@@ -114,7 +114,7 @@ public class DeviceBindLocation {
 	}
 
 	/**
-	 * 关联门店所归属的公众账号的APPID<br>
+	 * 关联门店所归属的公众账号的APPID
 	 * 当Type为2时，必填
 	 * @param poiAppid 关联门店所归属的公众账号的APPID
 	 */

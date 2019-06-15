@@ -8,11 +8,11 @@ import hunt.collection.List;
  * @Date: 2018/7/24 16:34
  * @Description:
  */
-public class DeviceListResultData {
+class DeviceListResultData {
     private Integer totalcount;
     private Integer pageindex;
     private Integer pagecount;
-    private List<Records> records;
+    private List!(Records) records;
 
     public Integer getTotalcount() {
         return totalcount;
@@ -38,15 +38,15 @@ public class DeviceListResultData {
         this.pagecount = pagecount;
     }
 
-    public List<Records> getRecords() {
+    public List!(Records) getRecords() {
         return records;
     }
 
-    public void setRecords(List<Records> records) {
+    public void setRecords(List!(Records) records) {
         this.records = records;
     }
 
-    public static class Records {
+    static class Records {
         private Integer shop_id;
         private string ssid;
         private string bssid;

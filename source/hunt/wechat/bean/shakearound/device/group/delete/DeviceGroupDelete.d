@@ -10,10 +10,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class DeviceGroupDelete {
+class DeviceGroupDelete {
 
 	/**
-	 * 分组唯一标识，全局唯一<br>
+	 * 分组唯一标识，全局唯一
 	 * 必填
 	 */
 	@JSONField(name = "group_id")
@@ -27,7 +27,7 @@ public class DeviceGroupDelete {
 	}
 
 	/**
-	 * 分组唯一标识，全局唯一<br>
+	 * 分组唯一标识，全局唯一
 	 * 必填
 	 * @param groupId 分组唯一标识
 	 */

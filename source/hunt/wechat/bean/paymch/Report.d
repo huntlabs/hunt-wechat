@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Report {
+class Report {
 
 	private string appid;
 	private string mch_id;
@@ -78,11 +78,11 @@ public class Report {
 		this.sign = sign;
 	}
 
-	public string getInterface_url() {
+	string getinterface_url() {
 		return interface_url;
 	}
 
-	public void setInterface_url(string interface_url) {
+	void setinterface_url(string interface_url) {
 		this.interface_url = interface_url;
 	}
 

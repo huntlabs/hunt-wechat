@@ -6,7 +6,7 @@ module hunt.wechat.bean.poi.Poi;
  * @author Moyq5
  *
  */
-public class Poi {
+class Poi {
 
 	private Business business;
 

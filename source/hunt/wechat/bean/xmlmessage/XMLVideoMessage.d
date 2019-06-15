@@ -4,9 +4,8 @@ import hunt.wechat.bean.message.message.Message;
 import hunt.wechat.bean.message.message.VideoMessage;
 import hunt.wechat.bean.message.message.VideoMessage.Video;
 
-public class XMLVideoMessage : XMLMessage {
+class XMLVideoMessage : XMLMessage {
 
-	private static final long serialVersionUID = 3858730703846989272L;
 
 	private string mediaId;
 

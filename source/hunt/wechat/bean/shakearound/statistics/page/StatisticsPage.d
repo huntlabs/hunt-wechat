@@ -12,10 +12,10 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class StatisticsPage : AbstractStatistics {
+class StatisticsPage : AbstractStatistics {
 
 	/**
-	 * 页面ID<br>
+	 * 页面ID
 	 * 必填
 	 */
 	@JSONField(name = "page_id")
@@ -29,7 +29,7 @@ public class StatisticsPage : AbstractStatistics {
 	}
 
 	/**
-	 * 页面ID<br>
+	 * 页面ID
 	 * 必填
 	 * @param pageId 页面ID
 	 */

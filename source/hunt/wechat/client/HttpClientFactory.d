@@ -24,19 +24,18 @@ import javax.net.ssl.SSLException;
 //import org.apache.http.impl.client.HttpClientBuilder;
 //import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 //import org.apache.http.protocol.HttpContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hunt.logger;
+
 
 /**
  * httpclient 4.3.x
  * @author Yi
  *
  */
-public class HttpClientFactory{
+class HttpClientFactory{
 	
-	private static Logger logger = LoggerFactory.getLogger(HttpClientFactory.class);
 	
-	private static final string[] supportedProtocols = new string[]{"TLSv1"};
+	private enum string[] supportedProtocols = new string[]{"TLSv1"};
 	
 	public static CloseableHttpClient createHttpClient() {
 		return createHttpClient(100,10,5000,2);

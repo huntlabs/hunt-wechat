@@ -8,5 +8,5 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * @Date: 2018/7/24 17:00
  * @Description:
  */
-public class HomePageGetResult : AbstractResult<HomePageGetResultData> {
+class HomePageGetResult : AbstractResult!(HomePageGetResultData) {
 }

@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MchOrderquery : MchVersion{
+class MchOrderquery : MchVersion{
 
 	@XmlElement
 	private string appid;

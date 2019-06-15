@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxopen.Wxamplink;
 
-public class Wxamplink {
+class Wxamplink {
 
 	private string appid;
 

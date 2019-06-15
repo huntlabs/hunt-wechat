@@ -1,7 +1,7 @@
 module hunt.wechat.bean.scan.infolist.KeyList;
 import hunt.wechat.bean.scan.base.ProductGet;
 
-public class KeyList : ProductGet {
+class KeyList : ProductGet {
     private string category_id;
     private string category_name;
     private Long update_time;

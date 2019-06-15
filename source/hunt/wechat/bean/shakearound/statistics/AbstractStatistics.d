@@ -10,17 +10,17 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public abstract class AbstractStatistics {
+abstract class AbstractStatistics {
 
 	/**
-	 * 起始日期时间戳，最长时间跨度为30天，单位为秒<br>
+	 * 起始日期时间戳，最长时间跨度为30天，单位为秒
 	 * 必填
 	 */
 	@JSONField(name = "begin_date")
 	private Long beginDate;
 	
 	/**
-	 * 结束日期时间戳，最长时间跨度为30天，单位为秒<br>
+	 * 结束日期时间戳，最长时间跨度为30天，单位为秒
 	 * 必填
 	 */
 	@JSONField(name = "end_date")
@@ -28,7 +28,7 @@ public abstract class AbstractStatistics {
 
 
 	/**
-	 * 起始日期时间戳，单位为秒<br>
+	 * 起始日期时间戳，单位为秒
 	 * @return 起始日期时间戳
 	 */
 	public Long getBeginDate() {
@@ -36,7 +36,7 @@ public abstract class AbstractStatistics {
 	}
 
 	/**
-	 * 起始日期时间戳，最长时间跨度为30天，单位为秒<br>
+	 * 起始日期时间戳，最长时间跨度为30天，单位为秒
 	 * 必填
 	 * @param beginDate 起始日期时间戳
 	 */
@@ -45,7 +45,7 @@ public abstract class AbstractStatistics {
 	}
 
 	/**
-	 * 结束日期时间戳，单位为秒<br>
+	 * 结束日期时间戳，单位为秒
 	 * @return 结束日期时间戳
 	 */
 	public Long getEndDate() {
@@ -53,7 +53,7 @@ public abstract class AbstractStatistics {
 	}
 
 	/**
-	 * 结束日期时间戳，最长时间跨度为30天，单位为秒<br>
+	 * 结束日期时间戳，最长时间跨度为30天，单位为秒
 	 * 必填
 	 * @param endDate 结束日期时间戳
 	 */

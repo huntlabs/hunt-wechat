@@ -1,6 +1,6 @@
 module hunt.wechat.bean.comment.Comment;
 
-public class Comment {
+class Comment {
 
 	private Long user_comment_id;
 

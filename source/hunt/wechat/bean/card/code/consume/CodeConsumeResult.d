@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class CodeConsumeResult : BaseResult {
+class CodeConsumeResult : BaseResult {
 
 	private CodeConsumeResultCard card;
 

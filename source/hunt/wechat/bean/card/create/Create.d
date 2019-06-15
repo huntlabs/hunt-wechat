@@ -9,7 +9,7 @@ import hunt.wechat.bean.card.AbstractCard;
  *
  * @param <T> 可以是CashCard、DiscountCard、GeneralCouponCard、GiftCard、GrouponCard
  */
-public class Create<T : AbstractCard> {
+class Create<T : AbstractCard> {
 
 	private T card;
 

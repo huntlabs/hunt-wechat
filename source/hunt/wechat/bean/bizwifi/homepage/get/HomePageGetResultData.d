@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.homepage.get.HomePageGetResultData;
  * @Date: 2018/7/24 17:00
  * @Description:
  */
-public class HomePageGetResultData {
+class HomePageGetResultData {
     private Integer shop_id;
     private Integer template_id;
     private string url;

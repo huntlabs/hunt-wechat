@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeGet {
+class CodeGet {
 	
 	/**
 	 * 卡券ID代表一类卡券。自定义code卡券必填。
@@ -17,13 +17,13 @@ public class CodeGet {
 	private string cardId;
 	
 	/**
-	 * 单张卡券的唯一标准。<br>
+	 * 单张卡券的唯一标准。
 	 * 必填：是
 	 */
 	private string code;
 	
 	/**
-	 * 是否校验code核销状态，填入true和false时的code异常状态返回数据不同。<br>
+	 * 是否校验code核销状态，填入true和false时的code异常状态返回数据不同。
 	 * 必填：否
 	 */
 	@JSONField(name = "check_consume")
@@ -53,7 +53,7 @@ public class CodeGet {
 	}
 
 	/**
-	 * 单张卡券的唯一标准。<br>
+	 * 单张卡券的唯一标准。
 	 * 必填：是
 	 * @param code 单张卡券的唯一标准
 	 */
@@ -70,7 +70,7 @@ public class CodeGet {
 	}
 
 	/**
-	 * 是否校验code核销状态，填入true和false时的code异常状态返回数据不同。<br>
+	 * 是否校验code核销状态，填入true和false时的code异常状态返回数据不同。
 	 * 必填：否
 	 * @param checkConsume 是否校验code核销状态
 	 */

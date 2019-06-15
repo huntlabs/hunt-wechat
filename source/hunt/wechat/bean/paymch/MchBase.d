@@ -2,7 +2,7 @@ module hunt.wechat.bean.paymch.MchBase;
 
 import javax.xml.bind.annotation.XmlTransient;
 
-public abstract class MchBase {
+abstract class MchBase {
 
 	protected string return_code;
 

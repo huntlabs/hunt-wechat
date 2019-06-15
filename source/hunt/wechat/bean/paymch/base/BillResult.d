@@ -6,6 +6,6 @@ module hunt.wechat.bean.paymch.base.BillResult;
  * @Date: 2018/7/18 12:13
  * @Description:
  */
-public interface BillResult {
+interface BillResult {
     string getData();
 }

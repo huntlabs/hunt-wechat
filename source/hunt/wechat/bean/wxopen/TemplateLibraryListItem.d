@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxopen.TemplateLibraryListItem;
 
-public class TemplateLibraryListItem {
+class TemplateLibraryListItem {
 
 	private string id;
 

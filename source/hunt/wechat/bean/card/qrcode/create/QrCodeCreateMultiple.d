@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class QrCodeCreateMultiple {
+class QrCodeCreateMultiple {
 
 	@JSONField(name = "action_name")
 	private string actionName = "QR_MULTIPLE_CARD";

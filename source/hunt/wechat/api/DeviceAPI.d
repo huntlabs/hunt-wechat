@@ -5,7 +5,7 @@ module hunt.wechat.api.DeviceAPI;
  * @author nobody
  *
  */
-public class DeviceAPI : BaseAPI{
+class DeviceAPI : BaseAPI{
 
 	/**
 	 * 这里一片空白，开源贡献动起手来！

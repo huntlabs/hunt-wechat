@@ -5,7 +5,7 @@ module hunt.wechat.bean.message.Article;
  * @author LiYi
  *
  */
-public class Article {
+class Article {
 
 	private string title;
 

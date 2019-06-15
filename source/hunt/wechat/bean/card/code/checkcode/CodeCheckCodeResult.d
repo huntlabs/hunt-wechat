@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class CodeCheckCodeResult : BaseResult {
+class CodeCheckCodeResult : BaseResult {
 
 	/**
 	 * 已经成功存入的code。

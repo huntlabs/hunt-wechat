@@ -2,7 +2,7 @@ module hunt.wechat.bean.menu.selfmenu.CurrentSelfmenuInfo;
 
 import hunt.wechat.bean.BaseResult;
 
-public class CurrentSelfmenuInfo : BaseResult{
+class CurrentSelfmenuInfo : BaseResult{
 
 	private Integer is_menu_open;
 

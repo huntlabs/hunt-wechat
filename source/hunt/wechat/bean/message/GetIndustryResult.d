@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.GetIndustryResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class GetIndustryResult : BaseResult{
+class GetIndustryResult : BaseResult{
 
 	private Industry primary_industry;
 	

@@ -9,12 +9,11 @@ import hunt.util.Serialize;
  * @author LiYi
  *
  */
-public class WxaEntrustwebData : Serializable {
+class WxaEntrustwebData : Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 
 	private string appId;
 

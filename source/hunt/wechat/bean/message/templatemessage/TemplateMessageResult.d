@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.templatemessage.TemplateMessageResult;
 
 import hunt.wechat.bean.BaseResult;
 
-public class TemplateMessageResult : BaseResult{
+class TemplateMessageResult : BaseResult{
 
 	private Long msgid;
 

@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class GethbinfoResult : MchBase{
+class GethbinfoResult : MchBase{
 	
 	private string mch_billno;
 	private string detail_id;
@@ -40,7 +40,7 @@ public class GethbinfoResult : MchBase{
 	private string act_name;
 	@XmlElementWrapper(name="hblist")
 	@XmlElement(name="hbinfo")
-	private List<Hbinfo> hblist;
+	private List!(Hbinfo) hblist;
 
 	public string getMch_billno() {
 		return mch_billno;
@@ -154,11 +154,11 @@ public class GethbinfoResult : MchBase{
 		this.act_name = act_name;
 	}
 
-	public List<Hbinfo> getHblist() {
+	public List!(Hbinfo) getHblist() {
 		return hblist;
 	}
 
-	public void setHblist(List<Hbinfo> hblist) {
+	public void setHblist(List!(Hbinfo) hblist) {
 		this.hblist = hblist;
 	}
 	

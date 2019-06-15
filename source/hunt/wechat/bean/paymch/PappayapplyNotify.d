@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PappayapplyNotify : MchBase{
+class PappayapplyNotify : MchBase{
 
 	private string device_info;
 

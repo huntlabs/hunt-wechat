@@ -8,7 +8,7 @@ import hunt.wechat.bean.BaseResult;
  * @author LiYi
  * 
  */
-public class FollowResult : BaseResult {
+class FollowResult : BaseResult {
 
 	private Integer total;
 
@@ -50,7 +50,7 @@ public class FollowResult : BaseResult {
 		this.data = data;
 	}
 
-	public static class Data {
+	static class Data {
 
 		private string[] openid;
 

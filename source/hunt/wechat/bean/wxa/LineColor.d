@@ -1,6 +1,6 @@
 module hunt.wechat.bean.wxa.LineColor;
 
-public class LineColor {
+class LineColor {
 
 	private string r;
 	private string g;

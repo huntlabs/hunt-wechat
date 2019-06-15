@@ -15,37 +15,37 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月30日
  */
-public class LotterySetPrizeBucketResult : BaseResult {
+class LotterySetPrizeBucketResult : BaseResult {
 
 	/**
 	 * 重复使用的ticket列表，如为空，将不返回
 	 */
 	@JSONField(name = "repeat_ticket_list")
-	private List<TicketInfo> repeatTicketList;
+	private List!(TicketInfo) repeatTicketList;
 	
 	/**
 	 * 过期的ticket列表，如为空，将不返回
 	 */
 	@JSONField(name = "expire_ticket_list")
-	private List<TicketInfo> expireTicketList;
+	private List!(TicketInfo) expireTicketList;
 	
 	/**
 	 * 金额不在大于1元，小于1000元的ticket列表，如为空，将不返回
 	 */
 	@JSONField(name = "invalid_amount_ticket_list")
-	private List<TicketInfo> invalidAmountTicketList;
+	private List!(TicketInfo) invalidAmountTicketList;
 	
 	/**
 	 * 原因：生成红包的时候，授权商户号auth_mchid和auth_appid没有写摇周边的商户号
 	 */
 	@JSONField(name = "wrong_authmchid_ticket_list")
-	private List<TicketInfo> wrongAuthmchidTicketList;
+	private List!(TicketInfo) wrongAuthmchidTicketList;
 	
 	/**
 	 * ticket解析失败，可能有错别字符或不完整
 	 */
 	@JSONField(name = "invalid_ticket_list")
-	private List<TicketInfo> invalidTicketList;
+	private List!(TicketInfo) invalidTicketList;
 	
 	/**
 	 * 成功录入的红包数量
@@ -57,14 +57,14 @@ public class LotterySetPrizeBucketResult : BaseResult {
 	 * 重复使用的ticket列表，如为空，将不返回
 	 * @return 重复使用的ticket列表
 	 */
-	public List<TicketInfo> getRepeatTicketList() {
+	public List!(TicketInfo) getRepeatTicketList() {
 		return repeatTicketList;
 	}
 
 	/**
 	 * @param repeatTicketList 重复使用的ticket列表
 	 */
-	public void setRepeatTicketList(List<TicketInfo> repeatTicketList) {
+	public void setRepeatTicketList(List!(TicketInfo) repeatTicketList) {
 		this.repeatTicketList = repeatTicketList;
 	}
 
@@ -72,14 +72,14 @@ public class LotterySetPrizeBucketResult : BaseResult {
 	 * 过期的ticket列表，如为空，将不返回
 	 * @return 过期的ticket列表
 	 */
-	public List<TicketInfo> getExpireTicketList() {
+	public List!(TicketInfo) getExpireTicketList() {
 		return expireTicketList;
 	}
 
 	/**
 	 * @param expireTicketList 过期的ticket列表
 	 */
-	public void setExpireTicketList(List<TicketInfo> expireTicketList) {
+	public void setExpireTicketList(List!(TicketInfo) expireTicketList) {
 		this.expireTicketList = expireTicketList;
 	}
 
@@ -87,14 +87,14 @@ public class LotterySetPrizeBucketResult : BaseResult {
 	 * 金额不在大于1元，小于1000元的ticket列表，如为空，将不返回
 	 * @return 金额不在大于1元，小于1000元的ticket列表
 	 */
-	public List<TicketInfo> getInvalidAmountTicketList() {
+	public List!(TicketInfo) getInvalidAmountTicketList() {
 		return invalidAmountTicketList;
 	}
 
 	/**
 	 * @param invalidAmountTicketList 金额不在大于1元，小于1000元的ticket列表
 	 */
-	public void setInvalidAmountTicketList(List<TicketInfo> invalidAmountTicketList) {
+	public void setInvalidAmountTicketList(List!(TicketInfo) invalidAmountTicketList) {
 		this.invalidAmountTicketList = invalidAmountTicketList;
 	}
 
@@ -102,7 +102,7 @@ public class LotterySetPrizeBucketResult : BaseResult {
 	 * 原因：生成红包的时候，授权商户号auth_mchid和auth_appid没有写摇周边的商户号
 	 * @return 没写商户号的ticket列表
 	 */
-	public List<TicketInfo> getWrongAuthmchidTicketList() {
+	public List!(TicketInfo) getWrongAuthmchidTicketList() {
 		return wrongAuthmchidTicketList;
 	}
 
@@ -110,7 +110,7 @@ public class LotterySetPrizeBucketResult : BaseResult {
 	 * 原因：生成红包的时候，授权商户号auth_mchid和auth_appid没有写摇周边的商户号
 	 * @param wrongAuthmchidTicketList 没写商户号的ticket列表
 	 */
-	public void setWrongAuthmchidTicketList(List<TicketInfo> wrongAuthmchidTicketList) {
+	public void setWrongAuthmchidTicketList(List!(TicketInfo) wrongAuthmchidTicketList) {
 		this.wrongAuthmchidTicketList = wrongAuthmchidTicketList;
 	}
 
@@ -118,7 +118,7 @@ public class LotterySetPrizeBucketResult : BaseResult {
 	 * ticket解析失败，可能有错别字符或不完整
 	 * @return ticket解析失败列表
 	 */
-	public List<TicketInfo> getInvalidTicketList() {
+	public List!(TicketInfo) getInvalidTicketList() {
 		return invalidTicketList;
 	}
 
@@ -126,7 +126,7 @@ public class LotterySetPrizeBucketResult : BaseResult {
 	 * ticket解析失败，可能有错别字符或不完整
 	 * @param invalidTicketList ticket解析失败列表
 	 */
-	public void setInvalidTicketList(List<TicketInfo> invalidTicketList) {
+	public void setInvalidTicketList(List!(TicketInfo) invalidTicketList) {
 		this.invalidTicketList = invalidTicketList;
 	}
 

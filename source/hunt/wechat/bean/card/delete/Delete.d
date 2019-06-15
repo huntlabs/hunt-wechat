@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  * @date 2016年7月31日
  */
-public class Delete {
+class Delete {
 	/**
 	 * 卡券ID
 	 */

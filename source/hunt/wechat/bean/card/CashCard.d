@@ -9,7 +9,7 @@ import hunt.wechat.bean.card.Cash;
  * @author Moyq5
  *
  */
-public class CashCard : AbstractCard {
+class CashCard : AbstractCard {
 
 	private Cash cash;
 

@@ -12,13 +12,13 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @author Moyq5
  *
  */
-public class UserGetCardListResult : BaseResult {
+class UserGetCardListResult : BaseResult {
 
 	/**
 	 * 已领取的卡券列表
 	 */
 	@JSONField(name = "card_list")
-	private List<UserGetCardListResultCard> cardList;
+	private List!(UserGetCardListResultCard) cardList;
 	
 	/**
 	 * 是否有可用的朋友的券
@@ -29,14 +29,14 @@ public class UserGetCardListResult : BaseResult {
 	/**
 	 * @return 已领取的卡券列表
 	 */
-	public List<UserGetCardListResultCard> getCardList() {
+	public List!(UserGetCardListResultCard) getCardList() {
 		return cardList;
 	}
 
 	/**
 	 * @param cardList 已领取的卡券列表
 	 */
-	public void setCardList(List<UserGetCardListResultCard> cardList) {
+	public void setCardList(List!(UserGetCardListResultCard) cardList) {
 		this.cardList = cardList;
 	}
 

@@ -10,15 +10,15 @@ import hunt.wechat.bean.BaseResult;
  * @author Moyq5
  *
  */
-public class MemberCardInfoResult : BaseResult {
+class MemberCardInfoResult : BaseResult {
 
-	List<MemberCardInfoResultInfo> list;
+	List!(MemberCardInfoResultInfo) list;
 
-	public List<MemberCardInfoResultInfo> getList() {
+	public List!(MemberCardInfoResultInfo) getList() {
 		return list;
 	}
 
-	public void setList(List<MemberCardInfoResultInfo> list) {
+	public void setList(List!(MemberCardInfoResultInfo) list) {
 		this.list = list;
 	}
 }

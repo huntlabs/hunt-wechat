@@ -6,7 +6,7 @@ module hunt.wechat.bean.bizwifi.statistics.StatisticsList;
  * @Date: 2018/7/24 17:29
  * @Description:
  */
-public class StatisticsList {
+class StatisticsList {
     private string begin_date;
     private string end_date;
     private string shop_id;

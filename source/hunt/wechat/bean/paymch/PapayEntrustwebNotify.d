@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PapayEntrustwebNotify : MchBase{
+class PapayEntrustwebNotify : MchBase{
 
 	private string contract_code;
 

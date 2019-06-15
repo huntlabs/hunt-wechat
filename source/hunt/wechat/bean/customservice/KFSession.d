@@ -8,18 +8,18 @@ import hunt.wechat.bean.BaseResult;
  * 客服会话
  * @author Menng
  */
-public class KFSession : BaseResult {
-	private List<SessionList> sessionlist; // 会话列表
+class KFSession : BaseResult {
+	private List!(SessionList) sessionlist; // 会话列表
 
-	public List<SessionList> getSessionlist() {
+	public List!(SessionList) getSessionlist() {
 		return sessionlist;
 	}
 
-	public void setSessionlist(List<SessionList> sessionlist) {
+	public void setSessionlist(List!(SessionList) sessionlist) {
 		this.sessionlist = sessionlist;
 	}
 
-	public static class SessionList {
+	static class SessionList {
 		private Integer createtime; // 会话创建时间，UNIX时间戳
 		private string openid; // 客户openid
 

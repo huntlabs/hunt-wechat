@@ -6,7 +6,7 @@ module hunt.wechat.bean.semantic.semproxy.inner.Semantic;
  * @author: 01
  * @create: 2018-08-18 13:30
  **/
-public class Semantic {
+class Semantic {
     private Details details;
     private string intent;
 

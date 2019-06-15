@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.interfaces.Interfacesummary;
 
-public class Interfacesummary {
+class Interfacesummary {
 
 	private string ref_date;
 

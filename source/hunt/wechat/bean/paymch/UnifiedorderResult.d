@@ -16,7 +16,7 @@ import hunt.wechat.bean.AdaptorCDATA;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class UnifiedorderResult : MchBase{
+class UnifiedorderResult : MchBase{
 
 	@XmlElement
 	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
