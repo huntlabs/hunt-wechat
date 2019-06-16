@@ -7,8 +7,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－新增分组－请求参数
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class DeviceGroupAdd {
 

@@ -8,7 +8,7 @@ import hunt.wechat.client.LocalHttpClient;
 
 /**
  * JSAPI ticket
- * @author LiYi
+ * 
  *
  */
 class TicketAPI : BaseAPI{
@@ -34,6 +34,6 @@ class TicketAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.addParameter("type", type)
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Ticket.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Ticket));
 	}
 }

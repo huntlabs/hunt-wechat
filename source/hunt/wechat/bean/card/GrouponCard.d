@@ -6,14 +6,14 @@ import hunt.wechat.bean.card.Groupon;
 /**
  * 团购券
  * 
- * @author Moyq5
+ * 
  *
  */
 class GrouponCard : AbstractCard {
 
 	private Groupon groupon;
 
-	public GrouponCard() {
+	public this() {
 		super("GROUPON");
 	}
 

@@ -6,14 +6,14 @@ import hunt.wechat.bean.card.Cash;
 /**
  * 代金券
  * 
- * @author Moyq5
+ * 
  *
  */
 class CashCard : AbstractCard {
 
 	private Cash cash;
 
-	public CashCard() {
+	public this() {
 		super("CASH");
 	}
 

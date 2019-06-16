@@ -23,7 +23,7 @@ import hunt.wechat.util.JsonUtil;
 
 /**
  * User API
- * @author LiYi
+ * 
  *
  */
 class UserAPI : BaseAPI{
@@ -49,7 +49,7 @@ class UserAPI : BaseAPI{
 				.addParameter("openid",openid)
 				.addParameter("lang","zh_CN")
 				.build();
-		User user = LocalHttpClient.executeJsonResult(httpUriRequest,User.class);
+		User user = LocalHttpClient.executeJsonResult(httpUriRequest,typeid(User));
 		if(emoji != 0 && user != null && user.getNickname() != null){
 			user.setNickname_emoji(EmojiUtil.parse(user.getNickname(), emoji));
 		}
@@ -78,7 +78,7 @@ class UserAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.addParameter("next_openid", next_openid==null?"":next_openid)
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,FollowResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(FollowResult));
 	}
 
 	/**
@@ -112,7 +112,7 @@ class UserAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(sb.toString(), Charset.forName("utf-8")))
 				.build();
-		UserInfoList userInfoList = LocalHttpClient.executeJsonResult(httpUriRequest,UserInfoList.class);
+		UserInfoList userInfoList = LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UserInfoList));
 		if(emoji != 0 && userInfoList != null && userInfoList.getUser_info_list() != null){
 			foreach(User user ; userInfoList.getUser_info_list()){
 				if(user.getNickname() != null){
@@ -149,7 +149,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(postJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -166,7 +166,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(groupJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Group.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Group));
 	}
 
 	/**
@@ -179,7 +179,7 @@ class UserAPI : BaseAPI{
 				.setUri(BASE_URI+"/cgi-bin/groups/get")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Group.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Group));
 	}
 
 	/**
@@ -196,7 +196,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(groupJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Group.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Group));
 	}
 
 	/**
@@ -214,7 +214,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(groupJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -232,7 +232,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(groupJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 
@@ -252,7 +252,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(groupJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -269,7 +269,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(groupJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -288,7 +288,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TagsCreatResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TagsCreatResult));
 	}
 	
 	/**
@@ -302,7 +302,7 @@ class UserAPI : BaseAPI{
 				.setUri(BASE_URI+"/cgi-bin/tags/get")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TagsGetResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TagsGetResult));
 	}
 	
 	/**
@@ -321,7 +321,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -341,7 +341,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -360,7 +360,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UserTagGetResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UserTagGetResult));
 	}
 	
 	/**
@@ -380,7 +380,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -399,7 +399,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -417,7 +417,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TagsGetidlistResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TagsGetidlistResult));
 	}
 	
 	/**
@@ -436,7 +436,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GetblacklistResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GetblacklistResult));
 	}
 	
 	/**
@@ -454,7 +454,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -472,7 +472,7 @@ class UserAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 }

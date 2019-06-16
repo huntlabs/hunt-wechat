@@ -5,8 +5,8 @@ module hunt.wechat.bean.shakearound.device.group.getlist.DeviceGroupGetList;
 
 /**
  * 微信摇一摇周边－查询分组列表－请求参数
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class DeviceGroupGetList {
 

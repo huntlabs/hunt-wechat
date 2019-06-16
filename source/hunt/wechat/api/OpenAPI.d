@@ -13,7 +13,7 @@ import hunt.wechat.client.LocalHttpClient;
 /**
  * 微信开放平台帐号管理
  * 第三方平台在获得此权限后，可以代替已授权的公众号/小程序创建开放平台帐号或进行绑定/解绑操作。
- * @author LiYi
+ * 
  */
 class OpenAPI : BaseAPI {
 
@@ -32,7 +32,7 @@ class OpenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,OpenResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(OpenResult));
 	}
 	
 	/**
@@ -51,7 +51,7 @@ class OpenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -70,7 +70,7 @@ class OpenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	
@@ -89,6 +89,6 @@ class OpenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,OpenResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(OpenResult));
 	}
 }

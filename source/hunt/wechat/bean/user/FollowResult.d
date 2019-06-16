@@ -5,7 +5,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 关注者列表
  * 
- * @author LiYi
+ * 
  * 
  */
 class FollowResult : BaseResult {

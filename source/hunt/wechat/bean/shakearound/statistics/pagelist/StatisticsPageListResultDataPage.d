@@ -9,8 +9,8 @@ import hunt.wechat.bean.shakearound.statistics.AbstractStatisticsResultData;
 
 /**
  * 微信摇一摇周边－批量查询页面统计数据接口－响应参数－统计数据－页面统计数据
- * @author Moyq5
- * @date 2016年7月31日
+ * 
+ * 
  */
 class StatisticsPageListResultDataPage : AbstractStatisticsResultData {
 

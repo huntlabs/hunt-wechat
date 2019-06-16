@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 获取免费券数据接口－响应对象
  * 
- * @author Moyq5
+ * 
  *
  */
 class CardInfoResult : BaseResult {

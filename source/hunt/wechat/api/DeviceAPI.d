@@ -2,7 +2,7 @@ module hunt.wechat.api.DeviceAPI;
 
 /**
  * 设备功能
- * @author nobody
+ * 
  *
  */
 class DeviceAPI : BaseAPI{

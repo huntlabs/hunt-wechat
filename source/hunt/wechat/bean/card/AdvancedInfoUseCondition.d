@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 使用门槛（条件）
  * 
- * @author Moyq5
+ * 
  *
  */
 class AdvancedInfoUseCondition {

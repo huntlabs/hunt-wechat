@@ -112,8 +112,8 @@ abstract class MapUtil {
 	 * @param clazz clazz
 	 * @return list
 	 */
-	private static List!(Field) getAllFields(Class<?> clazz){
-		if(!clazz== Object.class){
+	private static List!(Field) getAllFields(Class clazz){
+		if(!clazz== typeid(Object)){
 			List!(Field) fields = new ArrayList!(Field)(Arrays.asList(clazz.getDeclaredFields()));
 			List!(Field) fields2 = getAllFields(clazz.getSuperclass());
 			if(fields2!=null){

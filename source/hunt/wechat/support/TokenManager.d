@@ -16,7 +16,7 @@ import hunt.wechat.bean.token.Token;
 
 /**
  * TokenManager token 自动刷新
- * @author LiYi
+ * 
  *
  */
 class TokenManager{
@@ -26,7 +26,7 @@ class TokenManager{
 
 	private static Map!(string,string) tokenMap = new ConcurrentHashMap!(string,string)();
 
-	private static Map<string,ScheduledFuture<?>> futureMap = new ConcurrentHashMap<string, ScheduledFuture<?>>();
+	private static Map<string,ScheduledFuture> futureMap = new ConcurrentHashMap<string, ScheduledFuture>();
 
 	private static int poolSize = 2;
 	
@@ -97,7 +97,7 @@ class TokenManager{
 		if(initialDelay == 0){
 			doRun(appid, secret);
 		}
-		ScheduledFuture<?> scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
+		ScheduledFuture scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
 			override
 			public void run() {
 				doRun(appid, secret);

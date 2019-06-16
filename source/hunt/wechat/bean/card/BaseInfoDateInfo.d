@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 使用日期，有效期的信息
  * 
- * @author Moyq5
+ * 
  *
  */
 class BaseInfoDateInfo {

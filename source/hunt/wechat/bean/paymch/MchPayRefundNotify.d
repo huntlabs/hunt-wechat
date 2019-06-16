@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * 退款结果通知
- * @author LiYi
+ * 
  *
  */
 @XmlRootElement(name = "xml")

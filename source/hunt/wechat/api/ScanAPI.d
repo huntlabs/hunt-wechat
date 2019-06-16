@@ -5,8 +5,8 @@ module hunt.wechat.api.ScanAPI;
 //import org.apache.http.entity.StringEntity;
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.scan.base.ProductGet;
-import hunt.wechat.bean.scan.crud.*;
-import hunt.wechat.bean.scan.result.*;
+import hunt.wechat.bean.scan.crud;
+import hunt.wechat.bean.scan.result;
 import hunt.wechat.client.LocalHttpClient;
 import hunt.wechat.util.JsonUtil;
 
@@ -15,7 +15,7 @@ import hunt.text.Charset;
 /**
  * 微信扫一扫
  *
- * @author swang
+ * 
  * @since 2.8.22
  */
 class ScanAPI : BaseAPI {
@@ -33,7 +33,7 @@ class ScanAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(accessToken))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                MerchantinfoGetResult.class);
+                typeid(MerchantinfoGetResult));
     }
 
     /**
@@ -62,7 +62,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ProductCreateResult.class);
+                typeid(ProductCreateResult));
     }
 
     /**
@@ -91,7 +91,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -120,7 +120,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -149,7 +149,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ProductGetqrcodeResult.class);
+                typeid(ProductGetqrcodeResult));
     }
 
     /**
@@ -178,7 +178,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ProductGetResult.class);
+                typeid(ProductGetResult));
     }
 
     /**
@@ -207,7 +207,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ProductGetlistResult.class);
+                typeid(ProductGetlistResult));
     }
 
     /**
@@ -236,7 +236,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ProductCreateResult.class);
+                typeid(ProductCreateResult));
     }
 
     /**
@@ -265,7 +265,7 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -283,7 +283,7 @@ class ScanAPI : BaseAPI {
                 .addParameter("ticket", ticket)
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                TicketCheckResult.class);
+                typeid(TicketCheckResult));
     }
 
     /**
@@ -312,6 +312,6 @@ class ScanAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 }

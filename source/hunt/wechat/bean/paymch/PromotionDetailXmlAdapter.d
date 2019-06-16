@@ -11,7 +11,7 @@ class PromotionDetailXmlAdapter : XmlAdapter<string, List!(PromotionDetail)> {
 	override
 	public List!(PromotionDetail) unmarshal(string v){
 		string a = JSON.parseObject(v).getString("promotion_detail");
-		return JSON.parseArray(a, PromotionDetail.class);
+		return JSON.parseArray(a, typeid(PromotionDetail));
 	}
 
 	override

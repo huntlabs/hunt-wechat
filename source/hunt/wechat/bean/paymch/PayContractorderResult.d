@@ -29,7 +29,7 @@ class PayContractorderResult : MchBase{
 	
 	private string contract_code;
 
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string contract_display_account;
 	
 	private string mweb_url;

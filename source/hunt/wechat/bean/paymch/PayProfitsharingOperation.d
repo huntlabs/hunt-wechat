@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 class PayProfitsharingOperation : MchBase {
 
-	@XmlJavaTypeAdapter(value = ReceiverOperation.JsonXmlAdapter.class)
+	@XmlJavaTypeAdapter(value = ReceiverOperation.typeid(JsonXmlAdapter))
 	private ReceiverOperation receiver;
 
 	public ReceiverOperation getReceiver() {

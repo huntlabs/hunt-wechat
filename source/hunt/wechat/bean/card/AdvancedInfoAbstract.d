@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 封面摘要结构体名称
  * 
- * @author Moyq5
+ * 
  *
  */
 class AdvancedInfoAbstract {

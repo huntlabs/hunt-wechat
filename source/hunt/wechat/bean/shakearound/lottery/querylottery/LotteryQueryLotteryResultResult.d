@@ -11,8 +11,8 @@ import com.alibaba.fastjson.annotation.JSONField;
  * 目前暂不支持expired_prizes, drawed_prizes, available_prizes, expired_value, 
  * drawed_value, available_value这6个字段的查询。
  * 需要查询时，可以通过邮箱zhoubian@tencent.com联系我们，也可加入开发者QQ交流群390582489。
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class LotteryQueryLotteryResultResult {
 

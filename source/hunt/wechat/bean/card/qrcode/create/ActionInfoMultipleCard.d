@@ -6,7 +6,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 
- * @author Moyq5
+ * 
  *
  */
 class ActionInfoMultipleCard {

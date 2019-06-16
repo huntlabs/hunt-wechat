@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * 
  * 卡券高级信息
  * 
- * @author Moyq5
+ * 
  *
  */
 class AdvancedInfo {

@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 卡券投放－创建二维码（ticket）－响应参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class QrCodeCreateResult : BaseResult {

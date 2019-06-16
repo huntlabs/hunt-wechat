@@ -17,7 +17,7 @@ import hunt.wechat.util.JsonUtil;
 
 /**
  * 菜单API
- * @author LiYi
+ * 
  *
  */
 class MenuAPI : BaseAPI{
@@ -35,7 +35,7 @@ class MenuAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(menuJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -59,7 +59,7 @@ class MenuAPI : BaseAPI{
 					.setUri(BASE_URI+"/cgi-bin/menu/get")
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Menu.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Menu));
 	}
 
 	/**
@@ -72,7 +72,7 @@ class MenuAPI : BaseAPI{
 				.setUri(BASE_URI+"/cgi-bin/menu/delete")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 
@@ -90,7 +90,7 @@ class MenuAPI : BaseAPI{
 				.setUri(BASE_URI+"/cgi-bin/get_current_selfmenu_info")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,CurrentSelfmenuInfo.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(CurrentSelfmenuInfo));
 	}
 
 	/**
@@ -118,7 +118,7 @@ class MenuAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(menuJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,MenuAddconditionalResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(MenuAddconditionalResult));
 	}
 
 	/**
@@ -134,7 +134,7 @@ class MenuAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity("{\"menuid\":\""+menuid+"\"}",Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -150,7 +150,7 @@ class MenuAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity("{\"user_id\":\""+user_id+"\"}",Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TrymatchResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TrymatchResult));
 	}
 
 

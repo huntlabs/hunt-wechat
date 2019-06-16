@@ -6,7 +6,7 @@ import hunt.wechat.bean.BaseResult;
 
 /**
  * 在线客服的接待信息
- * @author Menng
+ * 
  */
 class KFOnline : BaseResult {
 	private List!(KF_Online_List) kf_online_list;

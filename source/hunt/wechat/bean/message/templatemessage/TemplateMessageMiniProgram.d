@@ -3,7 +3,7 @@ module hunt.wechat.bean.message.templatemessage.TemplateMessageMiniProgram;
 /**
  * 发送的微信模板消息、客服消息中带有跳转小程序的信息
  *
- * @author dave.wu
+ * .wu
  * @version 2018/1/9
  */
 class TemplateMessageMiniProgram {

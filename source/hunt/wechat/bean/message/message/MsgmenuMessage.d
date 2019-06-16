@@ -5,7 +5,7 @@ import hunt.collection.List;
 /**
  * 菜单消息
  * 
- * @author LiYi
+ * 
  */
 class MsgmenuMessage : Message {
 

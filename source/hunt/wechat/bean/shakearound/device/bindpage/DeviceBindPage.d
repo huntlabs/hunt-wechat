@@ -9,8 +9,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－配置设备与页面的关联关系－请求参数
- * @author Moyq5
- * @date 2016年7月26日
+ * 
+ * 
  */
 class DeviceBindPage {
 

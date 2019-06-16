@@ -11,8 +11,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－摇一摇红包－录入红包信息－请求参数
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class LotterySetPrizeBucket {
 

@@ -29,7 +29,7 @@ import hunt.logger;
 
 /**
  * httpclient 4.3.x
- * @author Yi
+ * 
  *
  */
 class HttpClientFactory{
@@ -118,7 +118,7 @@ class HttpClientFactory{
 	/**
 	 * 
 	 * HttpClient  超时重试
-	 * @author LiYi
+	 * 
 	 */
 	private static class HttpRequestRetryHandlerImpl : HttpRequestRetryHandler{
 		

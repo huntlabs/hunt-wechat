@@ -6,7 +6,7 @@ import hunt.wechat.bean.message.message.Message;
  * 
  * 消息转发到多客服
  * 
- * @author LiYi
+ * 
  *
  */
 class XMLTransferCustomerServiceMessage : XMLMessage {

@@ -8,7 +8,7 @@ import hunt.wechat.client.LocalHttpClient;
 
 /**
  * 获取微信服务器IP地址
- * @author LiYi
+ * 
  *
  */
 class CallbackipAPI : BaseAPI{
@@ -23,6 +23,6 @@ class CallbackipAPI : BaseAPI{
 				.setUri(BASE_URI + "/cgi-bin/getcallbackip")
 				.addParameter(PARAM_ACCESS_TOKEN,API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Callbackip.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Callbackip));
 	}
 }

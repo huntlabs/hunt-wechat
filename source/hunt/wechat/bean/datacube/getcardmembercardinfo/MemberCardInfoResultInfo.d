@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 拉取会员卡数据接口－响应对象（每行记录对象）
  * 
- * @author Moyq5
+ * 
  *
  */
 class MemberCardInfoResultInfo {

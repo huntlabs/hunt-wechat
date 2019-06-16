@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * 关闭订单
  * 
- * @author Yi
+ * 
  *
  */
 @XmlRootElement(name = "xml")

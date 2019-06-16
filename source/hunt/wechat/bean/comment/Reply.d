@@ -3,7 +3,7 @@ module hunt.wechat.bean.comment.Reply;
 /**
  * 作者回复
  * 
- * @author LiYi
+ * 
  *
  */
 class Reply {

@@ -34,7 +34,7 @@ class MicropayResult : MchBase{
 	 * @since 2.8.12
 	 */
 	@XmlElement
-	@XmlJavaTypeAdapter(value = MicropayPromotionDetailXmlAdapter.class)
+	@XmlJavaTypeAdapter(value = typeid(MicropayPromotionDetailXmlAdapter))
 	private List!(MicropayPromotionDetail) promotion_detail;
 
 	public string getOpenid() {

@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 投放卡券－导入code接口－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class CodeDeposit {

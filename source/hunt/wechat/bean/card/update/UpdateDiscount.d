@@ -7,8 +7,8 @@ import hunt.wechat.bean.card.Discount;
 
 /**
  * 微信卡券－卡券管理－更改卡券信息接口（折扣券）－请求参数 
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class UpdateDiscount : AbstractUpdate {
 	

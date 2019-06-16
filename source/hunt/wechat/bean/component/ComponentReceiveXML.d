@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * 推送 component_verify_ticket协议 或 取消授权通知 XML 数据
  * 
- * @author LiYi
+ * 
  *
  */
 @XmlRootElement(name = "xml")

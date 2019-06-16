@@ -10,7 +10,7 @@ import hunt.wechat.bean.AdaptorCDATA;
 
 /**
  * 刷卡支付 授权码查询OPENID 参数对象
- * @author LiYi
+ * 
  *
  */
 @XmlRootElement(name="xml")
@@ -30,7 +30,7 @@ class Authcodetoopenid {
 	private string nonce_str;
 
 	@XmlElement
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string sign;
 	
 	private string sign_type;

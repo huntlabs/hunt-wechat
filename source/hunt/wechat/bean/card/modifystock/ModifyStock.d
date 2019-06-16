@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券管理－修改库存接口－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class ModifyStock {

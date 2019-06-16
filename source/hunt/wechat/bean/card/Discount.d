@@ -3,7 +3,7 @@ module hunt.wechat.bean.card.Discount;
 /**
  * 折扣券
  * 
- * @author Moyq5
+ * 
  *
  */
 class Discount : AbstractInfo {

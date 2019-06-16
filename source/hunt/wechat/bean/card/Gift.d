@@ -3,7 +3,7 @@ module hunt.wechat.bean.card.Gift;
 /**
  * 兑换券
  * 
- * @author Moyq5
+ * 
  *
  */
 class Gift : AbstractInfo {

@@ -7,8 +7,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 分组信息
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class GroupInfo {
 

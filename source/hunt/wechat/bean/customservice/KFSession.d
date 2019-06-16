@@ -6,7 +6,7 @@ import hunt.wechat.bean.BaseResult;
 
 /**
  * 客服会话
- * @author Menng
+ * 
  */
 class KFSession : BaseResult {
 	private List!(SessionList) sessionlist; // 会话列表

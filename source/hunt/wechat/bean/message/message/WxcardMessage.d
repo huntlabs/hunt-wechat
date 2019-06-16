@@ -3,7 +3,7 @@ module hunt.wechat.bean.message.message.WxcardMessage;
 /**
  * 发送卡券
  *
- * @author LiYi
+ * 
  */
 class WxcardMessage : Message {
 

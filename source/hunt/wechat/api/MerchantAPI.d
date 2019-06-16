@@ -2,7 +2,7 @@ module hunt.wechat.api.MerchantAPI;
 
 /**
  * 微信小店
- * @author nobody
+ * 
  *
  */
 class MerchantAPI : BaseAPI{

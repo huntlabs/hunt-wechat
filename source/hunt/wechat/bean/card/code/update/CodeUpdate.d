@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券管理－更改Code接口－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class CodeUpdate {

@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
  * 
  * 摇一摇 周边事件数据
  * 
- * @author LiYi
+ * 
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券管理－批量查询卡券列表－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class BatchGet {

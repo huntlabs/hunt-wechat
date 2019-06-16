@@ -5,8 +5,8 @@ module hunt.wechat.bean.shakearound.lottery.TicketInfo;
 
 /**
  * 微信摇一摇周边－摇一摇红包－录入红包信息－请求参数－红包ticket
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class TicketInfo {
 

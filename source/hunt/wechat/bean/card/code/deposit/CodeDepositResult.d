@@ -6,8 +6,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 投放卡券－导入code接口－响应参数
- * @author Moyq5
- * @date 2016年7月27日
+ * 
+ * 
  */
 class CodeDepositResult : BaseResult {
 

@@ -6,7 +6,7 @@ module hunt.wechat.api.API;
  * 
  * 2.8.6
  * 
- * @author LiYi
+ * 
  *
  */
 class API {

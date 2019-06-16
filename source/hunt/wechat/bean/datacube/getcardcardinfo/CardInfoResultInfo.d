@@ -7,7 +7,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 获取免费券数据接口－响应参数－日统计结果
  * 
- * @author Moyq5
+ * 
  *
  */
 class CardInfoResultInfo : BizuinInfoResultInfo {

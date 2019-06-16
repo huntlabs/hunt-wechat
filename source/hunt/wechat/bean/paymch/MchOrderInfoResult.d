@@ -71,7 +71,7 @@ class MchOrderInfoResult : MchBase : DynamicField{
 	 * @since 2.8.12
 	 */
 	@XmlElement
-	@XmlJavaTypeAdapter(value = PromotionDetailXmlAdapter.class)
+	@XmlJavaTypeAdapter(value = typeid(PromotionDetailXmlAdapter))
 	private List!(PromotionDetail) promotion_detail;
 	
 	/**

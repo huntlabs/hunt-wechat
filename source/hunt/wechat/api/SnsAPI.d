@@ -17,7 +17,7 @@ import hunt.wechat.util.EmojiUtil;
 
 /**
  * 网页授权
- * @author LiYi
+ * 
  *
  */
 class SnsAPI : BaseAPI{
@@ -38,7 +38,7 @@ class SnsAPI : BaseAPI{
 				.addParameter("code", code)
 				.addParameter("grant_type", "authorization_code")
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,SnsToken.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(SnsToken));
 	}
 
 	/**
@@ -58,7 +58,7 @@ class SnsAPI : BaseAPI{
 				.addParameter("component_appid", component_appid)
 				.addParameter("component_access_token", component_access_token)
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,SnsToken.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(SnsToken));
 	}
 
 
@@ -75,7 +75,7 @@ class SnsAPI : BaseAPI{
 				.addParameter("refresh_token", refresh_token)
 				.addParameter("grant_type", "refresh_token")
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,SnsToken.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(SnsToken));
 	}
 
 	/**
@@ -95,7 +95,7 @@ class SnsAPI : BaseAPI{
 				.addParameter("component_appid", component_appid)
 				.addParameter("component_access_token", component_access_token)
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,SnsToken.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(SnsToken));
 	}
 	
 	
@@ -112,7 +112,7 @@ class SnsAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.addParameter("openid", openid)
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 
@@ -138,7 +138,7 @@ class SnsAPI : BaseAPI{
 				.addParameter("openid", openid)
 				.addParameter("lang", lang)
 				.build();
-		User user = LocalHttpClient.executeJsonResult(httpUriRequest,User.class);
+		User user = LocalHttpClient.executeJsonResult(httpUriRequest,typeid(User));
 		if(emoji != 0 && user != null && user.getNickname() != null){
 			user.setNickname_emoji(EmojiUtil.parse(user.getNickname(), emoji));
 		}
@@ -239,7 +239,7 @@ class SnsAPI : BaseAPI{
 			.addParameter("js_code",js_code)
 			.addParameter("grant_type","authorization_code")
 			.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Jscode2sessionResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Jscode2sessionResult));
 	}
 	
 	/**
@@ -260,7 +260,7 @@ class SnsAPI : BaseAPI{
 			.addParameter("component_appid",component_appid)
 			.addParameter("component_access_token",API.componentAccessToken(component_access_token))
 			.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Jscode2sessionResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Jscode2sessionResult));
 	}
 	
 

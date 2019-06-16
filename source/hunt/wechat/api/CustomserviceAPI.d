@@ -22,7 +22,7 @@ import hunt.wechat.client.LocalHttpClient;
 
 /**
  * 多客服功能
- * @author Menng
+ * 
  */
 class CustomserviceAPI : BaseAPI {
 
@@ -37,7 +37,7 @@ class CustomserviceAPI : BaseAPI {
 				.setUri(BASE_URI + "/cgi-bin/customservice/getkflist")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, KFAccount.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(KFAccount));
 	}
 
 	/**
@@ -51,7 +51,7 @@ class CustomserviceAPI : BaseAPI {
 				.setUri(BASE_URI + "/cgi-bin/customservice/getonlinekflist")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, KFOnline.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(KFOnline));
 	}
 
 	/**
@@ -73,7 +73,7 @@ class CustomserviceAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
 	}
 
 	/**
@@ -95,7 +95,7 @@ class CustomserviceAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
 	}
 
 	/**
@@ -114,7 +114,7 @@ class CustomserviceAPI : BaseAPI {
 				.addTextBody("kf_account", kf_account)
 				.build();
 		httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost, BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpPost, typeid(BaseResult));
 	}
 
 	/**
@@ -130,7 +130,7 @@ class CustomserviceAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.addParameter("kf_account", kf_account)
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
 	}
 
 	/**
@@ -152,7 +152,7 @@ class CustomserviceAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
 	}
 
 	/**
@@ -174,7 +174,7 @@ class CustomserviceAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
 	}
 
 	/**
@@ -190,7 +190,7 @@ class CustomserviceAPI : BaseAPI {
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.addParameter("openid", openid)
 					.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, KFCustomSession.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(KFCustomSession));
 	}
 
 	/**
@@ -206,7 +206,7 @@ class CustomserviceAPI : BaseAPI {
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.addParameter("kf_account", kf_account)
 					.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, KFSession.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(KFSession));
 	}
 
 	/**
@@ -220,7 +220,7 @@ class CustomserviceAPI : BaseAPI {
 					.setUri(BASE_URI + "/customservice/kfsession/getwaitcase")
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, KFWaitcase.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(KFWaitcase));
 	}
 
 	/**
@@ -244,6 +244,6 @@ class CustomserviceAPI : BaseAPI {
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.setEntity(new StringEntity(jsonPostData, Charset.forName("utf-8")))
 					.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest, KFMsgRecord.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(KFMsgRecord));
 	}
 }

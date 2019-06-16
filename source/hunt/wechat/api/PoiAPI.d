@@ -17,7 +17,7 @@ import hunt.wechat.util.JsonUtil;
 /**
  * 微信门店
  * 
- * @author Moyq5
+ * 
  *
  */
 class PoiAPI : BaseAPI {
@@ -37,7 +37,7 @@ class PoiAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -65,7 +65,7 @@ class PoiAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				PoiResult.class);
+				typeid(PoiResult));
 	}
 
 	/**
@@ -93,7 +93,7 @@ class PoiAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				PoiListResult.class);
+				typeid(PoiListResult));
 	}
 
 	/**
@@ -123,7 +123,7 @@ class PoiAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -151,7 +151,7 @@ class PoiAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -177,6 +177,6 @@ class PoiAPI : BaseAPI {
 				.setUri(BASE_URI + "/cgi-bin/poi/getwxcategory")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(accessToken)).build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CategoryListResult.class);
+				typeid(CategoryListResult));
 	}
 }

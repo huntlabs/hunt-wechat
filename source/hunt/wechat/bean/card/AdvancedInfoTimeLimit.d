@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 使用时段限制
  * 
- * @author Moyq5
+ * 
  *
  */
 class AdvancedInfoTimeLimit {

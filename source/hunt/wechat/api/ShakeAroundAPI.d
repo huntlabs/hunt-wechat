@@ -32,8 +32,8 @@ import hunt.wechat.bean.shakearound.device.group.add.DeviceGroupAdd;
 import hunt.wechat.bean.shakearound.device.group.add.DeviceGroupAddResult;
 import hunt.wechat.bean.shakearound.device.group.adddevice.DeviceGroupAddDevice;
 import hunt.wechat.bean.shakearound.device.group.adddevice.DeviceGroupAddDeviceResult;
-import hunt.wechat.bean.shakearound.device.group.delete.DeviceGroupDelete;
-import hunt.wechat.bean.shakearound.device.group.delete.DeviceGroupDeleteResult;
+import hunt.wechat.bean.shakearound.device.group.del.DeviceGroupDelete;
+import hunt.wechat.bean.shakearound.device.group.del.DeviceGroupDeleteResult;
 import hunt.wechat.bean.shakearound.device.group.deletedevice.DeviceGroupDeleteDevice;
 import hunt.wechat.bean.shakearound.device.group.deletedevice.DeviceGroupDeleteDeviceResult;
 import hunt.wechat.bean.shakearound.device.group.getdetail.DeviceGroupGetDetail;
@@ -55,8 +55,8 @@ import hunt.wechat.bean.shakearound.material.add.MaterialAddResult;
 import hunt.wechat.bean.shakearound.material.add.MediaType;
 import hunt.wechat.bean.shakearound.page.add.PageAdd;
 import hunt.wechat.bean.shakearound.page.add.PageAddResult;
-import hunt.wechat.bean.shakearound.page.delete.PageDelete;
-import hunt.wechat.bean.shakearound.page.delete.PageDeleteResult;
+import hunt.wechat.bean.shakearound.page.del.PageDelete;
+import hunt.wechat.bean.shakearound.page.del.PageDeleteResult;
 import hunt.wechat.bean.shakearound.page.search.PageSearch;
 import hunt.wechat.bean.shakearound.page.search.PageSearchResult;
 import hunt.wechat.bean.shakearound.page.update.PageUpdate;
@@ -80,7 +80,7 @@ import hunt.wechat.util.StreamUtils;
 /**
  * 微信摇一摇周边
  *
- * @author Moyq5
+ * 
  */
 class ShakeAroundAPI : BaseAPI {
 
@@ -97,7 +97,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setUri(BASE_URI + "/shakearound/account/auditstatus")
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(accessToken)).build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                AccountAuditStatusResult.class);
+                typeid(AccountAuditStatusResult));
     }
 
     /**
@@ -130,7 +130,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                AccountRegisterResult.class);
+                typeid(AccountRegisterResult));
     }
 
     /**
@@ -162,7 +162,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceApplyIdResult.class);
+                typeid(DeviceApplyIdResult));
     }
 
     /**
@@ -195,7 +195,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceApplyStatusResult.class);
+                typeid(DeviceApplyStatusResult));
     }
 
     /**
@@ -228,7 +228,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceBindLocationResult.class);
+                typeid(DeviceBindLocationResult));
     }
 
     /**
@@ -261,7 +261,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceBindPageResult.class);
+                typeid(DeviceBindPageResult));
     }
 
     /**
@@ -294,7 +294,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceGroupAddResult.class);
+                typeid(DeviceGroupAddResult));
     }
 
     /**
@@ -327,7 +327,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceGroupAddDeviceResult.class);
+                typeid(DeviceGroupAddDeviceResult));
     }
 
     /**
@@ -360,7 +360,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceGroupDeleteResult.class);
+                typeid(DeviceGroupDeleteResult));
     }
 
     /**
@@ -393,7 +393,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceGroupDeleteDeviceResult.class);
+                typeid(DeviceGroupDeleteDeviceResult));
     }
 
     /**
@@ -426,7 +426,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceGroupGetDetailResult.class);
+                typeid(DeviceGroupGetDetailResult));
     }
 
     /**
@@ -459,7 +459,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceGroupGetListResult.class);
+                typeid(DeviceGroupGetListResult));
     }
 
     /**
@@ -492,7 +492,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceGroupUpdateResult.class);
+                typeid(DeviceGroupUpdateResult));
     }
 
     /**
@@ -524,7 +524,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceSearchResult.class);
+                typeid(DeviceSearchResult));
     }
 
     /**
@@ -556,7 +556,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceUpdateResult.class);
+                typeid(DeviceUpdateResult));
     }
 
     /**
@@ -589,7 +589,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                LotteryAddLotteryInfoResult.class);
+                typeid(LotteryAddLotteryInfoResult));
     }
 
     /**
@@ -607,7 +607,7 @@ class ShakeAroundAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(accessToken))
                 .addParameter("lottery_id", lotteryId).build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                LotteryQueryLotteryResult.class);
+                typeid(LotteryQueryLotteryResult));
     }
 
     /**
@@ -627,7 +627,7 @@ class ShakeAroundAPI : BaseAPI {
                 .addParameter("lottery_id", lotteryId)
                 .addParameter("onoff", "" + onoff).build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -660,7 +660,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                LotterySetPrizeBucketResult.class);
+                typeid(LotterySetPrizeBucketResult));
     }
 
     /**
@@ -682,7 +682,7 @@ class ShakeAroundAPI : BaseAPI {
                 .addTextBody("type", type.name()).build();
         httpPost.setEntity(reqEntity);
         return LocalHttpClient.executeJsonResult(httpPost,
-                MaterialAddResult.class);
+                typeid(MaterialAddResult));
     }
 
     /**
@@ -712,7 +712,7 @@ class ShakeAroundAPI : BaseAPI {
         httpPost.setEntity(reqEntity);
 
         return LocalHttpClient.executeJsonResult(httpPost,
-                MaterialAddResult.class);
+                typeid(MaterialAddResult));
     }
 
     /**
@@ -742,7 +742,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                PageAddResult.class);
+                typeid(PageAddResult));
     }
 
     /**
@@ -774,7 +774,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                PageDeleteResult.class);
+                typeid(PageDeleteResult));
     }
 
     /**
@@ -806,7 +806,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                PageSearchResult.class);
+                typeid(PageSearchResult));
     }
 
     /**
@@ -838,7 +838,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                PageUpdateResult.class);
+                typeid(PageUpdateResult));
     }
 
     /**
@@ -871,7 +871,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                RelationSearchResult.class);
+                typeid(RelationSearchResult));
     }
 
     /**
@@ -904,7 +904,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                StatisticsDeviceResult.class);
+                typeid(StatisticsDeviceResult));
     }
 
     /**
@@ -937,7 +937,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                StatisticsDeviceListResult.class);
+                typeid(StatisticsDeviceListResult));
     }
 
     /**
@@ -970,7 +970,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                StatisticsPageResult.class);
+                typeid(StatisticsPageResult));
     }
 
     /**
@@ -1003,7 +1003,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                StatisticsPageListResult.class);
+                typeid(StatisticsPageListResult));
     }
 
     /**
@@ -1023,7 +1023,7 @@ class ShakeAroundAPI : BaseAPI {
                 .setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
                 .build();
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                UserGetShakeInfoResult.class);
+                typeid(UserGetShakeInfoResult));
     }
 
     /**

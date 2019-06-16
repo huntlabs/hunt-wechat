@@ -35,16 +35,16 @@ import com.sun.xml.bind.marshaller.CharacterEscapeHandler;
 /**
  * XML 数据接收对象转换工具类
  * 
- * @author LiYi
+ * 
  *
  */
 abstract class XMLConverUtil {
 
 
-	private static Map<Class<?>, JAXBContext> JAXB_CONTEXT_MAP;
+	private static Map<Class, JAXBContext> JAXB_CONTEXT_MAP;
 
 	static {
-		JAXB_CONTEXT_MAP = new ConcurrentHashMap<Class<?>, JAXBContext>(256);
+		JAXB_CONTEXT_MAP = new ConcurrentHashMap<Class, JAXBContext>(256);
 	}
 
 	/**

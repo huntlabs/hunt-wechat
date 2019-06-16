@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 门店图片信息
  * 
- * @author Moyq5
+ * 
  *
  */
 class Photo {

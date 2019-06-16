@@ -7,7 +7,7 @@ import hunt.wechat.bean.message.preview.Preview;
 /**
  * 高级群发接口数据
  * 
- * @author LiYi
+ * 
  *
  */
 abstract class MassMessage {

@@ -2,7 +2,7 @@ module hunt.wechat.bean.message.Article;
 
 /**
  * 高级群发接口  图文消息素材
- * @author LiYi
+ * 
  *
  */
 class Article {

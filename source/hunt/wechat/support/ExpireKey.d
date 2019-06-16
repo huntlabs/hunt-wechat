@@ -2,7 +2,7 @@ module hunt.wechat.support.ExpireKey;
 
 /**
  * key 过期
- * @author LiYi
+ * 
  *
  */
 interface ExpireKey {

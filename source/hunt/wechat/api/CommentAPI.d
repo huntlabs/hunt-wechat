@@ -16,7 +16,7 @@ import hunt.wechat.util.JsonUtil;
 
 /**
  * 图文消息留言管理接口
- * @author LiYi
+ * 
  */
 class CommentAPI : BaseAPI{
 
@@ -36,7 +36,7 @@ class CommentAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -54,7 +54,7 @@ class CommentAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -71,7 +71,7 @@ class CommentAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,CommentListResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(CommentListResult));
 	}
 	
 	/**
@@ -88,7 +88,7 @@ class CommentAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -105,7 +105,7 @@ class CommentAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -114,15 +114,15 @@ class CommentAPI : BaseAPI{
 	 * @param delete delete
 	 * @return BaseResult BaseResult
 	 */
-	public static BaseResult delete(string access_token,Params delete){
-		string json = JsonUtil.toJSONString(delete);
+	public static BaseResult del(string access_token,Params del){
+		string json = JsonUtil.toJSONString(del);
 		HttpUriRequest httpUriRequest = RequestBuilder.post()
 										.setHeader(jsonHeader)
 										.setUri(BASE_URI+"/cgi-bin/comment/delete")
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -139,7 +139,7 @@ class CommentAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -148,15 +148,15 @@ class CommentAPI : BaseAPI{
 	 * @param delete delete
 	 * @return BaseResult BaseResult
 	 */
-	public static BaseResult replyDelete(string access_token,Params delete){
-		string json = JsonUtil.toJSONString(delete);
+	public static BaseResult replyDelete(string access_token,Params del){
+		string json = JsonUtil.toJSONString(del);
 		HttpUriRequest httpUriRequest = RequestBuilder.post()
 										.setHeader(jsonHeader)
 										.setUri(BASE_URI+"/cgi-bin/comment/reply/delete")
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 }

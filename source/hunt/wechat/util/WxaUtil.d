@@ -19,7 +19,7 @@ import hunt.wechat.bean.wxa.WxaUserInfo;
 
 /**
  * 小程序 工具类
- * @author liyi
+ * 
  * @since 2.8.18
  */
 abstract class WxaUtil {
@@ -45,7 +45,7 @@ abstract class WxaUtil {
 			cipher.init(Cipher.DECRYPT_MODE, sKeySpec, new IvParameterSpec(Base64.decodeBase64(iv)));
 			byte[] resultByte = cipher.doFinal(Base64.decodeBase64(encryptedData));
 			string data = new string(PKCS7Encoder.decode(resultByte), StandardCharsets.UTF_8);
-			return JsonUtil.parseObject(data, WxaDUserInfo.class);
+			return JsonUtil.parseObject(data, typeid(WxaDUserInfo));
 		} catch (Exception e) {
 			logger.error("", e);
 		}
@@ -62,7 +62,7 @@ abstract class WxaUtil {
 	public static WxaUserInfo validateUserInfo(string session_key, string rawData, string signature) {
 		try {
 			if (DigestUtils.shaHex(rawData + session_key)== signature) {
-				return JsonUtil.parseObject(rawData, WxaUserInfo.class);
+				return JsonUtil.parseObject(rawData, typeid(WxaUserInfo));
 			}
 		} catch (Exception e) {
 			logger.error("", e);

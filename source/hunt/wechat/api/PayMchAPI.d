@@ -16,7 +16,7 @@ import java.util.zip.GZIPInputStream;
 //import org.apache.http.entity.StringEntity;
 //import org.apache.http.util.EntityUtils;
 
-import hunt.wechat.bean.paymch.*;
+import hunt.wechat.bean.paymch;
 import hunt.wechat.client.LocalHttpClient;
 import hunt.wechat.util.JsonUtil;
 import hunt.wechat.util.MapUtil;
@@ -26,7 +26,7 @@ import hunt.wechat.util.XMLConverUtil;
 
 /**
  * 微信支付 基于V3.X 版本
- * @author LiYi
+ * 
  *
  */
 class PayMchAPI : BaseAPI{
@@ -81,7 +81,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(MCH_URI + "/sandboxnew/pay/getsignkey")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest, SandboxSignkey.class, mchBaseResult.getSign_type(), key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest, typeid(SandboxSignkey), mchBaseResult.getSign_type(), key);
 	}
 
 	/**
@@ -110,7 +110,7 @@ class PayMchAPI : BaseAPI{
 										.setUri(baseURI()+ "/pay/unifiedorder")
 										.setEntity(new StringEntity(unifiedorderXML,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,UnifiedorderResult.class,unifiedorder.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(UnifiedorderResult),unifiedorder.getSign_type(),key);
 	}
 
 	/**
@@ -137,7 +137,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/micropay")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MicropayResult.class,micropay.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MicropayResult),micropay.getSign_type(),key);
 	}
 
 	/**
@@ -156,7 +156,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/orderquery")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MchOrderInfoResult.class,mchOrderquery.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MchOrderInfoResult),mchOrderquery.getSign_type(),key);
 	}
 
 
@@ -177,7 +177,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/closeorder")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MchBaseResult.class,closeorder.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MchBaseResult),closeorder.getSign_type(),key);
 	}
 
 
@@ -201,7 +201,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/secapi/pay/refund")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(secapiPayRefund.getMch_id(),httpUriRequest,SecapiPayRefundResult.class,secapiPayRefund.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(secapiPayRefund.getMch_id(),httpUriRequest,typeid(SecapiPayRefundResult),secapiPayRefund.getSign_type(),key);
 	}
 
 	/**
@@ -222,7 +222,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/secapi/pay/reverse")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(mchReverse.getMch_id(),httpUriRequest,MchReverseResult.class,mchReverse.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(mchReverse.getMch_id(),httpUriRequest,typeid(MchReverseResult),mchReverse.getSign_type(),key);
 	}
 
 	/**
@@ -244,7 +244,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/refundquery")
 				.setEntity(new StringEntity(refundqueryXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,RefundqueryResult.class,refundquery.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(RefundqueryResult),refundquery.getSign_type(),key);
 	}
 
 	/**
@@ -263,11 +263,11 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/downloadbill")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.execute(httpUriRequest,new ResponseHandler!(DownloadbillResult)() {
+		return LocalHttpClient.execute(httpUriRequest,new class ResponseHandler!(DownloadbillResult) {
 
 			override
 			public DownloadbillResult handleResponse(HttpResponse response)
-					throws ClientProtocolException, IOException {
+					{
 				int status = response.getStatusLine().getStatusCode();
                 if (status >= 200 && status < 300) {
                     HttpEntity entity = response.getEntity();
@@ -281,7 +281,7 @@ class PayMchAPI : BaseAPI{
 					}
 					EntityUtils.consume(entity);
                     if(str.matches(".*<xml>(.*|\\n)+</xml>.*")){
-                    	return XMLConverUtil.convertToObject(DownloadbillResult.class,str);
+                    	return XMLConverUtil.convertToObject(typeid(DownloadbillResult),str);
                     }else{
                     	DownloadbillResult dr = new DownloadbillResult();
                     	dr.setData(str);
@@ -331,11 +331,11 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/downloadfundflow")
 				.setEntity(new StringEntity(xmlData,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecute(payDownloadfundflow.getMch_id(),httpUriRequest,new ResponseHandler!(PayDownloadfundflowResult)() {
+		return LocalHttpClient.keyStoreExecute(payDownloadfundflow.getMch_id(),httpUriRequest,new class ResponseHandler!(PayDownloadfundflowResult) {
 	
 					override
 					public PayDownloadfundflowResult handleResponse(HttpResponse response)
-							throws ClientProtocolException, IOException {
+							 {
 						int status = response.getStatusLine().getStatusCode();
 						if (status >= 200 && status < 300) {
 							HttpEntity entity = response.getEntity();
@@ -349,7 +349,7 @@ class PayMchAPI : BaseAPI{
 							}
 							EntityUtils.consume(entity);
 							if (str.matches(".*<xml>(.*|\\n)+</xml>.*")) {
-								return XMLConverUtil.convertToObject(PayDownloadfundflowResult.class, str);
+								return XMLConverUtil.convertToObject(typeid(PayDownloadfundflowResult), str);
 							} else {
 								PayDownloadfundflowResult dr = new PayDownloadfundflowResult();
 								dr.setData(str);
@@ -385,7 +385,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/tools/shorturl")
 				.setEntity(new StringEntity(shorturlXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MchShorturlResult.class,shorturl.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MchShorturlResult),shorturl.getSign_type(),key);
 	}
 	
 	/**
@@ -404,7 +404,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/tools/authcodetoopenid")
 				.setEntity(new StringEntity(shorturlXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,AuthcodetoopenidResult.class,authcodetoopenid.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(AuthcodetoopenidResult),authcodetoopenid.getSign_type(),key);
 	}
 
 	/**
@@ -424,7 +424,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/payitil/report")
 				.setEntity(new StringEntity(shorturlXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MchBaseResult.class);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MchBaseResult));
 	}
 
 	/**
@@ -443,7 +443,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/send_coupon")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(sendCoupon.getMch_id(),httpUriRequest,SendCouponResult.class,sendCoupon.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(sendCoupon.getMch_id(),httpUriRequest,typeid(SendCouponResult),sendCoupon.getSign_type(),key);
 	}
 
 	/**
@@ -462,7 +462,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/query_coupon_stock")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,QueryCouponStockResult.class,queryCouponStock.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(QueryCouponStockResult),queryCouponStock.getSign_type(),key);
 	}
 
 	/**
@@ -481,7 +481,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/querycouponsinfo")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,QueryCouponResult.class,queryCoupon.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(QueryCouponResult),queryCoupon.getSign_type(),key);
 	}
 
 	/**
@@ -513,7 +513,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/sendredpack")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(sendredpack.getMch_id(),httpUriRequest,SendredpackResult.class,sendredpack.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(sendredpack.getMch_id(),httpUriRequest,typeid(SendredpackResult),sendredpack.getSign_type(),key);
 	}
 
 	/**
@@ -533,7 +533,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/sendgroupredpack")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(sendgroupredpack.getMch_id(),httpUriRequest,SendredpackResult.class,sendgroupredpack.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(sendgroupredpack.getMch_id(),httpUriRequest,typeid(SendredpackResult),sendgroupredpack.getSign_type(),key);
 	}
 	
 	/**
@@ -554,7 +554,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/gethbinfo")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(gethbinfo.getMch_id(),httpUriRequest,GethbinfoResult.class,gethbinfo.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(gethbinfo.getMch_id(),httpUriRequest,typeid(GethbinfoResult),gethbinfo.getSign_type(),key);
 	}
 
 
@@ -584,7 +584,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/promotion/transfers")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(transfers.getMchid(),httpUriRequest,TransfersResult.class,transfers.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(transfers.getMchid(),httpUriRequest,typeid(TransfersResult),transfers.getSign_type(),key);
 	}
 	
 	/**
@@ -604,7 +604,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/mmpaymkttransfers/gettransferinfo")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(gettransferinfo.getMch_id(),httpUriRequest,GettransferinfoResult.class,gettransferinfo.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(gettransferinfo.getMch_id(),httpUriRequest,typeid(GettransferinfoResult),gettransferinfo.getSign_type(),key);
 	}
 
 	/**
@@ -623,7 +623,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/contractorder")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,PayContractorderResult.class,payContractorder.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(PayContractorderResult),payContractorder.getSign_type(),key);
 	}
 
 	/**
@@ -642,7 +642,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/pappayapply")
 				.setEntity(new StringEntity(secapiPayRefundXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,PappayapplyResult.class,pappayapply.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(PappayapplyResult),pappayapply.getSign_type(),key);
 	}
 	
 	/**
@@ -661,7 +661,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/pay/paporderquery")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MchOrderInfoResult.class,mchOrderquery.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MchOrderInfoResult),mchOrderquery.getSign_type(),key);
 	}
 
 	/**
@@ -680,7 +680,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/papay/querycontract")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,PapayQuerycontractResult.class,papayQuerycontract.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(PapayQuerycontractResult),papayQuerycontract.getSign_type(),key);
 	}
 
 	/**
@@ -699,7 +699,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI()+ "/papay/deletecontract")
 				.setEntity(new StringEntity(closeorderXML,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,PapayDeletecontractResult.class,papayDeletecontract.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(PapayDeletecontractResult),papayDeletecontract.getSign_type(),key);
 	}
 	
 	/**
@@ -718,12 +718,12 @@ class PayMchAPI : BaseAPI{
 		RequestBuilder requestBuilder = RequestBuilder
 				.get()
 				.setUri(baseURI() + "/papay/h5entrustweb");
-		for (Map.Entry!(string, string) entry : map.entrySet()) {
-			if (entry.getValue() != null && !""== entry.getValue()) {
-				requestBuilder.addParameter(entry.getKey(), entry.getValue());
+		foreach (string k,string v ; map) {
+			if (v != null && !(""== v)) {
+				requestBuilder.addParameter(k, v);
 			}
 		}
-		return LocalHttpClient.executeXmlResult(requestBuilder.build(), PapayH5entrustwebResult.class, "HMAC-SHA256",
+		return LocalHttpClient.executeXmlResult(requestBuilder.build(), typeid(PapayH5entrustwebResult), "HMAC-SHA256",
 				key);
 	}
 	
@@ -747,7 +747,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI() + "/secapi/pay/profitsharing")
 				.setEntity(new StringEntity(xml,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(secapiPayProfitsharing.getMch_id(), httpUriRequest,SecapiPayProfitsharingResult.class, secapiPayProfitsharing.getSign_type() == null? "HMAC-SHA256": secapiPayProfitsharing.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(secapiPayProfitsharing.getMch_id(), httpUriRequest,typeid(SecapiPayProfitsharingResult), secapiPayProfitsharing.getSign_type() == null? "HMAC-SHA256": secapiPayProfitsharing.getSign_type(),key);
 	}
 	
 	/**
@@ -770,7 +770,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI() + "/secapi/pay/multiprofitsharing")
 				.setEntity(new StringEntity(xml,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(secapiPayProfitsharing.getMch_id(), httpUriRequest,SecapiPayProfitsharingResult.class, secapiPayProfitsharing.getSign_type() == null? "HMAC-SHA256": secapiPayProfitsharing.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(secapiPayProfitsharing.getMch_id(), httpUriRequest,typeid(SecapiPayProfitsharingResult), secapiPayProfitsharing.getSign_type() == null? "HMAC-SHA256": secapiPayProfitsharing.getSign_type(),key);
 	}
 	
 	/**
@@ -790,7 +790,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI() + "/secapi/pay/profitsharingfinish")
 				.setEntity(new StringEntity(xml,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.keyStoreExecuteXmlResult(profitsharingfinish.getMch_id(), httpUriRequest,SecapiPayProfitsharingfinishResult.class, profitsharingfinish.getSign_type() == null? "HMAC-SHA256": profitsharingfinish.getSign_type(),key);
+		return LocalHttpClient.keyStoreExecuteXmlResult(profitsharingfinish.getMch_id(), httpUriRequest,typeid(SecapiPayProfitsharingfinishResult), profitsharingfinish.getSign_type() == null? "HMAC-SHA256": profitsharingfinish.getSign_type(),key);
 	}
 	
 	/**
@@ -810,7 +810,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI() + "/pay/profitsharingquery")
 				.setEntity(new StringEntity(xml,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,PayProfitsharingqueryResult.class, payProfitsharingquery.getSign_type() == null? "HMAC-SHA256": payProfitsharingquery.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(PayProfitsharingqueryResult), payProfitsharingquery.getSign_type() == null? "HMAC-SHA256": payProfitsharingquery.getSign_type(),key);
 	}
 	
 	/**
@@ -833,7 +833,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI() + "/pay/profitsharingaddreceiver")
 				.setEntity(new StringEntity(xml,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MchBaseResult.class, payProfitsharingOperation.getSign_type() == null? "HMAC-SHA256": payProfitsharingOperation.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MchBaseResult), payProfitsharingOperation.getSign_type() == null? "HMAC-SHA256": payProfitsharingOperation.getSign_type(),key);
 	}
 	
 	/**
@@ -856,7 +856,7 @@ class PayMchAPI : BaseAPI{
 				.setUri(baseURI() + "/pay/profitsharingremovereceiver")
 				.setEntity(new StringEntity(xml,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeXmlResult(httpUriRequest,MchBaseResult.class, payProfitsharingOperation.getSign_type() == null? "HMAC-SHA256": payProfitsharingOperation.getSign_type(),key);
+		return LocalHttpClient.executeXmlResult(httpUriRequest,typeid(MchBaseResult), payProfitsharingOperation.getSign_type() == null? "HMAC-SHA256": payProfitsharingOperation.getSign_type(),key);
 	}
 	
 }

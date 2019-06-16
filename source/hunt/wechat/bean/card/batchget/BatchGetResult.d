@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 卡券管理－批量查询卡券列表－响应参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class BatchGetResult : BaseResult {

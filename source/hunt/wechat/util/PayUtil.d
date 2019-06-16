@@ -205,7 +205,7 @@ abstract class PayUtil {
 			cipher.init(Cipher.DECRYPT_MODE, sKeySpec);
 			byte[] resultByte = cipher.doFinal(Base64.decodeBase64(req_info));
 			string data = new string(PKCS7Encoder.decode(resultByte));
-			return XMLConverUtil.convertToObject(RefundNotifyReqInfo.class, data);
+			return XMLConverUtil.convertToObject(typeid(RefundNotifyReqInfo), data);
 		} catch (Exception e) {
 			logger.error("", e);
 		}

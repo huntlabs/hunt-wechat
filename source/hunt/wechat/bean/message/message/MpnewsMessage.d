@@ -5,7 +5,7 @@ module hunt.wechat.bean.message.message.MpnewsMessage;
  * 发送图文消息（点击跳转到图文消息页面）
  * 
  * @since 2.8.26
- * @author LiYi
+ * 
  */
 class MpnewsMessage : Message {
 

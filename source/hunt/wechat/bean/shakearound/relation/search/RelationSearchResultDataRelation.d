@@ -7,8 +7,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－查询设备与页面的关联关系－响应参数－关联信息
- * @author Moyq5
- * @date 2016年7月26日
+ * 
+ * 
  */
 class RelationSearchResultDataRelation {
 

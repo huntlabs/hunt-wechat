@@ -7,7 +7,7 @@ import hunt.wechat.bean.message.preview.VideoPreview;
 /**
  * 仅适用于对 openid 发送接口
  *
- * @author LiYi
+ * 
  */
 class MassVideoMessage : MassMessage {
 

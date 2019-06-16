@@ -9,7 +9,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 管理卡券－获取用户已领取卡券接口－响应参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class UserGetCardListResult : BaseResult {

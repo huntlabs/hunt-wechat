@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 标签
  * 
- * @author LiYi
+ * 
  * 
  */
 class TagsGetResult : BaseResult {

@@ -4,7 +4,7 @@ import hunt.collection.Map;
 
 /**
  * 用于XML 返回不定element
- * @author LiYi
+ * 
  * @since 2.8.5
  */
 interface DynamicField {

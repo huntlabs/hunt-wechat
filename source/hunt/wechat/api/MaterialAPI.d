@@ -39,7 +39,7 @@ import hunt.wechat.util.StreamUtils;
 
 /**
  * 永久素材
- * @author LiYi
+ * 
  *
  */
 class MaterialAPI : BaseAPI{
@@ -60,7 +60,7 @@ class MaterialAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(messageJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Media.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Media));
 	}
 
 
@@ -88,7 +88,7 @@ class MaterialAPI : BaseAPI{
 			                 .addTextBody("type",mediaType.uploadType())
 			                 .build();
         httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost,Media.class);
+		return LocalHttpClient.executeJsonResult(httpPost,typeid(Media));
 	}
 
 	/**
@@ -120,7 +120,7 @@ class MaterialAPI : BaseAPI{
 		                 .addTextBody("type",mediaType.uploadType())
 		                 .build();
         httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost,Media.class);
+		return LocalHttpClient.executeJsonResult(httpPost,typeid(Media));
 	}
 
 
@@ -150,7 +150,7 @@ class MaterialAPI : BaseAPI{
 			         .addTextBody("type",mediaType.uploadType())
 			         .build();
 			httpPost.setEntity(reqEntity);
-			return LocalHttpClient.executeJsonResult(httpPost,Media.class);
+			return LocalHttpClient.executeJsonResult(httpPost,typeid(Media));
 		} catch (UnsupportedCharsetException e) {
 			logger.error("", e);
 		} catch (ClientProtocolException e) {
@@ -182,7 +182,7 @@ class MaterialAPI : BaseAPI{
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.setEntity(new StringEntity("{\"media_id\":\""+media_id+"\"}",Charset.forName("utf-8")))
 					.build();
-		return LocalHttpClient.execute(httpUriRequest,BytesOrJsonResponseHandler.createResponseHandler(MaterialGetResult.class));
+		return LocalHttpClient.execute(httpUriRequest,BytesOrJsonResponseHandler.createResponseHandler(typeid(MaterialGetResult)));
 	}
 
 
@@ -199,7 +199,7 @@ class MaterialAPI : BaseAPI{
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.setEntity(new StringEntity("{\"media_id\":\""+media_id+"\"}",Charset.forName("utf-8")))
 					.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -231,7 +231,7 @@ class MaterialAPI : BaseAPI{
  										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
  										.setEntity(new StringEntity(messageJson,Charset.forName("utf-8")))
  										.build();
- 		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+ 		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
  	}
 
 
@@ -245,7 +245,7 @@ class MaterialAPI : BaseAPI{
 										.setUri(BASE_URI+"/cgi-bin/material/get_materialcount")
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,MaterialcountResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(MaterialcountResult));
 	}
 
 
@@ -264,7 +264,7 @@ class MaterialAPI : BaseAPI{
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.setEntity(new StringEntity("{\"type\":\""+type+"\",\"offset\":"+offset+",\"count\":"+count+"}",Charset.forName("utf-8")))
 					.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,MaterialBatchgetResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(MaterialBatchgetResult));
 	}
 
 }

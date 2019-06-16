@@ -4,7 +4,7 @@ import hunt.wechat.bean.BaseResult;
 
 /**
  * 二维码 ticket
- * @author LiYi
+ * 
  *
  */
 class QrcodeTicket : BaseResult{

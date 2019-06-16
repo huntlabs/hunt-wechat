@@ -2,7 +2,7 @@ module hunt.wechat.bean.paymch.MchVersion;
 
 /**
  * 2.8.12
- * @author LiYi
+ * 
  *
  */
 class MchVersion {

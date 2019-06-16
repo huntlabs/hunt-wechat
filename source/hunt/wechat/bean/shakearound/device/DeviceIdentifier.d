@@ -4,8 +4,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 设备信息ID
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class DeviceIdentifier {
 

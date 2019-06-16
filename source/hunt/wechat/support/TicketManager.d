@@ -16,7 +16,7 @@ import hunt.wechat.bean.ticket.Ticket;
 
 /**
  * TicketManager ticket(jsapi | wx_card) 自动刷新
- * @author LiYi
+ * 
  *
  */
 class TicketManager {
@@ -26,7 +26,7 @@ class TicketManager {
 
 	private static Map!(string,string) ticketMap = new ConcurrentHashMap!(string,string)();
 
-	private static Map<string,ScheduledFuture<?>> futureMap = new ConcurrentHashMap<string, ScheduledFuture<?>>();
+	private static Map<string,ScheduledFuture> futureMap = new ConcurrentHashMap<string, ScheduledFuture>();
 
 	private static int poolSize = 2;
 	
@@ -126,7 +126,7 @@ class TicketManager {
 			if(initialDelay == 0){
 				doRun(appid, type, key);
 			}
-			ScheduledFuture<?> scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
+			ScheduledFuture scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
 				override
 				public void run() {
 					doRun(appid, type, key);

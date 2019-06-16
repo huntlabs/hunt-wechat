@@ -42,7 +42,7 @@ class ApiGetAuthorizerInfoResult : BaseResult {
 
 		private Business_info business_info;
 
-		private string alias;
+		private string _alias;
 		
 		private string qrcode_url;
 
@@ -103,11 +103,11 @@ class ApiGetAuthorizerInfoResult : BaseResult {
 		}
 
 		public string getAlias() {
-			return alias;
+			return _alias;
 		}
 
-		public void setAlias(string alias) {
-			this.alias = alias;
+		public void setAlias(string _alias) {
+			this._alias = _alias;
 		}
 		
 		public string getQrcode_url() {

@@ -6,7 +6,7 @@ import hunt.util.Serialize;
 /**
  * 
  * 微信代扣小程序纯签约包装数据
- * @author LiYi
+ * 
  *
  */
 class WxaEntrustwebData : Serializable {

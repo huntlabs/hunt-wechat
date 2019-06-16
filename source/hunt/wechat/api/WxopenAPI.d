@@ -19,7 +19,7 @@ import hunt.wechat.util.JsonUtil;
 
 /**
  * 微信小程序
- * @author LiYi
+ * 
  * @since 2.8.18
  */
 class WxopenAPI : BaseAPI {
@@ -36,7 +36,7 @@ class WxopenAPI : BaseAPI {
 				.setUri(BASE_URI+"/cgi-bin/wxopen/wxamplinkget")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,WxamplinkgetResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(WxamplinkgetResult));
 	}
 	
 	/**
@@ -54,7 +54,7 @@ class WxopenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -72,7 +72,7 @@ class WxopenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 	/**
@@ -91,7 +91,7 @@ class WxopenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TemplateLibraryListResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TemplateLibraryListResult));
 	}
 	
 	/**
@@ -109,7 +109,7 @@ class WxopenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TemplateLibraryGetResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TemplateLibraryGetResult));
 	}
 	
 	/**
@@ -128,7 +128,7 @@ class WxopenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TemplateAddResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TemplateAddResult));
 	}
 	
 	/**
@@ -147,7 +147,7 @@ class WxopenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,TemplateListResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(TemplateListResult));
 	}
 	
 	/**
@@ -165,6 +165,6 @@ class WxopenAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 }

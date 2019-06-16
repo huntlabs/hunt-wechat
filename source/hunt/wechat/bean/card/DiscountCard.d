@@ -6,14 +6,14 @@ import hunt.wechat.bean.card.Discount;
 /**
  * 折扣券
  * 
- * @author Moyq5
+ * 
  *
  */
 class DiscountCard : AbstractCard {
 
 	private Discount discount;
 
-	public DiscountCard() {
+	public this() {
 		super("DISCOUNT");
 	}
 

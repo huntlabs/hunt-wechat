@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 卡券信息－添加结果
  * 
- * @author Moyq5
+ * 
  *
  */
 class CreateResult : BaseResult {

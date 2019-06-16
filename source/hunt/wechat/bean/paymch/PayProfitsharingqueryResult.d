@@ -21,7 +21,7 @@ class PayProfitsharingqueryResult : MchBase {
 
 	private string close_reason;
 
-	@XmlJavaTypeAdapter(value = ReceiverQuery.JsonXmlAdapter.class)
+	@XmlJavaTypeAdapter(value = ReceiverQuery.typeid(JsonXmlAdapter))
 	private List!(ReceiverQuery) receivers;
 
 	public string getTransaction_id() {

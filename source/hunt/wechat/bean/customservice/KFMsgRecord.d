@@ -6,7 +6,7 @@ import hunt.wechat.bean.BaseResult;
 
 /**
  * 客服聊天记录
- * @author Menng
+ * 
  */
 class KFMsgRecord : BaseResult {
 	private string retcode;

@@ -132,7 +132,7 @@ class SceneInfo {
 
 		override
 		public SceneInfo unmarshal(string arg0){
-			return JsonUtil.parseObject(arg0, SceneInfo.class);
+			return JsonUtil.parseObject(arg0, typeid(SceneInfo));
 		}
 	}
 

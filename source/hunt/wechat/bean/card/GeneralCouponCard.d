@@ -8,7 +8,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 优惠券
  * 
- * @author Moyq5
+ * 
  *
  */
 class GeneralCouponCard : AbstractCard {
@@ -16,7 +16,7 @@ class GeneralCouponCard : AbstractCard {
 	@JSONField(name = "general_coupon")
 	private GeneralCoupon generalCoupon;
 
-	public GeneralCouponCard() {
+	public this() {
 		super("GENERAL_COUPON");
 	}
 

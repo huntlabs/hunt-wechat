@@ -15,7 +15,7 @@ class SecapiPayProfitsharing : MchBase {
 
 	private string out_order_no;
 
-	@XmlJavaTypeAdapter(value = Receiver.JsonXmlAdapter.class)
+	@XmlJavaTypeAdapter(value = Receiver.typeid(JsonXmlAdapter))
 	private List!(Receiver) receivers;
 
 	public string getTransaction_id() {

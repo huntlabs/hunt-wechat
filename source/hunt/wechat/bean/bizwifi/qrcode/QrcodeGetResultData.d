@@ -1,4 +1,4 @@
-module hunt.wechat.bean.bizwifi.qrcode.QrcodeGetResultData;
+module hunt.wechat.bean.bizwifi.qrcode.QrcodeGetResultData.QrcodeGetResultData;
 
 /**
  * @ProjectName weixin-popular

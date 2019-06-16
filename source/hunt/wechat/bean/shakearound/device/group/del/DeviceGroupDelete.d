@@ -1,14 +1,14 @@
 /**
  * 
  */
-module hunt.wechat.bean.shakearound.device.group.delete.DeviceGroupDelete;
+module hunt.wechat.bean.shakearound.device.group.del.DeviceGroupDelete;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－删除分组－请求参数
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class DeviceGroupDelete {
 

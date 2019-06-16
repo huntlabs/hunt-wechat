@@ -10,7 +10,7 @@ import com.alibaba.fastjson.JSON;
  * 统一下单detail json 数据对象
  * 注意：单品总金额应<=订单总金额total_fee，否则会无法享受优惠。
  * 
- * @author LiYi
+ * 
  *
  */
 class Detail {
@@ -55,7 +55,7 @@ class Detail {
 
 		override
 		public Detail unmarshal(string v){
-			return JSON.parseObject(v, Detail.class);
+			return JSON.parseObject(v, typeid(Detail));
 		}
 
 	}

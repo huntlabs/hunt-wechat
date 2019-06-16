@@ -9,8 +9,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－（批量查询）统计接口响应参数抽象类
- * @author Moyq5
- * @date 2016年7月31日
+ * 
+ * 
  */
 class AbstractStatisticsListResult!(T)  : AbstractResult!(T) {
 

@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券核销－核销Code接口－响应参数－卡信息
  * 
- * @author Moyq5
+ * 
  *
  */
 class CodeConsumeResultCard {

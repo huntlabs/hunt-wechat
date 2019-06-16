@@ -5,7 +5,7 @@ import hunt.wechat.bean.component.ApiQueryAuthResult;
 /**
  * ComponentTokenManager 第三方平台token 管理
  * 
- * @author LiYi
+ * 
  * @since 2.8.20
  */
 interface ComponentTokenManager {

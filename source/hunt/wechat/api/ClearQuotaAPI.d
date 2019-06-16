@@ -14,7 +14,7 @@ import hunt.wechat.client.LocalHttpClient;
  * 接口调用频次清零API 
  * 公众号调用接口并不是无限制的。为了防止公众号的程序错误而引发微信服务器负载异常，默认情况下，每个公众号调用接口都不能超过一定限制，当超过一定限制时，调用对应接口会收到如下错误返回码：
  * {"errcode":45009,"errmsg":"api freq out of limit"}
- * @author LiYi
+ * 
  * @since 2.7.1
  */
 class ClearQuotaAPI : BaseAPI{
@@ -34,7 +34,7 @@ class ClearQuotaAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 
 }

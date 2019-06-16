@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 门店列表信息－响应对象
  * 
- * @author Moyq5
+ * 
  *
  */
 class PoiListResult : BaseResult {

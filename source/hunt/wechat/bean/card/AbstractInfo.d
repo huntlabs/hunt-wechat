@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券信息抽象类，具体卡券的公共信息对象
  * 
- * @author Moyq5
+ * 
  *
  */
 abstract class AbstractInfo {

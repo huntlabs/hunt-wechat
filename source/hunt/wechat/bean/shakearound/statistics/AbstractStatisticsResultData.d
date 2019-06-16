@@ -7,8 +7,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 基本数据结构－统计结果数据
- * @author Moyq5
- * @date 2016年7月31日
+ * 
+ * 
  */
 abstract class AbstractStatisticsResultData {
 

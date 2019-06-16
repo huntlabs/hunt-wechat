@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 优惠券
  * 
- * @author Moyq5
+ * 
  *
  */
 class GeneralCoupon : AbstractInfo {

@@ -4,7 +4,7 @@ module hunt.wechat.bean.BaseResult;
 /**
  * 微信请求状态数据
  *
- * @author LiYi
+ * 
  */
 class BaseResult {
 
@@ -13,10 +13,10 @@ class BaseResult {
   private string errcode;
   private string errmsg;
 
-  public BaseResult() {
+  public this() {
   }
 
-  public BaseResult(string errcode, string errmsg) {
+  public this(string errcode, string errmsg) {
     this.errcode = errcode;
     this.errmsg = errmsg;
   }

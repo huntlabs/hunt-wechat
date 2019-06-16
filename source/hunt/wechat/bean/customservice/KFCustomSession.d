@@ -4,7 +4,7 @@ import hunt.wechat.bean.BaseResult;
 
 /**
  * 客户的会话状态
- * @author Menng
+ * 
  */
 class KFCustomSession : BaseResult {
 	private Integer createtime; // 会话接入的时间

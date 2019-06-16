@@ -11,7 +11,7 @@ import hunt.wechat.client.LocalHttpClient;
 
 /**
  * 长链接转成短链接
- * @author LiYi
+ * 
  *
  */
 class ShorturlAPI : BaseAPI{
@@ -31,7 +31,7 @@ class ShorturlAPI : BaseAPI{
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Shorturl.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Shorturl));
 	}
 
 	/**

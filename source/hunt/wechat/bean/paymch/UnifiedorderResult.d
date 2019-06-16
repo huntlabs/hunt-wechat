@@ -10,7 +10,7 @@ import hunt.wechat.bean.AdaptorCDATA;
 
 /**
  * 统一支付请求返回对象
- * @author Yi
+ * 
  *
  */
 
@@ -19,23 +19,23 @@ import hunt.wechat.bean.AdaptorCDATA;
 class UnifiedorderResult : MchBase{
 
 	@XmlElement
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string device_info;
 
 	@XmlElement
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string trade_type;
 
 	@XmlElement
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string prepay_id;
 
 	@XmlElement
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string code_url;
 	
 	@XmlElement
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string mweb_url;
 
 	public string getDevice_info() {

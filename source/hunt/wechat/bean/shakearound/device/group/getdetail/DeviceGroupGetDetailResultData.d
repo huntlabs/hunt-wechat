@@ -11,8 +11,8 @@ import hunt.wechat.bean.shakearound.device.group.GroupInfo;
 
 /**
  * 微信摇一摇周边－查询分组详情－响应参数－分组详情
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class DeviceGroupGetDetailResultData : GroupInfo {
 

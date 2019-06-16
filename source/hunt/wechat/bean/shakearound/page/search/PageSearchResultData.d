@@ -11,8 +11,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－页面管理－查询页面列表－响应参数－页面列表数据
- * @author Moyq5
- * @date 2016年7月26日
+ * 
+ * 
  */
 class PageSearchResultData {
 

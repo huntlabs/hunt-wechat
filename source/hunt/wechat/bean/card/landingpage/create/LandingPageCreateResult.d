@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 卡券发放－创建货架接口－响应参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class LandingPageCreateResult : BaseResult {

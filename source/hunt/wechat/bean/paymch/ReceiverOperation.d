@@ -45,7 +45,7 @@ class ReceiverOperation {
 
 		override
 		public ReceiverOperation unmarshal(string v){
-			return JSON.parseObject(v, ReceiverOperation.class);
+			return JSON.parseObject(v, typeid(ReceiverOperation));
 		}
 
 	}

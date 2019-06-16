@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 图文列表
  * 
- * @author Moyq5
+ * 
  *
  */
 class AdvancedInfoTextImage {

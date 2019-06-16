@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券核销－Code解码接口－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class CodeDecrypt {

@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 代金券
  * 
- * @author Moyq5
+ * 
  *
  */
 class Cash : AbstractInfo {

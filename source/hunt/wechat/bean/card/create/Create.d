@@ -5,11 +5,11 @@ import hunt.wechat.bean.card.AbstractCard;
 /**
  * 创建卡券－请求参数
  * 
- * @author Moyq5
+ * 
  *
  * @param <T> 可以是CashCard、DiscountCard、GeneralCouponCard、GiftCard、GrouponCard
  */
-class Create<T : AbstractCard> {
+class Creat(T : AbstractCard) {
 
 	private T card;
 

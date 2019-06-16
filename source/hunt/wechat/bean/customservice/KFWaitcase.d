@@ -6,7 +6,7 @@ import hunt.wechat.bean.BaseResult;
 
 /**
  * 未接入会话
- * @author Menng
+ * 
  */
 class KFWaitcase : BaseResult {
 	private int count; // 未接入会话数量

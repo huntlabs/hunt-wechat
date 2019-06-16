@@ -22,7 +22,7 @@ import hunt.wechat.util.JsonUtil;
 
 /**
  * 二维码API
- * @author LiYi
+ * 
  *
  */
 class QrcodeAPI : BaseAPI{
@@ -41,7 +41,7 @@ class QrcodeAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(qrcodeJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,QrcodeTicket.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(QrcodeTicket));
 	}
 
 	/**

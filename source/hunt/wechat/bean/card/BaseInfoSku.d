@@ -3,7 +3,7 @@ module hunt.wechat.bean.card.BaseInfoSku;
 /**
  * 商品信息
  * 
- * @author Moyq5
+ * 
  *
  */
 class BaseInfoSku {

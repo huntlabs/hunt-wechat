@@ -8,7 +8,7 @@ import hunt.wechat.client.LocalHttpClient;
 
 /**
  * ACCESS_TOKEN API
- * @author LiYi
+ * 
  *
  */
 class TokenAPI : BaseAPI{
@@ -26,7 +26,7 @@ class TokenAPI : BaseAPI{
 				.addParameter("appid", appid)
 				.addParameter("secret", secret)
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Token.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Token));
 	}
 
 }

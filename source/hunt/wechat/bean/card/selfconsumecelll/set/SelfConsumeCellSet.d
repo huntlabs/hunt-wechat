@@ -5,7 +5,7 @@ import hunt.wechat.bean.card.paycell.set.PaySellSet;
 /**
  * 微信卡券－设置自助核销接口－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class SelfConsumeCellSet : PaySellSet {

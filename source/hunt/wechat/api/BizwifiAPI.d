@@ -13,7 +13,7 @@ import hunt.wechat.bean.bizwifi.bar.BarSet;
 import hunt.wechat.bean.bizwifi.base.ShopInfo;
 import hunt.wechat.bean.bizwifi.couponput.get.CouponputGetResult;
 import hunt.wechat.bean.bizwifi.couponput.set.CouponputSet;
-import hunt.wechat.bean.bizwifi.device.delete.DeviceDelete;
+import hunt.wechat.bean.bizwifi.device.del.DeviceDelete;
 import hunt.wechat.bean.bizwifi.device.list.DeviceList;
 import hunt.wechat.bean.bizwifi.device.list.DeviceListResult;
 import hunt.wechat.bean.bizwifi.finishpage.FinishPageSet;
@@ -35,7 +35,7 @@ import hunt.wechat.util.JsonUtil;
 /**
  * 微信连Wi-Fi
  *
- * @author zeroJun
+ * 
  */
 class BizwifiAPI : BaseAPI {
 
@@ -68,7 +68,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                OpenPluginTokenResult.class);
+                typeid(OpenPluginTokenResult));
     }
 
     /**
@@ -129,7 +129,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -175,7 +175,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -206,7 +206,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ShopGetResult.class);
+                typeid(ShopGetResult));
     }
 
     /**
@@ -241,7 +241,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ShopListResult.class);
+                typeid(ShopListResult));
     }
 
     /**
@@ -272,7 +272,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -303,7 +303,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -334,7 +334,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -365,7 +365,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                ApportalRegisterResult.class);
+                typeid(ApportalRegisterResult));
     }
 
     /**
@@ -398,7 +398,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                DeviceListResult.class);
+                typeid(DeviceListResult));
     }
 
     /**
@@ -429,7 +429,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -464,7 +464,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                QrcodeGetResult.class);
+                typeid(QrcodeGetResult));
     }
 
     /**
@@ -495,7 +495,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                HomePageGetResult.class);
+                typeid(HomePageGetResult));
     }
 
     /**
@@ -528,7 +528,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -561,7 +561,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                BaseResult.class);
+                typeid(BaseResult));
     }
 
     /**
@@ -594,7 +594,7 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                CouponputGetResult.class);
+                typeid(CouponputGetResult));
     }
 
     /**
@@ -629,6 +629,6 @@ class BizwifiAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                StatisticsListResult.class);
+                typeid(StatisticsListResult));
     }
 }

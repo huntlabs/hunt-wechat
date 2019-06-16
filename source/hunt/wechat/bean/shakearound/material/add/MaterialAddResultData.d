@@ -7,8 +7,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－素材管理－​上传图片素材－响应参数－图片信息
- * @author Moyq5
- * @date 2016年7月26日
+ * 
+ * 
  */
 class MaterialAddResultData {
 

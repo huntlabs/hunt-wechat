@@ -3,7 +3,7 @@ module hunt.wechat.bean.card.CardType;
 /**
  * 卡券类型
  * 
- * @author Moyq5
+ * 
  *
  */
 public enum CardType {
@@ -38,5 +38,5 @@ public enum CardType {
 	/**
 	 * 飞机票
 	 */
-	BOARDING_PASS;
+	BOARDING_PASS
 }

@@ -61,7 +61,7 @@ import hunt.wechat.util.JsonUtil;
 /**
  * 微信卡券
  * 
- * @author Moyq5
+ * 
  *
  */
 class CardAPI : BaseAPI {
@@ -91,7 +91,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BatchGetResult.class);
+				typeid(BatchGetResult));
 	}
 
 	/**
@@ -119,7 +119,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CodeCheckCodeResult.class);
+				typeid(CodeCheckCodeResult));
 	}
 
 	/**
@@ -147,7 +147,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CodeConsumeResult.class);
+				typeid(CodeConsumeResult));
 	}
 
 	/**
@@ -183,7 +183,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CodeDecryptResult.class);
+				typeid(CodeDecryptResult));
 	}
 
 	/**
@@ -211,7 +211,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CodeDepositResult.class);
+				typeid(CodeDepositResult));
 	}
 
 	/**
@@ -239,7 +239,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CodeGetResult.class);
+				typeid(CodeGetResult));
 	}
 
 	/**
@@ -268,7 +268,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CodeGetDepositCountResult.class);
+				typeid(CodeGetDepositCountResult));
 	}
 
 	/**
@@ -297,7 +297,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -335,7 +335,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -344,7 +344,7 @@ class CardAPI : BaseAPI {
 	 * @param card card
 	 * @return result
 	 */
-	public static CreateResult create(string accessToken, Create<?> card) {
+	public static CreateResult create(string accessToken, Create!(AbstractCard) card) {
 		return create(accessToken, JsonUtil.toJSONString(card));
 	}
 
@@ -423,7 +423,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				CreateResult.class);
+				typeid(CreateResult));
 	}
 
 	/**
@@ -432,7 +432,7 @@ class CardAPI : BaseAPI {
 	 * @param postJson postJson
 	 * @return result
 	 */
-	public static BaseResult delete(string accessToken, string postJson) {
+	public static BaseResult del(string accessToken, string postJson) {
 		HttpUriRequest httpUriRequest = RequestBuilder
 				.post()
 				.setHeader(jsonHeader)
@@ -441,7 +441,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -451,7 +451,7 @@ class CardAPI : BaseAPI {
 	 * @return result
 	 */
 	public static BaseResult deleteByCardId(string accessToken, string cardId) {
-		return delete(accessToken, string.format("{\"card_id\": \"%s\"}", cardId));
+		return del(accessToken, string.format("{\"card_id\": \"%s\"}", cardId));
 	}
 
 	/**
@@ -460,7 +460,7 @@ class CardAPI : BaseAPI {
 	 * @param postJson postJson
 	 * @return result
 	 */
-	public static GetResult<?> get(string accessToken, string postJson) {
+	public static GetResult get(string accessToken, string postJson) {
 		HttpUriRequest httpUriRequest = RequestBuilder
 				.post()
 				.setHeader(jsonHeader)
@@ -468,26 +468,26 @@ class CardAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(accessToken))
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
-		AbstractResult abs = LocalHttpClient.executeJsonResult(httpUriRequest, AbstractResult.class);
+		AbstractResult abs = LocalHttpClient.executeJsonResult(httpUriRequest, typeid(AbstractResult));
 		if (!abs.isSuccess()) {
 			return abs;
 		}
 
-		GetResult<?> result = abs;
+		GetResult result = abs;
 		CardType cardType = CardType.valueOf(abs.getCard().getCardType().toUpperCase());
-		Class<? : GetResult<?>> clazz = null;
+		Class!(GetResult) clazz = null;
 		switch (cardType) {
 		case CASH:
-			clazz = GetCashResult.class;
+			clazz = typeid(GetCashResult);
 			break;
 		case DISCOUNT:
-			clazz = GetDiscountResult.class;
+			clazz = typeid(GetDiscountResult);
 			break;
 		case GENERAL_COUPON:
-			clazz = GetGeneralCouponResult.class;
+			clazz = typeid(GetGeneralCouponResult);
 			break;
 		case GROUPON:
-			clazz = GetGrouponResult.class;
+			clazz = typeid(GetGrouponResult);
 			break;
 		// ...其它卡券类型
 		default:
@@ -505,7 +505,7 @@ class CardAPI : BaseAPI {
 	 * @param cardId cardId
 	 * @return result
 	 */
-	public static GetResult<?> getByCardId(string accessToken, string cardId) {
+	public static GetResult getByCardId(string accessToken, string cardId) {
 		return get(accessToken, string.format("{\"card_id\": \"%s\"}", cardId));
 	}
 
@@ -535,7 +535,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				LandingPageCreateResult.class);
+				typeid(LandingPageCreateResult));
 	}
 
 	/**
@@ -563,7 +563,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -592,7 +592,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				MpNewsGetHtmlResult.class);
+				typeid(MpNewsGetHtmlResult));
 	}
 
 	/**
@@ -620,7 +620,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -661,7 +661,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				QrCodeCreateResult.class);
+				typeid(QrCodeCreateResult));
 	}
 
 	/**
@@ -691,7 +691,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -710,7 +710,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				BaseResult.class);
+				typeid(BaseResult));
 	}
 
 	/**
@@ -739,7 +739,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				UpdateResult.class);
+				typeid(UpdateResult));
 	}
 
 	/**
@@ -811,7 +811,7 @@ class CardAPI : BaseAPI {
 				.setEntity(new StringEntity(postJson, Charset.forName("utf-8")))
 				.build();
 		return LocalHttpClient.executeJsonResult(httpUriRequest,
-				UserGetCardListResult.class);
+				typeid(UserGetCardListResult));
 	}
 
 	/**

@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 客服基本信息
  * 
- * @author Menng
+ * 
  */
 class KFAccount : BaseResult {
 

@@ -7,7 +7,7 @@ import hunt.collection.List;
  * 发送图文消息（点击跳转到外链）
  * 图文消息条数限制在1条以内，注意，如果图文数超过1，则将会返回错误码45008。
  *
- * @author LiYi
+ * 
  */
 class NewsMessage : Message {
 

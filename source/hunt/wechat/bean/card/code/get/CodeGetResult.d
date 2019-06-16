@@ -7,7 +7,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 卡券核销－查询Code接口－响应参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class CodeGetResult : BaseResult {

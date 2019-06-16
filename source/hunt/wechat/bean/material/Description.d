@@ -2,7 +2,7 @@ module hunt.wechat.bean.material.Description;
 
 /**
  * 新增永久视频素材需特别注意
- * @author LiYi
+ * 
  *
  */
 class Description {
@@ -11,10 +11,10 @@ class Description {
 
 	private string introduction;
 
-	public Description() {
+	public this() {
 	}
 
-	public Description(string title, string introduction) {
+	public this(string title, string introduction) {
 		this.title = title;
 		this.introduction = introduction;
 	}

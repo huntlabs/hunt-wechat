@@ -3,7 +3,7 @@ module hunt.wechat.bean.card.testwhitelist.set.TestWhiteListSet;
 /**
  * 投放卡券－设置测试白名单－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class TestWhiteListSet {

@@ -38,7 +38,7 @@ import hunt.wechat.util.StreamUtils;
 
 /**
  * 临时素材API
- * @author LiYi
+ * 
  *
  */
 class MediaAPI : BaseAPI{
@@ -65,7 +65,7 @@ class MediaAPI : BaseAPI{
                  .addTextBody("type",mediaType.uploadType())
                  .build();
         httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost,Media.class);
+		return LocalHttpClient.executeJsonResult(httpPost,typeid(Media));
 	}
 
 	/**
@@ -94,7 +94,7 @@ class MediaAPI : BaseAPI{
                  .addTextBody("type",mediaType.uploadType())
                  .build();
 		httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost,Media.class);
+		return LocalHttpClient.executeJsonResult(httpPost,typeid(Media));
 	}
 
 
@@ -121,7 +121,7 @@ class MediaAPI : BaseAPI{
 			         .addTextBody("type",mediaType.uploadType())
 			         .build();
 			httpPost.setEntity(reqEntity);
-			return LocalHttpClient.executeJsonResult(httpPost,Media.class);
+			return LocalHttpClient.executeJsonResult(httpPost,typeid(Media));
 		} catch (UnsupportedCharsetException e) {
 			logger.error("", e);
 		} catch (ClientProtocolException e) {
@@ -155,7 +155,7 @@ class MediaAPI : BaseAPI{
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.addParameter("media_id", media_id)
 					.build();
-		return LocalHttpClient.execute(httpUriRequest,BytesOrJsonResponseHandler.createResponseHandler(MediaGetResult.class));
+		return LocalHttpClient.execute(httpUriRequest,BytesOrJsonResponseHandler.createResponseHandler(typeid(MediaGetResult)));
 	}
 	
 	/**
@@ -186,7 +186,7 @@ class MediaAPI : BaseAPI{
 					.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 					.addParameter("media_id", media_id)
 					.build();
-		return LocalHttpClient.execute(httpUriRequest,BytesOrJsonResponseHandler.createResponseHandler(MediaGetResult.class));
+		return LocalHttpClient.execute(httpUriRequest,BytesOrJsonResponseHandler.createResponseHandler(typeid(MediaGetResult)));
 	}
 
 	/**
@@ -204,7 +204,7 @@ class MediaAPI : BaseAPI{
                  .addTextBody(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                  .build();
         httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost,UploadimgResult.class);
+		return LocalHttpClient.executeJsonResult(httpPost,typeid(UploadimgResult));
 	}
 
 	/**
@@ -228,7 +228,7 @@ class MediaAPI : BaseAPI{
                  .addTextBody(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                  .build();
         httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost,UploadimgResult.class);
+		return LocalHttpClient.executeJsonResult(httpPost,typeid(UploadimgResult));
 	}
 
 
@@ -249,7 +249,7 @@ class MediaAPI : BaseAPI{
 			         .addTextBody(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 			         .build();
 			httpPost.setEntity(reqEntity);
-			return LocalHttpClient.executeJsonResult(httpPost,UploadimgResult.class);
+			return LocalHttpClient.executeJsonResult(httpPost,typeid(UploadimgResult));
 		} catch (Exception e) {
 			logger.error("", e);
 		} finally{
@@ -287,7 +287,7 @@ class MediaAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(messageJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Media.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Media));
 	}
 
 	/**
@@ -305,7 +305,7 @@ class MediaAPI : BaseAPI{
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(messageJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,Media.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(Media));
 	}
 	
 }

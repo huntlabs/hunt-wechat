@@ -16,7 +16,7 @@ import hunt.wechat.util.JsonUtil;
  * 返回数据错误处理
  * 
  * @since 2.8.3
- * @author SHYL
+ * 
  *
  */
 abstract class ResultErrorHandler {

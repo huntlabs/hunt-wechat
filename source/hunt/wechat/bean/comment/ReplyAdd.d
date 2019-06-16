@@ -4,10 +4,10 @@ class ReplyAdd : Params {
 
 	private string content;
 
-	public ReplyAdd() {
+	public this() {
 	}
 
-	public ReplyAdd(string content) {
+	public this(string content) {
 		this.content = content;
 	}
 

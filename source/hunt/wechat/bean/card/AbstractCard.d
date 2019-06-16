@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券抽象类，公众属性
  * 
- * @author Moyq5
+ * 
  *
  */
 class AbstractCard {
@@ -16,10 +16,10 @@ class AbstractCard {
 	@JSONField(name = "card_type")
 	private string cardType;
 	
-	public AbstractCard() {
+	public this() {
 	}
 	
-	public AbstractCard(string cardType) {
+	public this(string cardType) {
 		this.cardType = cardType;
 	}
 	

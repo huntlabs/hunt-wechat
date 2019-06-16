@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 投放卡券－图文消息群发卡券－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class MpNewsGetHtml {

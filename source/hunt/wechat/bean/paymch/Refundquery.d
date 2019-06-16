@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * 退款查询
  * 
- * @author Yi
+ * 
  * 
  */
 

@@ -3,7 +3,7 @@ module hunt.wechat.bean.message.message.VideoMessage;
 /**
  * 视频
  *
- * @author LiYi
+ * 
  */
 class VideoMessage : Message {
 

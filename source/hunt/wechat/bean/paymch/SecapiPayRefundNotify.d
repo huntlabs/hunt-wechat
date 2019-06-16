@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * 
  * 退款回调数据
  * 
- * @author liyi
+ * 
  * @since 2.8.19
  */
 @XmlRootElement(name = "xml")

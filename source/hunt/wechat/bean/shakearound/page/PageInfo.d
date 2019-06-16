@@ -7,8 +7,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 页面信息
- * @author Moyq5
- * @date 2016年7月31日
+ * 
+ * 
  */
 class PageInfo {
 	

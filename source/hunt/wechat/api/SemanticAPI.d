@@ -24,7 +24,7 @@ import hunt.wechat.client.LocalHttpClient;
 import hunt.wechat.util.JsonUtil;
 import hunt.wechat.util.StreamUtils;
 
-import java.io.*;
+import java.io;
 import java.net.URI;
 import hunt.text.Charset;
 import java.nio.charset.UnsupportedCharsetException;
@@ -32,7 +32,7 @@ import java.nio.charset.UnsupportedCharsetException;
 /**
  * 微信智能
  *
- * @author zeroJun
+ * 
  * @since 2.8.22
  */
 class SemanticAPI : BaseAPI {
@@ -68,7 +68,7 @@ class SemanticAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                SemproxySearchResult.class);
+                typeid(SemproxySearchResult));
     }
 
     /**
@@ -132,7 +132,7 @@ class SemanticAPI : BaseAPI {
                 .build();
         httpPost.setEntity(reqEntity);
 
-        return LocalHttpClient.executeJsonResult(httpPost, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpPost, typeid(BaseResult));
     }
 
     /**
@@ -164,7 +164,7 @@ class SemanticAPI : BaseAPI {
                 .build();
         httpPost.setEntity(reqEntity);
 
-        return LocalHttpClient.executeJsonResult(httpPost, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpPost, typeid(BaseResult));
     }
 
     /**
@@ -191,8 +191,8 @@ class SemanticAPI : BaseAPI {
                     .build();
             httpPost.setEntity(reqEntity);
 
-            return LocalHttpClient.executeJsonResult(httpPost, BaseResult.class);
-        } catch (UnsupportedCharsetException | ParseException | IOException e) {
+            return LocalHttpClient.executeJsonResult(httpPost, typeid(BaseResult));
+        } catch ( IOException e) {
             logger.error("", e);
             throw new RuntimeException(e);
         } finally {
@@ -234,7 +234,7 @@ class SemanticAPI : BaseAPI {
                 .build();
 
         return LocalHttpClient.executeJsonResult(httpUriRequest,
-                QueryrecoresultfortextResult.class);
+                typeid(QueryrecoresultfortextResult));
     }
 
     /**
@@ -252,7 +252,8 @@ class SemanticAPI : BaseAPI {
         HttpPost httpPost = new HttpPost(BASE_URI + "/cgi-bin/media/voice/translatecontent");
 
         byte[] data;
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(content), charsetName))) {
+        try{
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(content), charsetName));
             string line;
             StringBuilder sb = new StringBuilder();
 
@@ -261,7 +262,7 @@ class SemanticAPI : BaseAPI {
             }
 
             data = sb.toString().getBytes("UTF-8");
-        } catch (IOException e) {
+        } catch(IOException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -274,7 +275,7 @@ class SemanticAPI : BaseAPI {
                 .build();
         httpPost.setEntity(reqEntity);
 
-        return LocalHttpClient.executeJsonResult(httpPost, TranslatecontentResult.class);
+        return LocalHttpClient.executeJsonResult(httpPost, typeid(TranslatecontentResult));
     }
 
     /**
@@ -292,7 +293,8 @@ class SemanticAPI : BaseAPI {
         HttpPost httpPost = new HttpPost(BASE_URI + "/cgi-bin/media/voice/translatecontent");
 
         byte[] data;
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, charsetName))) {
+        try{
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, charsetName));
             string line;
             StringBuilder sb = new StringBuilder();
             while ((line = reader.readLine()) != null) {
@@ -313,7 +315,7 @@ class SemanticAPI : BaseAPI {
                 .build();
         httpPost.setEntity(reqEntity);
 
-        return LocalHttpClient.executeJsonResult(httpPost, TranslatecontentResult.class);
+        return LocalHttpClient.executeJsonResult(httpPost, typeid(TranslatecontentResult));
     }
 
     /**
@@ -344,6 +346,6 @@ class SemanticAPI : BaseAPI {
                 .build();
         httpPost.setEntity(reqEntity);
 
-        return LocalHttpClient.executeJsonResult(httpPost, TranslatecontentResult.class);
+        return LocalHttpClient.executeJsonResult(httpPost, typeid(TranslatecontentResult));
     }
 }

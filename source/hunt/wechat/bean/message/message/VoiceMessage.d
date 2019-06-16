@@ -3,7 +3,7 @@ module hunt.wechat.bean.message.message.VoiceMessage;
 /**
  * 语音
  *
- * @author LiYi
+ * 
  */
 class VoiceMessage : Message {
 

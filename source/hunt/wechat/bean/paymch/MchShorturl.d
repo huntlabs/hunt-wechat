@@ -25,7 +25,7 @@ class MchShorturl {
 	private string nonce_str;
 
 	@XmlElement
-	@XmlJavaTypeAdapter(value = AdaptorCDATA.class)
+	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string sign;
 	
 	@XmlElement

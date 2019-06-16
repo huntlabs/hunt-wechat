@@ -8,10 +8,10 @@ import hunt.wechat.bean.bizwifi.base.ShopInfo;
  * @Date: 2018/7/24 11:11
  * @Description:
  */
-class HomePageSet : ShopInfo {
+public class HomePageSet : ShopInfo {
 
     private Integer template_id;
-    private Struct struct;
+    private Struct _struct;
 
     public Integer getTemplate_id() {
         return template_id;
@@ -22,14 +22,14 @@ class HomePageSet : ShopInfo {
     }
 
     public Struct getStruct() {
-        return struct;
+        return _struct;
     }
 
-    public void setStruct(Struct struct) {
-        this.struct = struct;
+    public void setStruct(Struct _struct) {
+        this._struct = _struct;
     }
 
-    static class Struct {
+    public class Struct {
         private string wxa_user_name;
         private string wxa_path;
         private string url;

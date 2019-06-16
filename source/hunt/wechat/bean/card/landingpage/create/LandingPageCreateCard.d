@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券发放－创建货架接口－请求参数－货架投放的卡券
  * 
- * @author Moyq5
+ * 
  *
  */
 class LandingPageCreateCard {

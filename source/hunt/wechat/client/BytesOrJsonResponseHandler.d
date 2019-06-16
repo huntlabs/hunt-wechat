@@ -18,7 +18,7 @@ import hunt.wechat.util.JsonUtil;
 /**
  * 二进制 或 JSON 数据Response处理
  * 
- * @author LiYi
+ * 
  *
  */
 class BytesOrJsonResponseHandler{
@@ -39,7 +39,7 @@ class BytesOrJsonResponseHandler{
 
 		override
 		public T handleResponse(HttpResponse response)
-				throws ClientProtocolException, IOException {
+				 {
 			int status = response.getStatusLine().getStatusCode();
             if (status >= 200 && status < 300) {
             	ContentType contentType = ContentType.get(response.getEntity());

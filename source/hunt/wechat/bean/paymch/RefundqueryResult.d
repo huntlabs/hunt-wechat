@@ -14,7 +14,7 @@ import hunt.wechat.bean.DynamicField;
 /**
  * 退款查询
  *
- * @author Yi
+ * 
  *
  */
 

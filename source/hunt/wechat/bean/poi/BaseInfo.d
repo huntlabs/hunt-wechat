@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 门店信息－提交对象
  * 
- * @author Moyq5
+ * 
  *
  */
 class BaseInfo {

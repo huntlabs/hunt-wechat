@@ -8,8 +8,8 @@ import hunt.wechat.bean.card.Gift;
 
 /**
  * 微信卡券－卡券管理－更改卡券信息接口（兑换券）－请求参数 
- * @author Moyq5
- * @date 2016年7月30日
+ * 
+ * 
  */
 class UpdateGift : AbstractUpdate {
 	

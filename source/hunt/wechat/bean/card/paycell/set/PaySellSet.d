@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 微信卡券－设置买单－提交对象
  * 
- * @author Moyq5
+ * 
  *
  */
 class PaySellSet {

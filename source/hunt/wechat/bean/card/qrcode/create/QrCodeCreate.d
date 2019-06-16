@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 卡券投放－创建领取单个卡券二维码信息接口－请求参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class QrCodeCreate {

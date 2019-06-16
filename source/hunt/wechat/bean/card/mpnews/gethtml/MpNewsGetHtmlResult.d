@@ -5,7 +5,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 投放卡券－图文消息群发卡券－响应参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class MpNewsGetHtmlResult : BaseResult {

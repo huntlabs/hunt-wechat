@@ -47,7 +47,7 @@ import hunt.wechat.util.StreamUtils;
 
 /**
  * 微信小程序接口
- * @author LiYi
+ * 
  * @since 2.8.9
  */
 class WxaAPI : BaseAPI {
@@ -68,7 +68,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,ModifyDomainResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(ModifyDomainResult));
 	}
 	
 	/**
@@ -87,7 +87,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -106,7 +106,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -125,7 +125,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	
@@ -154,7 +154,7 @@ class WxaAPI : BaseAPI {
 				}
 			}else{
 				string body = EntityUtils.toString(httpResponse.getEntity());
-				return JsonUtil.parseObject(body, GetQrcodeResult.class);
+				return JsonUtil.parseObject(body, typeid(GetQrcodeResult));
 			}
 		} catch (IOException e) {
 			logger.error("", e);
@@ -180,7 +180,7 @@ class WxaAPI : BaseAPI {
 				.setUri(BASE_URI + "/wxa/get_category")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GetCategoryResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GetCategoryResult));
 	}
 	
 	/**
@@ -195,7 +195,7 @@ class WxaAPI : BaseAPI {
 				.setUri(BASE_URI + "/wxa/get_page")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GetPageResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GetPageResult));
 	}
 	
 	/**
@@ -214,7 +214,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,SubmitAuditResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(SubmitAuditResult));
 	}
 	
 	/**
@@ -233,7 +233,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GetAuditstatusResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GetAuditstatusResult));
 	}
 	
 	/**
@@ -250,7 +250,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity("{}",Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -269,7 +269,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -359,7 +359,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,AddnearbypoiResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(AddnearbypoiResult));
 	}
 	
 	/**
@@ -378,7 +378,7 @@ class WxaAPI : BaseAPI {
 				.addParameter("page", string.valueOf(page))
 				.addParameter("page_rows", string.valueOf(page_rows))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GetnearbypoilistResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GetnearbypoilistResult));
 	}
 	
 	/**
@@ -396,7 +396,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -415,7 +415,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -431,7 +431,7 @@ class WxaAPI : BaseAPI {
 				.setUri(BASE_URI + "/wxa/gettemplatedraftlist")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GettemplatedraftlistResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GettemplatedraftlistResult));
 	}
 	
 	/**
@@ -447,7 +447,7 @@ class WxaAPI : BaseAPI {
 				.setUri(BASE_URI + "/wxa/gettemplatelist")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GettemplatelistResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GettemplatelistResult));
 	}
 	
 	/**
@@ -466,7 +466,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -485,7 +485,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -504,7 +504,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BaseResult));
 	}
 	
 	/**
@@ -520,7 +520,7 @@ class WxaAPI : BaseAPI {
 				.setUri(BASE_URI + "/wxa/getwxasearchstatus")
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GetwxasearchstatusResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GetwxasearchstatusResult));
 	}
 	
 	/**
@@ -545,7 +545,7 @@ class WxaAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(json,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,GetwxasearchstatusResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(GetwxasearchstatusResult));
 	}
 	
 	/**
@@ -574,7 +574,7 @@ class WxaAPI : BaseAPI {
                  .addTextBody(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                  .build();
         httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost, BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpPost, typeid(BaseResult));
 	}
 	
 	/**
@@ -598,6 +598,6 @@ class WxaAPI : BaseAPI {
                  .addTextBody(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                  .build();
         httpPost.setEntity(reqEntity);
-		return LocalHttpClient.executeJsonResult(httpPost,BaseResult.class);
+		return LocalHttpClient.executeJsonResult(httpPost,typeid(BaseResult));
 	}
 }

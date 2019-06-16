@@ -11,13 +11,13 @@ import hunt.logger;
 
 
 import hunt.wechat.bean.BaseResult;
-import hunt.wechat.bean.component.*;
+import hunt.wechat.bean.component;
 import hunt.wechat.client.LocalHttpClient;
 
 /**
  * 公众号第三方平台
  *
- * @author LiYi
+ * 
  */
 class ComponentAPI : BaseAPI {
 
@@ -114,7 +114,7 @@ class ComponentAPI : BaseAPI {
                 .setUri(BASE_URI + "/cgi-bin/component/api_component_token")
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, ComponentAccessToken.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(ComponentAccessToken));
     }
 
 
@@ -134,7 +134,7 @@ class ComponentAPI : BaseAPI {
                 .addParameter("component_access_token", API.componentAccessToken(component_access_token))
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, PreAuthCode.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(PreAuthCode));
     }
 
     /**
@@ -155,7 +155,7 @@ class ComponentAPI : BaseAPI {
                 .addParameter("component_access_token", API.componentAccessToken(component_access_token))
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, ApiQueryAuthResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(ApiQueryAuthResult));
     }
 
     /**
@@ -179,7 +179,7 @@ class ComponentAPI : BaseAPI {
                 .addParameter("component_access_token", API.componentAccessToken(component_access_token))
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, AuthorizerAccessToken.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(AuthorizerAccessToken));
     }
 
 
@@ -202,7 +202,7 @@ class ComponentAPI : BaseAPI {
                 .addParameter("component_access_token", API.componentAccessToken(component_access_token))
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, ApiGetAuthorizerInfoResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(ApiGetAuthorizerInfoResult));
     }
 
     /**
@@ -229,7 +229,7 @@ class ComponentAPI : BaseAPI {
                 .addParameter("component_access_token", API.componentAccessToken(component_access_token))
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, AuthorizerOption.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(AuthorizerOption));
     }
 
     /**
@@ -258,7 +258,7 @@ class ComponentAPI : BaseAPI {
                 .addParameter("component_access_token", API.componentAccessToken(component_access_token))
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -277,7 +277,7 @@ class ComponentAPI : BaseAPI {
                 .addParameter("component_access_token", API.componentAccessToken(component_access_token))
                 .setEntity(new StringEntity(json, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -300,6 +300,6 @@ class ComponentAPI : BaseAPI {
                 .setEntity(new StringEntity(postJsonData, Charset.forName("utf-8")))
                 .build();
 
-        return LocalHttpClient.executeJsonResult(httpUriRequest, ApiGetAuthorizerListResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(ApiGetAuthorizerListResult));
     }
 }

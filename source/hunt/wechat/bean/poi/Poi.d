@@ -3,7 +3,7 @@ module hunt.wechat.bean.poi.Poi;
 /**
  * 门店信息－提交对象
  * 
- * @author Moyq5
+ * 
  *
  */
 class Poi {

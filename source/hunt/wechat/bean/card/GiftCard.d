@@ -6,14 +6,14 @@ import hunt.wechat.bean.card.Gift;
 /**
  * 兑换券
  * 
- * @author Moyq5
+ * 
  *
  */
 class GiftCard : AbstractCard {
 
 	private Gift gift;
 
-	public GiftCard() {
+	public this() {
 		super("GIFT");
 	}
 

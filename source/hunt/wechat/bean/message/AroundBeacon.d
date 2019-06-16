@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * 
  * 摇一摇 周边事件数据
  * 
- * @author LiYi
+ * 
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)

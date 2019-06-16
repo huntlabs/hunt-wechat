@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 团购券
  * 
- * @author Moyq5
+ * 
  *
  */
 class Groupon : AbstractInfo {

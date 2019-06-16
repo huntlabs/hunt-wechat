@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 门店类目列表
  * 
- * @author Moyq5
+ * 
  *
  */
 class CategoryListResult {

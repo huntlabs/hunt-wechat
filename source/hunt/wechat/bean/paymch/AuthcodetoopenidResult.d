@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * 刷卡支付 授权码查询OPENID 返回数据
- * @author LiYi
+ * 
  *
  */
 @XmlRootElement(name = "xml")

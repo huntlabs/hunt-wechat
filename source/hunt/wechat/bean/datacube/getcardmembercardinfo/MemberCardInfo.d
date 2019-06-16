@@ -10,7 +10,7 @@ import hunt.wechat.bean.datacube.getcardbizuininfo.BizuinInfo;
  * 2. 传入时间格式需严格参照示例填写”2015-06-15”，否则报错;
  * 3. 该接口只能拉取非当天的数据，不能拉取当天的卡券数据，否则报错。
  * 
- * @author Moyq5
+ * 
  *
  */
 class MemberCardInfo : BizuinInfo {

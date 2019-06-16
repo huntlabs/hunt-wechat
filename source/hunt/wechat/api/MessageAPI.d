@@ -36,7 +36,7 @@ import hunt.wechat.util.JsonUtil;
  * 在48小时内不限制发送次数。
  * 此接口主要用于客服等有人工消息处理环节的功能，方便开发者为用户提供更加优质的服务。
  *
- * @author LiYi
+ * 
  */
 class MessageAPI : BaseAPI {
 
@@ -55,7 +55,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -87,7 +87,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(json, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -137,7 +137,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, MessageSendResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(MessageSendResult));
     }
 
     /**
@@ -167,7 +167,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, MessageSendResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(MessageSendResult));
     }
 
     /**
@@ -218,7 +218,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -236,7 +236,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(previewJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, MessageSendResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(MessageSendResult));
     }
 
     /**
@@ -254,7 +254,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, MessageSendResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(MessageSendResult));
     }
 
 
@@ -275,7 +275,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, TemplateMessageResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(TemplateMessageResult));
     }
 
     /**
@@ -293,7 +293,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -346,7 +346,7 @@ class MessageAPI : BaseAPI {
      *                     其它	其它	41 
      * @return BaseResult
      */
-    public static BaseResult templateApi_set_industry(string access_token, string... industrys) {
+    public static BaseResult templateApi_set_industry(string access_token, string[] industrys...) {
         Map!(string, string) map = new LinkedHashMap!(string, string)();
         for (int i = 1; i <= industrys.length; i++) {
             map.put("industry_id" + i, industrys[i - 1]);
@@ -358,7 +358,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(messageJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -372,7 +372,7 @@ class MessageAPI : BaseAPI {
                 .setUri(BASE_URI + "/cgi-bin/template/get_industry")
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, GetIndustryResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(GetIndustryResult));
     }
 
     /**
@@ -390,7 +390,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(json, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, ApiAddTemplateResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(ApiAddTemplateResult));
     }
 
     /**
@@ -404,7 +404,7 @@ class MessageAPI : BaseAPI {
                 .setUri(BASE_URI + "/cgi-bin/template/get_all_private_template")
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, GetAllPrivateTemplateResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(GetAllPrivateTemplateResult));
     }
 
     /**
@@ -422,7 +422,7 @@ class MessageAPI : BaseAPI {
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .setEntity(new StringEntity(json, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, BaseResult.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(BaseResult));
     }
 
     /**
@@ -436,7 +436,7 @@ class MessageAPI : BaseAPI {
                 .setUri(BASE_URI + "/cgi-bin/get_current_autoreply_info")
                 .addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, CurrentAutoreplyInfo.class);
+        return LocalHttpClient.executeJsonResult(httpUriRequest, typeid(CurrentAutoreplyInfo));
     }
 
 }

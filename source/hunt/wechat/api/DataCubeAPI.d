@@ -31,7 +31,7 @@ import hunt.wechat.util.JsonUtil;
 
 /**
  * 数据统计
- * @author Moyq5
+ * 
  */
 class DataCubeAPI : BaseAPI {
 
@@ -64,7 +64,7 @@ class DataCubeAPI : BaseAPI {
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,BizuinInfoResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(BizuinInfoResult));
 	}
 	
 	/**
@@ -98,7 +98,7 @@ class DataCubeAPI : BaseAPI {
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,CardInfoResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(CardInfoResult));
 	}
 	
 	
@@ -131,7 +131,7 @@ class DataCubeAPI : BaseAPI {
 										.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 										.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 										.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,MemberCardInfoResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(MemberCardInfoResult));
 	}
 	
 	
@@ -153,7 +153,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UsersummaryResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UsersummaryResult));
 	}
 	
 	/**
@@ -172,7 +172,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UsercumulateResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UsercumulateResult));
 	}
 	
 	//图文分析数据接口----------------------------------------------------------
@@ -193,7 +193,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,ArticlesummaryResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(ArticlesummaryResult));
 	}
 	
 	/**
@@ -212,7 +212,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,ArticletotalResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(ArticletotalResult));
 	}
 	
 	/**
@@ -231,7 +231,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UserreadResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UserreadResult));
 	}
 	
 	/**
@@ -250,7 +250,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UserreadResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UserreadResult));
 	}
 	
 	/**
@@ -269,7 +269,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UsershareResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UsershareResult));
 	}
 	
 	/**
@@ -288,7 +288,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UsershareResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UsershareResult));
 	}
 	
 	//消息分析数据接口----------------------------------------------------------
@@ -309,7 +309,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UpstreammsgResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UpstreammsgResult));
 	}
 	
 	/**
@@ -328,7 +328,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UpstreammsgResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UpstreammsgResult));
 	}
 	
 	/**
@@ -347,7 +347,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UpstreammsgResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UpstreammsgResult));
 	}
 	
 	/**
@@ -366,7 +366,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UpstreammsgResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UpstreammsgResult));
 	}
 	
 	/**
@@ -385,7 +385,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UpstreammsgResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UpstreammsgResult));
 	}
 	
 	/**
@@ -404,7 +404,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UpstreammsgResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UpstreammsgResult));
 	}
 	
 	/**
@@ -423,7 +423,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UpstreammsgResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UpstreammsgResult));
 	}
 	
 	//消息分析数据接口----------------------------------------------------------
@@ -444,7 +444,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,InterfacesummaryResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(InterfacesummaryResult));
 	}
 	
 	/**
@@ -463,7 +463,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,InterfacesummaryResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(InterfacesummaryResult));
 	}
 	
 	//-------------------------- 小程序
@@ -484,7 +484,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,SummarytrendResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(SummarytrendResult));
 	}
 	
 	/**
@@ -504,7 +504,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,VisittrendResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(VisittrendResult));
 	}
 	
 	/**
@@ -524,7 +524,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,VisittrendResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(VisittrendResult));
 	}
 	
 	/**
@@ -544,7 +544,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,VisittrendResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(VisittrendResult));
 	}
 	
 	/**
@@ -563,7 +563,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,VisitdistributionResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(VisitdistributionResult));
 	}
 	
 	/**
@@ -583,7 +583,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,RetaininfoResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(RetaininfoResult));
 	}
 	
 	/**
@@ -603,7 +603,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,RetaininfoResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(RetaininfoResult));
 	}
 	
 	/**
@@ -623,7 +623,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,RetaininfoResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(RetaininfoResult));
 	}
 	
 	/**
@@ -642,7 +642,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,VisitpageResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(VisitpageResult));
 	}
 	
 	/**
@@ -661,7 +661,7 @@ class DataCubeAPI : BaseAPI {
 				.addParameter(PARAM_ACCESS_TOKEN, API.accessToken(access_token))
 				.setEntity(new StringEntity(requestJson,Charset.forName("utf-8")))
 				.build();
-		return LocalHttpClient.executeJsonResult(httpUriRequest,UserportraitResult.class);
+		return LocalHttpClient.executeJsonResult(httpUriRequest,typeid(UserportraitResult));
 	}
 	
 }

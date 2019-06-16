@@ -5,7 +5,7 @@ import hunt.wechat.bean.BaseResult;
 /**
  * 卡券核销－Code解码接口－响应参数
  * 
- * @author Moyq5
+ * 
  *
  */
 class CodeDecryptResult : BaseResult {

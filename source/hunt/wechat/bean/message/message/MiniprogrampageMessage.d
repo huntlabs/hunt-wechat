@@ -4,7 +4,7 @@ module hunt.wechat.bean.message.message.MiniprogrampageMessage;
  * 小程序卡片
  * 
  * @serial 2.8.26
- * @author LiYi
+ * 
  *
  */
 class MiniprogrampageMessage : Message {

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 /**
  * 委托代扣-扣款请求参数
  *
- * @author LiYi
+ * 
  */
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)

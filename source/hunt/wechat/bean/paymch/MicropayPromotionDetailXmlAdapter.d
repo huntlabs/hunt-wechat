@@ -8,7 +8,7 @@ class MicropayPromotionDetailXmlAdapter : XmlAdapter!(string, MicropayPromotionD
 
 	override
 	public MicropayPromotionDetail unmarshal(string v){
-		return JSON.parseObject(v, MicropayPromotionDetail.class);
+		return JSON.parseObject(v, typeid(MicropayPromotionDetail));
 	}
 
 	override

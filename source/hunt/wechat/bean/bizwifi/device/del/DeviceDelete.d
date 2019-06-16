@@ -1,4 +1,4 @@
-module hunt.wechat.bean.bizwifi.device.delete.DeviceDelete;
+module hunt.wechat.bean.bizwifi.device.del.DeviceDelete;
 
 /**
  * @ProjectName weixin-popular
