@@ -5,10 +5,10 @@ class TemplateMessageItem{
 
 	private string color;
 
-	public TemplateMessageItem() {
+	public this() {
 	}
 
-	public TemplateMessageItem(string value, string color) {
+	public this(string value, string color) {
 		super();
 		this.value = value;
 		this.color = color;

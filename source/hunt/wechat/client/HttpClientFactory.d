@@ -35,7 +35,7 @@ import hunt.logger;
 class HttpClientFactory{
 	
 	
-	private enum string[] supportedProtocols = new string[]{"TLSv1"};
+	private enum string[] supportedProtocols = ["TLSv1"];
 	
 	public static CloseableHttpClient createHttpClient() {
 		return createHttpClient(100,10,5000,2);
@@ -124,7 +124,7 @@ class HttpClientFactory{
 		
 		private int retryExecutionCount;
 		
-		public HttpRequestRetryHandlerImpl(int retryExecutionCount){
+		public this(int retryExecutionCount){
 			this.retryExecutionCount = retryExecutionCount;
 		}
 		
@@ -136,21 +136,21 @@ class HttpClientFactory{
 			if (executionCount > retryExecutionCount) {
 	            return false;
 	        }
-	        if (exception instanceof InterruptedIOException) {
+	        if (cast(InterruptedIOException)exception !is null) {
 	            return false;
 	        }
-	        if (exception instanceof UnknownHostException) {
+	        if (cast(UnknownHostException)(exception) !is null) {
 	            return false;
 	        }
-	        if (exception instanceof ConnectTimeoutException) {
+	        if (cast(ConnectTimeoutException)(exception) !is null) {
 	            return true;
 	        }
-	        if (exception instanceof SSLException) {
+	        if (cast(SSLException)(exception) !is null) {
 	            return false;
 	        }
 	        HttpClientContext clientContext = HttpClientContext.adapt(context);
 	        HttpRequest request = clientContext.getRequest();
-	        bool idempotent = !(request instanceof HttpEntityEnclosingRequest);
+	        bool idempotent = !(cast(HttpEntityEnclosingRequest)(request) !is null);
 	        if (idempotent) {
 	            // Retry if the request is considered idempotent
 	            return true;

@@ -13,10 +13,10 @@ class Photo {
 	@JSONField(name = "photo_url")
 	private string photoUrl;
 
-	public Photo() {
+	public this() {
 	}
 
-	public Photo(string photoUrl) {
+	public this(string photoUrl) {
 		this.photoUrl = photoUrl;
 	}
 

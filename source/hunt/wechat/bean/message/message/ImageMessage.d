@@ -2,10 +2,10 @@ module hunt.wechat.bean.message.message.ImageMessage;
 
 class ImageMessage : Message {
 
-    public ImageMessage() {
+    public this() {
     }
 
-    public ImageMessage(string touser, string mediaId) {
+    public this(string touser, string mediaId) {
         super(touser, "image");
         this.image = new Image();
         this.image.setMedia_id(mediaId);

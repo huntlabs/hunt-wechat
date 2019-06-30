@@ -7,10 +7,10 @@ class MpvideoPreview : Preview{
 
 	private Map!(string,string) mpvideo = new HashMap!(string,string)();
 
-	public MpvideoPreview(){
+	public this(){
 
 	}
-	public MpvideoPreview(string media_id) {
+	public this(string media_id) {
 		super();
 		this.setMsgtype("mpvideo");
 		mpvideo.put("media_id", media_id);

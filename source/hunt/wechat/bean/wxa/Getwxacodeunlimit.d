@@ -12,10 +12,10 @@ class Getwxacodeunlimit {
 	
 	private string page;
 
-	public Getwxacodeunlimit() {
+	public this() {
 	}
 
-	public Getwxacodeunlimit(string scene, Integer width, Boolean auto_color, LineColor line_color) {
+	public this(string scene, Integer width, Boolean auto_color, LineColor line_color) {
 		this.scene = scene;
 		this.width = width;
 		this.auto_color = auto_color;

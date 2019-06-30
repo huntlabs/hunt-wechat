@@ -25,9 +25,9 @@ abstract class MapUtil {
 	 */
 	public static Map!(string,string) order(Map!(string, string) map){
 		HashMap!(string, string) tempMap = new LinkedHashMap!(string, string)();
-		List<Map.Entry!(string, string)> infoIds = new ArrayList<Map.Entry!(string, string)>(	map.entrySet());
+		List!(Map.Entry!(string, string)) infoIds = new ArrayList!(Map.Entry!(string, string))(	map.entrySet());
 
-		Collections.sort(infoIds, new Comparator<Map.Entry!(string, string)>() {
+		Collections.sort(infoIds, new class Comparator!(Map.Entry!(string, string)) {
 			public int compare(Map.Entry!(string, string) o1,Map.Entry!(string, string) o2) {
 				return (o1.getKey()).toString().compareTo(o2.getKey());
 			}
@@ -47,7 +47,7 @@ abstract class MapUtil {
 	 * @param ignore ignore
 	 * @return map
 	 */
-	public static Map!(string,string) objectToMap(Object object,string... ignore){
+	public static Map!(string,string) objectToMap(Object object,string[] ignore...){
 		Map!(string,string) tempMap = new LinkedHashMap!(string, string)();
 		foreach(Field f ; getAllFields(object.getClass())){
 			if(!f.isAccessible()){
@@ -88,7 +88,7 @@ abstract class MapUtil {
 	 */
 	public static string mapJoin(Map!(string, string) map,bool keyLower,bool valueUrlencode){
 		StringBuilder stringBuilder = new StringBuilder();
-		for(string key :map.keySet()){
+		foreach(string key ; map.keySet()){
 			if(map.get(key)!=null&&!""== map.get(key)){
 				try {
 					string temp = (key.endsWith("_")&&key.length()>1)?key.substring(0,key.length()-1):key;

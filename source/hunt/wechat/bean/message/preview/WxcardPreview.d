@@ -7,10 +7,10 @@ class WxcardPreview : Preview{
 
 	private Map!(string,Object) wxcard = new HashMap!(string,Object)();
 
-	public WxcardPreview(){
+	public this(){
 
 	}
-	public WxcardPreview(string card_id,Map!(string,string) card_ext) {
+	public this(string card_id,Map!(string,string) card_ext) {
 		super();
 		this.setMsgtype("wxcard");
 		wxcard.put("card_id", card_id);

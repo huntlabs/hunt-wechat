@@ -22,7 +22,7 @@ abstract class XMLMessage : Serializable{
 	protected string fromUserName;
 	protected string msgType;
 
-	protected XMLMessage(string toUserName, string fromUserName, string msgType) {
+	protected this(string toUserName, string fromUserName, string msgType) {
 		super();
 		this.toUserName = toUserName;
 		this.fromUserName = fromUserName;

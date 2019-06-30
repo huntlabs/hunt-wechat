@@ -9,10 +9,10 @@ module hunt.wechat.bean.message.message.MpnewsMessage;
  */
 class MpnewsMessage : Message {
 
-	public MpnewsMessage() {
+	public this() {
     }
 
-    public MpnewsMessage(string toUser, string mediaId) {
+    public this(string toUser, string mediaId) {
         super(toUser, "mpnews");
         this.mpnews = new Mpnews();
         this.mpnews.setMedia_id(mediaId);

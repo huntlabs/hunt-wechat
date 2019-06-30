@@ -14,7 +14,7 @@ class MassMPvideoMessage : MassMessage{
 	 *
 	 * @param media_id  MessageAPI mediaUploadvideo 返回的media_id
 	 */
-	public MassMPvideoMessage(string media_id) {
+	public this(string media_id) {
 		super();
 		mpvideo = new HashMap!(string, string)();
 		mpvideo.put("media_id",media_id);

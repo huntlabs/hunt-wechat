@@ -7,10 +7,10 @@ class ImagePreview : Preview{
 
 	private Map!(string,string) image = new HashMap!(string,string)();
 
-	public ImagePreview(){
+	public this(){
 
 	}
-	public ImagePreview(string media_id) {
+	public this(string media_id) {
 		super();
 		this.setMsgtype("image");
 		image.put("media_id", media_id);

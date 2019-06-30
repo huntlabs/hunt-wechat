@@ -123,11 +123,11 @@ class LocalHttpClient {
 		return null;
 	}
 
-	public static <T> T execute(HttpUriRequest request,ResponseHandler!(T) responseHandler){
+	public static T execute(HttpUriRequest request,ResponseHandler!(T) responseHandler){
 		string uriId = loggerRequest(request);
 		userAgent(request);
-		if(responseHandler instanceof LocalResponseHandler){
-			LocalResponseHandler lrh = (LocalResponseHandler) responseHandler;
+		if(cast(LocalResponseHandler)(responseHandler) !is null){
+			LocalResponseHandler lrh = cast(LocalResponseHandler) responseHandler;
 			lrh.setUriId(uriId);
 		}
 		try {
@@ -151,7 +151,7 @@ class LocalHttpClient {
 	 * @param <T> T
 	 * @return result
 	 */
-	public static <T> T executeJsonResult(HttpUriRequest request,Class!(T) clazz){
+	public static  T executeJsonResult(HttpUriRequest request,Class!(T) clazz){
 		return execute(request,JsonResponseHandler.createResponseHandler(clazz));
 	}
 
@@ -162,7 +162,7 @@ class LocalHttpClient {
 	 * @param <T> T
 	 * @return result
 	 */
-	public static <T> T executeXmlResult(HttpUriRequest request,Class!(T) clazz){
+	public static  T executeXmlResult(HttpUriRequest request,Class!(T) clazz){
 		return execute(request,XmlResponseHandler.createResponseHandler(clazz));
 	}
 	
@@ -176,7 +176,7 @@ class LocalHttpClient {
 	 * @return result
 	 * @since 2.8.5
 	 */
-	public static <T> T executeXmlResult(HttpUriRequest request,Class!(T) clazz,string sign_type,string key){
+	public static T executeXmlResult(HttpUriRequest request,Class!(T) clazz,string sign_type,string key){
 		return execute(request,XmlResponseHandler.createResponseHandler(clazz,sign_type,key));
 	}
 
@@ -188,7 +188,7 @@ class LocalHttpClient {
 	 * @param <T> T
 	 * @return result
 	 */
-	public static <T> T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class!(T) clazz){
+	public static  T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class!(T) clazz){
 		return keyStoreExecuteXmlResult(mch_id, request, clazz, null,null);
 	}
 	
@@ -203,15 +203,15 @@ class LocalHttpClient {
 	 * @since 2.8.5
 	 * @return result
 	 */
-	public static <T> T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class!(T) clazz,string sign_type,string key){
+	public static  T keyStoreExecuteXmlResult(string mch_id,HttpUriRequest request,Class!(T) clazz,string sign_type,string key){
 		return keyStoreExecute(mch_id, request, XmlResponseHandler.createResponseHandler(clazz, sign_type, key));
 	}
 	
-	public static <T> T keyStoreExecute(string mch_id,HttpUriRequest request,ResponseHandler!(T) responseHandler){
+	public static  T keyStoreExecute(string mch_id,HttpUriRequest request,ResponseHandler!(T) responseHandler){
 		string uriId = loggerRequest(request);
 		userAgent(request);
-		if(responseHandler instanceof LocalResponseHandler){
-			LocalResponseHandler lrh = (LocalResponseHandler) responseHandler;
+		if(cast(LocalResponseHandler)(responseHandler) !is null){
+			LocalResponseHandler lrh = cast(LocalResponseHandler)(responseHandler);
 			lrh.setUriId(uriId);
 		}
 		try {
@@ -234,8 +234,8 @@ class LocalHttpClient {
 	private static string loggerRequest(HttpUriRequest request){
 		string id = UUID.randomUUID().toString();
 		if(logger.isInfoEnabled()||logger.isDebugEnabled()){
-			if(request instanceof HttpEntityEnclosingRequestBase){
-				HttpEntityEnclosingRequestBase request_base = (HttpEntityEnclosingRequestBase)request;
+			if(cast(HttpEntityEnclosingRequestBase)(request) !is null){
+				HttpEntityEnclosingRequestBase request_base = cast(HttpEntityEnclosingRequestBase)(request);
 				HttpEntity entity = request_base.getEntity();
 				string content = null;
 				//MULTIPART_FORM_DATA 请求类型判断

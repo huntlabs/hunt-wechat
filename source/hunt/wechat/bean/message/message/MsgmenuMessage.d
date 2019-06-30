@@ -9,10 +9,10 @@ import hunt.collection.List;
  */
 class MsgmenuMessage : Message {
 
-	public MsgmenuMessage() {
+	public this() {
 	}
 
-	public MsgmenuMessage(string touser, Msgmenu msgmenu) {
+	public this(string touser, Msgmenu msgmenu) {
 		super(touser, "msgmenu");
 		this.msgmenu = msgmenu;
 	}

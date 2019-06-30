@@ -14,10 +14,10 @@ class Button {
 
 	private List!(Button) sub_button;
 
-	public Button() {
+	public this() {
 	}
 
-	public Button(string type, string name, string key, string url, string media_id, string appid, string pagepath) {
+	public this(string type, string name, string key, string url, string media_id, string appid, string pagepath) {
 		this.type = type;
 		this.name = name;
 		this.key = key;

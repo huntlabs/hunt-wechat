@@ -7,10 +7,10 @@ class Commit {
 	private string user_version;
 	private string user_desc;
 
-	public Commit() {
+	public this() {
 	}
 
-	public Commit(string template_id, string ext_json, string user_version, string user_desc) {
+	public this(string template_id, string ext_json, string user_version, string user_desc) {
 		this.template_id = template_id;
 		this.ext_json = ext_json;
 		this.user_version = user_version;

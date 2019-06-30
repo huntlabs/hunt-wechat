@@ -10,7 +10,7 @@ class MassMusicMessage : MassMessage{
 
 	private Map!(string, string) music;
 
-	public MassMusicMessage(string media_id) {
+	public this(string media_id) {
 		super();
 		music = new HashMap!(string, string)();
 		music.put("media_id",media_id);

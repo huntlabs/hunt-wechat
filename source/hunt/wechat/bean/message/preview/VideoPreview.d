@@ -6,10 +6,10 @@ class VideoPreview : Preview {
 
 	private Uploadvideo video;
 
-	public VideoPreview(){
+	public this(){
 
 	}
-	public VideoPreview(Uploadvideo video) {
+	public this(Uploadvideo video) {
 		super();
 		this.setMsgtype("video");
 		this.video = video;

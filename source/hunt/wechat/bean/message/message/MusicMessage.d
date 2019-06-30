@@ -2,13 +2,13 @@ module hunt.wechat.bean.message.message.MusicMessage;
 
 class MusicMessage : Message {
 
-    public MusicMessage() {
+    public this() {
     }
 
     private Music music;
 
 
-    public MusicMessage(string touser, Music music) {
+    public this(string touser, Music music) {
         super(touser, "music");
         this.music = music;
     }
@@ -29,11 +29,11 @@ class MusicMessage : Message {
         private string hqmusicurl;
         private string thumb_media_id;
 
-        public Music(){
+        public this(){
 
         }
 
-        public Music(string title, string description, string musicurl,
+        public this(string title, string description, string musicurl,
                      string hqmusicurl, string thumb_media_id) {
             super();
             this.title = title;

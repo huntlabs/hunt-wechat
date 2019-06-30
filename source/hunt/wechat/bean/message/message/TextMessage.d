@@ -3,14 +3,14 @@ module hunt.wechat.bean.message.message.TextMessage;
 
 class TextMessage : Message {
 
-    public TextMessage() {
+    public this() {
     }
 
-    public TextMessage(string touser) {
+    public this(string touser) {
         super(touser, "text");
     }
 
-    public TextMessage(string touser, string content) {
+    public this(string touser, string content) {
         this(touser);
         this.text = new Text();
         this.text.setContent(content);

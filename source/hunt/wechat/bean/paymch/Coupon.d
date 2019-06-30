@@ -10,11 +10,11 @@ class Coupon {
 
 	private Integer n;
 
-	public Coupon() {
+	public this() {
 		super();
 	}
 
-	public Coupon(string type, string id, Integer fee, Integer n) {
+	public this(string type, string id, Integer fee, Integer n) {
 		super();
 		this.type = type;
 		this.id = id;

@@ -8,7 +8,7 @@ class XMLImageMessage : XMLMessage{
 
 	private string mediaId;
 
-	public XMLImageMessage(string toUserName, string fromUserName, string mediaId) {
+	public this(string toUserName, string fromUserName, string mediaId) {
 		super(toUserName, fromUserName, "image");
 		this.mediaId = mediaId;
 	}

@@ -33,7 +33,7 @@ class QueryCoupon {
 
 	private string sign;
 
-	private string version;
+	private string _version;
 
 	private string type;
 	
@@ -120,11 +120,11 @@ class QueryCoupon {
 	}
 
 	public string getVersion() {
-		return version;
+		return _version;
 	}
 
-	public void setVersion(string version) {
-		this.version = version;
+	public void setVersion(string _version) {
+		this._version = _version;
 	}
 
 	public string getType() {

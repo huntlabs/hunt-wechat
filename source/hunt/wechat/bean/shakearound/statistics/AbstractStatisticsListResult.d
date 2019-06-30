@@ -12,7 +12,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * 
  * 
  */
-class AbstractStatisticsListResult!(T)  : AbstractResult!(T) {
+class AbstractStatisticsListResult(T)  : AbstractResult!(T) {
 
 	/**
 	 * 所查询的日期时间戳

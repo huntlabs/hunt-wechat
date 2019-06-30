@@ -49,7 +49,7 @@ class Receiver {
 		this.description = description;
 	}
 
-	static class JsonXmlAdapter : XmlAdapter<string, List!(Receiver)> {
+	static class JsonXmlAdapter : XmlAdapter!(string, List!(Receiver)) {
 
 		override
 		public string marshal(List!(Receiver) v){
@@ -58,7 +58,7 @@ class Receiver {
 
 		override
 		public List!(Receiver) unmarshal(string v){
-			return JSON.parseObject(v, new TypeReference<List!(Receiver)>() {
+			return JSON.parseObject(v, new class TypeReference!(List!(Receiver)) {
 			});
 		}
 

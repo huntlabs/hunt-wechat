@@ -155,12 +155,12 @@ abstract class JsUtil {
 	 *
 	 * @return 配置JSON数据
 	 */
-	public static string generateConfigJson(string jsapi_ticket,bool debug,string appId,string url,string... jsApiList){
+	public static string generateConfigJson(string jsapi_ticket,bool _debug,string appId,string url,string[] jsApiList...){
 		long timestamp = DateTimeHelper.currentTimeMillis()/1000;
 		string nonceStr = UUID.randomUUID().toString();
 		string signature = generateConfigSignature(nonceStr, jsapi_ticket, timestamp + "", url);
-		Map!(string,Object) map = new LinkedHashMap<>();
-		map.put("debug", debug);
+		Map!(string,Object) map = new LinkedHashMap!(string,Object)();
+		map.put("debug", _debug);
 		map.put("appId", appId);
 		map.put("timestamp", timestamp);
 		map.put("nonceStr", nonceStr);

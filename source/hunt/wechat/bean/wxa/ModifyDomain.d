@@ -9,10 +9,10 @@ class ModifyDomain {
 	private string[] uploaddomain; // uploadFile合法域名，当action参数是get时不需要此字段。
 	private string[] downloaddomain; // downloadFile合法域名，当action参数是get时不需要此字段。
 
-	public ModifyDomain() {
+	public this() {
 	}
 
-	public ModifyDomain(string action, string[] requestdomain, string[] wsrequestdomain, string[] uploaddomain, string[] downloaddomain) {
+	public this(string action, string[] requestdomain, string[] wsrequestdomain, string[] uploaddomain, string[] downloaddomain) {
 		this.action = action;
 		this.requestdomain = requestdomain;
 		this.wsrequestdomain = wsrequestdomain;

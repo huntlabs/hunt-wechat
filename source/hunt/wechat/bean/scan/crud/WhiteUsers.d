@@ -3,8 +3,8 @@ module hunt.wechat.bean.scan.crud.WhiteUsers;
 import hunt.collection.List;
 
 class WhiteUsers {
-    private List <string> openid;
-    private List <string> username;
+    private List!(string) openid;
+    private List!(string) username;
 
     public List!(string) getOpenid() {
         return openid;

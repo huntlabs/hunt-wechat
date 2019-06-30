@@ -7,10 +7,10 @@ class VoicePreview : Preview{
 
 	private Map!(string,string) voice = new HashMap!(string,string)();
 
-	public VoicePreview(){
+	public this(){
 
 	}
-	public VoicePreview(string media_id) {
+	public this(string media_id) {
 		super();
 		this.setMsgtype("voice");
 		voice.put("media_id", media_id);

@@ -10,10 +10,10 @@ class Poi {
 
 	private Business business;
 
-	public Poi() {
+	public this() {
 	}
 
-	public Poi(Business business) {
+	public this(Business business) {
 		this.business = business;
 	}
 

@@ -20,7 +20,7 @@ import hunt.wechat.bean.DynamicField;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-class RefundqueryResult : MchBase : DynamicField{
+class RefundqueryResult : MchBase , DynamicField{
 
 	private string device_info;
 

@@ -34,7 +34,7 @@ class XMLMusicMessage : XMLMessage {
 	 * @param thumbMediaId
 	 *            缩略图的媒体id，通过上传多媒体文件，得到的id
 	 */
-	public XMLMusicMessage(string toUserName, string fromUserName, string title, string description, string musicUrl,
+	public this(string toUserName, string fromUserName, string title, string description, string musicUrl,
 			string hQMusicUrl, string thumbMediaId) {
 		super(toUserName, fromUserName, "music");
 		this.title = title;

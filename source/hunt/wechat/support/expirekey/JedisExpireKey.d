@@ -16,10 +16,10 @@ class JedisExpireKey : ExpireKey {
 
 	private string perfix = "WP_ExpireKey_";
 
-	public JedisExpireKey() {
+	public this() {
 	}
 
-	public JedisExpireKey(JedisPool pool) {
+	public this(JedisPool pool) {
 		this.pool = pool;
 	}
 

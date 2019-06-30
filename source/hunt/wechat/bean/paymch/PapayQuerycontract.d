@@ -18,7 +18,7 @@ class PapayQuerycontract {
 
 	private string contract_code;
 
-	private string version;
+	private string _version;
 
 	private string sign;
 	
@@ -65,11 +65,11 @@ class PapayQuerycontract {
 	}
 
 	public string getVersion() {
-		return version;
+		return _version;
 	}
 
-	public void setVersion(string version) {
-		this.version = version;
+	public void setVersion(string _version) {
+		this._version = _version;
 	}
 
 	public string getSign() {

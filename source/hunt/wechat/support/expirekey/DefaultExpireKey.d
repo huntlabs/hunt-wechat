@@ -23,7 +23,7 @@ class DefaultExpireKey : ExpireKey{
 
 	private ScheduledExecutorService scheduledExecutorService;
 
-	public DefaultExpireKey(){
+	public this(){
 		cleanExpireKey();
 	}
 
@@ -31,7 +31,7 @@ class DefaultExpireKey : ExpireKey{
 	 *
 	 * @param period 清理key 间隔时间，默认60秒。
 	 */
-	public DefaultExpireKey(int period){
+	public this(int period){
 		this.period = period;
 		cleanExpireKey();
 	}
@@ -41,7 +41,7 @@ class DefaultExpireKey : ExpireKey{
 			scheduledExecutorService.shutdownNow();
 		}
 		//守护线程 自动清理过期key ，间隔时间60秒
-		scheduledExecutorService = Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
+		scheduledExecutorService = Executors.newSingleThreadScheduledExecutor(new class ThreadFactory {
 
 			override
 			public Thread newThread(Runnable arg0) {
@@ -51,10 +51,10 @@ class DefaultExpireKey : ExpireKey{
 			}
 		});
 
-		scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
+		scheduledExecutorService.scheduleWithFixedDelay(new class Runnable {
 			override
 			public void run() {
-				logger.debug("in clean");
+				logDebug("in clean");
 				List!(string) removeKey = new ArrayList!(string)();
 				foreach(string key ; map.keySet()){
 					Integer value = map.get(key);
@@ -65,7 +65,7 @@ class DefaultExpireKey : ExpireKey{
 				foreach(string key ; removeKey){
 					map.remove(key);
 				}
-				logger.debug("clean {} keys",removeKey.size());
+				logDebug("clean %d keys",removeKey.size());
 			}
 		},10,period,TimeUnit.SECONDS);
 	}
@@ -73,7 +73,7 @@ class DefaultExpireKey : ExpireKey{
 
 	override
 	public bool add(string key, int expire) {
-		map.put(key,(int)(DateTimeHelper.currentTimeMillis()/1000)+expire);
+		map.put(key,cast(int)(DateTimeHelper.currentTimeMillis()/1000)+expire);
 		return false;
 	}
 

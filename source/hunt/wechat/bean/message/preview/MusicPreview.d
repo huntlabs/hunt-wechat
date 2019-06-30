@@ -7,11 +7,11 @@ class MusicPreview : Preview {
 
 	private Map!(string, string) music = new HashMap!(string, string)();
 
-	public MusicPreview(){
+	public this(){
 
 	}
 
-	public MusicPreview(string media_id) {
+	public this(string media_id) {
 		super();
 		this.setMsgtype("music");
 		music.put("media_id", media_id);

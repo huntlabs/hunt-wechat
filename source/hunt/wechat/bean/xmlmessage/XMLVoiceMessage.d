@@ -8,7 +8,7 @@ class XMLVoiceMessage : XMLMessage {
 
 	private string mediaId;
 
-	public XMLVoiceMessage(string toUserName, string fromUserName, string mediaId) {
+	public this(string toUserName, string fromUserName, string mediaId) {
 		super(toUserName, fromUserName, "voice");
 		this.mediaId = mediaId;
 	}

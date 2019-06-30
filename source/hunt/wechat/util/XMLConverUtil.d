@@ -41,10 +41,10 @@ import com.sun.xml.bind.marshaller.CharacterEscapeHandler;
 abstract class XMLConverUtil {
 
 
-	private static Map<Class, JAXBContext> JAXB_CONTEXT_MAP;
+	private static Map!(Class, JAXBContext) JAXB_CONTEXT_MAP;
 
-	static {
-		JAXB_CONTEXT_MAP = new ConcurrentHashMap<Class, JAXBContext>(256);
+	static this(){
+		JAXB_CONTEXT_MAP = new ConcurrentHashMap!(Class, JAXBContext)(256);
 	}
 
 	/**
@@ -58,7 +58,7 @@ abstract class XMLConverUtil {
 	 *            xml
 	 * @return T
 	 */
-	public static <T> T convertToObject(Class!(T) clazz, string xml) {
+	public static  T convertToObject(Class!(T) clazz, string xml) {
 		return convertToObject(clazz, new StringReader(xml));
 	}
 
@@ -73,7 +73,7 @@ abstract class XMLConverUtil {
 	 *            inputStream
 	 * @return T
 	 */
-	public static <T> T convertToObject(Class!(T) clazz, InputStream inputStream) {
+	public static T convertToObject(Class!(T) clazz, InputStream inputStream) {
 		return convertToObject(clazz, new InputStreamReader(inputStream));
 	}
 
@@ -90,7 +90,7 @@ abstract class XMLConverUtil {
 	 *            charset
 	 * @return T
 	 */
-	public static <T> T convertToObject(Class!(T) clazz, InputStream inputStream, Charset charset) {
+	public static  T convertToObject(Class!(T) clazz, InputStream inputStream, Charset charset) {
 		return convertToObject(clazz, new InputStreamReader(inputStream, charset));
 	}
 
@@ -106,7 +106,7 @@ abstract class XMLConverUtil {
 	 * @return T
 	 */
 	
-	public static <T> T convertToObject(Class!(T) clazz, Reader reader) {
+	public static  T convertToObject(Class!(T) clazz, Reader reader) {
 		try {
 			/**
 			 * XXE 漏洞
@@ -123,7 +123,7 @@ abstract class XMLConverUtil {
 
 			Source xmlSource = new SAXSource(spf.newSAXParser().getXMLReader(), new InputSource(reader));
 			Unmarshaller unmarshaller = JAXB_CONTEXT_MAP.get(clazz).createUnmarshaller();
-			return (T) unmarshaller.unmarshal(xmlSource);
+			return cast(T) unmarshaller.unmarshal(xmlSource);
 		} catch (Exception e) {
 			logger.error("", e);
 		}
@@ -145,7 +145,7 @@ abstract class XMLConverUtil {
 			Marshaller marshaller = JAXB_CONTEXT_MAP.get(object.getClass()).createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			// 设置CDATA输出字符
-			marshaller.setProperty(typeid(CharacterEscapeHandler).name, new CharacterEscapeHandler() {
+			marshaller.setProperty(typeid(CharacterEscapeHandler).name, new class CharacterEscapeHandler {
 				public void escape(char[] ac, int i, int j, bool flag, Writer writer){
 					writer.write(ac, i, j);
 				}
@@ -186,8 +186,8 @@ abstract class XMLConverUtil {
 
 			DocumentBuilder db = dbf.newDocumentBuilder();
 			StringReader sr = new StringReader(xml);
-			InputSource is = new InputSource(sr);
-			Document document = db.parse(is);
+			InputSource _is = new InputSource(sr);
+			Document document = db.parse(_is);
 
 			Element root = document.getDocumentElement();
 			if (root != null) {

@@ -26,7 +26,7 @@ class TicketManager {
 
 	private static Map!(string,string) ticketMap = new ConcurrentHashMap!(string,string)();
 
-	private static Map<string,ScheduledFuture> futureMap = new ConcurrentHashMap<string, ScheduledFuture>();
+	private static Map!(string,ScheduledFuture) futureMap = new ConcurrentHashMap!(string, ScheduledFuture)();
 
 	private static int poolSize = 2;
 	
@@ -41,7 +41,7 @@ class TicketManager {
 	 */
 	private static void initScheduledExecutorService(){
 		logger.info("daemon:{},poolSize:{}",daemon,poolSize);
-		scheduledExecutorService =  Executors.newScheduledThreadPool(poolSize,new ThreadFactory() {
+		scheduledExecutorService =  Executors.newScheduledThreadPool(poolSize,new class ThreadFactory {
 
 			override
 			public Thread newThread(Runnable arg0) {
@@ -110,11 +110,11 @@ class TicketManager {
 	 * @param delay 执行间隔（秒）
 	 * @param types ticket 类型  [jsapi,wx_card]
 	 */
-	public static void init(final string appid,int initialDelay,int delay,string... types){
+	public static void init(final string appid,int initialDelay,int delay,string[] types...){
 		if(firestAppid == null){
 			firestAppid = appid;
 		}
-		foreach(final string type ; types){
+		foreach( string type ; types){
 			final string key = appid + KEY_JOIN + type;
 			if(scheduledExecutorService == null){
 				initScheduledExecutorService();
@@ -126,7 +126,7 @@ class TicketManager {
 			if(initialDelay == 0){
 				doRun(appid, type, key);
 			}
-			ScheduledFuture scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
+			ScheduledFuture scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new class Runnable {
 				override
 				public void run() {
 					doRun(appid, type, key);
@@ -169,7 +169,7 @@ class TicketManager {
 	 * @param appid appid
 	 * @param types ticket 类型  [jsapi,wx_card]
 	 */
-	public static void destroyed(string appid,string... types){
+	public static void destroyed(string appid,string[] types...){
 		foreach(string type ; types){
 			string key = appid + KEY_JOIN + type;
 			if(futureMap.containsKey(key)){

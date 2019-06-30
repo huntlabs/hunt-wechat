@@ -6,10 +6,10 @@ class Wxaqrcode {
 
 	private Integer width;
 
-	public Wxaqrcode() {
+	public this() {
 	}
 
-	public Wxaqrcode(string path, Integer width) {
+	public this(string path, Integer width) {
 		this.path = path;
 		this.width = width;
 	}

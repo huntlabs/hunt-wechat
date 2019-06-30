@@ -15,15 +15,15 @@ import hunt.wechat.util.JsonUtil;
 class JsonResponseHandler{
 
 
-	public static <T> ResponseHandler!(T) createResponseHandler(final Class!(T) clazz){
+	public static ResponseHandler!(T) createResponseHandler(final Class!(T) clazz){
 		return new JsonResponseHandlerImpl!(T)(null,clazz);
 	}
 
-	static class JsonResponseHandlerImpl!(T) : LocalResponseHandler : ResponseHandler!(T) {
+	static class JsonResponseHandlerImpl(T) : LocalResponseHandler , ResponseHandler!(T) {
 		
 		private Class!(T) clazz;
 		
-		public JsonResponseHandlerImpl(string uriId, Class!(T) clazz) {
+		public this(string uriId, Class!(T) clazz) {
 			this.uriId = uriId;
 			this.clazz = clazz;
 		}

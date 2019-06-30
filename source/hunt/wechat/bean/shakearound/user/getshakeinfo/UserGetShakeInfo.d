@@ -25,10 +25,10 @@ class UserGetShakeInfo {
 	@JSONField(name = "need_poi")
 	private Integer needPoi;
 
-	public UserGetShakeInfo() {
+	public this() {
 	}
 
-	public UserGetShakeInfo(string ticket, Integer needPoi) {
+	public this(string ticket, Integer needPoi) {
 		this.ticket = ticket;
 		this.needPoi = needPoi;
 	}

@@ -9,19 +9,19 @@ class Filter {
 	
 	private Integer tag_id;
 
-	public Filter(bool is_to_all, string group_id) {
+	public this(bool is_to_all, string group_id) {
 		super();
 		this.is_to_all = is_to_all;
 		this.group_id = group_id;
 	}
 	
-	public Filter(bool is_to_all, Integer tag_id) {
+	public this(bool is_to_all, Integer tag_id) {
 		super();
 		this.is_to_all = is_to_all;
 		this.tag_id = tag_id;
 	}
 
-	public Filter(string group_id){
+	public this(string group_id){
 		super();
 		this.group_id = group_id;
 	}

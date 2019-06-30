@@ -7,14 +7,14 @@ module hunt.wechat.bean.message.message.WxcardMessage;
  */
 class WxcardMessage : Message {
 
-    public WxcardMessage() {
+    public this() {
     }
 
-    public WxcardMessage(string touser) {
+    public this(string touser) {
         super(touser, "wxcard");
     }
 
-    public WxcardMessage(string touser, string card_id) {
+    public this(string touser, string card_id) {
         this(touser);
         this.wxcard = new Wxcard();
         this.wxcard.setCard_id(card_id);

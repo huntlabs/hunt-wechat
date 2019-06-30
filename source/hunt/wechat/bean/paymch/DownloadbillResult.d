@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-class DownloadbillResult : MchBase : BillResult {
+class DownloadbillResult : MchBase ,BillResult {
 
 	private string data;
 

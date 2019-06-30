@@ -8,7 +8,7 @@ class PromotionDetail {
 
 	private string name;
 
-	private string scope;
+	private string _scope;
 
 	private string type;
 
@@ -41,11 +41,11 @@ class PromotionDetail {
 	}
 
 	public string getScope() {
-		return scope;
+		return _scope;
 	}
 
-	public void setScope(string scope) {
-		this.scope = scope;
+	public void setScope(string _scope) {
+		this._scope = _scope;
 	}
 
 	public string getType() {

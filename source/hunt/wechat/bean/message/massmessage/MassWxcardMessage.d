@@ -10,7 +10,7 @@ class MassWxcardMessage : MassMessage{
 
 	private Map!(string, string) wxcard;
 
-	public MassWxcardMessage(string card_id) {
+	public this(string card_id) {
 		super();
 		wxcard = new HashMap!(string, string)();
 		wxcard.put("card_id",card_id);

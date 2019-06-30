@@ -7,14 +7,14 @@ module hunt.wechat.bean.paymch.MchVersion;
  */
 class MchVersion {
 
-	private string version;
+	private string _version;
 
 	public string getVersion() {
-		return version;
+		return _version;
 	}
 
-	public void setVersion(string version) {
-		this.version = version;
+	public void setVersion(string _version) {
+		this._version = _version;
 	}
 
 }

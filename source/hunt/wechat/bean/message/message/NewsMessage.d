@@ -11,10 +11,10 @@ import hunt.collection.List;
  */
 class NewsMessage : Message {
 
-    public NewsMessage() {
+    public this() {
     }
 
-    public NewsMessage(string touser, List!(Article) articles) {
+    public this(string touser, List!(Article) articles) {
         super(touser, "news");
         this.news = new News();
         this.news.setArticles(articles);
@@ -25,7 +25,7 @@ class NewsMessage : Message {
      * @param touser
      * @param article
      */
-    public NewsMessage(string touser, Article article) {
+    public this(string touser, Article article) {
         super(touser, "news");
         this.news = new News();
         this.news.setArticles(Collections.singletonList(article));
@@ -60,11 +60,11 @@ class NewsMessage : Message {
         private string url;
         private string picurl;
 
-        public Article(){
+        public this(){
 
         }
 
-        public Article(string title, string description, string url,
+        public this(string title, string description, string url,
                        string picurl) {
             super();
             this.title = title;

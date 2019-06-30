@@ -2,11 +2,11 @@ module hunt.wechat.bean.message.message.Message;
 
 abstract class Message {
 	
-	public Message() {
+	public this() {
 		super();
 	}
 	
-	protected Message(string touser,string msgtype) {
+	protected this(string touser,string msgtype) {
 		super();
 		this.touser = touser;
 		this.msgtype = msgtype;

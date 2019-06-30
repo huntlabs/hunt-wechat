@@ -7,10 +7,10 @@ module hunt.wechat.bean.message.message.VideoMessage;
  */
 class VideoMessage : Message {
 
-    public VideoMessage() {
+    public this() {
     }
 
-    public VideoMessage(string touser, Video video) {
+    public this(string touser, Video video) {
         super(touser, "video");
         this.video = video;
     }
@@ -34,11 +34,11 @@ class VideoMessage : Message {
         private string description;
         private string thumb_media_id;
 
-        public Video() {
+        public this() {
 
         }
 
-        public Video(string media_id, string title, string description, string thumb_media_id) {
+        public this(string media_id, string title, string description, string thumb_media_id) {
             super();
             this.media_id = media_id;
             this.thumb_media_id = thumb_media_id;
@@ -46,7 +46,7 @@ class VideoMessage : Message {
             this.description = description;
         }
 
-        public Video(string media_id, string title, string description) {
+        public this(string media_id, string title, string description) {
             super();
             this.media_id = media_id;
             this.title = title;

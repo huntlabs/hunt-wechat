@@ -10,10 +10,10 @@ class Getwxacode {
 	
 	private LineColor line_color;
 
-	public Getwxacode() {
+	public this() {
 	}
 
-	public Getwxacode(string path, Integer width, Boolean auto_color, LineColor line_color) {
+	public this(string path, Integer width, Boolean auto_color, LineColor line_color) {
 		this.path = path;
 		this.width = width;
 		this.auto_color = auto_color;

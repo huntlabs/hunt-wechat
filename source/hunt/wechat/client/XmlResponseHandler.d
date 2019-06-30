@@ -20,15 +20,15 @@ import hunt.wechat.util.XMLConverUtil;
 class XmlResponseHandler{
 	
 
-	public static <T> ResponseHandler!(T) createResponseHandler(Class!(T) clazz){
+	public static  ResponseHandler!(T) createResponseHandler(Class!(T) clazz){
 		return new XmlResponseHandlerImpl!(T)(null, clazz,null,null);
 	}
 	
-	public static <T> ResponseHandler!(T) createResponseHandler(Class!(T) clazz,string sign_type,string key){
+	public static  ResponseHandler!(T) createResponseHandler(Class!(T) clazz,string sign_type,string key){
 		return new XmlResponseHandlerImpl!(T)(null, clazz,sign_type,key);
 	}
 
-	static class XmlResponseHandlerImpl!(T) : LocalResponseHandler : ResponseHandler!(T) {
+	static class XmlResponseHandlerImpl(T) : LocalResponseHandler , ResponseHandler!(T) {
 		
 		private Class!(T) clazz;
 		
@@ -37,7 +37,7 @@ class XmlResponseHandler{
 		//签名校验key
 		private string key;
 		
-		public XmlResponseHandlerImpl(string uriId, Class!(T) clazz,string sign_type,string key) {
+		public this(string uriId, Class!(T) clazz,string sign_type,string key) {
 			this.uriId = uriId;
 			this.clazz = clazz;
 			this.sign_type = sign_type;
@@ -57,17 +57,17 @@ class XmlResponseHandler{
                 }
                 logger.info("URI[{}] elapsed time:{} ms RESPONSE DATA:{}",super.uriId,DateTimeHelper.currentTimeMillis()-super.startTime,str);
             	T t = XMLConverUtil.convertToObject(clazz,str);
-            	if(t instanceof DynamicField ||(t instanceof MchBase && key != null)){
+            	if(cast(DynamicField)(t) !is null ||(cast(MchBase)(t) !is null && key != null)){
             		Map!(string,string) map = XMLConverUtil.convertToMap(str);
             		//转换动态属性 @since 2.8.5
-            		if(t instanceof DynamicField){
-	            		DynamicField dynamicField = (DynamicField)t;
+            		if(cast(DynamicField)(t) !is null){
+	            		DynamicField dynamicField = cast(DynamicField)(t);
 	            		dynamicField.buildDynamicField(map);
             		}
             		
             		//返回数据验证签名 @since 2.8.5
-            		if((t instanceof MchBase && key != null)){
-            			MchBase mchBase = (MchBase)t;
+            		if((cast(MchBase)(t) !is null && key != null)){
+            			MchBase mchBase = cast(MchBase)(t);
             			mchBase.setSign_status(SignatureUtil.validateSign(map,sign_type,key));
             		}
             	}

@@ -262,13 +262,13 @@ class EventMessage {
 	 * @since 2.8.13
 	 */
 	@XmlAnyElement
-	private List<org.w3c.dom.Element> otherElements;	//com.sun.org.apache.xerces.internal.dom.ElementNSImpl
+	private List!(org.w3c.dom.Element) otherElements;	//com.sun.org.apache.xerces.internal.dom.ElementNSImpl
 
-	public List<org.w3c.dom.Element> getOtherElements() {
+	public List!(org.w3c.dom.Element) getOtherElements() {
 		return otherElements;
 	}
 
-	public void setOtherElements(List<org.w3c.dom.Element> otherElements) {
+	public void setOtherElements(List!(org.w3c.dom.Element) otherElements) {
 		this.otherElements = otherElements;
 	}
 	

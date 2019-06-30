@@ -10,7 +10,7 @@ class MassVoiceMessage : MassMessage{
 
 	private Map!(string, string) voice;
 
-	public MassVoiceMessage(string media_id) {
+	public this(string media_id) {
 		super();
 		voice = new HashMap!(string, string)();
 		voice.put("media_id",media_id);

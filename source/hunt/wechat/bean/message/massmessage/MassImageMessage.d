@@ -10,7 +10,7 @@ class MassImageMessage : MassMessage{
 
 	private Map!(string, string) image;
 
-	public MassImageMessage(string media_id) {
+	public this(string media_id) {
 		super();
 		image = new HashMap!(string, string)();
 		image.put("media_id",media_id);

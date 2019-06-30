@@ -13,7 +13,7 @@ class MassVideoMessage : MassMessage {
 
     private Uploadvideo mpvideo;
 
-    public MassVideoMessage(Uploadvideo uploadvideo) {
+    public this(Uploadvideo uploadvideo) {
         super();
         mpvideo = uploadvideo;
         super.msgtype = "mpvideo";

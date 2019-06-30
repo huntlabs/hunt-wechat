@@ -26,7 +26,7 @@ class TokenManager{
 
 	private static Map!(string,string) tokenMap = new ConcurrentHashMap!(string,string)();
 
-	private static Map<string,ScheduledFuture> futureMap = new ConcurrentHashMap<string, ScheduledFuture>();
+	private static Map!(string,ScheduledFuture) futureMap = new ConcurrentHashMap!(string, ScheduledFuture)();
 
 	private static int poolSize = 2;
 	
@@ -39,7 +39,7 @@ class TokenManager{
 	 */
 	private static void initScheduledExecutorService(){
 		logger.info("daemon:{},poolSize:{}",daemon,poolSize);
-		scheduledExecutorService =  Executors.newScheduledThreadPool(poolSize,new ThreadFactory() {
+		scheduledExecutorService =  Executors.newScheduledThreadPool(poolSize,new class ThreadFactory {
 
 			override
 			public Thread newThread(Runnable arg0) {
@@ -97,7 +97,7 @@ class TokenManager{
 		if(initialDelay == 0){
 			doRun(appid, secret);
 		}
-		ScheduledFuture scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
+		ScheduledFuture scheduledFuture =  scheduledExecutorService.scheduleWithFixedDelay(new class Runnable {
 			override
 			public void run() {
 				doRun(appid, secret);

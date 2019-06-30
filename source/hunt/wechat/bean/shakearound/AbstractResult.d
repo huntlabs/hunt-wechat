@@ -10,7 +10,7 @@ import hunt.wechat.bean.BaseResult;
  * 
  * 
  */
-class AbstractResult!(T) : BaseResult {
+class AbstractResult(T) : BaseResult {
 
 	private T data;
 

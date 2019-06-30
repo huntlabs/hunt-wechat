@@ -15,7 +15,7 @@ import hunt.wechat.bean.DynamicField;
 
 @XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-class MchPayNotify : MchBase : DynamicField{
+class MchPayNotify : MchBase , DynamicField{
 	
 	private string device_info;
 

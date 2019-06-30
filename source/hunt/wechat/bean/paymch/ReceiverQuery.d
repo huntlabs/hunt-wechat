@@ -80,7 +80,7 @@ class ReceiverQuery {
 	}
 
 	
-	static class JsonXmlAdapter : XmlAdapter<string, List!(ReceiverQuery)> {
+	static class JsonXmlAdapter : XmlAdapter!(string, List!(ReceiverQuery)) {
 
 		override
 		public string marshal(List!(ReceiverQuery) v){
@@ -89,7 +89,7 @@ class ReceiverQuery {
 
 		override
 		public List!(ReceiverQuery) unmarshal(string v){
-			return JSON.parseObject(v, new TypeReference<List!(ReceiverQuery)>() {
+			return JSON.parseObject(v, new class TypeReference!(List!(ReceiverQuery)) {
 			});
 		}
 

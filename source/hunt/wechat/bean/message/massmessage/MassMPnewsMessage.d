@@ -12,7 +12,7 @@ class MassMPnewsMessage : MassMessage{
 	
 	private Integer send_ignore_reprint;	//原创检查命中后行为 1为继续群发（转载），0为停止群发。	该参数默认为0。
 
-	public MassMPnewsMessage(string media_id) {
+	public this(string media_id) {
 		super();
 		mpnews = new HashMap!(string, string)();
 		mpnews.put("media_id",media_id);

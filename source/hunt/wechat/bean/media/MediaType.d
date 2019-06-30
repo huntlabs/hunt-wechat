@@ -1,60 +1,35 @@
 module hunt.wechat.bean.media.MediaType;
 
-public enum MediaType{
-	image {
+struct TypeItem
+{
+	this(string suffix, string type)
+	{
+		_suffix = suffix;
+		_type = type;
+	}
 
-		override
-		public string fileSuffix() {
-			return "jpg";
-		}
+	public string fileSuffix()
+	{
+		return "jpg";
+	}
 
-		override
-		public string uploadType() {
-			return "image";
-		}
-	},voice_mp3 {
+	public string uploadType()
+	{
+		return "image";
+	}
 
-		override
-		public string fileSuffix() {
-			return "mp3";
-		}
+	string _suffix;
+	string _type;
+}
 
-		override
-		public string uploadType() {
-			return "voice";
-		}
-	},voice_amr {
+public class MediaType
+{
 
-		override
-		public string fileSuffix() {
-			return "amr";
-		}
-
-		override
-		public string uploadType() {
-			return "voice";
-		}
-	},video {
-		override
-		public string fileSuffix() {
-			return "mp4";
-		}
-
-		override
-		public string uploadType() {
-			return "video";
-		}
-	},thumb {
-		override
-		public string fileSuffix() {
-			return "jpg";
-		}
-
-		override
-		public string uploadType() {
-			return "thumb";
-		}
-	};
+	enum TypeItem image = TypeItem("jpg", "image");
+	enum TypeItem voice_mp3= TypeItem("mp3", "voice");
+	enum TypeItem voice_amr = TypeItem("amr", "voice");
+	enum TypeItem video = TypeItem("mp4", "video");
+	enum TypeItem thumb = TypeItem("jpg", "thumb");
 
 	public abstract string fileSuffix();
 
@@ -64,6 +39,5 @@ public enum MediaType{
 	 */
 	public abstract string uploadType();
 
-
-
 }
+

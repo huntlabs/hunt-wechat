@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 import com.alibaba.fastjson.JSON;
 
-class PromotionDetailXmlAdapter : XmlAdapter<string, List!(PromotionDetail)> {
+class PromotionDetailXmlAdapter : XmlAdapter!(string, List!(PromotionDetail)) {
 
 	override
 	public List!(PromotionDetail) unmarshal(string v){

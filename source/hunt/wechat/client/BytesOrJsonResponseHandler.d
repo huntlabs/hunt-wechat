@@ -24,15 +24,15 @@ import hunt.wechat.util.JsonUtil;
 class BytesOrJsonResponseHandler{
 
 
-	public static <T : MediaGetResult> ResponseHandler!(T) createResponseHandler(final Class!(T) clazz){
+	public static /*<T : MediaGetResult>*/ ResponseHandler!(T) createResponseHandler(final Class!(T) clazz){
 		return new BytesOrJsonResponseHandlerImpl!(T)(null,clazz);
 	}
 
-	static class BytesOrJsonResponseHandlerImpl<T : MediaGetResult> : LocalResponseHandler : ResponseHandler!(T) {
+	static class BytesOrJsonResponseHandlerImpl(T : MediaGetResult) : LocalResponseHandler , ResponseHandler!(T) {
 		
 		private Class!(T) clazz;
 		
-		public BytesOrJsonResponseHandlerImpl(string uriId, Class!(T) clazz) {
+		public this(string uriId, Class!(T) clazz) {
 			this.uriId = uriId;
 			this.clazz = clazz;
 		}
@@ -56,7 +56,7 @@ class BytesOrJsonResponseHandler{
     				//bytes data
     				try {
 						T t = clazz.newInstance();
-						MediaGetResult mediaGetResult = (MediaGetResult)t;
+						MediaGetResult mediaGetResult = cast(MediaGetResult)t;
 						Header contentDisposition = response.getFirstHeader("Content-disposition");
 						if(contentDisposition != null){
 							string filename = contentDisposition.getValue().replaceAll(".*filename=\"(.*)\".*", "$1");

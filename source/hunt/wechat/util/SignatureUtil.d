@@ -63,7 +63,7 @@ abstract class SignatureUtil {
 	 * @return str
 	 */
 	public static string generateEventMessageSignature(string token, string timestamp,string nonce) {
-		string[] array = new string[]{token,timestamp,nonce};
+		string[] array = [token,timestamp,nonce];
 		Arrays.sort(array);
 		string s = StringUtils.arrayToDelimitedString(array, "");
 		return DigestUtils.shaHex(s);

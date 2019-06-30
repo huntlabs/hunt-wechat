@@ -7,10 +7,10 @@ module hunt.wechat.bean.message.message.VoiceMessage;
  */
 class VoiceMessage : Message {
 
-    public VoiceMessage() {
+    public this() {
     }
 
-    public VoiceMessage(string touser, string mediaId) {
+    public this(string touser, string mediaId) {
         super(touser, "voice");
         this.voice = new Voice();
         this.voice.setMedia_id(mediaId);

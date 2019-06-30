@@ -29,11 +29,11 @@ abstract class ResultErrorHandler {
 	 */
 	private bool isError(Object result) {
 		if(result != null){
-			if(result instanceof BaseResult){
-				BaseResult baseResult = (BaseResult)result;
+			if(cast(BaseResult)(result) !is null){
+				BaseResult baseResult = cast(BaseResult)result;
 				return !baseResult.isSuccess();
-			}else if(result instanceof MchBase){
-				MchBase mchBase = (MchBase)result;
+			}else if(cast(MchBase)(result) !is null){
+				MchBase mchBase = cast(MchBase)result;
 				if("FAIL".equalsIgnoreCase(mchBase.getReturn_code())||
 				   "FAIL".equalsIgnoreCase(mchBase.getResult_code())){
 					return true;
@@ -46,8 +46,8 @@ abstract class ResultErrorHandler {
 	protected void doHandle(string uriId,HttpUriRequest request,Object result){
 		if(this.isError(result)){
 			string content = null;
-			if(request instanceof HttpEntityEnclosingRequestBase){
-				HttpEntityEnclosingRequestBase request_base = (HttpEntityEnclosingRequestBase)request;
+			if(cast(HttpEntityEnclosingRequestBase)(request) !is null){
+				HttpEntityEnclosingRequestBase request_base = cast(HttpEntityEnclosingRequestBase)(request);
 				HttpEntity entity = request_base.getEntity();
 				//MULTIPART_FORM_DATA 请求类型判断
 				if(entity.getContentType().toString().indexOf(ContentType.MULTIPART_FORM_DATA.getMimeType()) == -1){

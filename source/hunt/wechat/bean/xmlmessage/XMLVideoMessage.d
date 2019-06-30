@@ -13,7 +13,7 @@ class XMLVideoMessage : XMLMessage {
 
 	private string description;
 
-	public XMLVideoMessage(string toUserName, string fromUserName, string mediaId, string title, string description) {
+	public this(string toUserName, string fromUserName, string mediaId, string title, string description) {
 		super(toUserName, fromUserName, "video");
 		this.mediaId = mediaId;
 		this.title = title;

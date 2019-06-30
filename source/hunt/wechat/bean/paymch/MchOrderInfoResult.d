@@ -15,7 +15,7 @@ import hunt.wechat.bean.DynamicField;
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-class MchOrderInfoResult : MchBase : DynamicField{
+class MchOrderInfoResult : MchBase , DynamicField{
 
 	private string trade_state;
 

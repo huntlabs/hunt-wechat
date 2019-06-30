@@ -36,10 +36,10 @@ class UserGetShakeInfoResultData {
 	@JSONField(name = "poi_id")
 	private Integer poiId;
 
-	public UserGetShakeInfoResultData() {
+	public this() {
 	}
 
-	public UserGetShakeInfoResultData(Integer pageId, UserGetShakeInfoResultDataBeaconInfo beaconInfo, string openId, Integer poiId) {
+	public this(Integer pageId, UserGetShakeInfoResultDataBeaconInfo beaconInfo, string openId, Integer poiId) {
 		this.pageId = pageId;
 		this.beaconInfo = beaconInfo;
 		this.openId = openId;

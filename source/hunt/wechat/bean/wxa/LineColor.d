@@ -6,10 +6,10 @@ class LineColor {
 	private string g;
 	private string b;
 
-	public LineColor() {
+	public this() {
 	}
 
-	public LineColor(string r, string g, string b) {
+	public this(string r, string g, string b) {
 		this.r = r;
 		this.g = g;
 		this.b = b;

@@ -20,7 +20,7 @@ class XMLNewsMessage : XMLMessage {
 	 * @param articles
 	 *            articles
 	 */
-	public XMLNewsMessage(string toUserName, string fromUserName, List!(Article) articles) {
+	public this(string toUserName, string fromUserName, List!(Article) articles) {
 		super(toUserName, fromUserName, "news");
 		this.articles = articles;
 	}
@@ -34,7 +34,7 @@ class XMLNewsMessage : XMLMessage {
 	 * @param article
 	 *            article
 	 */
-	public XMLNewsMessage(string toUserName, string fromUserName, Article article) {
+	public this(string toUserName, string fromUserName, Article article) {
 		super(toUserName, fromUserName, "news");
 		this.articles = Collections.singletonList(article);
 	}
@@ -58,7 +58,7 @@ class XMLNewsMessage : XMLMessage {
 
 	override
 	public Message convert() {
-		List<NewsMessage.Article> list = new ArrayList<>();
+		List!(NewsMessage.Article) list = new ArrayList();
 		if (articles != null) {
 			foreach(Article a ; articles) {
 				NewsMessage.Article item = new NewsMessage.Article(a.getTitle(), a.getDescription(), a.getUrl(),

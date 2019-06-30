@@ -7,10 +7,10 @@ class TextPreview : Preview{
 
 	private Map!(string,string) text = new HashMap!(string,string)();
 
-	public TextPreview(){
+	public this(){
 
 	}
-	public TextPreview(string content) {
+	public this(string content) {
 		super();
 		this.setMsgtype("text");
 		text.put("content", content);

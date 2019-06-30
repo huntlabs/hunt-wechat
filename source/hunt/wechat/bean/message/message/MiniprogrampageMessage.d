@@ -9,14 +9,14 @@ module hunt.wechat.bean.message.message.MiniprogrampageMessage;
  */
 class MiniprogrampageMessage : Message {
 
-	public MiniprogrampageMessage() {
+	public this() {
 	}
 
-	public MiniprogrampageMessage(string touser) {
+	public this(string touser) {
 		super(touser, "miniprogrampage");
 	}
 
-	public MiniprogrampageMessage(string touser, Miniprogrampage miniprogrampage) {
+	public this(string touser, Miniprogrampage miniprogrampage) {
 		this(touser);
 		this.miniprogrampage = miniprogrampage;
 	}

@@ -18,10 +18,10 @@ class Matchrule {
 	
 	private string language;
 
-	public Matchrule() {
+	public this() {
 	}
 
-	public Matchrule(string tag_id, Integer group_id, Integer sex, string country, string province, string city, string client_platform_type, string language) {
+	public this(string tag_id, Integer group_id, Integer sex, string country, string province, string city, string client_platform_type, string language) {
 		this.tag_id = tag_id;
 		this.group_id = group_id;
 		this.sex = sex;

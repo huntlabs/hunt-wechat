@@ -8,7 +8,7 @@ class XMLTextMessage : XMLMessage {
 
 	private string content;
 
-	public XMLTextMessage(string toUserName, string fromUserName, string content) {
+	public this(string toUserName, string fromUserName, string content) {
 		super(toUserName, fromUserName, "text");
 		this.content = content;
 	}

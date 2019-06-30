@@ -13,10 +13,10 @@ class Business {
 	@JSONField(name = "base_info")
 	private BaseInfo baseInfo;
 
-	public Business() {
+	public this() {
 	}
 
-	public Business(BaseInfo baseInfo) {
+	public this(BaseInfo baseInfo) {
 		this.baseInfo = baseInfo;
 	}
 

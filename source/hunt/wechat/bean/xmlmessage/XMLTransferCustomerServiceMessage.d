@@ -24,7 +24,7 @@ class XMLTransferCustomerServiceMessage : XMLMessage {
 	 * @param kfAccount
 	 *            可以为空
 	 */
-	public XMLTransferCustomerServiceMessage(string toUserName, string fromUserName, string kfAccount) {
+	public this(string toUserName, string fromUserName, string kfAccount) {
 		super(toUserName, fromUserName, "transfer_customer_service");
 		this.kfAccount = kfAccount;
 	}

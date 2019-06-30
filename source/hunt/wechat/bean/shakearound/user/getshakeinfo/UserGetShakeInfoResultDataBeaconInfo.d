@@ -18,10 +18,10 @@ class UserGetShakeInfoResultDataBeaconInfo {
 	private Integer minor;
 	private string uuid;
 
-	public UserGetShakeInfoResultDataBeaconInfo() {
+	public this() {
 	}
 
-	public UserGetShakeInfoResultDataBeaconInfo(Double distance, Integer major, Integer minor, string uuid) {
+	public this(Double distance, Integer major, Integer minor, string uuid) {
 		this.distance = distance;
 		this.major = major;
 		this.minor = minor;

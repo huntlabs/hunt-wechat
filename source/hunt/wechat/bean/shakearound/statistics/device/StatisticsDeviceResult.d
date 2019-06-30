@@ -12,6 +12,6 @@ import hunt.wechat.bean.shakearound.AbstractResult;
  * 
  * 
  */
-class StatisticsDeviceResult : AbstractResult<List!(StatisticsDeviceResultData)> {
+class StatisticsDeviceResult : AbstractResult!(List!(StatisticsDeviceResultData)) {
 
 }

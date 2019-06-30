@@ -7,10 +7,10 @@ class MpnewsPreview : Preview{
 
 	private Map!(string,string) mpnews = new HashMap!(string,string)();
 
-	public MpnewsPreview(){
+	public this(){
 
 	}
-	public MpnewsPreview(string media_id) {
+	public this(string media_id) {
 		super();
 		this.setMsgtype("mpnews");
 		mpnews.put("media_id", media_id);

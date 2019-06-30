@@ -10,7 +10,7 @@ class MassTextMessage : MassMessage{
 
 	private Map!(string, string) text;
 
-	public MassTextMessage(string content) {
+	public this(string content) {
 		super();
 		text = new HashMap!(string, string)();
 		text.put("content",content);

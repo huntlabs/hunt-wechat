@@ -15,11 +15,11 @@ class SubmitAudit {
 		this.item_list = item_list;
 	}
 
-	public SubmitAudit() {
+	public this() {
 		item_list = new ArrayList!(Item)();
 	}
 
-	public SubmitAudit(List!(Item) item_list) {
+	public this(List!(Item) item_list) {
 		this.item_list = item_list;
 	}
 	public void addItem(string address,string tag,string first_class,string second_class,string title){
@@ -40,10 +40,10 @@ class SubmitAudit {
 		private string second_class;
 		private string title;
 
-		public Item() {
+		public this() {
 		}
 
-		public Item(string address, string tag, string first_class, string second_class, string title) {
+		public this(string address, string tag, string first_class, string second_class, string title) {
 			this.address = address;
 			this.tag = tag;
 			this.first_class = first_class;

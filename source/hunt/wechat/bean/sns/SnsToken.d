@@ -12,7 +12,7 @@ class SnsToken : BaseResult{
 
 	private string openid;
 
-	private string scope;
+	private string _scope;
 	
 	private string unionid;
 
@@ -49,11 +49,11 @@ class SnsToken : BaseResult{
 	}
 
 	public string getScope() {
-		return scope;
+		return _scope;
 	}
 
-	public void setScope(string scope) {
-		this.scope = scope;
+	public void setScope(string _scope) {
+		this._scope = _scope;
 	}
 
 	public string getUnionid() {

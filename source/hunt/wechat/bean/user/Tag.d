@@ -8,10 +8,10 @@ class Tag {
 	
 	private Integer count;
 
-	public Tag() {
+	public this() {
 	}
 
-	public Tag(Integer id, string name, Integer count) {
+	public this(Integer id, string name, Integer count) {
 		this.id = id;
 		this.name = name;
 		this.count = count;

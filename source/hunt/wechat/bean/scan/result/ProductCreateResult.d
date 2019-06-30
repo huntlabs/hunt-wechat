@@ -5,7 +5,7 @@ import hunt.wechat.bean.BaseResult;
 class ProductCreateResult : BaseResult {
     private Integer pid;
 
-    public ProductCreateResult(Integer pid) {
+    public this(Integer pid) {
         this.pid = pid;
     }
 
