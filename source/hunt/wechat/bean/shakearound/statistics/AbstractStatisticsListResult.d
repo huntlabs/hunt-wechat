@@ -5,7 +5,7 @@ module hunt.wechat.bean.shakearound.statistics.AbstractStatisticsListResult;
 
 import hunt.wechat.bean.shakearound.AbstractResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－（批量查询）统计接口响应参数抽象类

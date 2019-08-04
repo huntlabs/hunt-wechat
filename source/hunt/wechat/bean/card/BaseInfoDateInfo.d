@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.BaseInfoDateInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 使用日期，有效期的信息

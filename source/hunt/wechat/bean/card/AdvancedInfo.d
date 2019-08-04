@@ -2,7 +2,7 @@ module hunt.wechat.bean.card.AdvancedInfo;
 
 import hunt.collection.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 

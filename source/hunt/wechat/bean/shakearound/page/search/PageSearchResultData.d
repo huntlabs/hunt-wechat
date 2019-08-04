@@ -7,7 +7,7 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.shakearound.page.PageInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－页面管理－查询页面列表－响应参数－页面列表数据

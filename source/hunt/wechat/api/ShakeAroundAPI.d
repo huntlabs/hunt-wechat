@@ -14,7 +14,7 @@ import hunt.text.Charset;
 //import org.apache.http.entity.mime.MultipartEntityBuilder;
 //import org.apache.http.entity.mime.content.FileBody;
 
-import hunt.logger;
+import hunt.logging;
 
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.shakearound.account.auditstatus.AccountAuditStatusResult;

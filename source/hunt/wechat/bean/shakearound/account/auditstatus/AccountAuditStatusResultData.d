@@ -1,6 +1,6 @@
 module hunt.wechat.bean.shakearound.account.auditstatus.AccountAuditStatusResultData;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－申请开通功能－查询审核状态－响应参数－审核状态信息

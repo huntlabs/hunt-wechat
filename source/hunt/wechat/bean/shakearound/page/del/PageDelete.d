@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.page.del.PageDelete;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 
 /**

@@ -29,13 +29,13 @@ class Report {
 	/**
 	 * @since 2.8.5
 	 */
-	@XmlElement
+	//@XmlElement
 	private string sub_appid;
 
 	/**
 	 * @since 2.8.5
 	 */
-	@XmlElement
+	//@XmlElement
 	private string sub_mch_id;
 
 	public string getAppid() {

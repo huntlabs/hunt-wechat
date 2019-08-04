@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.modifystock.ModifyStock;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 卡券管理－修改库存接口－请求参数

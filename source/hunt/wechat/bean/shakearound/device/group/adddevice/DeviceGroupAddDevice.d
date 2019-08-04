@@ -7,7 +7,7 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.shakearound.device.DeviceIdentifier;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－添加设备到分组－请求参数

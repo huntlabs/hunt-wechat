@@ -1,6 +1,6 @@
 module hunt.wechat.bean.poi.PoiListResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.BaseResult;
 

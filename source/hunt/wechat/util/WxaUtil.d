@@ -9,7 +9,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
-import hunt.logger;
+import hunt.logging;
 
 
 import com.qq.weixin.mp.aes.PKCS7Encoder;

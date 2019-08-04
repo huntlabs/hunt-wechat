@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 class AuthcodetoopenidResult : MchBase{
 
-	@XmlElement
+	//@XmlElement
 	private string openid;
 
 	public string getOpenid() {

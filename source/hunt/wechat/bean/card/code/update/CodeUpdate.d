@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.code.update.CodeUpdate;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 卡券管理－更改Code接口－请求参数

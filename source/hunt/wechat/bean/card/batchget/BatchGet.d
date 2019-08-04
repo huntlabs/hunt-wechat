@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.batchget.BatchGet;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 卡券管理－批量查询卡券列表－请求参数

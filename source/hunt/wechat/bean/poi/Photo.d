@@ -1,6 +1,6 @@
 module hunt.wechat.bean.poi.Photo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 门店图片信息

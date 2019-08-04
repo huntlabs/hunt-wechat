@@ -1,6 +1,6 @@
 module hunt.wechat.bean.poi.CategoryListResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 门店类目列表

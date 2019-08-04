@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.device.group.add.DeviceGroupAdd;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－新增分组－请求参数

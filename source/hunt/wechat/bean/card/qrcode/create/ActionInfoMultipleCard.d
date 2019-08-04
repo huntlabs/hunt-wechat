@@ -2,7 +2,7 @@ module hunt.wechat.bean.card.qrcode.create.ActionInfoMultipleCard;
 
 import hunt.collection.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 

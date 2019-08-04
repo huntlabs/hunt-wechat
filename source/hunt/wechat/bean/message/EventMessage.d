@@ -18,71 +18,71 @@ import org.w3c.dom.Node;
 class EventMessage {
 
 	//base
-	@XmlElement(name="ToUserName")
+	//@XmlElement(name="ToUserName")
 	private string toUserName; 		//开发者微信号
 	
-	@XmlElement(name="FromUserName")
+	//@XmlElement(name="FromUserName")
 	private string fromUserName;	//发送方帐号（一个OpenID）
 	
-	@XmlElement(name="CreateTime")
+	//@XmlElement(name="CreateTime")
 	private Integer createTime;		//消息创建时间 （整型）
 	
-	@XmlElement(name="MsgType")
+	//@XmlElement(name="MsgType")
 	private string msgType;			//消息类型，event
 	
-	@XmlElement(name="Event")
+	//@XmlElement(name="Event")
 	private string event;			//事件类型，subscribe(订阅)、unsubscribe(取消订阅)
 
 	//----扫描带参数二维码事件,自定义菜单key
-	@XmlElement(name="EventKey")
+	//@XmlElement(name="EventKey")
 	private string eventKey;		//事件KEY值，qrscene_为前缀，后面为二维码的参数值
 	
 	
 	
 	//接收普通消息------------------------------------ START
-	@XmlElements({@XmlElement(name="MsgId"),@XmlElement(name="MsgID")})
+	//@XmlElements({@XmlElement(name="MsgId"),@XmlElement(name="MsgID")})
 	private string msgId;			//消息ID号
 	//文本
-	@XmlElement(name="Content")
+	//@XmlElement(name="Content")
 	private string content;			//文本消息内容
 	//图片
-	@XmlElement(name="PicUrl")
+	//@XmlElement(name="PicUrl")
 	private string picUrl;			//图片消息
 	//媒体
-	@XmlElement(name="MediaId")
+	//@XmlElement(name="MediaId")
 	private string mediaId;			//mediaId 可以调用多媒体文件下载接口拉取数据
 	//语音格式
-	@XmlElement(name="Format")
+	//@XmlElement(name="Format")
 	private string format;			//语音格式
 	//语音识别
-	@XmlElement(name="Recognition")
+	//@XmlElement(name="Recognition")
 	private string recognition;		//开通语音识别功能的识别结果
 	//视频
-	@XmlElement(name="ThumbMediaId")
+	//@XmlElement(name="ThumbMediaId")
 	private string thumbMediaId;	//视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。
 	
 	//地理位置-地理位置维度
-	@XmlElement(name="Location_X")
+	//@XmlElement(name="Location_X")
 	private string location_X;
 	
 	//地理位置-地理位置经度
-	@XmlElement(name="Location_Y")
+	//@XmlElement(name="Location_Y")
 	private string location_Y;
 	
 	//地理位置-地图缩放大小
-	@XmlElement(name="Scale")
+	//@XmlElement(name="Scale")
 	private string scale;
 	
 	//地理位置-地理位置信息
-	@XmlElement(name="Label")
+	//@XmlElement(name="Label")
 	private string label;
 	
 	//链接
-	@XmlElement(name="Title")
+	//@XmlElement(name="Title")
 	private string title;
-	@XmlElement(name="Description")
+	//@XmlElement(name="Description")
 	private string description;
-	@XmlElement(name="Url")
+	//@XmlElement(name="Url")
 	private string url;
 	//接收普通消息------------------------------------ END
 	
@@ -97,17 +97,17 @@ class EventMessage {
 	//关注/取消关注事件
 	
 	//二维码的ticket，可用来换取二维码图片
-	@XmlElement(name="Ticket")
+	//@XmlElement(name="Ticket")
 	private string ticket;			
 	
 	//----上报地理位置事件
-	@XmlElement(name="Latitude")
+	//@XmlElement(name="Latitude")
 	private string latitude;		//地理位置纬度
 	
-	@XmlElement(name="Longitude")
+	//@XmlElement(name="Longitude")
 	private string longitude;		//地理位置经度
 	
-	@XmlElement(name="Precision")
+	//@XmlElement(name="Precision")
 	private string precision;		//地理位置精度
 	//接收事件推送------------------------------------ END
 
@@ -115,7 +115,7 @@ class EventMessage {
 	
 	//群发消息通知------------------------------------ START
 	//Event	 事件信息，此处为MASSSENDJOBFINISH
-	@XmlElement(name="Status")
+	//@XmlElement(name="Status")
 	private string status;/**群发的结构，为“send success”或“send fail”或“err(num)”。
 							但send success时，也有可能因用户拒收公众号的消息、系统错误等原因造成少量用户接收失败。err(num)是审核失败的具体原因，可能的情况如下：
 							err(10001), 涉嫌广告
@@ -128,19 +128,19 @@ class EventMessage {
 							err(22000), 涉嫌互推(互相宣传)
 							err(21000), 涉嫌其他*/
 
-	@XmlElement(name="TotalCount")
+	//@XmlElement(name="TotalCount")
 	private Integer totalCount;	//group_id下粉丝数；或者openid_list中的粉丝数
 
-	@XmlElement(name="FilterCount")
+	//@XmlElement(name="FilterCount")
 	private Integer filterCount;//过滤（过滤是指特定地区、性别的过滤、用户设置拒收的过滤，用户接收已超4条的过滤）后，准备发送的粉丝数，原则上，FilterCount = SentCount + ErrorCount
 	
-	@XmlElement(name="SentCount")
+	//@XmlElement(name="SentCount")
 	private Integer sentCount;//发送成功的粉丝数
 
-	@XmlElement(name="ErrorCount")
+	//@XmlElement(name="ErrorCount")
 	private Integer errorCount;//发送失败的粉丝数
 	
-	@XmlElement(name="CopyrightCheckResult")
+	//@XmlElement(name="CopyrightCheckResult")
 	private CopyrightCheckResult copyrightCheckResult;	//群发消息通知结果
 	
 	//群发消息通知------------------------------------ END
@@ -152,13 +152,13 @@ class EventMessage {
 	
 	//微信认证事件推送-------------------------------- START
 	
-	@XmlElement(name="ExpiredTime")
+	//@XmlElement(name="ExpiredTime")
 	private Integer expiredTime;   //有效期 (整形)，指的是时间戳
 	
-	@XmlElement(name="FailTime")
+	//@XmlElement(name="FailTime")
 	private Integer failTime;   //失败发生时间 (整形)，时间戳
 	
-	@XmlElement(name="FailReason")
+	//@XmlElement(name="FailReason")
 	private string failReason;   //认证失败的原因
 	
 	//微信认证事件推送-------------------------------- END
@@ -168,16 +168,16 @@ class EventMessage {
 	
 	//微信门店审核事件推送-------------------------------- START
 	
-	@XmlElement(name="UniqId")
+	//@XmlElement(name="UniqId")
 	private string uniqId;   //商户自己内部ID，即字段中的sid
 	
-	@XmlElement(name="PoiId")
+	//@XmlElement(name="PoiId")
 	private string poiId;   //微信的门店ID，微信内门店唯一标示ID
 	
-	@XmlElement(name="Result")
+	//@XmlElement(name="Result")
 	private string result;   //审核结果，成功succ 或失败fail
 	
-	@XmlElement(name="Msg")
+	//@XmlElement(name="Msg")
 	private string msg;   //成功的通知信息，或审核失败的驳回理由	
 	
 	//微信门店审核事件推送-------------------------------- END
@@ -185,73 +185,73 @@ class EventMessage {
 	
 	
 	//摇一摇周边事件通知-------------------------------- START
-	@XmlElement(name="ChosenBeacon")
+	//@XmlElement(name="ChosenBeacon")
 	private ChosenBeacon chosenBeacon;   //审核结果，成功succ 或失败fail
 	
-	@XmlElement(name="AroundBeacons")
+	//@XmlElement(name="AroundBeacons")
 	private List!(AroundBeacon) aroundBeacons;   //审核结果，成功succ 或失败fail
 	
 	//摇一摇 周边事件通知-------------------------------- END
 	
 	
 	//摇一摇 红包绑定用户事件通知-------------------------------- START
-	@XmlElement(name="LotteryId")
+	//@XmlElement(name="LotteryId")
 	private string lotteryId;
 	
-	@XmlElement(name="Money")
+	//@XmlElement(name="Money")
 	private Integer money;
 	
-	@XmlElement(name="BindTime")
+	//@XmlElement(name="BindTime")
 	private Integer bindTime;
 	
 	//摇一摇 红包绑定用户事件通知-------------------------------- END
 	
 	
 	//WIFI连网后下发消息-------------------------------- START
-	@XmlElement(name="ConnectTime")
+	//@XmlElement(name="ConnectTime")
 	private Integer connectTime;		//连网时间
 	
-	@XmlElement(name="ExpireTime")
+	//@XmlElement(name="ExpireTime")
 	private Integer expireTime;			//系统保留字段，固定值
 	
-	@XmlElement(name="VendorId")
+	//@XmlElement(name="VendorId")
 	private string vendorId;			//系统保留字段，固定值
 	
-	@XmlElement(name="ShopId")
+	//@XmlElement(name="ShopId")
 	private string shopId;				//门店ID，即shop_id
 	
-	@XmlElement(name="DeviceNo")
+	//@XmlElement(name="DeviceNo")
 	private string deviceNo;			//连网的设备无线mac地址，对应bssid
 	
 	//WIFI连网后下发消息-------------------------------- END
 
 	
 	//扫一扫事件推送-------------------------------- START
-	@XmlElement(name="KeyStandard")
+	//@XmlElement(name="KeyStandard")
 	private string keyStandard;		//商品编码标准
 	
-	@XmlElement(name="KeyStr")
+	//@XmlElement(name="KeyStr")
 	private string keyStr;			//商品编码内容
 	
-	@XmlElement(name="Country")
+	//@XmlElement(name="Country")
 	private string country;			//用户在微信内设置的国家
 	
-	@XmlElement(name="Province")
+	//@XmlElement(name="Province")
 	private string province;		//用户在微信内设置的省份
 	
-	@XmlElement(name="City")
+	//@XmlElement(name="City")
 	private string city;			//用户在微信内设置的城市
 	
-	@XmlElement(name="Sex")
+	//@XmlElement(name="Sex")
 	private Integer sex;			//用户的性别，1为男性，2为女性，0代表未知
 	
-	@XmlElement(name="Scene")
+	//@XmlElement(name="Scene")
 	private Integer scene;			//打开商品主页的场景，1为扫码，2为其他打开场景（如会话、收藏或朋友圈）
 	
-	@XmlElement(name="RegionCode")
+	//@XmlElement(name="RegionCode")
 	private string regionCode;		//用户的实时地理位置信息（目前只精确到省一级），可在国家统计局网站查到对应明细：http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201504/t20150415_712722.html
 	
-	@XmlElement(name="ReasonMsg")
+	//@XmlElement(name="ReasonMsg")
 	private Integer reasonMsg;		//审核未通过的原因。
 	
 	//扫一扫事件推送-------------------------------- END

@@ -39,7 +39,7 @@ class GethbinfoResult : MchBase{
 	private string remark;
 	private string act_name;
 	@XmlElementWrapper(name="hblist")
-	@XmlElement(name="hbinfo")
+	//@XmlElement(name="hbinfo")
 	private List!(Hbinfo) hblist;
 
 	public string getMch_billno() {

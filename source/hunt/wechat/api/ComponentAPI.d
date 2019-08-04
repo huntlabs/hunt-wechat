@@ -1,13 +1,13 @@
 module hunt.wechat.api.ComponentAPI;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+// import java.io.UnsupportedEncodingException;
+// import java.net.URLEncoder;
 import hunt.text.Charset;
 
 //import org.apache.http.client.methods.HttpUriRequest;
 //import org.apache.http.client.methods.RequestBuilder;
 //import org.apache.http.entity.StringEntity;
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.bean.BaseResult;

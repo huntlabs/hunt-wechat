@@ -33,8 +33,8 @@ class MicropayResult : MchBase{
 	 * 单品优惠 ,请求参数 version=1.0
 	 * @since 2.8.12
 	 */
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(MicropayPromotionDetailXmlAdapter))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(MicropayPromotionDetailXmlAdapter))
 	private List!(MicropayPromotionDetail) promotion_detail;
 
 	public string getOpenid() {

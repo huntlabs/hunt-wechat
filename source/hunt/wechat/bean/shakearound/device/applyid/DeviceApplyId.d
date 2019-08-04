@@ -1,6 +1,6 @@
 module hunt.wechat.bean.shakearound.device.applyid.DeviceApplyId;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－设备管理－申请设备ID－请求参数

@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.device.group.del.DeviceGroupDelete;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－删除分组－请求参数

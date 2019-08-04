@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.code.unavailable.CodeUnavailable;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 卡券管理－设置卡券失效接口－请求参数

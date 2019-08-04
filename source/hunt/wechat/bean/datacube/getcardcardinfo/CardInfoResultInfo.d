@@ -2,7 +2,7 @@ module hunt.wechat.bean.datacube.getcardcardinfo.CardInfoResultInfo;
 
 import hunt.wechat.bean.datacube.getcardbizuininfo.BizuinInfoResultInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 获取免费券数据接口－响应参数－日统计结果

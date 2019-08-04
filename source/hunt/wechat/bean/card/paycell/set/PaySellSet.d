@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.paycell.set.PaySellSet;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信卡券－设置买单－提交对象

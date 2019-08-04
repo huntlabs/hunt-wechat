@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.landingpage.create.LandingPageCreateResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.BaseResult;
 

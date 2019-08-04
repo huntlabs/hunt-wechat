@@ -5,7 +5,7 @@ module hunt.wechat.bean.shakearound.device.search.DeviceSearchResultData;
 
 import hunt.collection.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 
 /**

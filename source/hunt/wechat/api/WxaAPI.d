@@ -20,7 +20,7 @@ import javax.imageio.ImageIO;
 //import org.apache.http.entity.mime.MultipartEntityBuilder;
 //import org.apache.http.entity.mime.content.FileBody;
 //import org.apache.http.util.EntityUtils;
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.bean.BaseResult;

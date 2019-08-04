@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.Cash;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 代金券

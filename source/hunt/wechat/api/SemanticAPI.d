@@ -12,7 +12,7 @@ module hunt.wechat.api.SemanticAPI;
 //import org.apache.http.impl.client.CloseableHttpClient;
 //import org.apache.http.impl.client.HttpClients;
 //import org.apache.http.util.EntityUtils;
-import hunt.logger;
+import hunt.logging;
 
 import hunt.wechat.bean.BaseResult;
 import hunt.wechat.bean.media.MediaType;

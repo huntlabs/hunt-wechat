@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.bean.DynamicField;

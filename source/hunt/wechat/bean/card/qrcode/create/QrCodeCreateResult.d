@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.qrcode.create.QrCodeCreateResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.BaseResult;
 

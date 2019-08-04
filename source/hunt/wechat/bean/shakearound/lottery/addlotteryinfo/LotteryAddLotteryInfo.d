@@ -1,6 +1,6 @@
 module hunt.wechat.bean.shakearound.lottery.addlotteryinfo.LotteryAddLotteryInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－摇一摇红包－创建红包活动－请求参数

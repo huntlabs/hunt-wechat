@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.AdvancedInfoTextImage;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 图文列表

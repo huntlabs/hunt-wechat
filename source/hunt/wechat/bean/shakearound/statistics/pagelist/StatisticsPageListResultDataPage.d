@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.statistics.pagelist.StatisticsPageListResultDataPage;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.shakearound.statistics.AbstractStatisticsResultData;
 

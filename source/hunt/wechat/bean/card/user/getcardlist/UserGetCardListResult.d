@@ -4,7 +4,7 @@ import hunt.collection.List;
 
 import hunt.wechat.bean.BaseResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 管理卡券－获取用户已领取卡券接口－响应参数

@@ -9,7 +9,7 @@ import hunt.collection.Map;
 //import org.apache.http.client.ClientProtocolException;
 //import org.apache.http.client.ResponseHandler;
 //import org.apache.http.util.EntityUtils;
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.bean.DynamicField;

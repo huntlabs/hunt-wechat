@@ -1,6 +1,6 @@
 module hunt.wechat.bean.bizwifi.qrcode.QrcodeGet;
 
-import hunt.wechat.bean.bizwifi.base.ShopInfo.QrcodeGet;
+import hunt.wechat.bean.bizwifi.base.ShopInfo;
 
 /**
  * @ProjectName weixin-popular

@@ -24,11 +24,11 @@ class PayContractorder {
 	private string out_trade_no;
 	private string device_info;
 	private string nonce_str;
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string body;
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string detail;
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string attach;
 	private string notify_url;
 	private string total_fee;
@@ -43,7 +43,7 @@ class PayContractorder {
 	private string plan_id;
 	private string contract_code;
 	private string request_serial;
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string contract_display_account;
 	private string contract_notify_url;
 	private string sign_type;

@@ -5,7 +5,7 @@ import java.net.URLEncoder;
 
 //import org.apache.http.client.methods.HttpUriRequest;
 //import org.apache.http.client.methods.RequestBuilder;
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.bean.BaseResult;

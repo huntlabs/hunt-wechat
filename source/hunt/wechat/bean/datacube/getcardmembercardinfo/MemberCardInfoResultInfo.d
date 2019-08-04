@@ -1,6 +1,6 @@
 module hunt.wechat.bean.datacube.getcardmembercardinfo.MemberCardInfoResultInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 拉取会员卡数据接口－响应对象（每行记录对象）

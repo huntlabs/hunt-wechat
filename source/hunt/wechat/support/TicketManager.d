@@ -8,7 +8,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.api.TicketAPI;

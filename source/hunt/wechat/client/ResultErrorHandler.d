@@ -5,7 +5,7 @@ module hunt.wechat.client.ResultErrorHandler;
 //import org.apache.http.client.methods.HttpUriRequest;
 //import org.apache.http.entity.ContentType;
 //import org.apache.http.util.EntityUtils;
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.bean.BaseResult;

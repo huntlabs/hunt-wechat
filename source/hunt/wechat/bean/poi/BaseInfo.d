@@ -1,6 +1,6 @@
 module hunt.wechat.bean.poi.BaseInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 门店信息－提交对象

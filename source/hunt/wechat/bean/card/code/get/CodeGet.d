@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.code.get.CodeGet;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 卡券核销－查询Code接口－请求参数

@@ -16,29 +16,29 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 class ComponentReceiveXML {
 
-	@XmlElement(name = "AppId")
+	//@XmlElement(name = "AppId")
 	private string appId;
 
-	@XmlElement(name = "CreateTime")
+	//@XmlElement(name = "CreateTime")
 	private Integer createTime;
 
-	@XmlElement(name = "InfoType")
+	//@XmlElement(name = "InfoType")
 	private string infoType; // component_verify_ticket
 								// 推送component_verify_ticket协议
 								// unauthorized 取消授权
 								// updateauthorized 更新授权
 								// authorized 授权成功通知
 
-	@XmlElement(name = "ComponentVerifyTicket")
+	//@XmlElement(name = "ComponentVerifyTicket")
 	private string componentVerifyTicket;
 
-	@XmlElement(name = "AuthorizerAppid")
+	//@XmlElement(name = "AuthorizerAppid")
 	private string authorizerAppid; // 公众号
 
-	@XmlElement(name = "AuthorizationCode")
+	//@XmlElement(name = "AuthorizationCode")
 	private string authorizationCode; // 授权码（code）
 
-	@XmlElement(name = "AuthorizationCodeExpiredTime")
+	//@XmlElement(name = "AuthorizationCodeExpiredTime")
 	private string authorizationCodeExpiredTime; // 过期时间
 
 	public string getAppId() {

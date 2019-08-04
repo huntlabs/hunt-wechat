@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 //import org.apache.http.client.methods.RequestBuilder;
 //import org.apache.http.entity.StringEntity;
 //import org.apache.http.util.EntityUtils;
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.bean.qrcode.QrcodeTicket;

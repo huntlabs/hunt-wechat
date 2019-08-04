@@ -2,7 +2,7 @@ module hunt.wechat.bean.card.code.checkcode.CodeCheckCodeResult;
 
 import hunt.wechat.bean.BaseResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 投放卡券－核查code接口－响应参数

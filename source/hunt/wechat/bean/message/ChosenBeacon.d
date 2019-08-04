@@ -14,16 +14,16 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 class ChosenBeacon {
 	
-	@XmlElement(name="Uuid")
+	//@XmlElement(name="Uuid")
 	private string uuid;
 	
-	@XmlElement(name="Major")
+	//@XmlElement(name="Major")
 	private string major;
 	
-	@XmlElement(name="Minor")
+	//@XmlElement(name="Minor")
 	private string minor;
 	
-	@XmlElement(name="Distance")
+	//@XmlElement(name="Distance")
 	private string distance;
 
 	public string getUuid() {

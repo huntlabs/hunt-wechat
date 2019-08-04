@@ -6,7 +6,7 @@ import hunt.util.Serialize;
 import java.io.UnsupportedEncodingException;
 import java.util.UUID;
 
-import hunt.logger;
+import hunt.logging;
 
 
 import com.qq.weixin.mp.aes.AesException;

@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.user.getcardlist.UserGetCardListResultCard;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 管理卡券－获取用户已领取卡券接口－响应参数－已领取的卡券

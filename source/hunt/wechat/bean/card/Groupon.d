@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.Groupon;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 团购券

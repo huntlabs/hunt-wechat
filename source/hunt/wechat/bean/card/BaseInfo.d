@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.BaseInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 卡券基础信息

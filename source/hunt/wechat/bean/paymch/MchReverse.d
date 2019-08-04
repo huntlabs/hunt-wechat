@@ -9,22 +9,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 class MchReverse {
 
-	@XmlElement
+	//@XmlElement
 	private string appid;
 
-	@XmlElement
+	//@XmlElement
 	private string mch_id;
 
-	@XmlElement
+	//@XmlElement
 	private string transaction_id;
 
-	@XmlElement
+	//@XmlElement
 	private string out_trade_no;
 
-	@XmlElement
+	//@XmlElement
 	private string nonce_str;
 
-	@XmlElement
+	//@XmlElement
 	private string sign;
 	
 	private string sign_type;
@@ -32,13 +32,13 @@ class MchReverse {
 	/**
 	 * @since 2.8.13
 	 */
-	@XmlElement
+	//@XmlElement
 	private string sub_appid;
 
 	/**
 	 * @since 2.8.13
 	 */
-	@XmlElement
+	//@XmlElement
 	private string sub_mch_id;
 
 	public string getAppid() {

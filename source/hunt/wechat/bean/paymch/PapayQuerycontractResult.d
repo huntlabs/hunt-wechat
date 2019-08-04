@@ -19,7 +19,7 @@ class PapayQuerycontractResult : MchBase{
 
 	private string contract_code;
 
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string contract_display_account;
 
 	private Integer contract_state;
@@ -32,7 +32,7 @@ class PapayQuerycontractResult : MchBase{
 
 	private string contract_termination_mode;
 
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string contract_termination_remark;
 
 	private string openid;

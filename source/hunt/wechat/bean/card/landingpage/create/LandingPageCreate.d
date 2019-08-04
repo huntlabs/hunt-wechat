@@ -2,7 +2,7 @@ module hunt.wechat.bean.card.landingpage.create.LandingPageCreate;
 
 import hunt.collection.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 卡券发放－创建货架接口－请求参数

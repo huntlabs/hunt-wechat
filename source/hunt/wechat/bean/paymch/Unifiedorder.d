@@ -31,18 +31,18 @@ class Unifiedorder : MchVersion{
 	/**
 	 * @since 2.8.5
 	 */
-	@XmlJavaTypeAdapter(value = Detail.typeid(JsonXmlAdapter))
+	//@XmlJavaTypeAdapter(value = Detail.typeid(JsonXmlAdapter))
 	private Detail detail;
 
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string sign;
 	
 	private string sign_type;
 
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string body;
 
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string attach;
 
 	private string out_trade_no;
@@ -89,7 +89,7 @@ class Unifiedorder : MchVersion{
 	/**
 	 * @since 2.8.21
 	 */
-	@XmlJavaTypeAdapter(value= SceneInfo.typeid(JsonXmlAdapter))
+	//@XmlJavaTypeAdapter(value= SceneInfo.typeid(JsonXmlAdapter))
 	private SceneInfo scene_info;
 	
 	/**

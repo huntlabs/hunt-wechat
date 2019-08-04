@@ -1,14 +1,13 @@
 module hunt.wechat.client.LocalHttpClient;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import std.file;
+import hunt.io.FileInputStream;
 import hunt.Exceptions;
 import hunt.io.Common;
-import java.security.KeyStore;
+// import java.security.KeyStore;
 import hunt.collection.Map;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
+// import java.util.UUID;
+// import java.util.concurrent.ConcurrentHashMap;
 
 //import org.apache.http.Header;
 //import org.apache.http.HttpEntity;
@@ -22,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 //import org.apache.http.impl.client.CloseableHttpClient;
 //import org.apache.http.message.BasicHeader;
 //import org.apache.http.util.EntityUtils;
-import hunt.logger;
+import hunt.logging;
 
 
 import hunt.wechat.Version;

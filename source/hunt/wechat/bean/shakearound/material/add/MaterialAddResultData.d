@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.material.add.MaterialAddResultData;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－素材管理－​上传图片素材－响应参数－图片信息

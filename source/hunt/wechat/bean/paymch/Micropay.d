@@ -22,7 +22,7 @@ class Micropay : MchVersion {
 	 * @since 2.8.14
 	 */
 	@XmlElement
-	@XmlJavaTypeAdapter(value = Detail.typeid(JsonXmlAdapter))
+	//@XmlJavaTypeAdapter(value = Detail.JsonXmlAdapter.class)
 	private Detail detail;
 	private string attach;
 	private string out_trade_no;
@@ -47,7 +47,7 @@ class Micropay : MchVersion {
 	/**
 	 * @since 2.8.27
 	 */
-	@XmlJavaTypeAdapter(value = SceneInfo.typeid(JsonXmlAdapter))
+	//@XmlJavaTypeAdapter(value = SceneInfo.JsonXmlAdapter.class)
 	private SceneInfo scene_info;
 
 	/**

@@ -18,24 +18,24 @@ import hunt.wechat.bean.AdaptorCDATA;
 @XmlAccessorType(XmlAccessType.FIELD)
 class UnifiedorderResult : MchBase{
 
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string device_info;
 
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string trade_type;
 
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string prepay_id;
 
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string code_url;
 	
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string mweb_url;
 
 	public string getDevice_info() {

@@ -15,7 +15,7 @@ class CopyrightCheckResult {
 	private Integer Count;
 	
 	@XmlElementWrapper(name = "ResultList")
-	@XmlElement(name = "item")
+	//@XmlElement(name = "item")
 	private List!(CopyrightCheckResultItem) ResultList;
 	
 	private Integer CheckState;	//整体校验结果  1-未被判为转载，可以群发，2-被判为转载，可以群发，3-被判为转载，不能群发

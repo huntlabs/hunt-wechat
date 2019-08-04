@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.card.update.UpdateGeneralCoupon;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.card.GeneralCoupon;
 

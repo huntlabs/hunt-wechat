@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.AdvancedInfoAbstract;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 封面摘要结构体名称

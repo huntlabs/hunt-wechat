@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.device.applystatus.DeviceApplyStatusResultData;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－设备管理－查询设备ID申请审核状态－响应参数－审核状态信息

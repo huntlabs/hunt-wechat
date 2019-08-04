@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.AdvancedInfoTimeLimit;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 使用时段限制

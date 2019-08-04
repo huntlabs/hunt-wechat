@@ -22,7 +22,7 @@ import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.Source;
 import javax.xml.transform.sax.SAXSource;
 
-import hunt.logger;
+import hunt.logging;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

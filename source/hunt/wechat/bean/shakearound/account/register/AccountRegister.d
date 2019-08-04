@@ -2,7 +2,7 @@ module hunt.wechat.bean.shakearound.account.register.AccountRegister;
 
 import hunt.collection.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－申请开通功能－请求参数

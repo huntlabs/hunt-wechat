@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.page.PageInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 页面信息

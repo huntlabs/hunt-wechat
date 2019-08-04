@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.statistics.device.StatisticsDevice;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.shakearound.device.DeviceIdentifier;
 import hunt.wechat.bean.shakearound.statistics.AbstractStatistics;

@@ -5,7 +5,7 @@ module hunt.wechat.bean.shakearound.device.update.DeviceUpdate;
 
 import hunt.wechat.bean.shakearound.device.DeviceIdentifier;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－设备管理－编辑设备信息－请求参数

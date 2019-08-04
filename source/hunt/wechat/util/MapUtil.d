@@ -12,7 +12,7 @@ import hunt.collection.LinkedHashMap;
 import hunt.collection.List;
 import hunt.collection.Map;
 
-import hunt.logger;
+import hunt.logging;
 
 
 abstract class MapUtil {

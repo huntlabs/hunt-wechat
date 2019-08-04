@@ -75,8 +75,8 @@ class MchPayNotify : MchBase , DynamicField{
 	 * 单品优惠 ,请求参数 version=1.0
 	 * @since 2.8.12
 	 */
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(PromotionDetailXmlAdapter))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(PromotionDetailXmlAdapter))
 	private List!(PromotionDetail) promotion_detail;
 	
 	public string getDevice_info() {

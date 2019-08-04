@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.device.group.GroupInfo;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 分组信息

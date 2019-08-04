@@ -1,6 +1,6 @@
 module hunt.wechat.support.expirekey.JedisExpireKey;
 
-import hunt.logger;
+import hunt.logging;
 
 
 import redis.clients.jedis.Jedis;

@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.AdvancedInfoUseCondition;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 使用门槛（条件）

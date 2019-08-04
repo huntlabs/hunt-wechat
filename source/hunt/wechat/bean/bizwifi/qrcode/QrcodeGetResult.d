@@ -1,6 +1,6 @@
 module hunt.wechat.bean.bizwifi.qrcode.QrcodeGetResult;
 
-import hunt.wechat.bean.shakearound.AbstractResult.QrcodeGetResult;
+import hunt.wechat.bean.shakearound.AbstractResult;
 
 /**
  * @ProjectName weixin-popular

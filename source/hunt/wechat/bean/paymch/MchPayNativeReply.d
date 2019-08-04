@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 class MchPayNativeReply : MchBase{
 
-	@XmlElement
+	//@XmlElement
 	private string prepay_id;
 
 	public string getPrepay_id() {

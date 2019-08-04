@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.relation.search.RelationSearchResultDataRelation;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 微信摇一摇周边－查询设备与页面的关联关系－响应参数－关联信息

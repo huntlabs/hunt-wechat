@@ -3,7 +3,7 @@
  */
 module hunt.wechat.bean.shakearound.lottery.addlotteryinfo.LotteryAddLotteryInfoResult;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.BaseResult;
 

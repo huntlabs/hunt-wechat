@@ -24,7 +24,7 @@ import javax.net.ssl.SSLException;
 //import org.apache.http.impl.client.HttpClientBuilder;
 //import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 //import org.apache.http.protocol.HttpContext;
-import hunt.logger;
+import hunt.logging;
 
 
 /**

@@ -12,23 +12,23 @@ import hunt.wechat.bean.AdaptorCDATA;
 @XmlAccessorType(XmlAccessType.FIELD)
 class MchShorturl {
 
-	@XmlElement
+	//@XmlElement
 	private string appid;
 
-	@XmlElement
+	//@XmlElement
 	private string mch_id;
 
-	@XmlElement
+	//@XmlElement
 	private string long_url;
 
-	@XmlElement
+	//@XmlElement
 	private string nonce_str;
 
-	@XmlElement
-	@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
+	//@XmlElement
+	//@XmlJavaTypeAdapter(value = typeid(AdaptorCDATA))
 	private string sign;
 	
-	@XmlElement
+	//@XmlElement
 	private string sign_type;
 	
 	/**

@@ -1,6 +1,6 @@
 module hunt.wechat.bean.card.code.deposit.CodeDeposit;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 投放卡券－导入code接口－请求参数

@@ -5,7 +5,7 @@ module hunt.wechat.bean.shakearound.device.group.getdetail.DeviceGroupGetDetailR
 
 import hunt.collection.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 import hunt.wechat.bean.shakearound.device.group.GroupInfo;
 

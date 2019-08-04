@@ -1,6 +1,6 @@
 module hunt.wechat.bean.paymch.MchPayApp;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 class MchPayApp {
 

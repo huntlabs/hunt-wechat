@@ -3,7 +3,7 @@ module hunt.wechat.bean.card.GeneralCouponCard;
 import hunt.wechat.bean.card.AbstractCard;
 import hunt.wechat.bean.card.GeneralCoupon;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 优惠券
